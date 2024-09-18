@@ -13,7 +13,7 @@ import ServicesSection from "./Component/ServicesSection";
 import TextPath from "./Component/TextPath";
 import CounterSection from "./Component/CounterSection";
 import ScrollToTop from "./Component/ScrollToTop";
-import AnimatedSection from "./Component/AnimatedSection";
+// import AnimatedSection from "./Component/AnimatedSection";
 // import CheckboxTree from "./Component/CheckboxTree";
 
 function App() {

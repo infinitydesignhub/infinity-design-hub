@@ -4,7 +4,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { FaShoppingCart, FaSearch, FaBars, FaTimes } from "react-icons/fa";
+import { FaShoppingCart, FaSearch, FaTimes } from "react-icons/fa";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
