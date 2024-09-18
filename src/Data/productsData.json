@@ -1,0 +1,27 @@
+[
+    {
+      "id": 1,
+      "image": "../images/crop-people-working-with-schemes.jpg",
+      "content": [
+        {
+          "id": "content1-1",
+          "title": "Product 1 Detail 1",
+          "description": "Detail description for product 1 item 1",
+          "image": "../images/crop-people-working-with-schemes.jpg"
+        },
+        {
+          "id": "content1-2",
+          "title": "Product 1 Detail 2",
+          "description": "Detail description for product 1 item 2",
+          "image": "../images/crop-people-working-with-schemes.jpg"
+        },
+        {
+          "id": "content1-3",
+          "title": "Product 1 Detail 3",
+          "description": "Detail description for product 1 item 3",
+          "image": "../images/crop-people-working-with-schemes.jpg"
+        }
+      ]
+    }
+  ]
+  

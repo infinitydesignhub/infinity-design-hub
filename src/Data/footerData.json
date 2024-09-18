@@ -1,0 +1,67 @@
+{
+    "logo": {
+      "src": "https://wgl-dsites.net/bili/light/wp-content/uploads/2022/03/logo_light_footer.png",
+      "alt": "logotype",
+      "link": "https://wgl-dsites.net/bili/light/"
+    },
+    "services": [
+      {
+        "text": "UI/UX Experience",
+        "link": "https://wgl-dsites.net/bili/light/services/"
+      },
+      {
+        "text": "Digital Marketing",
+        "link": "https://wgl-dsites.net/bili/light/services/"
+      },
+      {
+        "text": "Web Development",
+        "link": "https://wgl-dsites.net/bili/light/services/"
+      },
+      {
+        "text": "Product Design",
+        "link": "https://wgl-dsites.net/bili/light/services/"
+      }
+    ],
+    "contacts": {
+      "address": "27 Division St, New York, NY 10002",
+      "phone": "+1 800 123 456 789",
+      "email": "bili@mail.com"
+    },
+    "socials": [
+      {
+        "platform": "Twitter",
+        "link": "https://twitter.com/",
+        "iconClass": "fab fa-twitter"
+      },
+      {
+        "platform": "Facebook",
+        "link": "https://www.facebook.com/",
+        "iconClass": "fab fa-facebook-f"
+      },
+      {
+        "platform": "LinkedIn",
+        "link": "https://www.linkedin.com/",
+        "iconClass": "fab fa-linkedin-in"
+      },
+      {
+        "platform": "Instagram",
+        "link": "https://www.instagram.com/",
+        "iconClass": "fab fa-instagram"
+      }
+    ],
+    "subscribe": {
+      "placeholder": "Get news & updates",
+      "buttonText": "@"
+    },
+    "footerLinks": [
+      {
+        "text": "Terms of Use",
+        "link": "https://wgl-dsites.net/bili/light/contacts"
+      },
+      {
+        "text": "Privacy Policy",
+        "link": "https://wgl-dsites.net/bili/light/contacts"
+      }
+    ]
+  }
+  
