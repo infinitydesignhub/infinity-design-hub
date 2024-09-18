@@ -21,10 +21,10 @@ const BannerSection = () => {
 
   return (
     <section
-      className="banner relative py-14"
+      className="banner relative"
     >
       {/* Main content container */}
-      <div className="container-fluid flex items-center  text-start  ">
+      <div className="container-fluid flex items-center  text-start py-28 ">
         <div className="mx-10">
           {/* Main Text */}
           <div
@@ -32,7 +32,7 @@ const BannerSection = () => {
               transitioning ? "opacity-0" : "opacity-100"
             }`}
           >
-            <h1 className="text-7xl font-bold text-black  ">
+            <h1 className="text-7xl font-bold">
               {currentData.mainText[0]}
             </h1>
             <div className="flex items-center justify-center">
@@ -45,7 +45,7 @@ const BannerSection = () => {
                 {currentData.mainText[1]}
               </h2>
             </div>
-            <h1 className="text-7xl font-bold text-black">
+            <h1 className="text-7xl font-bold">
               {currentData.mainText[2]}
             </h1>
           </div>

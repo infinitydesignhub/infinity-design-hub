@@ -21,10 +21,10 @@ const Navbar = () => {
       {/* <nav className="bg-gray-800 top-fixed p-2">
          <div className="flex justify-between mx-auto container">
       
-          <h4  className="px-4 py-2  text-white font-semibold rounded  transition-all"
+          <h4  className="px-4 py-2  font-semibold rounded  transition-all"
             data-aos="fade-right">Envoto market</h4>
       <button
-            className="px-4 py-2 bg-green-500 text-white font-semibold rounded hover:bg-orange-600 transition-all"
+            className="px-4 py-2 bg-green-500 font-semibold rounded hover:bg-orange-600 transition-all"
             data-aos="fade-left"
           >
             Buy Now
@@ -34,24 +34,24 @@ const Navbar = () => {
       <nav className=" p-4 relative z-10">
         <div className="container mx-auto flex justify-between items-center source-code-pro">
           {/* Logo */}
-          <div className="text-white font-bold text-xl" data-aos="fade-right">
+          <div className="font-bold text-xl" data-aos="fade-right">
             <Link to="/">
               <img
                 src="https://www.infinitydesignhub.com/wp-content/uploads/2021/05/Infinity-Logo-Black-Pink-e1621100265589.png"
-                className="h-12"
+                className="logo"
               />
             </Link>
           </div>
 
           {/* Centered Links with Dropdown */}
           <div
-          className="hidden md:flex space-x-8 text-white uppercase font-bold text-center"
+          className="hidden md:flex space-x-8 uppercase font-bold text-center"
           data-aos="fade-up"
         >
           {/* Home Dropdown */}
           <div className="dropdown">
             <Link
-              className="nav-link  text-white no-underline"
+              className="nav-link  no-underline"
               to="/"
               role="button"
             >
@@ -59,22 +59,22 @@ const Navbar = () => {
             </Link>
             {/* <ul className="dropdown-menu bg-black">
               <li>
-                <Link className="dropdown-item text-white" to="/">
+                <Link className="dropdown-item  to="/">
                   Option 1
                 </Link>
               </li>
               <li>
-                <Link className="dropdown-item text-white" to="/">
+                <Link className="dropdown-item  to="/">
                   Option 2
                 </Link>
               </li>
               <li>
-                <Link className="dropdown-item text-white" to="/">
+                <Link className="dropdown-item  to="/">
                   Option 3
                 </Link>
               </li>
               <li>
-                <Link className="dropdown-item text-white" to="/">
+                <Link className="dropdown-item  to="/">
                   Option 4
                 </Link>
               </li>
@@ -84,7 +84,7 @@ const Navbar = () => {
           {/* Pages Dropdown */}
           <div className="dropdown">
             <Link
-              className="nav-link  text-white no-underline"
+              className="nav-link  no-underline"
               to="/pages"
               role="button"
             >
@@ -93,7 +93,7 @@ const Navbar = () => {
             {/* <ul className="dropdown-menu bg-black">
               <li>
                 <Link
-                  className="dropdown-item text-white"
+                  className="dropdown-item 
                   to="/pages/option1"
                 >
                   Option 1
@@ -101,7 +101,7 @@ const Navbar = () => {
               </li>
               <li>
                 <Link
-                  className="dropdown-item text-white"
+                  className="dropdown-item 
                   to="/pages/option2"
                 >
                   Option 2
@@ -109,7 +109,7 @@ const Navbar = () => {
               </li>
               <li>
                 <Link
-                  className="dropdown-item text-white"
+                  className="dropdown-item 
                   to="/pages/option3"
                 >
                   Option 3
@@ -117,7 +117,7 @@ const Navbar = () => {
               </li>
               <li>
                 <Link
-                  className="dropdown-item text-white"
+                  className="dropdown-item 
                   to="/pages/option4"
                 >
                   Option 4
@@ -129,7 +129,7 @@ const Navbar = () => {
           {/* Similar dropdowns for Blog, Portfolio, Shop, and Contacts */}
           <div className="dropdown">
             <Link
-              className="nav-link  text-white no-underline"
+              className="nav-link  no-underline"
               to="/blog"
               role="button"
             >
@@ -137,22 +137,22 @@ const Navbar = () => {
             </Link>
             {/* <ul className="dropdown-menu bg-black">
               <li>
-                <Link className="dropdown-item text-white" to="/blog/option1">
+                <Link className="dropdown-item  to="/blog/option1">
                   Option 1
                 </Link>
               </li>
               <li>
-                <Link className="dropdown-item text-white" to="/blog/option2">
+                <Link className="dropdown-item  to="/blog/option2">
                   Option 2
                 </Link>
               </li>
               <li>
-                <Link className="dropdown-item text-white" to="/blog/option3">
+                <Link className="dropdown-item  to="/blog/option3">
                   Option 3
                 </Link>
               </li>
               <li>
-                <Link className="dropdown-item text-white" to="/blog/option4">
+                <Link className="dropdown-item  to="/blog/option4">
                   Option 4
                 </Link>
               </li>
@@ -162,7 +162,7 @@ const Navbar = () => {
           {/* Portfolio Dropdown */}
           <div className="dropdown">
             <Link
-              className="nav-link  text-white no-underline"
+              className="nav-link  no-underline"
               to="/portfolio"
               role="button"
             >
@@ -171,7 +171,7 @@ const Navbar = () => {
             {/* <ul className="dropdown-menu bg-black">
               <li>
                 <Link
-                  className="dropdown-item text-white"
+                  className="dropdown-item 
                   to="/portfolio/option1"
                 >
                   Option 1
@@ -179,7 +179,7 @@ const Navbar = () => {
               </li>
               <li>
                 <Link
-                  className="dropdown-item text-white"
+                  className="dropdown-item 
                   to="/portfolio/option2"
                 >
                   Option 2
@@ -187,7 +187,7 @@ const Navbar = () => {
               </li>
               <li>
                 <Link
-                  className="dropdown-item text-white"
+                  className="dropdown-item 
                   to="/portfolio/option3"
                 >
                   Option 3
@@ -195,7 +195,7 @@ const Navbar = () => {
               </li>
               <li>
                 <Link
-                  className="dropdown-item text-white"
+                  className="dropdown-item 
                   to="/portfolio/option4"
                 >
                   Option 4
@@ -207,7 +207,7 @@ const Navbar = () => {
           {/* Shop Dropdown */}
           <div className="dropdown">
             <Link
-              className="nav-link  text-white no-underline"
+              className="nav-link  no-underline"
               to="/shop"
               role="button"
             >
@@ -215,22 +215,22 @@ const Navbar = () => {
             </Link>
             {/* <ul className="dropdown-menu bg-black">
               <li>
-                <Link className="dropdown-item text-white" to="/shop/option1">
+                <Link className="dropdown-item  to="/shop/option1">
                   Option 1
                 </Link>
               </li>
               <li>
-                <Link className="dropdown-item text-white" to="/shop/option2">
+                <Link className="dropdown-item  to="/shop/option2">
                   Option 2
                 </Link>
               </li>
               <li>
-                <Link className="dropdown-item text-white" to="/shop/option3">
+                <Link className="dropdown-item  to="/shop/option3">
                   Option 3
                 </Link>
               </li>
               <li>
-                <Link className="dropdown-item text-white" to="/shop/option4">
+                <Link className="dropdown-item  to="/shop/option4">
                   Option 4
                 </Link>
               </li>
@@ -239,7 +239,7 @@ const Navbar = () => {
 
           {/* Contacts */}
           <div className="dropdown">
-            <Link className="nav-link text-white no-underline" to="/contacts">
+            <Link className="nav-link no-underline" to="/contacts">
               Contacts
             </Link>
           </div>
@@ -249,9 +249,9 @@ const Navbar = () => {
             <div className="flex items-center space-x-6">
               {/* Shopping Cart Icon */}
               <div className="relative">
-                <FaShoppingCart className="text-white text-xl cursor-pointer" />
+                <FaShoppingCart className="text-xl cursor-pointer" />
                 {cartCount > 0 && (
-                  <span className="absolute top-0 left-3 bg-red-500 text-white text-xs rounded-full px-1">
+                  <span className="absolute top-0 left-3 bg-red-500 text-xs rounded-full px-1">
                     {cartCount}
                   </span>
                 )}
@@ -260,13 +260,13 @@ const Navbar = () => {
               {/* Search Icon */}
               <div className="relative">
                 <FaSearch
-                  className="text-white text-xl cursor-pointer "
+                  className="text-xl cursor-pointer "
                   onClick={() => setIsSearchOpen(!isSearchOpen)}
                 />
                 {isSearchOpen && (
                   <input
                     type="text"
-                    className="absolute right-4 top-10 bg-slate-900 text-white p-2 rounded shadow-lg w-64 focus:visually-hidden"
+                    className="absolute right-4 top-10 bg-slate-900 p-2 rounded shadow-lg w-64 focus:visually-hidden"
                     placeholder="Search..."
                   />
                 )}
@@ -275,7 +275,7 @@ const Navbar = () => {
               {/* Sidebar Toggle Icon */}
               {/* <div className=" bg-gray-800 h-9 w-9 items-center justify-center flex rounded-3xl hover:bg-gray-600">
               <FaBars
-                className="text-white text-xl cursor-pointer"
+                className="text-xl cursor-pointer"
                 onClick={() => setIsSidebarOpen(true)}
               />
               </div> */}
@@ -283,7 +283,7 @@ const Navbar = () => {
           </div>
 
           {/* Hamburger Menu for Mobile */}
-          {/* <div className="md:hidden text-white">
+          {/* <div className="md:hidden >
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="focus:outline-none"
@@ -295,7 +295,7 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="md:hidden flex flex-col items-center text-white space-y-4 pt-4">
+          <div className="md:hidden flex flex-col items-center space-y-4 pt-4">
             <Link
               className="hover:text-orange-400 uppercase"
               to="/"
@@ -343,13 +343,13 @@ const Navbar = () => {
 
         {/* Sidebar */}
         <div
-          className={`fixed top-0 right-0 h-full bg-black text-white p-6 transform transition-transform duration-300 ${
+          className={`fixed top-0 right-0 h-full bg-black p-6 transform transition-transform duration-300 ${
             isSidebarOpen ? "translate-x-0" : "translate-x-full"
           } overflow-y-auto w-64`}
         >
           <button
             onClick={() => setIsSidebarOpen(false)}
-            className="text-white text-2xl"
+            className="text-2xl"
           >
             <FaTimes />
           </button>
