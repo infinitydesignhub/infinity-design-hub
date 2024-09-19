@@ -17,8 +17,8 @@ const BenefitsSection = () => {
       <div className="container mx-auto flex flex-wrap">
         {/* Left Column - Text */}
         <div className="w-full md:w-1/2 px-10">
-          <div className="mb-4">
-            <span className="text-orange-500">OUR BENEFITS</span>
+          <div className="mb-4 w-[450px]">
+            <span className="text-orange-500 font-bold">OUR BENEFITS</span>
             <h3 className="text-4xl font-bold mt-2 mb-3">
               Unlock Revenue Growth for Your Business
             </h3>
@@ -30,7 +30,7 @@ const BenefitsSection = () => {
               <div key={index}>
                 {/* Title with dynamic + or - sign */}
                 <h4
-                  className={`cursor-pointer text-xl font-semibold py-2 flex items-center  hover:text-orange-500 hover:transition hover:duration-1000 ease-in-out  ${
+                  className={`cursor-pointer text-2xl font-semibold py-2 flex items-center  hover:text-orange-500 hover:transition hover:duration-1000 ease-in-out  ${
                     activeIndex === index ? "text-orange-600" : "text-gray-800"
                   }`}
                   onClick={() => handleToggle(index)}

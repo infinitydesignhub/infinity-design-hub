@@ -23,7 +23,7 @@ const TextPath = () => {
                 <path d={data.svgPath}  />
               </svg> */}
             </span>
-            <span className="text-4xl font-bold mx-4 text-black">
+            <span className="text-4xl font-bold mx-4 text-black text-webkit">
               {data.text}
             </span>
             <span className="inline-block mx-4">
