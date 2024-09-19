@@ -13,8 +13,13 @@ import ServicesSection from "./Component/ServicesSection";
 import TextPath from "./Component/TextPath";
 import CounterSection from "./Component/CounterSection";
 import ScrollToTop from "./Component/ScrollToTop";
-// import AnimatedSection from "./Component/AnimatedSection";
-// import CheckboxTree from "./Component/CheckboxTree";
+import TitleSubTitle from "./Component/TitleSubTitle";
+import PricingSection from "./Component/PricingSection";
+import GetInTouch from "./Component/GetInTouch";
+import ClientSlider from "./Component/ClientSlider";
+import Testimonials from "./Component/Testimonials";
+
+
 
 function App() {
   useEffect(() => {
@@ -27,11 +32,15 @@ function App() {
       <Navbar />
       <BannerSection />
       <BenefitsSection />
-      <TextPath/>
+      <TextPath />
       <ServicesSection />
-      <ScrollToTop/>   
-      <CounterSection/>
-      {/* <AnimatedSection/> */}
+      <ScrollToTop />
+      <CounterSection />
+      <TitleSubTitle />
+      <PricingSection />
+      <ClientSlider />
+      <Testimonials />
+      <GetInTouch />
       <Footer />
     </div>
   );
