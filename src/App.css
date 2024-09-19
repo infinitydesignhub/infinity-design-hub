@@ -88,7 +88,8 @@ nav a {
   stroke: #232323;
 }
 
-.wgl-button::after {
+.wgl-button::after 
+{
   position: absolute;
   z-index: -1;
   top: 0;
@@ -111,7 +112,7 @@ nav a {
 }
 
 .wgl-button:hover::after,
-.wgl-button:focus::after {
+.wgl-button:focus::after{
   background-color: #ffffff;
 }
 .wgl-button:hover::after {
@@ -121,14 +122,16 @@ nav a {
   height: 100%;
   border-radius: 32px 32px 32px 32px;
 }
+.btn-w .wgl-button:hover::after{
+  width: 65%;
+}
 .services .wgl-button::after,
 .services .wgl-button:hover::after,
-.services .wgl-button:focus::after {
+.services .wgl-button:focus::after{
   background-color: #dfdfdf;
 }
 
 .text-path span {
-  color: #232323;
   font-size: 130px;
   line-height: 1em;
 }
@@ -214,4 +217,35 @@ nav a {
   position: absolute;
   border-radius: 50%;
   background-color: #ff7425;
+}
+.vc-line{
+  border-bottom: 1px solid;
+    display: block;
+    margin-top: 18px;
+}
+.service-box:hover .hover-line {
+  color: #ff7425;
+}
+.text-webkit{
+  -webkit-text-stroke: 1px currentColor;
+    -webkit-text-fill-color: transparent;
+}
+.service-box {
+  position: relative; /* Make the image position relative to this box */
+  overflow: hidden; /* Ensure the image doesn’t overflow the container */
+}
+
+.service-image {
+  display: none; /* Hide the image by default */
+  position: absolute; /* Position it absolutely within the box */
+  top: 0; /* Adjust positioning as needed */
+  left: 0; /* Adjust positioning as needed */
+  width: 100%; /* Adjust width as needed */
+  height: auto; /* Adjust height as needed */
+  transition: opacity 0.3s ease; /* Smooth transition for fade effect */
+}
+
+.service-box:hover .service-image {
+  display: block; /* Show the image on hover */
+  opacity: 1; /* Ensure the image is fully visible */
 }

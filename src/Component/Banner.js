@@ -52,17 +52,17 @@ const BannerSection = () => {
 
           {/* Subheading */}
           <div
-            className={`flex items-center space-x-4 mt-6 transition-opacity duration-500 ${
+            className={`flex items-center space-x-4 mt-10 transition-opacity duration-500 ${
               transitioning ? "opacity-0" : "opacity-100"
             }`}
           >
             {/* Subheading */}
-            <p className="text-gray-600 text-lg dm-sans">{currentData.subheading}</p>
+            <p className="w-[400px] text-[20px] leading-[36px] text-gray-600 dm-sans">{currentData.subheading}</p>
 
             {/* Button */}
             <a
               href="#contact"
-              className="wgl-button relative px-8 py-3 z-1 font-semibold rounded-full  transition-all duration-300"
+              className="no-underline text-gray-600 wgl-button relative px-8 py-3 z-1 font-semibold rounded-full  transition-all duration-300"
             >
               {currentData.buttonText}
             </a>
