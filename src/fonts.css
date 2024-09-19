@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'DM Sans';
+    src: url('./fonts/static/DMSans-ExtraLight.ttf') format('woff2'),
+         url('./fonts/static/DMSans-BlackItalic.ttf') format('woff'),
+         url('./fonts/static/DMSans-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DM Sans';
+    src: url('./fonts/static/DMSans-ExtraLight.ttf') format('woff2'),
+         url('./fonts/static/DMSans-BlackItalic.ttf') format('woff'),
+         url('./fonts/static/DMSans-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* Add additional weights/styles as needed */
