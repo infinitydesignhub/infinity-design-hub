@@ -38,7 +38,8 @@ const clientData = [
 
 const ClientSlider = () => {
   const settings = {
-    dots: true,
+    dots: false,
+    arrow:false,
     infinite: true,
     speed: 500,
     slidesToShow: 6,
@@ -65,12 +66,12 @@ const ClientSlider = () => {
         <h2 className="text-white text-2xl mb-8">OVER 1K+ SOFTWARE BUSINESSES GROWING WITH BILI</h2>
         <Slider {...settings}>
           {clientData.map(client => (
-            <div key={client.id} className="flex justify-center">
+            <div key={client.id} className="!flex justify-center items-center mt-8">
               <a href={client.link}>
                 <img
                   src={client.imgSrc}
                   alt={`Partner ${client.id}`}
-                  className="w-full h-auto"
+                  className="w-[50px] h-auto object-contain"
                 />
               </a>
             </div>

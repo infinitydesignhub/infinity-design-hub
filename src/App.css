@@ -45,6 +45,15 @@ nav a {
   font-optical-sizing: auto;
   font-style: normal;
 }
+.slick-track {
+  display: flex !important;
+  justify-content: center;
+  align-items: center !important;
+}
+.testimonials .slick-next {
+  left: 0;
+  bottom: 0;
+}
 /* CSS for hover functionality and transition */
 .dropdown:hover .dropdown-menu {
   display: block;
@@ -191,13 +200,13 @@ nav a {
   border-color: #ff7425;
   background: #ff7425;
 }
-.list-disc  li{
+.list-disc li {
   position: relative;
   list-style: none;
   padding-left: 22px;
 }
 .list-disc li::before {
-  content: '';
+  content: "";
   top: 0.7em;
   left: 0;
   width: 8px;

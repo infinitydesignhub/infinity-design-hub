@@ -29,7 +29,7 @@ const Testimonials = () => {
   };
 
   return (
-    <section className="flex flex-col md:flex-row items-center py-12">
+    <section className="testimonials flex flex-col md:flex-row items-center py-12">
       <div className="md:w-1/3 hidden md:block">
         <img 
           loading="lazy" 
