@@ -13,6 +13,7 @@ import Home from "./Pages/Home";
 import Portfolio from "./Pages/Portfolio";
 import WhatsAppIcon from "./Component/WhatsAppIcon";
 import Contact from "./Pages/Contact";
+import About from "./Pages/About";
 
 function getBodyClass(pathname) {
   // Remove leading/trailing slashes and convert to kebab-case
@@ -43,6 +44,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/contact" element={<Contact />} />
         {/* Add more routes here */}
