@@ -238,26 +238,7 @@ nav a {
   -webkit-text-stroke: 1px currentColor;
     -webkit-text-fill-color: transparent;
 }
-.service-box {
-  position: relative; /* Make the image position relative to this box */
-  overflow: hidden; /* Ensure the image doesn’t overflow the container */
-}
 
-.service-image {
-  display: none; /* Hide the image by default */
-  position: absolute; /* Position it absolutely within the box */
-  top: 0; /* Adjust positioning as needed */
-  left: 0; /* Adjust positioning as needed */
-  width: 100%; /* Adjust width as needed */
-  height: auto; /* Adjust height as needed */
-  transition: opacity 0.3s ease; /* Smooth transition for fade effect */
-}
-
-.service-box:hover .service-image {
-  display: block; /* Show the image on hover */
-  opacity: 1; /* Ensure the image is fully visible */
-
-}
 /* testimonials */
 .testimonials .slick-prev,
 .testimonials .slick-next {
@@ -708,5 +689,76 @@ position: absolute;
 }
 .sqs-block-button{
   margin-top: 50px;
+
+}
+button.elementor-swiper-button.elementor-swiper-button-next.slick-arrow.slick-next {
+  left: 77px;
+  top: 223px;
+}
+button.elementor-swiper-button.elementor-swiper-button-prev.slick-arrow.slick-prev {
+  left: 151px;
+  top: 223px;
+}
+.flaticon-right svg {
+  /* background-color: #303032; */
+  transform: rotate(180deg);
+}
+.flaticon {
+  background-color: #303032; /* Dark background */
+  padding: 20px; /* Adjust padding to fit your design */
+  border-radius: 50%; /* To make it circular */
+  display: inline-block;
+}
+
+.flaticon svg {
+  fill: #FFFFFF; /* Arrow fill color */
+}
+.dblh__title {
+  font-family: "DM Sans", Sans-serif;
+  font-size: 144px;
+}
+.dblh__title-2 {
+  -webkit-text-stroke: 1px currentColor;
+  -webkit-text-fill-color: transparent;
+}
+.btn-size-lg {
+  padding: 93px 30px 93px 10px;
+  border-radius: 50%;
+  color: #FFFFFF;
+  background-color: #323232ED;
+  transition: 0.4s;
+}
+.btn-circle{
+  margin-top: 4.25rem!important
+}
+.btn-size-lg:hover{
+  background-color: #ff7425;
+}
+.service-box {
+  position: relative;
+  /* overflow: hidden; */
+  cursor: pointer;
+}
+
+.service-image {
+  transition: transform 0.2s ease; /* Smooth transition */
+}
+.service-box {
+  position: relative; /* Make the image position relative to this box */
+}
+
+.service-image {
+  display: none; 
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  /* width: 100%;  */
+  height: auto; 
+  transition: opacity 0.3s ease; 
+}
+
+.service-box:hover .service-image {
+  display: block; /* Show the image on hover */
+  opacity: 1; /* Ensure the image is fully visible */
 
 }
