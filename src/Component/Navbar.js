@@ -6,6 +6,7 @@ import { useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { FaMailBulk, FaPhone } from "react-icons/fa";
 
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -83,13 +84,10 @@ const Navbar = () => {
           <div className="hidden md:block">
             <div className="flex items-center space-x-6">
               <div className="relative">
-                <FaMailBulk className="text-xl cursor-pointer" />
+                <i className="fa-solid fa-envelope text-xl cursor-pointer"></i>
               </div>
               <div className="relative">
-                <FaPhone
-                  className="text-xl cursor-pointer "
-                  onClick={() => setIsSearchOpen(!isSearchOpen)}
-                />
+                <i className="fa-solid fa-phone text-xl cursor-pointer" onClick={() => setIsSearchOpen(!isSearchOpen)}></i>
               </div>
             </div>
           </div>
