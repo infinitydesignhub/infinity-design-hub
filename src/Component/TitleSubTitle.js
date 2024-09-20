@@ -7,18 +7,18 @@ const pricingData = {
 
 const TitleSubTitle = () => {
   return (
-    <section className="max-w-7xl mx-auto py-8">
-      <div className="px-4">
+    <section className="max-w-7xl mx-auto">
+      <div className="px-0">
         <div className="w-full">
-          <div className="text-center mb-8">
-            <div className="text-lg text-gray-600 mb-2">
+          <div className="title-text">
+            <div className="text-lg text-orange-600 mb-2 font-bold">
               <span>{pricingData.subtitle}</span>
             </div>
-            <h3 className="text-2xl font-bold">
+            <h3 className="text-[38px] font-bold">
               <span>{pricingData.title}</span>
             </h3>
           </div>
-          <div className="h-8"></div> {/* Spacer equivalent */}
+          {/* <div className="h-8"></div> Spacer equivalent */}
         </div>
       </div>
     </section>

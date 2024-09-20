@@ -16,7 +16,7 @@ const BenefitsSection = () => {
     <section className="py-10">
       <div className="container mx-auto flex flex-wrap">
         {/* Left Column - Text */}
-        <div className="w-full md:w-1/2 px-10">
+        <div className="w-full md:w-1/2">
           <div className="mb-4 w-[450px]">
             <span className="text-orange-500 font-bold">OUR BENEFITS</span>
             <h3 className="text-4xl font-bold mt-2 mb-3">
