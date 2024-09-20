@@ -25,7 +25,7 @@ const BannerSection = () => {
     >
       {/* Main content container */}
       <div className="container flex items-center  text-start py-28 ">
-        <div className="mx-10">
+        <div className="">
           {/* Main Text */}
           <div
             className={`space-y-6 transition-opacity duration-500 ${
