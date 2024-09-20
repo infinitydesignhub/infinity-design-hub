@@ -12,7 +12,7 @@ const GetInTouch = () => {
         </div>
         <div className="btn-circle">
           <a
-            className=" wgl-button btn-size-lg  w-full lg:w-auto bg-blue-500 text-white  text-lg"
+            className="btn-size-lg  w-full lg:w-auto bg-blue-500 text-white  text-lg"
             href="https://wgl-dsites.net/bili/light/contacts/"
             role="button"
           >
