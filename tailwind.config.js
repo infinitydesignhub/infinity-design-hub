@@ -18,6 +18,9 @@ module.exports = {
           borderColor: {
             'custom-gray': 'rgb(35, 35, 35)',
           },
+          colors: {
+            'custom-btn': '#EC008C',
+          },
       },
   },
   plugins: [],

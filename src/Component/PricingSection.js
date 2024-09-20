@@ -80,7 +80,7 @@ const PricingSection = () => {
               </ul>
               <button
           
-                className="inline-block px-[48px] hover:bg-orange-500 text-[16px] leading-[32px] text-center font-[400] bg-[#393939] ml-[35px] text-white  py-2 rounded-full  tracking-wide  transition duration-200"
+                className="inline-block px-[48px] hover:bg-custom-btn text-[16px] leading-[32px] text-center font-[400] bg-[#393939] ml-[35px] text-white  py-2 rounded-full  tracking-wide  transition duration-200"
               >
                 CHOOSE PLAN
               </button>

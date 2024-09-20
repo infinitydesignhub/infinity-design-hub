@@ -51,13 +51,13 @@ const ProvideServices = () => {
             <div className='container'>
                 <div className='row m-auto'>
                     <div className="flex flex-col w-full md:w-1/3 p-4 col-4">
-                        <div className="mb-4">
-                            <span className="text-orange-400 dblh__subtitle">Our Benefits</span>
-                            <h2 className="text-white text-5xl font-bold">Learn What Services We Provide</h2>
+                        <div className="mb-4 mt-10">
+                            <span className="text-orange-600 dblh__subtitle mb-4 block text-lg font-bold mt-10">Our Benefits</span>
+                            <h2 className="text-white text-5xl font-bold mt-3 mb-3">Learn What Services We Provide</h2>
                         </div>
                         <a
                             href="https://wgl-dsites.net/bili/light/services/"
-                            className="flex justify-center items-center my-0 mr-auto ml-0 p-14  hover:bg-orange-500 text-[16px] leading-[32px] text-center font-[400] bg-[#393939] text-white  py-2 rounded-full  tracking-wide  transition duration-200"
+                            className="flex justify-center items-center my-0 mr-auto ml-0 p-14  hover:bg-custom-btn text-[16px] leading-[32px] text-center font-[400] bg-[#393939] text-white  py-2 rounded-full  tracking-wide  transition duration-200"
                         >
                             More Services
                         </a>

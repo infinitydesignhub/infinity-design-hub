@@ -120,7 +120,7 @@ nav a {
 
 .wgl-button:hover::after,
 .wgl-button:focus::after {
-  background-color: #ffffff;
+  background-color:#EC008C;
 }
 .wgl-button:hover::after {
   top: 0px;
@@ -135,7 +135,7 @@ nav a {
 .services .wgl-button::after,
 .services .wgl-button:hover::after,
 .services .wgl-button:focus::after {
-  background-color: #dfdfdf;
+  background-color: #EC008C;    
 }
 
 .text-path span {
@@ -758,11 +758,11 @@ body.about-class{
 }
 
 button.elementor-swiper-button.elementor-swiper-button-next.slick-arrow.slick-next {
-  left: 77px;
+  left: 24rem;
   top: 223px;
 }
 button.elementor-swiper-button.elementor-swiper-button-prev.slick-arrow.slick-prev {
-  left: 151px;
+  left: 29.5rem;
   top: 223px;
 }
 .flaticon-right svg {
@@ -798,7 +798,7 @@ button.elementor-swiper-button.elementor-swiper-button-prev.slick-arrow.slick-pr
   margin-top: 4.25rem!important
 }
 .btn-size-lg:hover{
-  background-color: #ff7425;
+  background-color: #EC008C; 
 }
 .service-box {
   position: relative;
@@ -827,4 +827,16 @@ button.elementor-swiper-button.elementor-swiper-button-prev.slick-arrow.slick-pr
   display: block; /* Show the image on hover */
   opacity: 1; /* Ensure the image is fully visible */
 
+}
+.item__quote:after {
+  display: block;
+  content: "";
+  position: absolute;
+  left: calc(-28px + 2px);
+  top: calc(24.3% + 1px);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-color: transparent #FFFFFF #FFFFFF transparent;
+  border-width: calc(15px - 1px);
 }

@@ -18,14 +18,14 @@ const BenefitsSection = () => {
         {/* Left Column - Text */}
         <div className="w-full md:w-1/2 px-10">
           <div className="mb-4 w-[450px]">
-            <span className="text-orange-500 font-bold">OUR BENEFITS</span>
-            <h3 className="text-4xl font-bold mt-2 mb-3">
+            <span className="text-orange-500 font-bold mb-4">OUR BENEFITS</span>
+            <h3 className="text-4xl font-bold mt-3 mb-3">
               Unlock Revenue Growth for Your Business
             </h3>
           </div>
 
           {/* Accordion */}
-          <div className="space-y-4">
+          <div className="space-y-2">
             {data.benefits.map((benefit, index) => (
               <div key={index}>
                 {/* Title with dynamic + or - sign */}
