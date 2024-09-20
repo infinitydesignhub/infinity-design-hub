@@ -736,6 +736,14 @@ body.contact-class {
   background-attachment: scroll;
   background-position: top center;
 }
+body.about-class{
+  background-color: #ffffff;
+    background-image: url(https://wgl-dsites.net/bili/light/wp-content/uploads/2023/03/about-bg-l3.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: top center;
+}
 .elementor-widget-wrap {
   transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
   padding: 42px 50px 64px 50px;
