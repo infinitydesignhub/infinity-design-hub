@@ -47,51 +47,46 @@ const pricingPlans = [
 
 const PricingSection = () => {
   return (
-    <section className="pricing_plan py-[96px] flex flex-col items-center">
-      <div className="max-w-7xl mx-auto">
-        <h2 className="text-center text-2xl font-bold text-white mb-8">Explore Our Pricing Plans</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {pricingPlans.map((plan) => (
+    <section className="py-16 text-white">
+      {/* <div className="max-w-7xl mx-auto text-center mb-8">
+        <h2 className="text-orange-400 font-bold text-sm tracking-wide">PRICING PLANS</h2>
+        <h3 className="text-3xl font-extrabold text-white">Explore Our Digital Pricing Plans</h3>
+      </div> */}
+      
+      <div className=" container grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        {pricingPlans.map((plan) => (
+          <div
+            key={plan.id}
+            className="relative bg-black rounded-lg shadow-lg overflow-hidden"
+          >
             <div
-              key={plan.id}
-              className="relative shadow-md rounded-lg overflow-hidden"
-              style={{
-                backgroundImage: `url(${plan.backgroundImage})`,
-                backgroundColor: '#232323',
-                backgroundPosition: 'top center',
-                backgroundSize: 'cover',
-                padding: '50px 20px',
-                color: 'white',
-              }}
+              className="absolute inset-0 bg-cover bg-center"
+              // style={{ backgroundImage: `url(${plan.backgroundImage})` }}
             >
-              <div className="text-center mb-4">
-                <h4 className="text-xl font-bold">{plan.title}</h4>
-                <div className="text-lg">
-                  <span className="text-gray-300">${plan.price}/</span>
-                  <span className="text-gray-400">{plan.period}</span>
-                </div>
-              </div>
-              <div className="mb-4">
-                <ul className="list-disc list-inside text-left space-y-2">
-                  {plan.features.map((feature, index) => (
-                    <li key={index} className="text-gray-300">{feature}</li>
-                  ))}
-                </ul>
-              </div>
-              <div className="text-center">
-                <a
-                  className="wgl-button transition duration-200"
-                  href="https://wgl-dsites.net/bili/light/contacts/"
-                  role="button"
-                >
-                  <span>
-                  CHOOSE PLAN
-                  </span>
-                </a>
-              </div>
+              <img src={plan.backgroundImage}/>
             </div>
-          ))}
-        </div>
+            <div className="relative p-8  mt-10 Dm Sans bg-[#232323]">
+              <h4 className="text-[14px] Dm Sans text-[#888888] mb-4">{plan.title}</h4>
+              <div className="flex items-center justify-center text-white mb-4">
+                <span className="text-4xl font-[400] text-white text-[64px]  tracking-[2px]">${plan.price}/</span>
+                <span className="ml-2 text-[16px] font-[500] leading-6 max-w-[70px] inline-block	">{plan.period}</span>
+              </div>
+              <ul className="text-[16px] p-3 text-white  mb-6 space-y-2 ml-[-10px] leading-[30px] Dm Sans ">
+                {plan.features.map((feature, index) => (
+                  <li key={index} className="flex items-center">
+                    <span className="mr-2 text-orange-400 text-[30px] ">•</span> {feature}
+                  </li>
+                ))}
+              </ul>
+              <button
+          
+                className="inline-block px-[48px] hover:bg-orange-500 text-[16px] leading-[32px] text-center font-[400] bg-[#393939] ml-[35px] text-white  py-2 rounded-full  tracking-wide  transition duration-200"
+              >
+                CHOOSE PLAN
+              </button>
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );
