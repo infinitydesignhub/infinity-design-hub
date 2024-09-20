@@ -1,6 +1,5 @@
-// App.js
 import React, { useEffect } from "react";
-import { Route, Routes} from 'react-router-dom';
+import { Route, Routes, useLocation } from 'react-router-dom';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -13,27 +12,44 @@ import ScrollToTop from "./Component/ScrollToTop";
 import Home from "./Pages/Home";
 import Portfolio from "./Pages/Portfolio";
 import WhatsAppIcon from "./Component/WhatsAppIcon";
-// import RatingSidebar from "./Component/RatingSidebar";
+import Contact from "./Pages/Contact";
 
-
+function getBodyClass(pathname) {
+  // Remove leading/trailing slashes and convert to kebab-case
+  const formattedPath = pathname.replace(/^\//, '').replace(/\/$/, '').replace(/\//g, '-');
+  return formattedPath ? `${formattedPath}-class` : 'default-class';
+}
 
 function App() {
+  const location = useLocation();
+
   useEffect(() => {
-    AOS.init({
-      duration: 1000,
-    });
-  }, []);
+    AOS.init({ duration: 1000 });
+
+    // Generate the body class based on the current path
+    const bodyClass = getBodyClass(location.pathname);
+
+    // Add the class to the body
+    document.body.classList.add(bodyClass);
+
+    // Cleanup function to remove the class when the component unmounts or when the path changes
+    return () => {
+      document.body.classList.remove(bodyClass);
+    };
+  }, [location.pathname]);
+
   return (
     <div className="">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/contact" element={<Contact />} />
+        {/* Add more routes here */}
       </Routes>
       <Footer />
       <ScrollToTop />
-      {/* <RatingSidebar/> */}
-     <WhatsAppIcon/>
+      <WhatsAppIcon />
     </div>
   );
 }
