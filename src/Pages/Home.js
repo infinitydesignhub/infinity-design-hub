@@ -10,7 +10,8 @@ import PricingSection from "../Component/PricingSection";
 import GetInTouch from "../Component/GetInTouch";
 import ClientSlider from "../Component/ClientSlider";
 import Testimonials from "../Component/Testimonials";
-import Portfolio from './Portfolio';
+import ProvideServices from '../Component/ProvideServices';
+// import Portfolio from './Portfolio';
 
 const Home = () => {
     return (
@@ -24,8 +25,9 @@ const Home = () => {
             <PricingSection />
             <ClientSlider />
             <Testimonials />
+            <ProvideServices/>
             <GetInTouch />
-    <Portfolio/>
+    {/* <Portfolio/> */}
         </>
     )
 }
