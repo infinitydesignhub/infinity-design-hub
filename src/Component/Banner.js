@@ -24,7 +24,7 @@ const BannerSection = () => {
       className="banner relative"
     >
       {/* Main content container */}
-      <div className="container-fluid flex items-center  text-start py-28 ">
+      <div className="container flex items-center  text-start py-28 ">
         <div className="mx-10">
           {/* Main Text */}
           <div
