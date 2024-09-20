@@ -3,10 +3,10 @@ import CountUp from 'react-countup';
 
 const CounterSection = () => {
   const counters = [
-    { value: 10, title: "Years of Experience" },
-    { value: 18, title: "Skilled Professionals" },
-    { value: 32, title: "Visited Conferences" },
-    { value: 1000, title: "Projects Worldwide", isK: true }, // Added "isK" for handling 'K'
+    { value: 10, title: 'Years of Experience' },
+    { value: 18, title: 'Skilled Professionals' },
+    { value: 32, title: 'Visited Conferences' },
+    { value: 10, title: 'Projects Worldwide', isK: true },
   ];
 
   const [hasAnimated, setHasAnimated] = useState(false);
@@ -21,7 +21,7 @@ const CounterSection = () => {
           }
         });
       },
-      { threshold: 0.5 } // Trigger when 50% of the section is visible
+      { threshold: 0.5 }
     );
 
     if (sectionRef.current) {
@@ -37,36 +37,30 @@ const CounterSection = () => {
 
   return (
     <section ref={sectionRef} className="bg-white py-16">
-      <div className="container mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div className="container mx-auto ">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 justify-items-center items-center">
           {counters.map((counter, index) => (
-            <div key={index} className="flex flex-col items-center">
-              {/* Spacer */}
-              <div className="mb-4">
-                <div className="h-4"></div>
-              </div>
-              
-              {/* Counter */}
-              <div className="text-4xl font-bold text-gray-800">
+            <div
+              key={index}
+              className="flex flex-row justify-center items-center text-start col-md-4 text=[18px]"
+            >
+              {/* Number */}
+              <div className="text-[130px] font-bold text-gray-800  text-webkit  border-custom-gray ">
                 {hasAnimated ? (
                   <CountUp
                     start={0}
                     end={counter.value}
-                    duration={2} // Animation duration in seconds
+                    duration={2}
                     suffix={counter.isK ? 'K' : ''}
                   />
                 ) : (
-                  0 // Show "0" before the animation starts
+                  0
                 )}
               </div>
-              <h3 className="mt-2 text-xl text-gray-600">
+              {/* Title */}
+              <h3 className="mt-4 text-[18px] font-medium text-[#232323] DM Sans leading-6 my-4 ml-[-10px] ">
                 {counter.title}
               </h3>
-
-              {/* Spacer */}
-              <div className="mt-4">
-                <div className="h-4"></div>
-              </div>
             </div>
           ))}
         </div>
