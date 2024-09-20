@@ -256,8 +256,8 @@ nav a {
 .service-box:hover .service-image {
   display: block; /* Show the image on hover */
   opacity: 1; /* Ensure the image is fully visible */
-=======
 
+}
 /* testimonials */
 .testimonials .slick-prev,
 .testimonials .slick-next {

@@ -15,6 +15,9 @@ module.exports = {
                   xl: '1200px', // Set max width for extra large screens
               },
           },
+          borderColor: {
+            'custom-gray': 'rgb(35, 35, 35)',
+          },
       },
   },
   plugins: [],
