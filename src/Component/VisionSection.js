@@ -8,7 +8,7 @@ const VisionSection = () => {
         "We envision a world where every brand possesses a distinctive identity that stands out and leaves a lasting impression."
       ],
       buttonText: "GET IN TOUCH",
-      buttonLink: "https://wgl-dsites.net/bili/light/services/",
+      buttonLink: "/contact",
       imageSrc: "https://wgl-dsites.net/bili/light/wp-content/uploads/2022/08/home6-1.jpg"
     }
   };

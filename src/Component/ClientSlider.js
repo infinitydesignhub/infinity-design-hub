@@ -7,32 +7,32 @@ const clientData = [
   {
     id: "partner1",
     imgSrc: "https://wgl-dsites.net/bili/light/wp-content/uploads/2022/03/partner_1.png",
-    link: "https://wgl-dsites.net/bili/light/contacts/"
+    link: "/contact"
   },
   {
     id: "partner2",
     imgSrc: "https://wgl-dsites.net/bili/light/wp-content/uploads/2022/03/partner_2.png",
-    link: "https://wgl-dsites.net/bili/light/contacts/"
+    link: "/contact"
   },
   {
     id: "partner3",
     imgSrc: "https://wgl-dsites.net/bili/light/wp-content/uploads/2022/03/partner_3.png",
-    link: "https://wgl-dsites.net/bili/light/contacts/"
+    link: "/contact"
   },
   {
     id: "partner4",
     imgSrc: "https://wgl-dsites.net/bili/light/wp-content/uploads/2022/03/partner_4.png",
-    link: "https://wgl-dsites.net/bili/light/contacts/"
+    link: "/contact"
   },
   {
     id: "partner5",
     imgSrc: "https://wgl-dsites.net/bili/light/wp-content/uploads/2022/03/partner_5.png",
-    link: "https://wgl-dsites.net/bili/light/contacts/"
+    link: "/contact"
   },
   {
     id: "partner6",
     imgSrc: "https://wgl-dsites.net/bili/light/wp-content/uploads/2022/03/partner_6.png",
-    link: "https://wgl-dsites.net/bili/light/contacts/"
+    link: "/contact"
   },
 ];
 
