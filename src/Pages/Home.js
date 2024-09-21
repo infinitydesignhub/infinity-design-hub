@@ -11,6 +11,7 @@ import GetInTouch from "../Component/GetInTouch";
 import ClientSlider from "../Component/ClientSlider";
 import Testimonials from "../Component/Testimonials";
 import ProvideServices from '../Component/ProvideServices';
+import VisionSection from '../Component/VisionSection';
 // import Portfolio from './Portfolio';
 
 const Home = () => {
@@ -20,12 +21,13 @@ const Home = () => {
             <BenefitsSection />
             <TextPath />
             <ServicesSection />
-            <CounterSection />
+            <ProvideServices/>
+            <VisionSection/>
+            <ClientSlider />
             <TitleSubTitle />
             <PricingSection />
-            <ClientSlider />
+            <CounterSection />
             <Testimonials />
-            <ProvideServices/>
             <GetInTouch />
     {/* <Portfolio/> */}
         </>
