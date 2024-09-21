@@ -26,7 +26,7 @@ const StepsSection = () => {
   ];
 
   return (
-    <div className="container mx-auto p-4">
+    <div className="blog container mx-auto p-4">
       <h1 className="text-3xl font-bold mb-6">Our Steps</h1>
       <section className="flex flex-wrap justify-between">
         {data.map((step, index) => (
