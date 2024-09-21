@@ -31,7 +31,7 @@ const BannerSection = () => {
             <h1 className="text-3xl md:text-5xl lg:text-7xl font-bold">
               {currentData.mainText[0]}
             </h1>
-            <div className="flex items-center justify-center">
+            <div className="flex items-center">
               <img
                 src="https://wgl-dsites.net/bili/light/wp-content/uploads/2022/03/arrow_orange.png"
                 alt="arrow"
