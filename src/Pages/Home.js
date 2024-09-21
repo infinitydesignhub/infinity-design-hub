@@ -11,6 +11,7 @@ import GetInTouch from "../Component/GetInTouch";
 import ClientSlider from "../Component/ClientSlider";
 import Testimonials from "../Component/Testimonials";
 import ProvideServices from '../Component/ProvideServices';
+import StepsSection from '../Component/StepsSection';
 // import Portfolio from './Portfolio';
 
 const Home = () => {
@@ -27,6 +28,7 @@ const Home = () => {
             <Testimonials />
             <ProvideServices/>
             <GetInTouch />
+            <StepsSection/>
     {/* <Portfolio/> */}
         </>
     )
