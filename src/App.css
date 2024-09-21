@@ -463,6 +463,42 @@ button.elementor-swiper-button.elementor-swiper-button-prev.slick-arrow.slick-pr
   border-color: transparent #FFFFFF #FFFFFF transparent;
   border-width: calc(15px - 1px);
 }
+
+.elementor-element-e7e1364 img {
+  width: 320px;
+  max-width: 90%;
+  border-radius: 0px 150px 150px 0px;
+}
+.dblh__subtitle {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.333em;
+  letter-spacing: 0px;
+  margin: 0px 0px 9px 0px;
+  color: #232323;
+}
+.dblh__title-wrapper {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+.wgl-button {
+  padding: 25px 20px 25px 20px;
+  border-style: solid;
+  /* border-width: 1px 0px 0px 0px; */
+  color: #232323;
+  border-color: #000000;
+  background-color: #FF742500;
+  width: 100%;
+  text-align: center;
+}
+.wgl-button:hover{
+  background-color: orange; 
+  border-color: orange;
+
+}
+
 .contact input,.contact textarea{
   display: block;
     height: 56px;
