@@ -17,7 +17,7 @@ const TalkAboutDesignSection = ({ data }) => {
     <section className="max-w-7xl mx-auto py-12 flex flex-wrap talk">
       <div className="w-full md:w-1/2 p-4">
         <div className="mb-6">
-          <h2 className="text-2xl font-semibold">{data.leftTitle}</h2>
+          <h2 className="service-title text-2xl font-semibold">{data.leftTitle}</h2>
         </div>
         <div className="mb-4">
           <img
@@ -25,20 +25,20 @@ const TalkAboutDesignSection = ({ data }) => {
             decoding="async"
             src={leftImage}
             alt={data.leftTitle}
-            className="w-full h-auto"
+            className="w-full h-auto round-img"
           />
         </div>
-        <p className="mb-6">{data.leftSubTitle}</p>
-        <div className="flex space-x-4">
+        <p className="mb-6 text-[18px] leading-[36px]">{data.leftSubTitle}</p>
+        <div className="flex btn-flex space-x-4 gap[15px]">
           <Link
             to="/contact"
-            className="wgl-button btn-size-lg inline-block bg-blue-600 text-white px-4 py-2 rounded-lg"
+            className="inline-block text-black wgl-button relative px-8 py-3 z-1 font-semibold rounded-full  transition-all duration-300  px-4 py-2 rounded-lg"
           >
             {data.getInTouchButton}
           </Link>
           <Link
             to="/about"
-            className="wgl-button btn-size-lg inline-block bg-blue-600 text-white px-4 py-2 rounded-lg"
+            className="inline-block text-black wgl-button relative px-8 py-3 z-1 font-semibold rounded-full  transition-all duration-300  px-4 py-2 rounded-lg"
           >
             {data.ourAgencyButton}
           </Link>

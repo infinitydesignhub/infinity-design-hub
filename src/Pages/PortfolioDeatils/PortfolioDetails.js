@@ -33,16 +33,16 @@ const PortfolioDetail = () => {
     : null;
 
   return (
-    <div className="cont">
+    <div className="cont w-[70%] m-auto">
       <section className="portfolio-single portfolio-images pp-img type-3 top_90 row">
         <figure className="hero-image">
           <img src={portfolio.images[0]} alt={portfolio.title} />
         </figure>
         <div className="col-md-8 offset-md-2 text-center">
-          <h1 className="title bottom_45 top_60 text-4xl font-bold">{portfolio.title}</h1>
-          <h4 className="text-lg font-semibold">{portfolio.subtitle}</h4>
+          <h1 className="text-black bottom_45 top_60 text-4xl font-bold">{portfolio.title}</h1>
+          <h4 className="text-lx font-bold mb-4">{portfolio.subtitle}</h4>
           {portfolio.description.map((desc, index) => (
-            <p key={index} className="text-center mb-4">{desc}</p>
+            <p key={index} className="text-center leading-[30px] mb-4">{desc}</p>
           ))}
           <ul className="information text-center">
             <li><span>Client:</span> {portfolio.client}</li>
