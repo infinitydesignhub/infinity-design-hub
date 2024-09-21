@@ -1,11 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const pageHeaderData = {
   title: 'Contacts',
   breadcrumbs: [
     {
       label: 'Home',
-      link: 'https://wgl-dsites.net/bili/light/',
+      link: '/',
       isCurrent: false,
     },
     {
@@ -67,9 +68,9 @@ const PageHeader = () => {
                       <span className="current">{crumb.label}</span>
                     ) : (
                       <>
-                        <a href={crumb.link} className="home">
+                        <Link to={crumb.link} className="home">
                           {crumb.label}
-                        </a>
+                        </Link>
                         <span className="divider">/</span>
                       </>
                     )}

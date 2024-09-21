@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const GetInTouch = () => {
   return (
@@ -11,13 +12,13 @@ const GetInTouch = () => {
           </h3>
         </div>
         <div className="btn-circle">
-          <a
+          <Link
             className="btn-size-lg  w-full lg:w-auto bg-blue-500 text-white  text-lg"
-            href="https://wgl-dsites.net/bili/light/contacts/"
+            to="/contact"
             role="button"
           >
             SEND US A MESSAGE
-          </a>
+          </Link>
         </div>
         
       </div>

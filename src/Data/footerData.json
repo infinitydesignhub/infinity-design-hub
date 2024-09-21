@@ -11,62 +11,58 @@
     },
     {
       "text": "Branding Strategies",
-      "link": "services/"
+      "link": "services/branding-strategies"
     },
     {
       "text": "Web Development",
-      "link": "services/"
+      "link": "services/web-development"
     },
     {
       "text": "Digital Marketing",
-      "link": "services/"
+      "link": "services/digital-marketing"
     },
     {
       "text": "Design Solutions",
-      "link": "services/"
+      "link": "services/design-solutions"
     },
     {
       "text": "Content Writing",
-      "link": "services/"
+      "link": "services/content-writing"
     },
     {
       "text": "Video Creation",
-      "link": "services/"
+      "link": "services/video-creation"
     },
     {
       "text": "Printing Solutions",
-      "link": "services/"
+      "link": "services/printing-solutions"
     }
   ],
   "contacts": {
     "address": "27 Division St, New York, NY 10002",
-    "phone": "+1 800 123 456 789",
-    "email": "bili@mail.com"
+    "phone": "+1 (659) 400-8283",
+    "email": "info@infinitydesignhub.com"
   },
   "socials": [
     {
       "platform": "Twitter",
-      "link": "https://twitter.com/",
+      "link": "https://twitter.com/Infinity_DH",
       "iconClass": "fab fa-twitter"
     },
     {
       "platform": "Facebook",
-      "link": "https://www.facebook.com/",
+      "link": "https://www.facebook.com/infinitydesignhub/?eid=ARCLTZCdUHvhxs9ypf5WNhDY5f8ZTHcm7DHkQCKRrvrknw3BTLvNiVTMRMrMDb1muGMpXRRh0NmN92OJ",
       "iconClass": "fab fa-facebook-f"
     },
     {
       "platform": "LinkedIn",
-      "link": "https://www.linkedin.com/",
+      "link": "https://www.linkedin.com/company/31553220/admin/",
       "iconClass": "fab fa-linkedin-in"
     },
     {
       "platform": "Instagram",
-      "link": "https://www.instagram.com/",
+      "link": "https://www.instagram.com/infinitydesignhub/?hl=en",
       "iconClass": "fab fa-instagram"
     }
-  ],
-  "subscribe": {
-    "placeholder": "Get news & updates",
-    "buttonText": "@"
-  }
+  ]
 }

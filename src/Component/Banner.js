@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import bannerData from "../Data/bannerData.json"; // Adjust the path if necessary
+import { Link } from "react-router-dom";
 
 const BannerSection = () => {
   const [index, setIndex] = useState(0);
@@ -54,18 +55,18 @@ const BannerSection = () => {
             <p className="w-full md:w-[400px] text-base md:text-lg lg:text-[20px] leading-[28px] md:leading-[36px] text-gray-600 dm-sans">
               {currentData.subheading}
             </p>
-            <a
-              href="#contact"
+            <Link
+              href="/contact"
               className="no-underline text-gray-600 wgl-button relative px-6 md:px-8 py-2 md:py-3 z-1 font-semibold rounded-full transition-all duration-300"
             >
               {currentData.buttonText}
-            </a>
+            </Link>
           </div>
         </div>
       </div>
 
       {/* Social Media (Sidebar-like styling) */}
-      <div className="absolute left-0 top-1/2 transform -translate-y-1/2 space-y-10 text-gray-600 text-xs md:text-sm lg:text-base">
+      <div className="absolute left-0 top-1/2 transform -translate-y-1/2 space-y-10 text-gray-600 flex justify-center flex-col  items-center gap-5 text-xs md:text-sm lg:text-base">
         <div className="rotate-90 transform-origin-left">FACEBOOK</div>
         <div className="rotate-90 transform-origin-left">TWITTER</div>
         <div className="rotate-90 transform-origin-left">INSTAGRAM</div>

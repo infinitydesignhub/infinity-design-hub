@@ -1,3 +1,42 @@
+:root {
+  /* Colors */
+  --color-primary: #ec008c;
+  --color-secondary: #393939;
+  --color-background: #ffffff;
+  --color-background-light: url(https://wgl-dsites.net/bili/light/wp-content/uploads/2023/03/homepage-1_1.jpg);
+  --color-background-contact: url(https://wgl-dsites.net/bili/light/wp-content/uploads/2023/03/contacts-bg-l.jpg);
+  --color-background-about: url(https://wgl-dsites.net/bili/light/wp-content/uploads/2023/03/about-bg-l3.png);
+  --color-text: #232323;
+  --color-text-light: #dfdfdf;
+  --color-accent: #ff7425;
+  --color-border: rgba(35, 35, 35, 0.3);
+
+  /* Font Families */
+  --font-dm-sans: "DM Sans", sans-serif;
+  --font-inconsolata: "Inconsolata", monospace;
+  --font-source-code: "Source Code Pro", monospace;
+
+  /* Font Sizes */
+  --font-size-xxl: 130px;
+  --font-size-xl: 144px;
+  --font-size-lg: 26px;
+  --font-size-md: 24px;
+  --font-size-sm: 18px;
+  --font-size-xs: 14px;
+
+  /* Spacing */
+  --spacing-xxs: 4px;
+  --spacing-xs: 8px;
+  --spacing-sm: 16px;
+  --spacing-md: 32px;
+  --spacing-lg: 50px;
+  --spacing-xl: 64px;
+
+  /* Other */
+  --border-radius: 30px;
+  --transition-speed: 0.3s;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,33 +45,32 @@
 @import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inconsolata:wdth,wght@112.5,200..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap");
 
-/* In your index.css */
+/* Navbar Toggler Icon */
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%2855, 55, 55, 0.5%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
-.dm-sans {
-  font-family: "DM Sans", sans-serif;
-  font-optical-sizing: auto;
-  /* font-weight: <weight>; */
-}
+
+/* Body */
 body {
-  background-color: #ffffff;
-  background-image: url(https://wgl-dsites.net/bili/light/wp-content/uploads/2023/03/homepage-1_1.jpg);
+  background-color: var(--color-background);
+  background-image: var(--color-background-light);
   background-size: contain;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: top center;
-  font-family: "DM Sans";
-  font-optical-sizing: auto;
-  color: #232323;
+  font-family: var(--font-dm-sans);
+  color: var(--color-text);
 }
+
+/* Links */
 a {
   text-decoration: none !important;
-  color: #393939 !important;
+  color: var(--color-secondary) !important;
 }
 footer a {
-  color: #dfdfdf !important;
+  color: var(--color-text-light) !important;
 }
+
 .logo {
   object-fit: contain;
   height: 50px;
@@ -115,12 +153,12 @@ nav a {
   border-radius: 50% 50% 50% 50%;
 }
 .wgl-button::after {
-  background-color: #EC008C;
+  background-color: #ec008c;
 }
 
 .wgl-button:hover::after,
 .wgl-button:focus::after {
-  background-color:#EC008C;
+  background-color: #ec008c;
 }
 .wgl-button:hover::after {
   top: 0px;
@@ -135,7 +173,7 @@ nav a {
 .services .wgl-button::after,
 .services .wgl-button:hover::after,
 .services .wgl-button:focus::after {
-  background-color: #EC008C;    
+  background-color: #ec008c;
 }
 
 .text-path span {
@@ -359,13 +397,13 @@ body.contact-class {
   background-attachment: scroll;
   background-position: top center;
 }
-body.about-class{
+body.about-class {
   background-color: #ffffff;
-    background-image: url(https://wgl-dsites.net/bili/light/wp-content/uploads/2023/03/about-bg-l3.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    background-position: top center;
+  background-image: url(https://wgl-dsites.net/bili/light/wp-content/uploads/2023/03/about-bg-l3.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: top center;
 }
 .elementor-widget-wrap {
   transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
@@ -377,16 +415,16 @@ body.about-class{
   margin-top: 16px;
 }
 .wpcf7 .wgl-button::after {
-  background: #EC008C;
+  background: #ec008c;
 }
 
 button.elementor-swiper-button.elementor-swiper-button-next.slick-arrow.slick-next {
   left: 24rem;
-  top:270px ;
+  top: 270px;
 }
 button.elementor-swiper-button.elementor-swiper-button-prev.slick-arrow.slick-prev {
   left: 29.5rem;
-  top:270px;
+  top: 270px;
 }
 .flaticon-right svg {
   /* background-color: #303032; */
@@ -400,7 +438,7 @@ button.elementor-swiper-button.elementor-swiper-button-prev.slick-arrow.slick-pr
 }
 
 .flaticon svg {
-  fill: #FFFFFF; /* Arrow fill color */
+  fill: #ffffff; /* Arrow fill color */
 }
 .dblh__title {
   font-family: "DM Sans", Sans-serif;
@@ -413,15 +451,15 @@ button.elementor-swiper-button.elementor-swiper-button-prev.slick-arrow.slick-pr
 .btn-size-lg {
   padding: 93px 19px 93px 19px;
   border-radius: 50%;
-  color: #FFFFFF;
-  background-color: #323232ED;
+  color: #ffffff;
+  background-color: #323232ed;
   transition: 0.4s;
 }
-.btn-circle{
-  margin-top: 4.25rem!important
+.btn-circle {
+  margin-top: 4.25rem !important;
 }
-.btn-size-lg:hover{
-  background-color: #EC008C; 
+.btn-size-lg:hover {
+  background-color: #ec008c;
 }
 .service-box {
   position: relative;
@@ -437,19 +475,18 @@ button.elementor-swiper-button.elementor-swiper-button-prev.slick-arrow.slick-pr
 }
 
 .service-image {
-  display: none; 
-  position: absolute; 
-  top: 0; 
-  left: 0; 
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
   /* width: 100%;  */
-  height: auto; 
-  transition: opacity 0.3s ease; 
+  height: auto;
+  transition: opacity 0.3s ease;
 }
 
 .service-box:hover .service-image {
   display: block; /* Show the image on hover */
   opacity: 1; /* Ensure the image is fully visible */
-
 }
 .item__quote:after {
   display: block;
@@ -460,16 +497,16 @@ button.elementor-swiper-button.elementor-swiper-button-prev.slick-arrow.slick-pr
   width: 0;
   height: 0;
   border-style: solid;
-  border-color: transparent #FFFFFF #FFFFFF transparent;
+  border-color: transparent #ffffff #ffffff transparent;
   border-width: calc(15px - 1px);
 }
 
-.elementor-element-e7e1364 img {
+.blog img {
   width: 320px;
   max-width: 90%;
   border-radius: 0px 150px 150px 0px;
 }
-.dblh__subtitle {
+.blog .dblh__subtitle {
   font-size: 26px;
   font-weight: 700;
   line-height: 1.333em;
@@ -477,7 +514,7 @@ button.elementor-swiper-button.elementor-swiper-button-prev.slick-arrow.slick-pr
   margin: 0px 0px 9px 0px;
   color: #232323;
 }
-.dblh__title-wrapper {
+.blog .dblh__title-wrapper {
   font-size: 13px;
   font-weight: 700;
   text-transform: uppercase;
@@ -489,57 +526,60 @@ button.elementor-swiper-button.elementor-swiper-button-prev.slick-arrow.slick-pr
   /* border-width: 1px 0px 0px 0px; */
   color: #232323;
   border-color: #000000;
-  background-color: #FF742500;
+  background-color: #ff742500;
   width: 100%;
   text-align: center;
 }
-.blog .wgl-button::after{
+.blog .wgl-button::after {
   content: none;
 }
-.blog .wgl-button:hover{
-  background-color: orange; 
+.blog .wgl-button:hover {
+  background-color: orange;
   border-color: orange;
 }
 
-.contact input,.contact textarea{
+.contact input,
+.contact textarea {
   display: block;
-    height: 56px;
-    max-width: 100%;
-    margin: 0 0 21px 0;
-    border: 1px solid black !important;
-    border-width: 0 0 1px 0 !important;
-    border-radius: unset;
-    padding: 0;
-    font-family: var(--bili-content-font-family);
-    font-size: 18px;
-    line-height: 1.7;
-    font-weight: 500;
-    text-transform: unset;
-    color: var(--bili-header-font-color);
-    background-color: transparent;
-    transition: all 0.3s, height 0s;
+  height: 56px;
+  max-width: 100%;
+  margin: 0 0 21px 0;
+  border: 1px solid black !important;
+  border-width: 0 0 1px 0 !important;
+  border-radius: unset;
+  padding: 0;
+  font-family: var(--bili-content-font-family);
+  font-size: 18px;
+  line-height: 1.7;
+  font-weight: 500;
+  text-transform: unset;
+  color: var(--bili-header-font-color);
+  background-color: transparent;
+  transition: all 0.3s, height 0s;
 }
-.contact input:focus-visible,.contact textarea:focus-visible{
+.contact input:focus-visible,
+.contact textarea:focus-visible {
   outline: none;
 }
-.contact input:focus,.contact textarea:focus{
-  border-color:#FFFFFF !important;
+.contact input:focus,
+.contact textarea:focus {
+  border-color: #ffffff !important;
 }
-.socail-btn:hover ::before{
-color: #EC008C;  
-transition: 0.3s;
+.socail-btn:hover ::before {
+  color: #ec008c;
+  transition: 0.3s;
 }
-.map{
+.map {
   padding-top: 4rem;
 }
-.contact-details .elementor-widget-wrap{
+.contact-details .elementor-widget-wrap {
   padding: 42px 0px 64px 50px;
 }
-.wgl-tabs_headings-wrap{
-    border-style: solid;
-    border-width: 0px 0px 1px 0px;
-    border-color: rgba(35, 35, 35, 0.2);
-    position: relative;
+.wgl-tabs_headings-wrap {
+  border-style: solid;
+  border-width: 0px 0px 1px 0px;
+  border-color: rgba(35, 35, 35, 0.2);
+  position: relative;
 }
 .lavalamp-object {
   position: absolute;
@@ -550,19 +590,20 @@ transition: 0.3s;
   left: 0;
   margin: auto auto -2px 0;
   opacity: 0;
-  background-color:#000;
-    border-radius: 0;
-    height: 3px;
-    width: 33px !important;
-    transition-duration: 0.6s;
-    transform: translate(27px);
-    opacity: 1;
-    left: 0px;
+  background-color: #000;
+  border-radius: 0;
+  height: 3px;
+  width: 33px !important;
+  transition-duration: 0.6s;
+  transform: translate(27px);
+  opacity: 1;
+  left: 0px;
 }
-.wgl-tabs_title:hover, .wgl-tabs_title.active {
-  color:#000;
+.wgl-tabs_title:hover,
+.wgl-tabs_title.active {
+  color: #000;
 }
-.wgl-tabs_title{
+.wgl-tabs_title {
   color: #888888;
 }
 .wgl-tabs_header {
@@ -572,44 +613,44 @@ transition: 0.3s;
 
 .wgl-tabs_content-wrap {
   position: relative;
-  max-height: 200px; 
-  overflow-y: auto;  
-  transition: max-height 1.0s ease, opacity 1.0s ease;
+  max-height: 200px;
+  overflow-y: auto;
+  transition: max-height 1s ease, opacity 1s ease;
 }
 
 .wgl-tabs_content {
   opacity: 0;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 1.0s ease, opacity 1.0s ease;
+  transition: max-height 1s ease, opacity 1s ease;
 }
 
 .wgl-tabs_content.active {
   opacity: 1;
-  max-height: 200px; 
+  max-height: 200px;
 }
-.wgl-infobox_wrapper{
-  background-color: #1717171A;
-    background-image: linear-gradient(210deg, #1717171A 10%, #1717171A 90%);
-    /* justify-content: center; */
-    height: 200px;
-    width: 140px;
+.wgl-infobox_wrapper {
+  background-color: #1717171a;
+  background-image: linear-gradient(210deg, #1717171a 10%, #1717171a 90%);
+  /* justify-content: center; */
+  height: 200px;
+  width: 140px;
 }
-.service-title{
+.service-title {
   color: #181818;
-    font-size: 133px;
-    font-weight: 700;
-    line-height: 1em;
-    margin: 0% -45% 3% 0%;
-    padding: 0px 0px 4px 0px;
-    z-index: 0;
-    position: relative;
+  font-size: 133px;
+  font-weight: 700;
+  line-height: 1em;
+  margin: 0% -45% 3% 0%;
+  padding: 0px 0px 4px 0px;
+  z-index: 0;
+  position: relative;
 }
-.talk .round-img{
+.talk .round-img {
   width: 250px;
-    border-radius: 0px 100px 100px 0px;
+  border-radius: 0px 100px 100px 0px;
 }
-.service-btn{
+.service-btn {
   text-transform: uppercase;
   padding: 17px 23px 15px 33px;
   border-style: solid;
@@ -617,11 +658,57 @@ transition: 0.3s;
   border-radius: 50px 50px 50px 50px;
   color: #232323;
   border-color: #232323;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
-.btn-flex{
+.btn-flex {
   justify-content: flex-end;
-    position: relative;
-    margin-top: 24px;
-    transform: translate(89px);
+  position: relative;
+  margin-top: 24px;
+  transform: translate(89px);
+}
+
+.masonry-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.item__description {
+  transition: opacity 0.3s ease;
+}
+.item__description {
+  display: flex;
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  height: 100%;
+  padding: 27px 30px 31px;
+  opacity: 0;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.item__description {
+  top: initial;
+  left: 0;
+  bottom: 40px;
+  height: auto;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 300px;
+  word-break: break-word;
+  background: #fff;
+  transform: rotateY(20deg);
+  border-bottom-left-radius: inherit;
+  border-bottom-right-radius: inherit;
+  transition: opacity 0.5s, transform 0.5s;
+  transform-origin: left center;
+}
+.animation_sub_layer:hover .item__description {
+  transition: opacity 0.2s, transform 0.5s;
+  transform: rotateY(0);
+  opacity: 1;
 }
