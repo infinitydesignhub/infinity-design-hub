@@ -19,10 +19,10 @@ const TalkAboutDesignSection = () => {
   };
 
   return (
-    <section className="max-w-7xl mx-auto py-12 flex flex-wrap">
+    <section className="max-w-7xl mx-auto py-12 flex flex-wrap talk">
       <div className="w-full md:w-1/2 p-4">
         <div className="mb-6">
-          <h2 className="text-2xl font-semibold">{data.title}</h2>
+          <h2 className="service-title">{data.title}</h2>
         </div>
         <div className="mb-4">
           <img
@@ -30,16 +30,16 @@ const TalkAboutDesignSection = () => {
             decoding="async"
             src={data.imageSrc1}
             alt=""
-            className="w-full h-auto"
+            className="w-full h-auto round-img"
           />
         </div>
-        <p className="mb-6">{data.description}</p>
-        <div className="flex space-x-4">
+        <p className="mb-6 text-[18px] leading-[36px]">{data.description}</p>
+        <div className="flex btn-flex space-x-4 gap[15px]">
           {data.buttons.map((button, index) => (
             <a
               key={index}
               href={button.link}
-              className="wgl-button btn-size-lg inline-block bg-blue-600 text-white px-4 py-2 rounded-lg"
+              className="service-btn flex justify-center items-center my-0 ml-0 p-14  hover:bg-custom-btn text-[16px] leading-[32px] text-center font-[400] bg-[#393939]  rounded-full  tracking-wide  transition duration-200"
             >
               {button.text}
             </a>

@@ -19,16 +19,16 @@ const Portfolio = () => {
 
   return (
     <div className="wgl-portfolio_wrapper">
-      <div className="wgl-portfolio_header mb-6">
-        <div className="item_title">
-          <div className="portfolio_subtitle">DISCOVER OUR CASES</div>
-          <h3 className="portfolio_title">Latest Projects</h3>
+      <div className="wgl-portfolio_header mb-6 flex justify-between p-2 px-4">
+        <div className="item_title ">
+          <div className="portfolio_subtitle text-orange-500 font-bold mb-4">DISCOVER OUR CASES</div>
+          <h3 className="portfolio_title text-4xl font-bold mt-3 mb-3">Latest Projects</h3>
         </div>
         <div className="flex space-x-4">
           {categories.map(category => (
             <button
               key={category.name}
-              className={`px-4 py-2 rounded transition ${activeCategory === category.name ? 'bg-blue-500 text-white' : 'bg-white text-blue-500'}`}
+              className={`px-4 py-2 rounded transition font-bold ${activeCategory === category.name ? 'text-orange-600' : ' text-black'}`}
               onClick={() => setActiveCategory(category.name)}
             >
               {category.name}

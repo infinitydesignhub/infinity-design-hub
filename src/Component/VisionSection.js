@@ -7,7 +7,7 @@ const VisionSection = () => {
       content: [
         "We envision a world where every brand possesses a distinctive identity that stands out and leaves a lasting impression."
       ],
-      buttonText: "READ MORE",
+      buttonText: "GET IN TOUCH",
       buttonLink: "https://wgl-dsites.net/bili/light/services/",
       imageSrc: "https://wgl-dsites.net/bili/light/wp-content/uploads/2022/08/home6-1.jpg"
     }
@@ -31,13 +31,13 @@ const VisionSection = () => {
 
         <div className="mb-6">
           {data.vision.content.map((paragraph, idx) => (
-            <p key={idx}>{paragraph}</p>
+            <p className='text-[18px] leading-[36px]' key={idx}>{paragraph}</p>
           ))}
         </div>
 
         <a
           href={data.vision.buttonLink}
-          className="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg mt-6"
+          className="no-underline text-gray-600 wgl-button relative px-8 py-3 z-1 font-semibold rounded-full  transition-all duration-300"
         >
           {data.vision.buttonText}
         </a>
