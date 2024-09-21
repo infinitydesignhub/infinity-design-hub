@@ -597,7 +597,7 @@ transition: 0.3s;
 }
 .service-title{
   color: #181818;
-    font-size: 133px;
+    font-size: 73px;
     font-weight: 700;
     line-height: 1em;
     margin: 0% -45% 3% 0%;
@@ -609,19 +609,145 @@ transition: 0.3s;
   width: 250px;
     border-radius: 0px 100px 100px 0px;
 }
-.service-btn{
-  text-transform: uppercase;
-  padding: 17px 23px 15px 33px;
-  border-style: solid;
-  border-width: 1px 1px 1px 1px;
-  border-radius: 50px 50px 50px 50px;
-  color: #232323;
-  border-color: #232323;
-  background-color: #FFFFFF;
-}
+
 .btn-flex{
   justify-content: flex-end;
     position: relative;
     margin-top: 24px;
     transform: translate(89px);
+}
+.portfolio-images figure img {
+  width: 100%;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  box-shadow: 0px 0px 48px 0px rgba(4, 6, 4, 0.15);
+  -webkit-box-shadow: 0px 0px 48px 0px rgba(4, 6, 4, 0.15);
+}
+.portfolio-single.type-3 .title {
+  font-size: 55px;
+  line-height: 65px;
+  font-family: 'Work_Sans_Bold';
+  margin: 50px 0px;
+}
+.wgl-flipbox {
+  height: 260px;
+}
+
+.wgl-flipbox_front, .wgl-flipbox_back {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform: rotate(0);
+  transition: 0.7s;
+  perspective: inherit;
+  transform-style: preserve-3d;
+  border-radius: 0;
+  padding: 31px 42px;
+  justify-content: center;
+}
+.wgl-flipbox_front{
+  background-color: #232323;
+}
+.wgl-flipbox_title {
+  display: inline-block;
+  font-size: 24px;
+  line-height: 1.5;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+}
+
+
+.wgl-flipbox_wrap {
+  perspective: 1000px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: 0.7s;
+  transform-style: preserve-3d;
+}
+
+.wgl-flipbox_front, .wgl-flipbox_back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; 
+  transition: transform 0.6s ease-in-out;
+}
+
+
+.wgl-flipbox_front {
+  transform: rotateY(0deg); 
+  z-index: 2; 
+}
+
+
+.wgl-flipbox_back {
+  transform: rotateY(180deg); 
+  z-index: 1;
+}
+
+
+.wgl-flipbox:hover .wgl-flipbox_front {
+  transform: rotateY(-180deg); 
+}
+
+.wgl-flipbox:hover .wgl-flipbox_back {
+  transform: rotateY(0deg); 
+  z-index: 2; 
+}
+.portfolio-single h1{
+  margin: 50px 0px;
+  font-size: 50px;
+    line-height: 65px;
+    font-family: 'Work_Sans_Bold';
+}
+.portfolio-single .information li {
+  float: left;
+  list-style: none;
+  margin-right: 35px;
+  color: #a7a7a7;
+  font-weight: 400;
+}
+.portfolio-single .information li span {
+  font-weight: normal;
+  color: #000;
+}
+.portfolio-single .information{
+  padding-bottom: 5rem;
+}
+.portfolio-nav .port-nexta .nav-title,
+.port-prev-title {
+  color: #000;
+  font-size: 40px;
+  font-weight: 600;
+ 
+}
+.portfolio-nav .port-nexta .nav-title{
+  padding-bottom: 40px;
+}
+.site-btn2 {
+  background: #212121;
+  font-size: 15px;
+  font-weight: 500;
+  border: 0;
+  border-radius: 50px;
+  padding: 12px 60px;
+  color: #fff !important;
+  cursor: pointer;
+  line-height: 25px;
+  transition: all ease 0.3s;
+  -webkit-transition: all ease 0.3s;
+}
+.site-btn2:hover{
+  background: #EC008C;
+}
+.portfolio-nav {
+  padding: 50px 0px;
 }
