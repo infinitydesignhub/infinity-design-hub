@@ -1,0 +1,69 @@
+import React, { useState } from 'react';
+import data from '../../Data/portfolio.json'; // Update with your JSON data path
+
+const categories = [
+  { name: 'All', filter: 'All' },
+  { name: 'Design', filter: 'Design' },
+  { name: 'Development', filter: 'Development' },
+  { name: 'Marketing', filter: 'Marketing' },
+  { name: 'Technology', filter: 'Technology' },
+];
+
+const Portfolio = () => {
+  const [activeCategory, setActiveCategory] = useState('All');
+
+  const filteredProjects = activeCategory === 'All'
+    ? data
+    : data.filter(project => project.category.includes(activeCategory));
+
+  return (
+    <div className="wgl-portfolio_wrapper">
+      <div className="wgl-portfolio_header mb-6">
+        <div className="item_title">
+          <div className="portfolio_subtitle">DISCOVER OUR CASES</div>
+          <h3 className="portfolio_title">Latest Projects</h3>
+        </div>
+        <div className="flex space-x-4">
+          {categories.map(category => (
+            <button
+              key={category.name}
+              className={`px-4 py-2 rounded transition ${activeCategory === category.name ? 'bg-blue-500 text-white' : 'bg-white text-blue-500'
+                }`}
+              onClick={() => setActiveCategory(category.name)}
+            >
+              {category.name}
+            </button>
+          ))}
+        </div>
+      </div>
+      <div className="wgl-portfolio_container grid grid-cols-2 gap-4">
+        {filteredProjects.map(project => (
+          <article key={project.id} className={`portfolio__item item ${project.category.join(' ').toLowerCase()} relative group`}>
+            <div className="item__wrapper description_inside_image">
+              <div className="item__image">
+                <img src={project.image} alt={project.title} className="w-full h-auto" />
+              </div>
+              <div className="item__description absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="description__wrapper text-center text-white">
+                  <div className="post_cats">
+                    {project.category.map(cat => (
+                      <a href="#" key={cat} className="portfolio-category">{cat}</a>
+                    ))}
+                  </div>
+                  <div className="item__title">
+                    <h5 className="title">
+                      <a href={project.link} className="single_link">{project.title}</a>
+                    </h5>
+                  </div>
+                </div>
+              </div>
+              <a href={project.link} className="absolute inset-0" />
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default Portfolio;
