@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 const VisionSection = () => {
   const data = {
     vision: {
-    //   subtitle: "OUR VISION",
       title: "Empowering Brands, Together",
       tabs: [
         {
@@ -15,17 +14,30 @@ const VisionSection = () => {
         {
           title: "Mission",
           content: [
-            "Our mission is driven by teamwork and expertise. By combining our diverse skills, we create tailored solutions to meet the unique needs of businesses, helping them thrive in a competitive landscape.",
+            "Our mission is driven by teamwork and expertise. By combining our diverse skills, we create tailored solutions to meet the unique needs of businesses, helping them thrive in a competitive landscape."
           ]
         }
       ],
-      buttonText: "READ MORE",
+      buttonText: "GET IN TOUCH",
       buttonLink: "https://wgl-dsites.net/bili/light/services/",
       imageSrc: "https://wgl-dsites.net/bili/light/wp-content/uploads/2022/08/home6-1.jpg"
     }
   };
 
   const [activeTabIndex, setActiveTabIndex] = useState(0);
+  const lavaLampRef = useRef(null);
+
+  // Move lavalamp-object based on active tab
+  useEffect(() => {
+    const activeTabElement = document.querySelector(`.wgl-tabs_header:nth-child(${activeTabIndex + 2})`);
+    if (activeTabElement && lavaLampRef.current) {
+      const tabRect = activeTabElement.getBoundingClientRect();
+      const containerRect = activeTabElement.parentElement.getBoundingClientRect();
+
+      lavaLampRef.current.style.width = `${tabRect.width}px`;
+      lavaLampRef.current.style.left = `${tabRect.left - containerRect.left}px`;
+    }
+  }, [activeTabIndex]);
 
   return (
     <section className="max-w-7xl mx-auto py-12 flex flex-wrap">
@@ -34,18 +46,19 @@ const VisionSection = () => {
           loading="lazy"
           decoding="async"
           src={data.vision.imageSrc}
-          alt=""
+          alt="Vision and Mission"
           className="w-full h-auto"
         />
       </div>
       <div className="w-full md:w-1/2 p-4">
         <div className="mb-6">
           <span className="text-gray-600">{data.vision.subtitle}</span>
-          <h3 className="text-3xl font-semibold mt-2">{data.vision.title}</h3>
+          <h3 className="text-[38px] font-semibold mt-2">{data.vision.title}</h3>
         </div>
 
         <div className="wgl-tabs">
-          <div className="flex space-x-4">
+          <div className="flex wgl-tabs_headings-wrap relative">
+            <div ref={lavaLampRef} className="lavalamp-object easeInOutCubic"></div>
             {data.vision.tabs.map((tab, index) => (
               <h4
                 key={index}
@@ -56,12 +69,13 @@ const VisionSection = () => {
               </h4>
             ))}
           </div>
-          <div className="wgl-tabs_content-wrap">
+
+          {/* Content Wrapper with vertical scrolling */}
+          <div className="wgl-tabs_content-wrap mt-4 mb-4">
             {data.vision.tabs.map((tab, index) => (
               <div
                 key={index}
                 className={`wgl-tabs_content ${index === activeTabIndex ? 'active' : ''}`}
-                style={{ display: index === activeTabIndex ? 'block' : 'none' }}
               >
                 {tab.content.map((paragraph, idx) => (
                   <p key={idx}>{paragraph}</p>
@@ -73,7 +87,7 @@ const VisionSection = () => {
 
         <a
           href={data.vision.buttonLink}
-          className="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg mt-6"
+          className="inline-block text-black wgl-button relative px-8 py-3 z-1 font-semibold rounded-full  transition-all duration-300  px-4 py-2 rounded-lg mt-6"
         >
           {data.vision.buttonText}
         </a>
