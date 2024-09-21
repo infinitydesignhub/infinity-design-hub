@@ -1,67 +1,72 @@
 {
-    "logo": {
-      "src": "./images/logowhite.png",
-      "alt": "logotype",
-      "link": "https://wgl-dsites.net/bili/light/"
+  "logo": {
+    "src": "/images/logowhite.png",
+    "alt": "logotype",
+    "link": "/"
+  },
+  "services": [
+    {
+      "text": "Logo Design",
+      "link": "services/logo-design"
     },
-    "services": [
-      {
-        "text": "UI/UX Experience",
-        "link": "https://wgl-dsites.net/bili/light/services/"
-      },
-      {
-        "text": "Digital Marketing",
-        "link": "https://wgl-dsites.net/bili/light/services/"
-      },
-      {
-        "text": "Web Development",
-        "link": "https://wgl-dsites.net/bili/light/services/"
-      },
-      {
-        "text": "Product Design",
-        "link": "https://wgl-dsites.net/bili/light/services/"
-      }
-    ],
-    "contacts": {
-      "address": "27 Division St, New York, NY 10002",
-      "phone": "+1 800 123 456 789",
-      "email": "bili@mail.com"
+    {
+      "text": "Branding Strategies",
+      "link": "services/"
     },
-    "socials": [
-      {
-        "platform": "Twitter",
-        "link": "https://twitter.com/",
-        "iconClass": "fab fa-twitter"
-      },
-      {
-        "platform": "Facebook",
-        "link": "https://www.facebook.com/",
-        "iconClass": "fab fa-facebook-f"
-      },
-      {
-        "platform": "LinkedIn",
-        "link": "https://www.linkedin.com/",
-        "iconClass": "fab fa-linkedin-in"
-      },
-      {
-        "platform": "Instagram",
-        "link": "https://www.instagram.com/",
-        "iconClass": "fab fa-instagram"
-      }
-    ],
-    "subscribe": {
-      "placeholder": "Get news & updates",
-      "buttonText": "@"
+    {
+      "text": "Web Development",
+      "link": "services/"
     },
-    "footerLinks": [
-      {
-        "text": "Terms of Use",
-        "link": "https://wgl-dsites.net/bili/light/contacts"
-      },
-      {
-        "text": "Privacy Policy",
-        "link": "https://wgl-dsites.net/bili/light/contacts"
-      }
-    ]
+    {
+      "text": "Digital Marketing",
+      "link": "services/"
+    },
+    {
+      "text": "Design Solutions",
+      "link": "services/"
+    },
+    {
+      "text": "Content Writing",
+      "link": "services/"
+    },
+    {
+      "text": "Video Creation",
+      "link": "services/"
+    },
+    {
+      "text": "Printing Solutions",
+      "link": "services/"
+    }
+  ],
+  "contacts": {
+    "address": "27 Division St, New York, NY 10002",
+    "phone": "+1 800 123 456 789",
+    "email": "bili@mail.com"
+  },
+  "socials": [
+    {
+      "platform": "Twitter",
+      "link": "https://twitter.com/",
+      "iconClass": "fab fa-twitter"
+    },
+    {
+      "platform": "Facebook",
+      "link": "https://www.facebook.com/",
+      "iconClass": "fab fa-facebook-f"
+    },
+    {
+      "platform": "LinkedIn",
+      "link": "https://www.linkedin.com/",
+      "iconClass": "fab fa-linkedin-in"
+    },
+    {
+      "platform": "Instagram",
+      "link": "https://www.instagram.com/",
+      "iconClass": "fab fa-instagram"
+    }
+  ],
+  "subscribe": {
+    "placeholder": "Get news & updates",
+    "buttonText": "@"
   }
-  
+}

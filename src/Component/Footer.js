@@ -1,11 +1,11 @@
 import React from 'react';
 import footerData from '../Data/footerData.json';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
     <footer className="bg-gray-800 text-white">
       <div className="container mx-auto py-12">
-
         <div className="grid grid-cols-4 gap-8">
           <div>
             <a href={footerData.logo.link}>
@@ -16,9 +16,10 @@ const Footer = () => {
             </p>
             <div className="sqs-block button-block sqs-block-button" data-block-type="53" id="block-yui_3_17_2_1_1685733755740_4014"><div className="sqs-block-content" id="yui_3_17_2_1_1726774254249_483">
               <div className="sqs-block-button-container sqs-block-button-container--left" data-animation-role="button" data-alignment="left" data-button-size="medium" data-button-type="primary" id="yui_3_17_2_1_1726774254249_482">
-                <a href="/meet-with-a-designer" className="no-underline text-gray-600 wgl-button relative px-8 py-3 z-1 font-semibold rounded-full  transition-all duration-300" data-initialized="true">
-                  Meet with a Designer
-                </a>
+
+                <Link to="/contact" className="sqs-block-button-element--medium sqs-button-element--primary sqs-block-button-element" data-initialized="true">
+                Get inTouch
+                </Link>
               </div>
             </div></div>
           </div>
@@ -28,13 +29,11 @@ const Footer = () => {
             <ul>
               {footerData.services.map((service, index) => (
                 <li key={index} className="mb-2">
-                  <a href={service.link} className="hover:text-gray-400">{service.text}</a>
+                  <Link to={service.link} className="hover:text-gray-400">{service.text}</Link>
                 </li>
               ))}
             </ul>
           </div>
-
-
           <div>
             <h5 className="text-lg font-semibold mb-4">Contacts</h5>
             <ul>
@@ -47,19 +46,6 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-
-          {/* Subscribe Section */}
-          {/* <div>
-            <h5 className="text-lg font-semibold mb-4">Subscribe</h5>
-            <form className="flex">
-              <input
-                type="email"
-                placeholder={footerData.subscribe.placeholder}
-                className="w-full p-2 text-gray-800 rounded-l-md focus:outline-none"
-              />
-              <button className="bg-blue-600 p-2 rounded-r-md">{footerData.subscribe.buttonText}</button>
-            </form>
-          </div> */}
         </div>
 
         {/* Social Media Icons */}
@@ -81,11 +67,11 @@ const Footer = () => {
         {/* Footer Bottom Links */}
         <div className="mt-8 grid grid-cols-2 text-sm text-gray-400">
           <div>Copyright © 2024 All Rights Reserved</div>
-          <div className="flex justify-end space-x-4">
+          {/* <div className="flex justify-end space-x-4">
             {footerData.footerLinks.map((link, index) => (
               <a key={index} href={link.link} className="hover:text-white">{link.text}</a>
             ))}
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>
