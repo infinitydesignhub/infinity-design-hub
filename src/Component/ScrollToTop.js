@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { FaArrowUp } from "react-icons/fa";
+import { useLocation } from "react-router-dom";
 
 const ScrollToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const location = useLocation();
 
   // Show button when user scrolls down 300px
   const toggleVisibility = () => {
@@ -20,6 +22,11 @@ const ScrollToTop = () => {
       behavior: "smooth", // Smooth scroll effect
     });
   };
+
+  useEffect(() => {
+    // Scroll to top on location change
+    scrollToTop();
+  }, [location]);
 
   useEffect(() => {
     window.addEventListener("scroll", toggleVisibility);

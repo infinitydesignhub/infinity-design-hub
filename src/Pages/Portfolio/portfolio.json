@@ -15,6 +15,13 @@
   },
   {
     "id": 3,
+    "title": "Development Software",
+    "category": ["Development"],
+    "image": "https://wgl-dsites.net/bili/light/wp-content/uploads/2022/03/portfolio-s-2-1140x570.jpg",
+    "link": "/portfolio/development-software"
+  },
+  {
+    "id": 4,
     "title": "Another Software Development",
     "category": ["Development"],
     "image": "https://wgl-dsites.net/bili/light/wp-content/uploads/2022/03/portfolio-s-13-540x540.jpg",

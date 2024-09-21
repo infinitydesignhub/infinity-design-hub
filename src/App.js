@@ -41,6 +41,12 @@ function App() {
       document.body.classList.remove(bodyClass);
     };
   }, [location.pathname]);
+  useEffect(() => {
+    const images = document.querySelectorAll('img');
+    images.forEach((img) => {
+        img.setAttribute('loading', 'lazy');
+    });
+}, []);
 
   return (
     <div className="">
