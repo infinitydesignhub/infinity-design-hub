@@ -46,7 +46,7 @@ const PageHeader = () => {
                 color: pageHeaderData.styles.titleColor,
                 fontSize: pageHeaderData.styles.titleFontSize,
                 lineHeight: pageHeaderData.styles.titleLineHeight,
-                letterSpacing: '0em',fontWeight:'700'
+                letterSpacing: '0em',
               }}
             >
               {pageHeaderData.title}
@@ -57,7 +57,7 @@ const PageHeader = () => {
                 color: pageHeaderData.styles.breadcrumbsColor,
                 fontSize: pageHeaderData.styles.breadcrumbsFontSize,
                 lineHeight: pageHeaderData.styles.breadcrumbsLineHeight,
-                letterSpacing: '0.1em',fontWeight:'700'
+                letterSpacing: '0.1em',
               }}
             >
               <div className="breadcrumbs">
