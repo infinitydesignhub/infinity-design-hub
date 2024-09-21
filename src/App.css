@@ -411,7 +411,7 @@ button.elementor-swiper-button.elementor-swiper-button-prev.slick-arrow.slick-pr
   -webkit-text-fill-color: transparent;
 }
 .btn-size-lg {
-  padding: 93px 30px 93px 10px;
+  padding: 93px 19px 93px 19px;
   border-radius: 50%;
   color: #FFFFFF;
   background-color: #323232ED;
@@ -533,4 +533,93 @@ transition: 0.3s;
 .contact-details .elementor-widget-wrap{
   padding: 42px 0px 64px 50px;
 }
+.wgl-tabs_headings-wrap{
+    border-style: solid;
+    border-width: 0px 0px 1px 0px;
+    border-color: rgba(35, 35, 35, 0.2);
+    position: relative;
+}
+.lavalamp-object {
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto auto -2px 0;
+  opacity: 0;
+  background-color:#000;
+    border-radius: 0;
+    height: 3px;
+    width: 33px !important;
+    transition-duration: 0.6s;
+    transform: translate(27px);
+    opacity: 1;
+    left: 0px;
+}
+.wgl-tabs_title:hover, .wgl-tabs_title.active {
+  color:#000;
+}
+.wgl-tabs_title{
+  color: #888888;
+}
+.wgl-tabs_header {
+  padding: 15px 4px 33px 4px;
+  margin: 0px 50px 0px 0px;
+}
 
+.wgl-tabs_content-wrap {
+  position: relative;
+  max-height: 200px; 
+  overflow-y: auto;  
+  transition: max-height 1.0s ease, opacity 1.0s ease;
+}
+
+.wgl-tabs_content {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1.0s ease, opacity 1.0s ease;
+}
+
+.wgl-tabs_content.active {
+  opacity: 1;
+  max-height: 200px; 
+}
+.wgl-infobox_wrapper{
+  background-color: #1717171A;
+    background-image: linear-gradient(210deg, #1717171A 10%, #1717171A 90%);
+    /* justify-content: center; */
+    height: 200px;
+    width: 140px;
+}
+.service-title{
+  color: #181818;
+    font-size: 133px;
+    font-weight: 700;
+    line-height: 1em;
+    margin: 0% -45% 3% 0%;
+    padding: 0px 0px 4px 0px;
+    z-index: 0;
+    position: relative;
+}
+.talk .round-img{
+  width: 250px;
+    border-radius: 0px 100px 100px 0px;
+}
+.service-btn{
+  text-transform: uppercase;
+  padding: 17px 23px 15px 33px;
+  border-style: solid;
+  border-width: 1px 1px 1px 1px;
+  border-radius: 50px 50px 50px 50px;
+  color: #232323;
+  border-color: #232323;
+  background-color: #FFFFFF;
+}
+.btn-flex{
+  justify-content: flex-end;
+    position: relative;
+    margin-top: 24px;
+    transform: translate(89px);
+}
