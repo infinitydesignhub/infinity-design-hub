@@ -1,0 +1,57 @@
+{
+    "portfolios": [
+      {
+        "client": "Rutul Narania",
+        "category": "Branding, Logo",
+        "title": "Unique Product Design",
+        "subtitle": "Luxury Menswear Brand",
+        "description": [
+          "Infinity Designhub has given a unique identity by creating a logo design and visual identity concept for this clothing brand. The concept of logo is 'R and N monogram' and finishing touch is iconic mark for the company, that gives rich look to the brand.",
+          "One of the most important aspects of a successful branding project is communication. And one of the best parts of being a designer is that I get to communicate not only verbally, but visually."
+        ],
+        "images": [
+          "https://www.infinitydesignhub.com/wp-content/uploads/2020/03/RN-Fly-01-1-scaled.jpg",
+          "https://www.infinitydesignhub.com/wp-content/uploads/2020/03/RN-Fly-02-scaled.jpg"
+        ],
+        "nextPortfolio": {
+          "title": "Raamah Group",
+          "link": "https://www.infinitydesignhub.com/portfolios/raamah-group/"
+        }
+      },
+      {
+        "client": "Another Client",
+        "category": "Web Design",
+        "title": "Development Software",
+        "subtitle": "Creative Web Design",
+        "description": [
+          "This project showcases innovative web design solutions tailored for the client’s needs."
+        ],
+        "images": [
+          "https://example.com/image1.jpg",
+          "https://example.com/image2.jpg"
+        ],
+        "nextPortfolio": {
+          "title": "Last Project",
+          "link": "https://www.infinitydesignhub.com/portfolios/last-project/"
+        }
+      },
+      {
+        "client": "New Client",
+        "category": "Photography",
+        "title": "Another Software Development",
+        "subtitle": "Stunning Nature Photography",
+        "description": [
+          "A collection of stunning nature photographs capturing the beauty of our planet."
+        ],
+        "images": [
+          "https://example.com/nature1.jpg",
+          "https://example.com/nature2.jpg"
+        ],
+        "nextPortfolio": {
+          "title": "Previous Project",
+          "link": "https://www.infinitydesignhub.com/portfolios/previous-project/"
+        }
+      }
+    ]
+  }
+  

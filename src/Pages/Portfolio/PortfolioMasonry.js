@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import data from '../../Data/portfolio.json'; // Update with your JSON data path
 
 const categories = [
@@ -27,8 +28,7 @@ const Portfolio = () => {
           {categories.map(category => (
             <button
               key={category.name}
-              className={`px-4 py-2 rounded transition ${activeCategory === category.name ? 'bg-blue-500 text-white' : 'bg-white text-blue-500'
-                }`}
+              className={`px-4 py-2 rounded transition ${activeCategory === category.name ? 'bg-blue-500 text-white' : 'bg-white text-blue-500'}`}
               onClick={() => setActiveCategory(category.name)}
             >
               {category.name}
@@ -47,20 +47,23 @@ const Portfolio = () => {
                 <div className="description__wrapper text-center text-white">
                   <div className="post_cats">
                     {project.category.map(cat => (
-                      <a href="#" key={cat} className="portfolio-category">{cat}</a>
+                      <span key={cat} className="portfolio-category">{cat}</span>
                     ))}
                   </div>
                   <div className="item__title">
                     <h5 className="title">
-                      <a href={project.link} className="single_link">{project.title}</a>
+                      <Link to={`/portfolio/${project.title ? project.title.replace(/\s+/g, '-').toLowerCase() : ''}`} className="single_link">
+                        {project.title}
+                      </Link>
                     </h5>
                   </div>
                 </div>
               </div>
-              <a href={project.link} className="absolute inset-0" />
+              <Link to={`/portfolio/${project.title ? project.title.replace(/\s+/g, '-').toLowerCase() : ''}`} className="absolute inset-0" />
             </div>
           </article>
         ))}
+
       </div>
     </div>
   );
