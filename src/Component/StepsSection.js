@@ -6,21 +6,21 @@ const StepsSection = () => {
       subtitle: "Research & Planning",
       title: "first step",
       image: "/images/homepage-9_6.jpg",
-      link: "https://wgl-dsites.net/bili/light/contacts/",
+      link: "/blog/",
       bgColor: "#EAEAEA" // Light blue background
     },
     {
       subtitle: "Design & Development",
       title: "second step",
       image: "/images/homepage-9_7.jpg",
-      link: "https://wgl-dsites.net/bili/light/contacts/",
+      link: "/blog/",
       bgColor: "#ff7425" // Light green background
     },
     {
       subtitle: "Customize & Testing",
       title: "third step",
       image: "/images/homepage-9_8.jpg",
-      link: "https://wgl-dsites.net/bili/light/contacts/",
+      link: "/blog/",
       bgColor: "black" // Light yellow background
     }
   ];
