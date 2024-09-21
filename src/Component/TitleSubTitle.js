@@ -8,7 +8,7 @@ const pricingData = {
 const TitleSubTitle = () => {
   return (
     <section className="max-w-7xl mx-auto">
-      <div className="px-0">
+      <div className="pl-[4.5rem] py-3">
         <div className="w-full">
           <div className="title-text">
             <div className="text-lg text-orange-600 mb-2 font-bold">

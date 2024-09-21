@@ -41,7 +41,7 @@ const VisionSection = () => {
       <div className="w-full md:w-1/2 p-4">
         <div className="mb-6">
           <span className="text-gray-600">{data.vision.subtitle}</span>
-          <h3 className="text-3xl font-semibold mt-2">{data.vision.title}</h3>
+          <h3 className="text-[38px] font-semibold mt-2">{data.vision.title}</h3>
         </div>
 
         <div className="wgl-tabs">

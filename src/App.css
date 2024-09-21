@@ -115,7 +115,7 @@ nav a {
   border-radius: 50% 50% 50% 50%;
 }
 .wgl-button::after {
-  background-color: #ffffff;
+  background-color: #EC008C;
 }
 
 .wgl-button:hover::after,
@@ -377,16 +377,16 @@ body.about-class{
   margin-top: 16px;
 }
 .wpcf7 .wgl-button::after {
-  background: #dfdfdf;
+  background: #EC008C;
 }
 
 button.elementor-swiper-button.elementor-swiper-button-next.slick-arrow.slick-next {
   left: 24rem;
-  top: 223px;
+  top:270px ;
 }
 button.elementor-swiper-button.elementor-swiper-button-prev.slick-arrow.slick-prev {
   left: 29.5rem;
-  top: 223px;
+  top:270px;
 }
 .flaticon-right svg {
   /* background-color: #303032; */
@@ -456,10 +456,44 @@ button.elementor-swiper-button.elementor-swiper-button-prev.slick-arrow.slick-pr
   content: "";
   position: absolute;
   left: calc(-28px + 2px);
-  top: calc(24.3% + 1px);
+  top: calc(23.3% + 1px);
   width: 0;
   height: 0;
   border-style: solid;
   border-color: transparent #FFFFFF #FFFFFF transparent;
   border-width: calc(15px - 1px);
+}
+.contact input,.contact textarea{
+  display: block;
+    height: 56px;
+    max-width: 100%;
+    margin: 0 0 21px 0;
+    border: 1px solid black !important;
+    border-width: 0 0 1px 0 !important;
+    border-radius: unset;
+    padding: 0;
+    font-family: var(--bili-content-font-family);
+    font-size: 18px;
+    line-height: 1.7;
+    font-weight: 500;
+    text-transform: unset;
+    color: var(--bili-header-font-color);
+    background-color: transparent;
+    transition: all 0.3s, height 0s;
+}
+.contact input:focus-visible,.contact textarea:focus-visible{
+  outline: none;
+}
+.contact input:focus,.contact textarea:focus{
+  border-color:#FFFFFF !important;
+}
+.socail-btn:hover ::before{
+color: #EC008C;  
+transition: 0.3s;
+}
+.map{
+  padding-top: 4rem;
+}
+.contact-details .elementor-widget-wrap{
+  padding: 42px 0px 64px 50px;
 }

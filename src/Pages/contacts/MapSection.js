@@ -8,7 +8,7 @@ const mapSectionData = {
 
 const MapSection = () => {
     return (
-        <section className="elementor-section elementor-top-section">
+        <section className="elementor-section elementor-top-section map">
             <div className="elementor-column-gap-no">
                 <div className="elementor-column elementor-col-100">
                     <div className="elementor-widget-wrap">
