@@ -24,7 +24,7 @@ const Navbar = () => {
           <div className="font-bold text-xl" data-aos="fade-right">
             <Link to="/">
               <img
-                src="./images/infinity.png"
+                src="/images/infinity.png"
                 alt="logo"
                 className="logo"
               />
