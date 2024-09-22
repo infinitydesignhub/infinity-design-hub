@@ -1,0 +1,31 @@
+{
+    "page1": {
+      "approach": {
+        "title": "Our Approach",
+        "subtitle": "Strategic Innovation Meets Creative Excellence."
+      },
+      "services": [
+        {
+          "title": "In-Depth Discovery",
+          "description": "We dive deep into understanding your brand’s unique needs and target audience.",
+          "image": "../image/infobox_cursor.png"
+        },
+        {
+          "title": "Strategic Planning",
+          "description": "Infinity DesignHub crafts a tailored digital marketing strategy that blends creativity with data-driven insights.",
+          "image": "../image/infobox_cursor_3.png"
+        },
+        {
+            "title": "Creative Execution",
+            "description": "We launch innovative campaigns and engaging content that connects with your audience.",
+            "image": "../image/infobox_cursor_3.png"
+          },
+          {
+            "title": "Agile Optimization",
+            "description": "Infinity DesignHub continually tracks, analyzes, and refines strategies for peak performance.",
+            "image": "../image/infobox_cursor_3.png"
+          }
+      ]
+    }
+  }
+  
