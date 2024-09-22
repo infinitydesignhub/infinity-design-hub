@@ -5,8 +5,9 @@ import TalkAboutDesignSection from './Services/TalkAboutDesignSection';
 import CounterSection from '../Component/CounterSection'; // Your local component
 import PhilosophySection from './Services/PhilosophySection';
 import BenefitsSection from './Services/BenefitsSection'; // Import the BenefitsSection
-import FeaturesSection from './Services/FeaturesSection';
+import FeaturesSection from '../Component/FeaturesSection';
 import GetInTouch from '../Component/GetInTouch';
+import featuresData from '../Data/FeaturesData.json';
 const componentMap = {
   layoutComponent: TalkAboutDesignSection,
   customComponent: PhilosophySection,
@@ -55,15 +56,15 @@ const Services = () => {
             <ComponentToRender data={section.fields} />
             {/* Render CounterSection after layoutComponent */}
             {contentTypeId === 'layoutComponent' && <CounterSection />}
-            
+
           </React.Fragment>
         ) : (
           <div key={index}>Unknown section type</div>
         );
       })}
-      <FeaturesSection/>
-      <GetInTouch/>
-    
+      <FeaturesSection data={featuresData.services} />
+      <GetInTouch />
+
     </div>
   );
 };

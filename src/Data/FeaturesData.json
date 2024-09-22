@@ -1,0 +1,63 @@
+{
+    "home": {
+        "title": "Home Features",
+        "features": [
+            {
+                "imgSrc": "https://wgl-dsites.net/bili/wp-content/uploads/2023/03/landing-42.png",
+                "text": "Expert Team\nAvailable"
+            },
+            {
+                "imgSrc": "https://wgl-dsites.net/bili/wp-content/uploads/2023/03/landing-43.png",
+                "text": "Customer Focused\nApproach"
+            }
+        ]
+
+    },
+    "about": {
+        "title": "About Us Features",
+        "features": [
+            {
+                "imgSrc": "https://wgl-dsites.net/bili/wp-content/uploads/2023/03/landing-40.png",
+                "text": "5 Stars\nSupport"
+            },
+            {
+                "imgSrc": "https://wgl-dsites.net/bili/wp-content/uploads/2023/03/landing-41.png",
+                "text": "SEO\nOptimized"
+            },
+            {
+                "imgSrc": "https://wgl-dsites.net/bili/wp-content/uploads/2023/03/landing-40.png",
+                "text": "5 Stars\nSupport"
+            },
+            {
+                "imgSrc": "https://wgl-dsites.net/bili/wp-content/uploads/2023/03/landing-41.png",
+                "text": "SEO\nOptimized"
+            },
+            {
+                "imgSrc": "https://wgl-dsites.net/bili/wp-content/uploads/2023/03/landing-40.png",
+                "text": "5 Stars\nSupport"
+            },
+            {
+                "imgSrc": "https://wgl-dsites.net/bili/wp-content/uploads/2023/03/landing-41.png",
+                "text": "SEO\nOptimized"
+            },
+            {
+                "imgSrc": "https://wgl-dsites.net/bili/wp-content/uploads/2023/03/landing-41.png",
+                "text": "SEO\nOptimized"
+            }
+        ]
+        
+    },
+    "services": {
+        "title": "Services We Offer",
+        "features": [
+            {
+                "imgSrc": "https://wgl-dsites.net/bili/wp-content/uploads/2023/03/landing-44.png",
+                "text": "Tailored Solutions"
+            },
+            {
+                "imgSrc": "https://wgl-dsites.net/bili/wp-content/uploads/2023/03/landing-45.png",
+                "text": "24/7 Support"
+            }
+        ]
+    }
+}
