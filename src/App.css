@@ -638,7 +638,7 @@ button.elementor-swiper-button.elementor-swiper-button-prev.slick-arrow.slick-pr
 }
 .service-title {
   color: #181818;
-  font-size: 133px;
+  font-size: 75px;
   font-weight: 700;
   line-height: 1em;
   margin: 0% -45% 3% 0%;
@@ -698,7 +698,7 @@ button.elementor-swiper-button.elementor-swiper-button-prev.slick-arrow.slick-pr
   align-items: flex-start;
   height: 100%;
   padding: 27px 30px 31px;
-  opacity: 0;
+  /* opacity: 0; */
   overflow: hidden;
   transition: 0.5s;
 }
@@ -855,4 +855,15 @@ button.elementor-swiper-button.elementor-swiper-button-prev.slick-arrow.slick-pr
 }
 .portfolio-nav {
   padding: 50px 0px;
+}
+.wgl-double-heading {
+  padding-top: 7rem;
+}
+@media screen and (max-width: 767px) {
+  .banner h1,.heading-title,.text-path span {
+    font-size: 40px;
+  }
+  .banner img{
+    width: 50px;
+  }
 }

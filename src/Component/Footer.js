@@ -17,7 +17,7 @@ const Footer = () => {
             <div className="sqs-block button-block sqs-block-button" data-block-type="53" id="block-yui_3_17_2_1_1685733755740_4014"><div className="sqs-block-content" id="yui_3_17_2_1_1726774254249_483">
               <div className="sqs-block-button-container sqs-block-button-container--left" data-animation-role="button" data-alignment="left" data-button-size="medium" data-button-type="primary" id="yui_3_17_2_1_1726774254249_482">
 
-                <Link to="/contact" className="inline-block text-black wgl-button relative px-8 py-3 z-1 font-semibold rounded-full  transition-all duration-300  px-4 py-2 rounded-lg" data-initialized="true">
+                <Link to="/contact" className="inline-block text-white wgl-button relative px-8 py-3 z-1 font-semibold rounded-full  transition-all duration-300  px-4 py-2 rounded-lg" data-initialized="true">
                 Get inTouch
                 </Link>
               </div>
