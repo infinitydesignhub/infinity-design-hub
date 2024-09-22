@@ -1,14 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const BenefitsSection = ({ data }) => {
   const [activeIndex, setActiveIndex] = useState(null);
 
-  // Log data to check its structure
-  console.log(data);
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
 
   // Check if data is defined and has benefits
   if (!data || !data.benefits) {
-    return <p>No benefits available.</p>; // Display a message if no data is available
+    return <p>No benefits available.</p>;
   }
 
   const handleToggle = (index) => {
@@ -16,11 +19,11 @@ const BenefitsSection = ({ data }) => {
   };
 
   return (
-    <section className="py-10">
+    <section className="py-16">
       <div className="container mx-auto flex flex-wrap">
-        <div className="w-full md:w-1/2 px-10">
-          <div className="mb-4 w-[450px]">
-            {/* Use dynamic section title and subtitle */}
+        <div className="w-full md:w-1/2 px-10" data-aos="fade-right">
+          <div className="sm:[100%] md:w-[100%] mb-4 w-[450px]">
+            {/* Dynamic section title and subtitle */}
             <span className="text-orange-500 font-bold mb-4">{data.sectionTitle}</span>
             <h3 className="text-4xl font-bold mt-3 mb-3">
               {data.sectionSubtitle}
@@ -29,7 +32,7 @@ const BenefitsSection = ({ data }) => {
 
           <div className="space-y-2">
             {data.benefits.map((benefit, index) => (
-              <div key={index}>
+              <div key={index} data-aos="fade-up">
                 <h4
                   className={`cursor-pointer text-2xl font-semibold py-2 flex items-center hover:text-orange-500 transition duration-300 ease-in-out ${
                     activeIndex === index ? "text-orange-600" : "text-gray-800"
@@ -60,7 +63,7 @@ const BenefitsSection = ({ data }) => {
           </div>
         </div>
 
-        <div className="w-full md:w-1/2 px-4 flex justify-center">
+        <div className="w-full md:w-1/2 px-4 flex justify-center" data-aos="fade-left">
           <img
             src="https://wgl-dsites.net/bili/light/wp-content/uploads/2022/03/home1_arrow_bg.png"
             alt="Business Growth"

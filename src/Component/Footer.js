@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer className="bg-gray-800 text-white">
       <div className="container mx-auto py-12">
-        <div className="grid grid-cols-4 gap-8">
+        <div className="grid grid-cols-3 gap-8"> 
           <div>
             <a href={footerData.logo.link}>
               <img src={footerData.logo.src} alt={footerData.logo.alt} className="h-7" />
@@ -26,7 +26,7 @@ const Footer = () => {
 
           <div>
             <h5 className="text-lg font-semibold mb-4">Navigation</h5>
-            <ul>
+            <ul className='pl-0'>
               {footerData.services.map((service, index) => (
                 <li key={index} className="mb-2">
                   <Link to={service.link} className="hover:text-gray-400">{service.text}</Link>
@@ -36,7 +36,7 @@ const Footer = () => {
           </div>
           <div>
             <h5 className="text-lg font-semibold mb-4">Contacts</h5>
-            <ul>
+            <ul className='pl-0'>
               <li className="mb-2">{footerData.contacts.address}</li>
               <li className="mb-2">
                 <a href={`tel:${footerData.contacts.phone}`} className="hover:text-gray-400">{footerData.contacts.phone}</a>
@@ -45,11 +45,7 @@ const Footer = () => {
                 <a href={`mailto:${footerData.contacts.email}`} className="hover:text-gray-400">{footerData.contacts.email}</a>
               </li>
             </ul>
-          </div>
-        </div>
-
-        {/* Social Media Icons */}
-        <div className="mt-8 flex space-x-4">
+            <div className="mt-8 flex space-x-4">
           {footerData.socials.map((social, index) => (
             <a
               key={index}
@@ -63,6 +59,11 @@ const Footer = () => {
             </a>
           ))}
         </div>
+          </div>
+        </div>
+
+        {/* Social Media Icons */}
+        
 
         {/* Footer Bottom Links */}
         <div className="mt-8 grid grid-cols-2 text-sm text-gray-400">

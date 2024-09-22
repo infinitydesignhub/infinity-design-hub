@@ -13,7 +13,7 @@ const AboutSection = () => {
   };
 
   return (
-    <section className="max-w-7xl mx-auto py-12">
+    <section className="max-w-7xl mx-auto py-16">
       <div className="flex flex-wrap">
         <div className="w-full md:w-1/2 p-4">
           <div className="mb-6 px-4 mt-4">

@@ -12,7 +12,7 @@ const PhilosophySection = ({ data }) => {
   } = data;
 
   return (
-    <section className="max-w-7xl mx-auto py-12 flex flex-wrap">
+    <section className="max-w-7xl mx-auto py-16 flex flex-wrap">
       <div className="w-full m-auto md:w-1/2 p-4">
         <div className="mb-6">
           <span className="text-gray-600">{subtitle}</span>

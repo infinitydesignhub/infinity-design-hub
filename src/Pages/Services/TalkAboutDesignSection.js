@@ -14,7 +14,7 @@ const TalkAboutDesignSection = ({ data }) => {
   }
 
   return (
-    <section className="max-w-7xl mx-auto py-12 flex flex-wrap talk">
+    <section className="max-w-7xl mx-auto py-16 flex flex-wrap talk">
       <div className="w-full md:w-1/2 p-4">
         <div className="mb-6">
           <h2 className="service-title text-2xl font-semibold">{data.leftTitle}</h2>

@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import CountUp from 'react-countup';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const CounterSection = () => {
   const counters = [
@@ -13,6 +15,7 @@ const CounterSection = () => {
   const sectionRef = useRef(null);
 
   useEffect(() => {
+    AOS.init({ duration: 1000 }); // Initialize AOS
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -43,9 +46,10 @@ const CounterSection = () => {
             <div
               key={index}
               className="flex flex-row justify-center items-center text-start col-md-4 text=[18px]"
+              data-aos="fade-up" // Add AOS fade-up animation
             >
               {/* Number */}
-              <div className="text-[130px] font-bold text-gray-800  text-webkit  border-custom-gray ">
+              <div className="text-[130px] font-bold text-gray-800 text-webkit border-custom-gray ">
                 {hasAnimated ? (
                   <CountUp
                     start={0}

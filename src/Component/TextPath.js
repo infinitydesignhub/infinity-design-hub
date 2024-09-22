@@ -9,7 +9,7 @@ const data = {
 
 const TextPath = () => {
   return (
-    <section className="text-path w-full py-10">
+    <section className="text-path w-full py-16">
       <div className="container mx-auto">
         <div className="relative overflow-hidden">
           {/* Looping Text */}
