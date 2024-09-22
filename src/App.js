@@ -58,8 +58,6 @@ function App() {
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/portfolio/:title" element={<PortfolioDetails />} />
         <Route path="/contact" element={<Contact />} />
-        {/* <Route path="/services/:slug" element={<BasicPage />} /> */}
-        {/* Add more routes here */}
       </Routes>
       <Footer />
       <ScrollToTop />
