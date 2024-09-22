@@ -28,6 +28,9 @@ const BenefitsSection = ({ data }) => {
             <h3 className="text-4xl font-bold mt-3 mb-3">
               {data.sectionSubtitle}
             </h3>
+            <p>
+              {data.sectionDescription}
+            </p>
           </div>
 
           <div className="space-y-2">

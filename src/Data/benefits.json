@@ -1,23 +1,28 @@
 {
   "home": {
-    "sectionTitle": "OUR BENEFITS home",
-    "sectionSubtitle": "Unlock Revenue Growth for Your Business",
+    "sectionTitle": "Business Growth",
+    "sectionSubtitle": "Growth isn’t just about numbers—it’s about creating impactful experiences.",
+    "sectionDescription": "At Infinity DesignHub, we turn growth into a journey of innovation and influence, propelling your brand to new heights.",
     "benefits": [
       {
-        "title": "High Standards",
-        "content": "Through our years of experience, we've learned that while each channel has its own set of advantages, they all work best when strategically paired with other channels."
+        "title": "Experience Over Metrics",
+        "content": "Transform growth into unforgettable experiences that captivate and engage."
       },
       {
-        "title": "Focus on People",
-        "content": "Our experience shows that prioritizing people leads to better collaboration and results."
+        "title": "Future-Ready Innovation",
+        "content": "Leverage cutting-edge strategies to stay ahead in a fast-evolving digital world."
       },
       {
-        "title": "Different Thinking",
-        "content": "Innovative strategies can make a significant difference in achieving business goals."
+        "title": "Engagement Amplified",
+        "content": "Boost your brand’s presence and impact with creative, targeted solutions."
       },
       {
-        "title": "Business Innovation",
-        "content": "Constant innovation is essential for staying competitive in today's market."
+        "title": "Tailored Brilliance",
+        "content": "Enjoy bespoke approaches that adapt to your unique business needs and vision."
+      },
+      {
+        "title": "Strategic Evolution",
+        "content": "Achieve impactful change with solutions that enhance visibility and deliver real results."
       }
     ]
   },

@@ -9,7 +9,7 @@ const VisionSection = () => {
 
   const data = {
     vision: {
-      title: "Empowering Brands, Together",
+      title: "Why Partner with Infinity DesignHub?",
       content: [
         "We envision a world where every brand possesses a distinctive identity that stands out and leaves a lasting impression."
       ],

@@ -15,14 +15,15 @@ import Blog from '../Component/Blog';
 import VisionSection from '../Component/VisionSection';
 // import Portfolio from './Portfolio';
 import data from '../Data/benefits.json'
-
+import allData from '../Data/OurApproach.json'; // Adjust the path as necessary
 const Home = () => {
+    const { approach, services } = allData.page1; // Get data for Page 1
     return (
         <>
             <BannerSection />
             <BenefitsSection data={data.home} />
             <TextPath />
-            <ServicesSection />
+            <ServicesSection approach={approach} services={services} />
             <ProvideServices />
             <VisionSection />
             <ClientSlider />
