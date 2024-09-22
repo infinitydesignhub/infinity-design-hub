@@ -4,7 +4,8 @@ import 'aos/dist/aos.css';
 
 const VisionSection = () => {
   useEffect(() => {
-    AOS.init({ duration: 1000 }); // Initialize AOS
+    AOS.init({ duration: 1000, once: true }); // Initialize AOS with 'once' to trigger animation once on scroll
+    AOS.refresh(); // Refresh AOS to ensure all animations are properly triggered
   }, []);
 
   const data = {
@@ -37,7 +38,7 @@ const VisionSection = () => {
 
         <div className="mb-6">
           {data.vision.content.map((paragraph, idx) => (
-            <p className='text-[18px] leading-[36px]' key={idx}>{paragraph}</p>
+            <p className="text-[18px] leading-[36px]" key={idx}>{paragraph}</p>
           ))}
         </div>
 

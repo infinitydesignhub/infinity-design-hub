@@ -859,6 +859,25 @@ button.elementor-swiper-button.elementor-swiper-button-prev.slick-arrow.slick-pr
 .wgl-double-heading {
   padding-top: 7rem;
 }
+.menu-item_dots {
+  position: absolute;
+  left: -16px;
+  top: 50%;
+  z-index: -1;
+  display: inline-block;
+  background: transparent;
+  transition: background-color 0.3s;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  border: 1px solid currentColor;
+  transform: translateY(-3px);
+}
+.dropdown:hover, .nav-link:hover{
+    color: #ff7425 !important;
+}
+
+
 @media screen and (max-width: 767px) {
   .banner h1,.heading-title,.text-path span {
     font-size: 40px;
