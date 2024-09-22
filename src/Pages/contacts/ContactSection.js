@@ -80,7 +80,7 @@ const ContactSection = () => {
               />
               <button
                 type="submit"
-                className="no-underline text-white wgl-button relative px-8 py-3 z-1 font-semibold rounded-full  transition-all duration-300"
+                className="no-underline text-black wgl-button relative px-8 py-3 z-1 font-semibold rounded-full  transition-all duration-300"
               >
                 {contactSectionData.form.submitButtonText}
               </button>

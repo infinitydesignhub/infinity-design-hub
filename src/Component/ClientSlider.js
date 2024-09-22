@@ -61,7 +61,7 @@ const ClientSlider = () => {
   };
 
   return (
-    <section className="py-24 bg-gray-900">
+    <section className="py-24 bg-gray-900 my-12">
       <div className="container mx-auto text-center">
         <h2 className="text-white text-2xl mb-8">OVER 1K+ SOFTWARE BUSINESSES GROWING WITH BILI</h2>
         <Slider {...settings}>

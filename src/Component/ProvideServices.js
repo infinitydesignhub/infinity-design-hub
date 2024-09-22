@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const servicesData = [
     {
@@ -47,8 +49,12 @@ const servicesData = [
 ];
 
 const ProvideServices = () => {
+    useEffect(() => {
+        AOS.init({ duration: 1000 });
+    }, []);
+
     return (
-        <section className="provide_services bg-[#181818] pt-[124px] pb-14">
+        <section className="provide_services bg-[#181818] pt-[124px] pb-14 my-10">
             <div className='container'>
                 <div className='row m-auto'>
                     <div className="flex flex-col w-full md:w-1/3 p-4 col-4">
@@ -65,7 +71,11 @@ const ProvideServices = () => {
                     </div>
                     <div className="col-8">
                         {servicesData.map((service) => (
-                            <div key={service.id} className="relative group showcase__content">
+                            <div
+                                key={service.id}
+                                className="relative group showcase__content"
+                                data-aos="fade-up"
+                            >
                                 <Link to={service.link} className="block relative z-10">
                                     <div className="">
                                         <div className="flex gap-2">
@@ -73,14 +83,13 @@ const ProvideServices = () => {
                                             <span className="block text-[#5B5B5B] hover:text-white relative z-[2] text-[72px] font-bold">{service.title}</span>
                                         </div>
                                     </div>
-                                    <div className='showcase__image'>
+                                    <div className='showcase__image' data-aos="zoom-in">
                                         <img
                                             src={service.image}
                                             alt={service.title}
                                             className="w-full h-auto rounded-md"
                                         />
                                     </div>
-
                                 </Link>
                             </div>
                         ))}

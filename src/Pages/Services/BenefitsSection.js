@@ -18,7 +18,7 @@ const BenefitsSection = ({ data }) => {
   } = data;
 
   return (
-    <section className="py-10">
+    <section className="py-16">
       <div className="container mx-auto flex flex-wrap">
         {/* Left Column - Image */}
         <div className="w-full md:w-1/2 px-4 flex justify-center">

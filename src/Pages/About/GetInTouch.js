@@ -2,7 +2,7 @@ import React from 'react';
 
 const GetInTouch = () => {
   return (
-    <section className="container mx-auto py-12">
+    <section className="container mx-auto py-16">
       <div className="flex justify-between items-start">
         <div className="text-center">
           <h3 className="font-bold dblh__title">

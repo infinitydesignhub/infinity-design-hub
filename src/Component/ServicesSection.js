@@ -32,7 +32,7 @@ const ServicesSection = () => {
 
   return (
     <section className="services py-1">
-      <div className="container mx-auto px-4 py-14">
+      <div className="container mx-auto px-4 py-16">
         <div className="flex justify-between gap-3">
           {/* Left Content Section */}
           <div

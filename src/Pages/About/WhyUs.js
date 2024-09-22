@@ -8,7 +8,7 @@ const WhyUs = ({ wData }) => {
   }
 
   return (
-    <section className="max-w-7xl mx-auto py-12">
+    <section className="max-w-7xl mx-auto py-16">
       <div className="flex flex-wrap">
         <div className="w-full md:w-1/2 p-4">
           <img
