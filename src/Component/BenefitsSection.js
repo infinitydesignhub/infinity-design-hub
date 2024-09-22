@@ -7,6 +7,7 @@ const BenefitsSection = ({ data }) => {
 
   useEffect(() => {
     AOS.init({ duration: 1000 });
+    AOS.refresh(); // Refresh AOS to ensure animations work on scroll
   }, []);
 
   // Check if data is defined and has benefits

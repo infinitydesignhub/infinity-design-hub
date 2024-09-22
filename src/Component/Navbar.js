@@ -26,10 +26,11 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8 uppercase font-bold text-center" data-aos="fade-up">
             {['Home', 'About', 'Services', 'Portfolio', 'Contact'].map((item) => (
-              <div className="dropdown" key={item}>
+              <div className="dropdown relative" key={item}>
                 <Link className="nav-link no-underline" to={`/${item.toLowerCase()}`} role="button">
                   {item}
                 </Link>
+                <span class="menu-item_dots"></span>
               </div>
             ))}
           </div>
