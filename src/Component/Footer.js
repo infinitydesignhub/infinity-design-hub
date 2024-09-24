@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-800 text-white">
-      <div className="container mx-auto py-12">
+    <footer className="bg-[#0E0E0E] text-white">
+      <div className="container mx-auto py-8">
         <div className="grid grid-cols-3 gap-8"> 
-          <div>
+          <div className='m-auto'>
             <a href={footerData.logo.link}>
               <img src={footerData.logo.src} alt={footerData.logo.alt} className="h-7" />
             </a>
@@ -24,7 +24,7 @@ const Footer = () => {
             </div></div>
           </div>
 
-          <div>
+          <div className='m-auto'>
             <h5 className="text-lg font-semibold mb-4">Navigation</h5>
             <ul className='pl-0'>
               {footerData.services.map((service, index) => (
@@ -34,7 +34,7 @@ const Footer = () => {
               ))}
             </ul>
           </div>
-          <div>
+          <div className='m-auto'>
             <h5 className="text-lg font-semibold mb-4">Contacts</h5>
             <ul className='pl-0'>
               <li className="mb-2">{footerData.contacts.address}</li>

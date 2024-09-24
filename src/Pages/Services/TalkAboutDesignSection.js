@@ -29,7 +29,7 @@ const TalkAboutDesignSection = ({ data }) => {
           />
         </div>
         <p className="mb-6 text-[18px] leading-[36px]">{data.leftSubTitle}</p>
-        <div className="flex btn-flex space-x-4 gap[15px]">
+        <div className="flex  space-x-4 gap[15px]">
           <Link
             to="/contact"
             className="inline-block text-black wgl-button relative px-8 py-3 z-1 font-semibold rounded-full  transition-all duration-300  px-4 py-2 rounded-lg"

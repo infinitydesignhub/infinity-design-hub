@@ -35,7 +35,7 @@ const ServicesSection = ({ approach, services }) => {
             <h2 className="text-orange-600 font-semibold text-lg mb-2">{approach.title}</h2>
             <h3 className="dblh__title-wrapper text-4xl font-bold mb-7">{approach.subtitle}</h3>
             <a
-              href="#contact"
+              href="#services"
               className="wgl-button text-gray-600 no-underline relative px-8 py-3 z-1 font-semibold rounded-full transition-all duration-300"
             >
               MORE SERVICES

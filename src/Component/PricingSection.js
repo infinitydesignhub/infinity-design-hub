@@ -60,7 +60,7 @@ const PricingSection = () => {
         <h3 className="text-3xl font-extrabold text-white">Explore Our Digital Pricing Plans</h3>
       </div> */}
 
-      <div className="container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+      <div className="container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-7xl mx-auto pb-16">
         {pricingPlans.map((plan) => (
           <div
             key={plan.id}

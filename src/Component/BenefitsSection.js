@@ -21,8 +21,9 @@ const BenefitsSection = ({ data }) => {
 
   return (
     <section className="py-16">
-      <div className="container mx-auto flex flex-wrap">
-        <div className="w-full md:w-1/2 px-10" data-aos="fade-right">
+      <div className="container mx-auto">
+        <div className="flex flex-wrap">
+        <div className="w-full md:w-1/2" data-aos="fade-right">
           <div className="sm:[100%] md:w-[100%] mb-4 w-[450px]">
             {/* Dynamic section title and subtitle */}
             <span className="text-orange-500 font-bold mb-4">{data.sectionTitle}</span>
@@ -67,12 +68,13 @@ const BenefitsSection = ({ data }) => {
           </div>
         </div>
 
-        <div className="w-full md:w-1/2 px-4 flex justify-center" data-aos="fade-left">
+        <div className="md:w-1/2 px-4 flex justify-center" data-aos="fade-left">
           <img
             src="https://wgl-dsites.net/bili/light/wp-content/uploads/2022/03/home1_arrow_bg.png"
             alt="Business Growth"
-            className="max-w-full h-auto"
+            className="h-max"
           />
+        </div>
         </div>
       </div>
     </section>

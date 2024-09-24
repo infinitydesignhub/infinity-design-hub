@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-
-
+import footerData from '../Data/footerData.json'; // Adjust the path as necessary
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const services = footerData.services; // Get services from JSON data
 
   useEffect(() => {
     AOS.init({ duration: 1000 });
@@ -22,15 +22,41 @@ const Navbar = () => {
               <img src="/images/infinity.png" alt="logo" className="logo" />
             </Link>
           </div>
-          
+
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8 uppercase font-bold text-center" data-aos="fade-up">
-            {['Home', 'About', 'Services', 'Portfolio', 'Contact'].map((item) => (
-              <div className="dropdown relative" key={item}>
-                <Link className="nav-link no-underline" to={`/${item.toLowerCase()}`} role="button">
-                  {item}
-                </Link>
-                <span class="menu-item_dots"></span>
+            {['Home', 'About', 'Services', 'Portfolio', 'Blog', 'Contact'].map((item, index) => (
+              <div key={index} className={item === 'Services' ? 'dropdown relative' : 'relative arimo-bold text-[14px] tracking-[2px]'}>
+                {item === 'Services' ? (
+                  <>
+                    <Link
+                      className="nav-link dropdown-toggle no-underline arimo-bold !text-[14px] tracking-[2px]"
+                      to="#!"
+                      role="button"
+                      data-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Services
+                      <span className="menu-item_dots"></span>
+                    </Link>
+                    <div className="dropdown-menu">
+                      {services.map((service, index) => (
+                        <Link
+                          key={index}
+                          className="dropdown-item text-[#232323] bg-white relative arimo-bold text-[14px] tracking-[2px]"
+                          to={`/${service.link}`}
+                        >
+                          {service.text}
+                        </Link>
+                      ))}
+                    </div>
+                  </>
+                ) : (
+                  <Link className="nav-link no-underline arimo-bold text-[14px] tracking-[2px]" to={`/${item.toLowerCase()}`}>
+                    {item}
+                    <span className="menu-item_dots"></span>
+                  </Link>
+                )}
               </div>
             ))}
           </div>
@@ -58,16 +84,40 @@ const Navbar = () => {
         {/* Mobile Menu */}
         {isOpen && (
           <div className="md:hidden flex flex-col items-center space-y-4 pt-4 bg-black text-white">
-            {['Home', 'About', 'Services', 'Portfolio', 'Contact'].map((item) => (
-              <Link
-                className="hover:text-orange-400 uppercase"
-                to={`/${item.toLowerCase()}`}
-                onClick={() => setIsOpen(false)}
-                key={item}
-              >
-                {item}
-              </Link>
+            {['Home', 'About', 'Portfolio', 'Blog', 'Contact'].map((item) => (
+              <div key={item} className="relative">
+                <Link
+                  className="hover:text-orange-400 uppercase pr-7 pl-3"
+                  to={`/${item.toLowerCase()}`}
+                  onClick={() => setIsOpen(false)}
+                >
+                  {item}
+                  <span className="menu-item_dots"></span>
+                </Link>
+              </div>
             ))}
+            <div className="dropdown relative">
+              <button
+                className="nav-link dropdown-toggle no-underline"
+                onClick={() => setIsOpen(!isOpen)}
+              >
+                Services
+                <span className="menu-item_dots"></span>
+              </button>
+              {isOpen && (
+                <div className="dropdown-menu bg-black text-white">
+                  {services.map((service, index) => (
+                    <Link
+                      key={index}
+                      className="dropdown-item text-[#232323] bg-white relative arimo-bold text-[14px] tracking-[2px]"
+                      to={`/${service.link}`}
+                    >
+                      {service.text}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
           </div>
         )}
       </nav>

@@ -1,15 +1,14 @@
-/* Custom Looping Animation */
+/* Component.css */
 @keyframes loop {
-    0% {
+  0% {
       transform: translateX(100%);
-    }
-    100% {
+  }
+  100% {
       transform: translateX(-100%);
-    }
   }
-  
-  .animate-loop {
-    display: inline-block;
-    animation: loop 30s linear infinite;
-  }
-  
+}
+
+.animate-loop {
+  display: inline-block;
+  animation: loop 120s linear infinite; /* Change duration to 120 seconds */
+}
