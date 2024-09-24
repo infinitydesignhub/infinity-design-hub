@@ -1,28 +1,54 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { Link } from 'react-router-dom';
 
 const VisionSection = () => {
   useEffect(() => {
-    AOS.init({ duration: 1000, once: true }); // Initialize AOS with 'once' to trigger animation once on scroll
-    AOS.refresh(); // Refresh AOS to ensure all animations are properly triggered
+    AOS.init({ duration: 1000, once: true });
+    AOS.refresh();
   }, []);
 
   const data = {
     vision: {
       title: "Why Partner with Infinity DesignHub?",
-      content: [
-        "We envision a world where every brand possesses a distinctive identity that stands out and leaves a lasting impression."
-      ],
       buttonText: "GET IN TOUCH",
       buttonLink: "/contact",
-      imageSrc: "https://wgl-dsites.net/bili/light/wp-content/uploads/2022/08/home6-1.jpg"
+      imageSrc: "https://wgl-dsites.net/bili/light/wp-content/uploads/2022/08/home6-1.jpg",
+      features: [
+        {
+          title: "Expert Professional Team",
+          description: "Access top talent with extensive experience in digital innovation and marketing."
+        },
+        {
+          title: "End-to-End Solutions",
+          description: "From strategy to execution, we handle every aspect of your digital and print needs."
+        },
+        {
+          title: "Proven Experience",
+          description: "Leveraging years of success globally across various industries."
+        },
+        {
+          title: "Economical and Efficient",
+          description: "Quality solutions that fit your budget without compromising on excellence."
+        },
+        {
+          title: "Continuous Support",
+          description: "Timely and responsive service to ensure your success every step of the way."
+        }
+      ]
     }
   };
 
+  const [openFeatureIndex, setOpenFeatureIndex] = useState(null);
+
+  const toggleFeature = (index) => {
+    setOpenFeatureIndex(openFeatureIndex === index ? null : index);
+  };
+
   return (
-    <section className="max-w-7xl mx-auto py-12 flex flex-wrap" data-aos="fade-up">
-      <div className="w-full md:w-1/2 p-4" data-aos="fade-right">
+    <section className="max-w-7xl mx-auto py-12 flex flex-wrap">
+      <div className="w-full md:w-1/2 p-4">
         <img
           loading="lazy"
           decoding="async"
@@ -31,23 +57,36 @@ const VisionSection = () => {
           className="w-full h-auto"
         />
       </div>
-      <div className="w-full md:w-1/2 p-4" data-aos="fade-left">
+      <div className="w-full md:w-1/2 p-4">
         <div className="mb-6">
           <h3 className="text-3xl font-semibold mt-2">{data.vision.title}</h3>
         </div>
-
         <div className="mb-6">
-          {data.vision.content.map((paragraph, idx) => (
-            <p className="text-[18px] leading-[36px]" key={idx}>{paragraph}</p>
+          {data.vision.features.map((feature, index) => (
+            <div key={index}>
+              <h4
+                className={`cursor-pointer text-2xl font-semibold py-2 flex items-center hover:text-orange-500 transition duration-300 ease-in-out ${
+                  openFeatureIndex === index ? "text-orange-600" : "text-gray-800"
+                }`}
+                onClick={() => toggleFeature(index)}
+              >
+                <span className="mr-2 text-orange-600">
+                  {openFeatureIndex === index ? "-" : "+"}
+                </span>
+                {feature.title}
+              </h4>
+              {openFeatureIndex === index && (
+                <p className="text-[16px] font-normal leading-7 pt-[3px] px-[35px] py-[15px]">{feature.description}</p>
+              )}
+            </div>
           ))}
         </div>
-
-        <a
-          href={data.vision.buttonLink}
-          className="no-underline text-gray-600 wgl-button relative px-8 py-3 z-1 font-semibold rounded-full transition-all duration-300"
+        <Link
+          to={data.vision.buttonLink}
+          className="no-underline text-gray-600 wgl-button relative px-8 py-3 z-1 font-semibold rounded-full transition-all duration-300 mt-10 flex w-[180px]"
         >
           {data.vision.buttonText}
-        </a>
+        </Link>
       </div>
     </section>
   );

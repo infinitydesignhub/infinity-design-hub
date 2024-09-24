@@ -1,8 +1,25 @@
 /* index.css */
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
+@import url("https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap");
 
-body{
-  font-family: "DM Sans";
+body {
+  font-family: "DM Sans", sans-serif;
   font-optical-sizing: auto;
 }
+
+.arimo-regular {
+  font-family: "Arimo", sans-serif;
+  font-weight: 400; /* Regular weight */
+}
+
+.arimo-bold {
+  font-family: "Arimo", sans-serif;
+  font-weight: 700; /* Bold weight */
+}
+
+a {
+  font-family: "Arimo", sans-serif;
+}
+
+

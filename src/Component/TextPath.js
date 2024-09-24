@@ -1,37 +1,48 @@
-
-import React from 'react';
-import './Component.css'
-
-const data = {
-  "text": "LATEST CASES",
-  "svgPath": "M18.6742 30.3182L13.2701 30.2776L13.1406 13.0492L13.1316 11.8549L12.287 12.6994L5.30318 19.6833L1.44794 15.828L15.7504 1.52543L30.2803 16.0555L26.4931 19.8426L19.3983 12.7477L18.5355 11.8849L18.5447 13.105L18.6742 30.3182Z"
-};
+import React, { useEffect, useState, useRef } from 'react';
+import './Component.css'; // Optional: for custom styles
+import data from '../Data/TextPathData.json'; // Import the JSON data
 
 const TextPath = () => {
+  const [services, setServices] = useState(data.services); // Use imported data
+  const textRef = useRef(null);
+
+  useEffect(() => {
+    // Add animation class on mount
+    const textElement = textRef.current;
+    if (textElement) {
+      textElement.classList.add('animate-loop');
+    }
+  }, []);
+
+  if (!services.length) return null; // Handle loading state
+
   return (
-    <section className="text-path w-full py-16">
+    <section className="w-full h-full py-16">
       <div className="container mx-auto">
         <div className="relative overflow-hidden">
-          {/* Looping Text */}
-          <div className="animate-loop whitespace-nowrap text-center flex items-center justify-center text-4xl">
-            <span className="text-[40px] font-bold mx-4 text-orange-600">
-              {data.text}
-            </span>
-            <span className="inline-block mx-4 text-orange-600">
-              __
-              {/* <svg viewBox="0 0 31 31" xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-orange-600 ">
-                <path d={data.svgPath}  />
-              </svg> */}
-            </span>
-            <span className="text-4xl font-bold mx-4 text-black text-webkit">
-              {data.text}
-            </span>
-            <span className="inline-block mx-4">
-              __
-              {/* <svg viewBox="0 0 31 31" xmlns="http://www.w3.org/2000/svg" className="w-6 h-6">
-                <path d={data.svgPath} />
-              </svg> */}
-            </span>
+          <div ref={textRef} className="whitespace-nowrap text-center flex items-center justify-center">
+            {services.map((service, index) => {
+              // Alternate colors: black for even index, transparent for odd
+              const textColor = index % 2 === 0 ? '#232323' : ''; // Adjust as needed
+
+              return (
+                <span key={index} className="">
+                  <span
+                    className="text text-[130px] font-bold uppercase"
+                    style={{
+                      color: textColor,
+                      ...(textColor === '#232323'
+                        ? {}
+                        : { WebkitTextStroke: '1px currentColor', WebkitTextFillColor: 'transparent' })
+                    }}
+                  >
+                    {service.title}
+                    <span className="inline-block mx-4 text-orange-600">_</span>
+                  </span>
+                  &nbsp;
+                </span>
+              );
+            })}
           </div>
         </div>
       </div>

@@ -7,8 +7,8 @@ const GetInTouch = () => {
       <div className="flex justify-between items-start">
         <div className="text-center">
           <h3 className="font-bold dblh__title">
-            <span className="dblh__title-1">Get in</span>
-            <span className="dblh__title-2">Touch</span>
+            <span className="dblh__title-1">We craft branding </span>
+            <span className="dblh__title-2">strategies that resonate!</span>
           </h3>
         </div>
         <div className="btn-circle">
@@ -17,7 +17,7 @@ const GetInTouch = () => {
             to="/contact"
             role="button"
           >
-            SEND US A MESSAGE
+            Get Quote
           </Link>
         </div>
         

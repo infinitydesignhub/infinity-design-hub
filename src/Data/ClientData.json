@@ -1,0 +1,110 @@
+{
+    "clients": [
+      {
+        "id": "partner1",
+        "imgSrc": "/images/Logos/1.png",
+        "link": "/contact"
+      },
+      {
+        "id": "partner2",
+        "imgSrc": "/images/Logos/2 (2).png",
+        "link": "/contact"
+      },
+      {
+        "id": "partner3",
+        "imgSrc": "/images/Logos/2 (3).png",
+        "link": "/contact"
+      },
+      {
+        "id": "partner4",
+        "imgSrc": "/images/Logos/3.png",
+        "link": "/contact"
+      },
+      {
+        "id": "partner5",
+        "imgSrc": "/images/Logos/4.png",
+        "link": "/contact"
+      },
+      {
+        "id": "partner6",
+        "imgSrc": "/images/Logos/5.png",
+        "link": "/contact"
+      },
+      {
+        "id": "partner7",
+        "imgSrc": "/images/Logos/6.png",
+        "link": "/contact"
+      },
+      {
+        "id": "partner8",
+        "imgSrc": "/images/Logos/7.png",
+        "link": "/contact"
+      },
+      {
+        "id": "partner9",
+        "imgSrc": "/images/Logos/8.png",
+        "link": "/contact"
+      },
+      {
+        "id": "partner10",
+        "imgSrc": "/images/Logos/9.png",
+        "link": "/contact"
+      },
+      {
+        "id": "partner11",
+        "imgSrc": "/images/Logos/Icon-Blue.png",
+        "link": "/contact"
+      },
+      {
+        "id": "partner12",
+        "imgSrc": "/images/Logos/Logo (2).png",
+        "link": "/contact"
+      },
+      {
+        "id": "partner13",
+        "imgSrc": "/images/Logos/Logo (3).png",
+        "link": "/contact"
+      },
+      {
+        "id": "partner14",
+        "imgSrc": "/images/Logos/Logo (4).png",
+        "link": "/contact"
+      },
+      {
+        "id": "partner15",
+        "imgSrc": "/images/Logos/Logo (5).png",
+        "link": "/contact"
+      },
+      {
+        "id": "partner16",
+        "imgSrc": "/images/Logos/logo.png",
+        "link": "/contact"
+      },
+      {
+        "id": "partner17",
+        "imgSrc": "/images/Logos/Nirvanaah Logo.jpg",
+        "link": "/contact"
+      },
+      {
+        "id": "partner18",
+        "imgSrc": "/images/Logos/Orignal Logo Color.png",
+        "link": "/contact"
+      },
+      {
+        "id": "partner19",
+        "imgSrc": "/images/Logos/Portfolio.png",
+        "link": "/contact"
+      },
+      {
+        "id": "partner20",
+        "imgSrc": "/images/Logos/Star_Chaat_Logo.png",
+        "link": "/contact"
+      },
+      {
+        "id": "partner21",
+        "imgSrc": "/images/Logos/Stavik Stationery .png",
+        "link": "/contact"
+      }
+    ]
+  }
+  

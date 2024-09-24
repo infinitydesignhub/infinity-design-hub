@@ -68,7 +68,7 @@ const ProvideServices = () => {
     }, []);
 
     return (
-        <section className="provide_services bg-[#181818] pt-[124px] pb-14 my-10">
+        <section className="provide_services bg-[#181818] pt-[124px] pb-14 my-10" id='services'>
             <div className='container'>
                 <div className='row m-auto'>
                     <div className="flex flex-col w-full md:w-1/3 p-4 col-4">
@@ -77,10 +77,10 @@ const ProvideServices = () => {
                             <h2 className="text-white text-5xl font-bold mt-3 mb-3">Learn What Services We Provide</h2>
                         </div>
                         <Link
-                            to="/services/"
-                            className="flex justify-center items-center my-0 mr-auto ml-0 p-14  hover:bg-custom-btn text-[16px] leading-[32px] text-center font-[400] bg-[#393939] text-white  py-2 rounded-full  tracking-wide  transition duration-200"
+                            to="/contact"
+                            className="flex wgl-button text-white no-underline relative px-8 py-3 z-1 font-semibold rounded-full transition-all duration-300 w-40"
                         >
-                            More Services
+                            Get inTouch
                         </Link>
                     </div>
                     <div className="col-8">
