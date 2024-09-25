@@ -3,60 +3,110 @@
         "title": "Home Features",
         "features": [
             {
-                "imgSrc": "https://wgl-dsites.net/bili/wp-content/uploads/2023/03/landing-42.png",
-                "text": "Expert Team\nAvailable"
+                "imgSrc": "https://wgl-dsites.net/bili/wp-content/uploads/2023/03/landing-40.png",
+                "text": "Logo Design"
             },
             {
-                "imgSrc": "https://wgl-dsites.net/bili/wp-content/uploads/2023/03/landing-43.png",
-                "text": "Customer Focused\nApproach"
+                "imgSrc": "https://wgl-dsites.net/bili/wp-content/uploads/2023/03/landing-41.png",
+                "text": "Branding Strategies"
+            },
+            {
+                "imgSrc": "https://wgl-dsites.net/bili/wp-content/uploads/2023/03/landing-40.png",
+                "text": "Web Development"
+            },
+            {
+                "imgSrc": "https://wgl-dsites.net/bili/wp-content/uploads/2023/03/landing-41.png",
+                "text": "Digital Marketing"
+            },
+            {
+                "imgSrc": "https://wgl-dsites.net/bili/wp-content/uploads/2023/03/landing-40.png",
+                "text": "Design Solutions"
+            },
+            {
+                "imgSrc": "https://wgl-dsites.net/bili/wp-content/uploads/2023/03/landing-41.png",
+                "text": "Content Writing"
+            },
+            {
+                "imgSrc": "https://wgl-dsites.net/bili/wp-content/uploads/2023/03/landing-41.png",
+                "text": "Video Creation"
+            },
+            {
+                "imgSrc": "https://wgl-dsites.net/bili/wp-content/uploads/2023/03/landing-41.png",
+                "text": "Printing Solutions"
             }
         ]
-
     },
     "about": {
         "title": "About Us Features",
         "features": [
             {
                 "imgSrc": "https://wgl-dsites.net/bili/wp-content/uploads/2023/03/landing-40.png",
-                "text": "5 Stars\nSupport"
+                "text": "Logo Design"
             },
             {
                 "imgSrc": "https://wgl-dsites.net/bili/wp-content/uploads/2023/03/landing-41.png",
-                "text": "SEO\nOptimized"
+                "text": "Branding Strategies"
             },
             {
                 "imgSrc": "https://wgl-dsites.net/bili/wp-content/uploads/2023/03/landing-40.png",
-                "text": "5 Stars\nSupport"
+                "text": "Web Development"
             },
             {
                 "imgSrc": "https://wgl-dsites.net/bili/wp-content/uploads/2023/03/landing-41.png",
-                "text": "SEO\nOptimized"
+                "text": "Digital Marketing"
             },
             {
                 "imgSrc": "https://wgl-dsites.net/bili/wp-content/uploads/2023/03/landing-40.png",
-                "text": "5 Stars\nSupport"
+                "text": "Design Solutions"
             },
             {
                 "imgSrc": "https://wgl-dsites.net/bili/wp-content/uploads/2023/03/landing-41.png",
-                "text": "SEO\nOptimized"
+                "text": "Content Writing"
             },
             {
                 "imgSrc": "https://wgl-dsites.net/bili/wp-content/uploads/2023/03/landing-41.png",
-                "text": "SEO\nOptimized"
+                "text": "Video Creation"
+            },
+            {
+                "imgSrc": "https://wgl-dsites.net/bili/wp-content/uploads/2023/03/landing-41.png",
+                "text": "Printing Solutions"
             }
         ]
-        
     },
     "services": {
         "title": "Services We Offer",
         "features": [
             {
-                "imgSrc": "https://wgl-dsites.net/bili/wp-content/uploads/2023/03/landing-44.png",
-                "text": "Tailored Solutions"
+                "imgSrc": "https://wgl-dsites.net/bili/wp-content/uploads/2023/03/landing-40.png",
+                "text": "Logo Design"
             },
             {
-                "imgSrc": "https://wgl-dsites.net/bili/wp-content/uploads/2023/03/landing-45.png",
-                "text": "24/7 Support"
+                "imgSrc": "https://wgl-dsites.net/bili/wp-content/uploads/2023/03/landing-41.png",
+                "text": "Branding Strategies"
+            },
+            {
+                "imgSrc": "https://wgl-dsites.net/bili/wp-content/uploads/2023/03/landing-40.png",
+                "text": "Web Development"
+            },
+            {
+                "imgSrc": "https://wgl-dsites.net/bili/wp-content/uploads/2023/03/landing-41.png",
+                "text": "Digital Marketing"
+            },
+            {
+                "imgSrc": "https://wgl-dsites.net/bili/wp-content/uploads/2023/03/landing-40.png",
+                "text": "Design Solutions"
+            },
+            {
+                "imgSrc": "https://wgl-dsites.net/bili/wp-content/uploads/2023/03/landing-41.png",
+                "text": "Content Writing"
+            },
+            {
+                "imgSrc": "https://wgl-dsites.net/bili/wp-content/uploads/2023/03/landing-41.png",
+                "text": "Video Creation"
+            },
+            {
+                "imgSrc": "https://wgl-dsites.net/bili/wp-content/uploads/2023/03/landing-41.png",
+                "text": "Printing Solutions"
             }
         ]
     }

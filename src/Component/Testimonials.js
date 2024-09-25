@@ -68,31 +68,28 @@ const Testimonials = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    // autoplay: true,
     autoplaySpeed: 3000,
     prevArrow: <CustomPrevArrow />,
     nextArrow: <CustomNextArrow />,
   };
 
   return (
-    <section className="testimonials py-16 container">
+    <section className="testimonials py-5 container">
       <div className="row justify-between align-items-center">
         <div className="col-md-4 d-none d-md-block">
           <img
             loading="lazy"
             decoding="async"
-            width="510"
-            height="510"
             src="https://wgl-dsites.net/bili/light/wp-content/uploads/2022/11/h8-6.png"
             alt=""
-            className="w-100 h-auto"
+            className="img-fluid"
           />
         </div>
         <div className="col-md-8 col-12">
           <Slider {...settings}>
             {testimonialsData.map((testimonial) => (
-              <div key={testimonial.id} className="d-flex row items-center p-4 mb-4" data-aos="fade-up">
-                <div className="col-4 author__thumbnail me-3 d-flex flex-column align-items-center">
+              <div key={testimonial.id} className="d-flex row align-items-center p-4 mb-4" data-aos="fade-up">
+                <div className="col-4 author__thumbnail d-flex flex-column align-items-center">
                   <img
                     src={testimonial.image}
                     alt={`${testimonial.author} photo`}
@@ -103,8 +100,8 @@ const Testimonials = () => {
                     <span className="author__position text-gray-400">{testimonial.position}</span>
                   </div>
                 </div>
-                <div className="col-7 item__content">
-                  <div className="item__quote text-lg  !pl-28">{testimonial.quote}</div>
+                <div className="col-8 item__content">
+                  <div className="item__quote text-lg">{testimonial.quote}</div>
                 </div>
               </div>
             ))}

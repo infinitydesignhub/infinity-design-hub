@@ -3,7 +3,7 @@ import React from 'react';
 const AnimatedSection = () => {
   return (
     <section className="bg-gradient-to-r from-blue-500 to-purple-500 w-full h-auto">
-      <div className="container mx-auto">
+      <div className=" container mx-auto">
         <div className="flex flex-col items-center">
           <div className="my-10"></div>
           <div className="wgl-text-path loop_animation clone_text">

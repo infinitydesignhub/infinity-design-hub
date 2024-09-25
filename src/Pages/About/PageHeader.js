@@ -21,6 +21,7 @@ const pageHeaderData = {
     titleColor: '#232323',
     titleFontSize: '48px',
     titleLineHeight: '60px',
+    fontWeight:'700',
     breadcrumbsColor: '#232323',
     breadcrumbsFontSize: '14px',
     breadcrumbsLineHeight: '34px',
@@ -48,6 +49,7 @@ const PageHeader = () => {
                 fontSize: pageHeaderData.styles.titleFontSize,
                 lineHeight: pageHeaderData.styles.titleLineHeight,
                 letterSpacing: '0em',
+                fontWeight:pageHeaderData.styles.fontWeight
               }}
             >
               {pageHeaderData.title}
@@ -59,6 +61,7 @@ const PageHeader = () => {
                 fontSize: pageHeaderData.styles.breadcrumbsFontSize,
                 lineHeight: pageHeaderData.styles.breadcrumbsLineHeight,
                 letterSpacing: '0.1em',
+                fontWeight:pageHeaderData.styles.fontWeight
               }}
             >
               <div className="breadcrumbs">

@@ -47,46 +47,48 @@ const VisionSection = () => {
   };
 
   return (
-    <section className="max-w-7xl mx-auto py-12 flex flex-wrap">
-      <div className="w-full md:w-1/2 p-4">
-        <img
-          loading="lazy"
-          decoding="async"
-          src={data.vision.imageSrc}
-          alt=""
-          className="w-full h-auto"
-        />
-      </div>
-      <div className="w-full md:w-1/2 p-4">
-        <div className="mb-6">
-          <h3 className="text-3xl font-semibold mt-2">{data.vision.title}</h3>
+    <section className="container mx-auto py-12">
+      <div className="row flex-wrap">
+        <div className="col-md-6" data-aos="fade-right">
+          <img
+            loading="lazy"
+            decoding="async"
+            src={data.vision.imageSrc}
+            alt=""
+            className="w-full h-auto"
+          />
         </div>
-        <div className="mb-6">
-          {data.vision.features.map((feature, index) => (
-            <div key={index}>
-              <h4
-                className={`cursor-pointer text-2xl font-semibold py-2 flex items-center hover:text-orange-500 transition duration-300 ease-in-out ${
-                  openFeatureIndex === index ? "text-orange-600" : "text-gray-800"
-                }`}
-                onClick={() => toggleFeature(index)}
-              >
-                <span className="mr-2 text-orange-600">
-                  {openFeatureIndex === index ? "-" : "+"}
-                </span>
-                {feature.title}
-              </h4>
-              {openFeatureIndex === index && (
-                <p className="text-[16px] font-normal leading-7 pt-[3px] px-[35px] py-[15px]">{feature.description}</p>
-              )}
-            </div>
-          ))}
+        <div className="col-md-6" data-aos="fade-left">
+          <div className="mb-6">
+            <h3 className="text-3xl font-semibold mt-2">{data.vision.title}</h3>
+          </div>
+          <div className="mb-6">
+            {data.vision.features.map((feature, index) => (
+              <div key={index}>
+                <h4
+                  className={`cursor-pointer text-2xl font-semibold py-2 flex items-center hover:text-orange-500 transition duration-300 ease-in-out ${
+                    openFeatureIndex === index ? "text-orange-600" : "text-gray-800"
+                  }`}
+                  onClick={() => toggleFeature(index)}
+                >
+                  <span className="mr-2 text-orange-600">
+                    {openFeatureIndex === index ? "-" : "+"}
+                  </span>
+                  {feature.title}
+                </h4>
+                {openFeatureIndex === index && (
+                  <p className="text-[16px] font-normal leading-7 pt-[3px] px-[35px] py-[15px]">{feature.description}</p>
+                )}
+              </div>
+            ))}
+          </div>
+          <Link
+            to={data.vision.buttonLink}
+            className="no-underline text-gray-600 wgl-button relative px-8 py-3 z-1 font-semibold rounded-full transition-all duration-300 mt-10 flex w-[180px]"
+          >
+            {data.vision.buttonText}
+          </Link>
         </div>
-        <Link
-          to={data.vision.buttonLink}
-          className="no-underline text-gray-600 wgl-button relative px-8 py-3 z-1 font-semibold rounded-full transition-all duration-300 mt-10 flex w-[180px]"
-        >
-          {data.vision.buttonText}
-        </Link>
       </div>
     </section>
   );

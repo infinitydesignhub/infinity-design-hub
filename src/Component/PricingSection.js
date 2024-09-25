@@ -60,37 +60,41 @@ const PricingSection = () => {
         <h3 className="text-3xl font-extrabold text-white">Explore Our Digital Pricing Plans</h3>
       </div> */}
 
-      <div className="container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-7xl mx-auto pb-16">
-        {pricingPlans.map((plan) => (
-          <div
-            key={plan.id}
-            className="relative bg-black rounded-lg shadow-lg overflow-hidden"
-            data-aos="fade-up" // Add animation attribute
-          >
-            <div className="absolute inset-0 bg-cover bg-center">
-              <img src={plan.backgroundImage} alt={plan.title} className="w-full h-full object-cover" />
-            </div>
-            <div className="relative p-6 sm:p-8 mt-10 Dm Sans bg-[#232323]">
-              <h4 className="text-[14px] Dm Sans text-[#888888] mb-4">{plan.title}</h4>
-              <div className="flex items-center justify-center text-white mb-4">
-                <span className="text-4xl font-[400] text-white text-[64px] tracking-[2px]">${plan.price}/</span>
-                <span className="ml-2 text-[16px] font-[500] leading-6 max-w-[70px] inline-block">{plan.period}</span>
+      <div className="container">
+        <div className="row justify-content-center">
+          {pricingPlans.map((plan) => (
+            <div
+              key={plan.id}
+              className="col-lg-4 col-md-6 mb-4"
+              data-aos="fade-up" // Add animation attribute
+            >
+              <div className="relative bg-black rounded-lg shadow-lg overflow-hidden">
+                <div className="absolute inset-0 bg-cover bg-center">
+                  <img src={plan.backgroundImage} alt={plan.title} className="w-full h-full object-cover" />
+                </div>
+                <div className="relative p-6 sm:p-8 mt-10 Dm Sans bg-[#232323]">
+                  <h4 className="text-[14px] Dm Sans text-[#888888] mb-4">{plan.title}</h4>
+                  <div className="flex items-center justify-center text-white mb-4">
+                    <span className="text-4xl font-[400] text-white text-[64px] tracking-[2px]">${plan.price}/</span>
+                    <span className="ml-2 text-[16px] font-[500] leading-6 max-w-[70px] inline-block">{plan.period}</span>
+                  </div>
+                  <ul className="text-[16px] p-3 text-white mb-6 space-y-2 ml-[-10px] leading-[30px] Dm Sans">
+                    {plan.features.map((feature, index) => (
+                      <li key={index} className="flex items-center">
+                        <span className="mr-2 text-orange-400 text-[30px]">•</span> {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  <button
+                    className="inline-block px-8 sm:px-10 lg:px-[48px] hover:bg-custom-btn text-[16px] leading-[32px] text-center font-[400] bg-[#393939] ml-[35px] text-white py-2 rounded-full tracking-wide transition duration-200"
+                  >
+                    CHOOSE PLAN
+                  </button>
+                </div>
               </div>
-              <ul className="text-[16px] p-3 text-white mb-6 space-y-2 ml-[-10px] leading-[30px] Dm Sans">
-                {plan.features.map((feature, index) => (
-                  <li key={index} className="flex items-center">
-                    <span className="mr-2 text-orange-400 text-[30px]">•</span> {feature}
-                  </li>
-                ))}
-              </ul>
-              <button
-                className="inline-block px-8 sm:px-10 lg:px-[48px] hover:bg-custom-btn text-[16px] leading-[32px] text-center font-[400] bg-[#393939] ml-[35px] text-white py-2 rounded-full tracking-wide transition duration-200"
-              >
-                CHOOSE PLAN
-              </button>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );

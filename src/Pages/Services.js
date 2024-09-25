@@ -6,10 +6,10 @@ import CounterSection from '../Component/CounterSection'; // Your local componen
 import PhilosophySection from './Services/PhilosophySection';
 import BenefitsSection from './Services/BenefitsSection'; // Import the BenefitsSection
 import FeaturesSection from '../Component/FeaturesSection';
-// import GetInTouch from './Services/GetInTouch';
 import GetInTouch from '../Component/GetInTouch';
 import featuresData from '../Data/FeaturesData.json';
 import FlipboxGrid from './Services/FlipboxGrid';
+
 const componentMap = {
   layoutComponent: TalkAboutDesignSection,
   customComponent: PhilosophySection,
@@ -53,21 +53,24 @@ const Services = () => {
 
         console.log("Rendering section:", section);
 
-        return ComponentToRender ? (
+        return (
           <React.Fragment key={index}>
-            <ComponentToRender data={section.fields} />
-            {/* Render CounterSection after layoutComponent */}
-            {contentTypeId === 'layoutComponent' && <CounterSection />}
-
+            {ComponentToRender ? (
+              <>
+                <ComponentToRender data={section.fields} />
+                {/* Render CounterSection after layoutComponent */}
+                {contentTypeId === 'layoutComponent' && <CounterSection />}
+                {/* Check if the rendered component is BenefitsSection */}
+                {contentTypeId === 'customComponent' && <FlipboxGrid />}
+              </>
+            ) : (
+              <div>Unknown section type</div>
+            )}
           </React.Fragment>
-        ) : (
-          <div key={index}>Unknown section type</div>
         );
       })}
       <FeaturesSection data={featuresData.services} />
       <GetInTouch />
-      <FlipboxGrid />
-
     </div>
   );
 };
