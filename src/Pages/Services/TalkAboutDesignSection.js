@@ -14,8 +14,8 @@ const TalkAboutDesignSection = ({ data }) => {
   }
 
   return (
-    <section className="max-w-7xl mx-auto py-16 flex flex-wrap talk">
-      <div className="w-full md:w-1/2 p-4">
+    <section className=" container mx-auto py-16 flex flex-wrap talk">
+      <div className="w-full md:w-1/2 py-4">
         <div className="mb-6">
           <h2 className="service-title text-2xl font-semibold">{data.leftTitle}</h2>
         </div>
@@ -45,7 +45,7 @@ const TalkAboutDesignSection = ({ data }) => {
         </div>
         <p className="mb-6 text-[18px] leading-[36px]">{data.description}</p>
       </div>
-      <div className="w-full md:w-1/2 p-4">
+      <div className="w-full md:w-1/2 py-4">
         <div className="mb-6">
           <img
             loading="lazy"

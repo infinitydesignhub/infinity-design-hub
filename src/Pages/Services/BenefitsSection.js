@@ -19,9 +19,9 @@ const BenefitsSection = ({ data }) => {
 
   return (
     <section className="py-16">
-      <div className="container mx-auto flex flex-wrap">
+      <div className="container mx-auto flex flex-wrap justify-between">
         {/* Left Column - Image */}
-        <div className="w-full md:w-1/2 px-4 flex justify-center">
+        <div className="w-full md:w-1/2 flex justify-between">
           {image && image.fields && (
             <img
               src={image.fields.file.url}
@@ -32,8 +32,8 @@ const BenefitsSection = ({ data }) => {
         </div>
 
         {/* Right Column - Text */}
-        <div className="w-full md:w-1/2 px-10">
-          <div className="mb-4 w-[450px]">
+        <div className="w-full md:w-1/2 pl-10">
+          <div className="mb-4">
             <span className="text-orange-500 font-bold mb-4">{subTitle}</span>
             <h3 className="text-4xl font-bold mt-3 mb-3">
               {title}

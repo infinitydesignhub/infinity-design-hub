@@ -22,7 +22,7 @@ const BannerSection = () => {
 
   return (
     <section className="banner relative">
-      <div className="container flex flex-col md:flex-row items-center text-start py-10 md:py-28">
+      <div className="container d-flex flex-column flex-md-row align-items-start text-start py-10 md:py-28">
         <div className="flex-1">
           <div
             className={`space-y-6 transition-opacity duration-500 ${
@@ -32,7 +32,7 @@ const BannerSection = () => {
             <h1 className="text-3xl md:text-5xl lg:text-7xl font-bold">
               {currentData.mainText[0]}
             </h1>
-            <div className="flex items-center">
+            <div className="d-flex align-items-center">
               <img
                 src="https://wgl-dsites.net/bili/light/wp-content/uploads/2022/03/arrow_orange.png"
                 alt="arrow"
@@ -48,7 +48,7 @@ const BannerSection = () => {
           </div>
 
           <div
-            className={`flex flex-col md:flex-row items-start md:items-center space-y-4 md:space-x-4 mt-6 md:mt-10 transition-opacity duration-500 ${
+            className={`d-flex flex-column md:flex-row align-items-start md:align-items-center space-y-4 md:space-x-4 mt-6 md:mt-10 transition-opacity duration-500 ${
               transitioning ? "opacity-0" : "opacity-100"
             }`}
           >
@@ -56,8 +56,8 @@ const BannerSection = () => {
               {currentData.subheading}
             </p>
             <Link
-              href="/contact"
-              className="inline-block text-black wgl-button relative px-8 py-3 z-1 font-semibold rounded-full  transition-all duration-300  px-4 py-2 rounded-lg"
+              to="/contact"
+              className="inline-block text-black wgl-button relative px-8 py-3 z-1 font-semibold rounded-full transition-all duration-300 px-4 py-2 rounded-lg"
             >
               {currentData.buttonText}
             </Link>
@@ -66,7 +66,7 @@ const BannerSection = () => {
       </div>
 
       {/* Social Media (Sidebar-like styling) */}
-      <div className="absolute left-0 top-1/2 transform -translate-y-1/2 space-y-10 text-gray-600 flex justify-center flex-col  items-center gap-5 text-xs md:text-sm lg:text-base">
+      <div className="absolute left-0 top-1/2 transform -translate-y-1/2 space-y-10 text-gray-600 flex justify-center flex-column items-center gap-5 text-xs md:text-sm lg:text-base">
         <div className="rotate-90 transform-origin-left">FACEBOOK</div>
         <div className="rotate-90 transform-origin-left">TWITTER</div>
         <div className="rotate-90 transform-origin-left">INSTAGRAM</div>

@@ -11,8 +11,8 @@ const contactSectionData = {
   },
   contacts: {
     header: 'OUR CONTACTS',
-    subHeader: "Let’s Start Working Together. Get in Touch with Us!",
-    description: 'Get in touch to discuss your employee wellbeing needs today. Please give us a call, drop us an email.',
+    subHeader: "Let’s Build Something Incredible Together!",
+    description: 'Have questions? Want to talk about how we can bring your brand to life? We’d love to hear from you! Whether you need a fresh logo, a complete brand overhaul, or dynamic marketing solutions, our team is ready to make your vision a reality.',
     address: '27 Division St, New York, NY 10002, USA',
     phone: '+1 (659) 400-8283',
     email: 'info@infinitydesignhub.com',

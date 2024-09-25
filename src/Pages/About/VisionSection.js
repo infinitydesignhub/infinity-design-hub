@@ -1,6 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react';
+import 'aos/dist/aos.css'; // Import AOS styles
+import AOS from 'aos'; // Import AOS
 
 const VisionSection = () => {
+  useEffect(() => {
+    AOS.init(); // Initialize AOS
+  }, []);
+
   const data = {
     vision: {
       title: "Empowering Brands, Together",
@@ -33,64 +39,64 @@ const VisionSection = () => {
     if (activeTabElement && lavaLampRef.current) {
       const tabRect = activeTabElement.getBoundingClientRect();
       const containerRect = activeTabElement.parentElement.getBoundingClientRect();
-
       lavaLampRef.current.style.width = `${tabRect.width}px`;
       lavaLampRef.current.style.left = `${tabRect.left - containerRect.left}px`;
     }
   }, [activeTabIndex]);
 
   return (
-    <section className="max-w-7xl mx-auto py-16 flex flex-wrap">
-      <div className="w-full md:w-1/2 p-4">
-        <img
-          loading="lazy"
-          decoding="async"
-          src={data.vision.imageSrc}
-          alt="Vision and Mission"
-          className="w-full h-auto"
-        />
-      </div>
-      <div className="w-full md:w-1/2 p-4">
-        <div className="mb-6">
-          <span className="text-gray-600">{data.vision.subtitle}</span>
-          <h3 className="text-[38px] font-semibold mt-2">{data.vision.title}</h3>
+    <section className="container mx-auto py-16">
+      <div className="row flex-wrap">
+        <div className="col-md-6" data-aos="fade-right">
+          <img
+            loading="lazy"
+            decoding="async"
+            src={data.vision.imageSrc}
+            alt="Vision and Mission"
+            className="w-full h-auto"
+          />
         </div>
-
-        <div className="wgl-tabs">
-          <div className="flex wgl-tabs_headings-wrap relative">
-            <div ref={lavaLampRef} className="lavalamp-object easeInOutCubic"></div>
-            {data.vision.tabs.map((tab, index) => (
-              <h4
-                key={index}
-                onClick={() => setActiveTabIndex(index)} // Update active tab on click
-                className={`wgl-tabs_header cursor-pointer ${index === activeTabIndex ? 'active' : ''}`}
-              >
-                <span className="wgl-tabs_title">{tab.title}</span>
-              </h4>
-            ))}
+        <div className="col-md-6" data-aos="fade-left">
+          <div className="mb-6">
+            <h3 className="text-[38px] font-semibold mt-2">{data.vision.title}</h3>
           </div>
 
-          {/* Content Wrapper with vertical scrolling */}
-          <div className="wgl-tabs_content-wrap mt-4 mb-4">
-            {data.vision.tabs.map((tab, index) => (
-              <div
-                key={index}
-                className={`wgl-tabs_content ${index === activeTabIndex ? 'active' : ''}`}
-              >
-                {tab.content.map((paragraph, idx) => (
-                  <p key={idx}>{paragraph}</p>
-                ))}
-              </div>
-            ))}
-          </div>
-        </div>
+          <div className="wgl-tabs">
+            <div className="flex wgl-tabs_headings-wrap relative">
+              <div ref={lavaLampRef} className="lavalamp-object easeInOutCubic"></div>
+              {data.vision.tabs.map((tab, index) => (
+                <h4
+                  key={index}
+                  onClick={() => setActiveTabIndex(index)} // Update active tab on click
+                  className={`wgl-tabs_header cursor-pointer ${index === activeTabIndex ? 'active' : ''}`}
+                >
+                  <span className="wgl-tabs_title">{tab.title}</span>
+                </h4>
+              ))}
+            </div>
 
-        <a
-          href={data.vision.buttonLink}
-          className="inline-block text-black wgl-button relative px-8 py-3 z-1 font-semibold rounded-full  transition-all duration-300  px-4 py-2 rounded-lg mt-6"
-        >
-          {data.vision.buttonText}
-        </a>
+            {/* Content Wrapper */}
+            <div className="wgl-tabs_content-wrap mt-4 mb-4">
+              {data.vision.tabs.map((tab, index) => (
+                <div
+                  key={index}
+                  className={`wgl-tabs_content ${index === activeTabIndex ? 'active' : ''}`}
+                >
+                  {tab.content.map((paragraph, idx) => (
+                    <p key={idx}>{paragraph}</p>
+                  ))}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <a
+            href={data.vision.buttonLink}
+            className="inline-block text-black wgl-button relative px-8 py-3 z-1 font-semibold rounded-full transition-all duration-300 mt-6"
+          >
+            {data.vision.buttonText}
+          </a>
+        </div>
       </div>
     </section>
   );
