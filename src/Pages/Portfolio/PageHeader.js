@@ -10,7 +10,7 @@ const pageHeaderData = {
       isCurrent: false,
     },
     {
-      label: 'Contacts',
+      label: 'Portfolio',
       isCurrent: true,
     },
   ],
