@@ -5,10 +5,11 @@ import Masonry from 'react-masonry-css';
 
 const categories = [
   { name: 'All', filter: 'All' },
-  { name: 'Design', filter: 'Design' },
-  { name: 'Development', filter: 'Development' },
-  { name: 'Marketing', filter: 'Marketing' },
-  { name: 'Technology', filter: 'Technology' },
+  { name: 'Branding', filter: 'Branding' },
+  { name: 'Logo Design', filter: 'Logo Design' },
+  { name: 'Printing-solutions', filter: 'Printing-solutions' },
+  { name: 'Social Media', filter: 'Social Media' },
+  { name: 'Website design', filter: 'Website design' },
 ];
 
 const Portfolio = () => {

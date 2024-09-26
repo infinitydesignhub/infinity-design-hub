@@ -1,30 +1,93 @@
 [
   {
     "id": 1,
-    "title": "Unique Product Design",
-    "category": ["Design"],
-    "image": "https://wgl-dsites.net/bili/light/wp-content/uploads/2022/03/portfolio-s-1-1140x1140.jpg",
-    "link": "/portfolio/unique-product-design"
+    "title": "Printing and Packaging Solutions",
+    "category": ["Printing-solutions"],
+    "image": "/images/portfolio/P1.jpg",
+    "link": "/portfolio/printing-and-packaging-solutions"
   },
   {
     "id": 2,
-    "title": "Development Software",
-    "category": ["Development"],
-    "image": "https://wgl-dsites.net/bili/light/wp-content/uploads/2022/03/portfolio-s-2-1140x570.jpg",
+    "title": "Logo Design",
+    "category": ["Logo Design"],
+    "image": "/images/portfolio/P2.jpg",
     "link": "/portfolio/development-software"
   },
   {
     "id": 3,
-    "title": "Development Software",
+    "title": "Satvik Eggless Bakery",
     "category": ["Development"],
-    "image": "https://wgl-dsites.net/bili/light/wp-content/uploads/2022/03/portfolio-s-2-1140x570.jpg",
+    "image": "/images/portfolio/Satvik-Web-Port-1.jpg",
     "link": "/portfolio/development-software"
   },
   {
     "id": 4,
-    "title": "Another Software Development",
+    "title": "Balista Cafe",
     "category": ["Development"],
-    "image": "https://wgl-dsites.net/bili/light/wp-content/uploads/2022/03/portfolio-s-13-540x540.jpg",
+    "image": "/images/portfolio/Balista-1-scaled.jpg",
+    "link": "/portfolio/development-software-2"
+  },
+  {
+    "id": 5,
+    "title": "Premier Lab Dental",
+    "category": ["Development"],
+    "image": "/images/portfolio/Lab-1.jpg",
+    "link": "/portfolio/development-software-2"
+  },
+  {
+    "id": 6,
+    "title": "Forest Nectar",
+    "category": ["Development"],
+    "image": "/images/portfolio/Cosmetic-Port_page-0001.jpg",
+    "link": "/portfolio/development-software-2"
+  },
+  {
+    "id": 7,
+    "title": "VARIETEA",
+    "category": ["Development"],
+    "image": "/images/portfolio/web-home-02.jpg",
+    "link": "/portfolio/development-software-2"
+  },
+  {
+    "id": 8,
+    "title": "Raamah Group",
+    "category": ["Development"],
+    "image": "/images/portfolio/Raamah-1.jpg",
+    "link": "/portfolio/development-software-2"
+  },
+  {
+    "id": 9,
+    "title": "RUTUL NARANIA",
+    "category": ["Development"],
+    "image": "/images/portfolio/web-home-03.jpg",
+    "link": "/portfolio/development-software-2"
+  },
+  {
+    "id": 10,
+    "title": "ANIKEDHYA GROUP",
+    "category": ["Development"],
+    "image": "/images/portfolio/web-home-05.jpg",
+    "link": "/portfolio/development-software-2"
+  },
+  {
+    "id": 11,
+    "title": "THE PALM",
+    "category": ["Development"],
+    "image": "/images/portfolio/web-home-01.jpg",
+    "link": "/portfolio/development-software-2"
+  },
+  {
+    "id": 12,
+    "title": "ADEQUACY",
+    "category": ["Development"],
+    "image": "/images/portfolio/web-home-04.jpg",
+    "link": "/portfolio/development-software-2"
+  },
+  {
+    "id": 13,
+    "title": "PLUG-IN",
+    "category": ["Branding"],
+    "image": "/images/portfolio/web-home-06.jpg",
     "link": "/portfolio/development-software-2"
   }
 ]

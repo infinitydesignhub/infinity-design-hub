@@ -22,7 +22,7 @@ const BannerSection = () => {
 
   return (
     <section className="banner relative">
-      <div className="container d-flex flex-column flex-md-row align-items-start text-start py-10 md:py-28">
+      <div className="container d-flex flex-md-row align-items-start text-start py-10 md:py-28">
         <div className="flex-1">
           <div
             className={`space-y-6 transition-opacity duration-500 ${
