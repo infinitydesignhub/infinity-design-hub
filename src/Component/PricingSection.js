@@ -56,7 +56,7 @@ const PricingSection = () => {
     <section className="py-16 text-white">
       {/* Uncomment if you want the heading */}
       {/* <div className="max-w-7xl mx-auto text-center mb-8">
-        <h2 className="text-orange-400 font-bold text-sm tracking-wide">PRICING PLANS</h2>
+        <h2 className="text-[#ec008c] font-bold text-sm tracking-wide">PRICING PLANS</h2>
         <h3 className="text-3xl font-extrabold text-white">Explore Our Digital Pricing Plans</h3>
       </div> */}
 
@@ -81,7 +81,7 @@ const PricingSection = () => {
                   <ul className="text-[16px] p-3 text-white mb-6 space-y-2 ml-[-10px] leading-[30px] Dm Sans">
                     {plan.features.map((feature, index) => (
                       <li key={index} className="flex items-center">
-                        <span className="mr-2 text-orange-400 text-[30px]">•</span> {feature}
+                        <span className="mr-2 text-[#ec008c] text-[30px]">•</span> {feature}
                       </li>
                     ))}
                   </ul>

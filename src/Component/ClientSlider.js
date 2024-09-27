@@ -47,7 +47,7 @@ const ClientSlider = () => {
                 <img
                   src={client.imgSrc}
                   alt={`Partner ${client.id}`}
-                  className="w-[100px] h-[100px] object-contain"
+                  className="w-[100px] h-[100px] object-contain grayscale hover:filter-none"
                 />
               </a>
             </div>

@@ -34,7 +34,7 @@ const BenefitsSection = ({ data }) => {
         {/* Right Column - Text */}
         <div className="w-full md:w-1/2 pl-10">
           <div className="mb-4">
-            <span className="text-orange-500 font-bold mb-4">{subTitle}</span>
+            <span className="text-[#ec008c] font-bold mb-4">{subTitle}</span>
             <h3 className="text-4xl font-bold mt-3 mb-3">
               {title}
             </h3>
@@ -45,10 +45,10 @@ const BenefitsSection = ({ data }) => {
             {collapsibleSection.map((item, index) => (
               <div key={index}>
                 <h4
-                  className={`cursor-pointer text-2xl font-semibold py-2 flex items-center hover:text-orange-500 ${activeIndex === index ? "text-orange-600" : "text-gray-800"}`}
+                  className={`cursor-pointer text-2xl font-semibold py-2 flex items-center hover:text-[#ec008c] ${activeIndex === index ? "text-[#ec008c]" : "text-gray-800"}`}
                   onClick={() => handleToggle(index)}
                 >
-                  <span className="mr-2 text-orange-600">
+                  <span className="mr-2 text-[#ec008c]">
                     {activeIndex === index ? "-" : "+"}
                   </span>
                   {item.fields.Collapsibletitle}

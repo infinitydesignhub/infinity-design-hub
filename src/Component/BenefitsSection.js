@@ -21,12 +21,12 @@ const BenefitsSection = ({ data }) => {
 
   return (
     <section className="py-16">
-      <div className="container mx-auto">
+      <div className=" max-w-6xl mx-auto">
         <div className="row flex-wrap">
           <div className="col-12 col-md-6" data-aos="fade-right">
             <div className="mb-4">
               {/* Dynamic section title and subtitle */}
-              <span className="text-orange-500 font-bold mb-4">{data.sectionTitle}</span>
+              <span className="text-[#ec008c] font-bold mb-4">{data.sectionTitle}</span>
               <h3 className="text-4xl font-bold mt-3 mb-3">{data.sectionSubtitle}</h3>
               <p>{data.sectionDescription}</p>
             </div>
@@ -35,12 +35,12 @@ const BenefitsSection = ({ data }) => {
               {data.benefits.map((benefit, index) => (
                 <div key={index} data-aos="fade-up">
                   <h4
-                    className={`cursor-pointer text-2xl font-semibold py-2 flex items-center hover:text-orange-500 transition duration-300 ease-in-out ${
-                      activeIndex === index ? "text-orange-600" : "text-gray-800"
+                    className={`cursor-pointer text-2xl font-semibold py-2 flex items-center hover:text-[#ec008c] transition duration-300 ease-in-out ${
+                      activeIndex === index ? "text-[#ec008c]" : "text-gray-800"
                     }`}
                     onClick={() => handleToggle(index)}
                   >
-                    <span className="mr-2 text-orange-600">
+                    <span className="mr-2 text-[#ec008c]">
                       {activeIndex === index ? "-" : "+"}
                     </span>
                     {benefit.title}
@@ -53,7 +53,7 @@ const BenefitsSection = ({ data }) => {
                   >
                     <div className="text-gray-600 mt-2">
                       {activeIndex === index && (
-                        <p className="text-[16px] font-normal leading-7 pt-[3px] px-[35px] py-[15px]">
+                        <p className="text-[16px] font-normal leading-7 pt-[3px] px-[35px] py-[15px] text-[#585858]">
                           {benefit.content}
                         </p>
                       )}

@@ -66,12 +66,12 @@ const VisionSection = () => {
             {data.vision.features.map((feature, index) => (
               <div key={index}>
                 <h4
-                  className={`cursor-pointer text-2xl font-semibold py-2 flex items-center hover:text-orange-500 transition duration-300 ease-in-out ${
-                    openFeatureIndex === index ? "text-orange-600" : "text-gray-800"
+                  className={`cursor-pointer text-2xl font-semibold py-2 flex items-center hover:text-[#ec008c] transition duration-300 ease-in-out ${
+                    openFeatureIndex === index ? "text-[#ec008c]" : "text-gray-800"
                   }`}
                   onClick={() => toggleFeature(index)}
                 >
-                  <span className="mr-2 text-orange-600">
+                  <span className="mr-2 text-[#ec008c]">
                     {openFeatureIndex === index ? "-" : "+"}
                   </span>
                   {feature.title}

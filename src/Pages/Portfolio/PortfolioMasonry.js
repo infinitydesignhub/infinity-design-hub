@@ -34,14 +34,14 @@ const Portfolio = () => {
     <div className="wgl-portfolio_wrapper container">
       <div className="wgl-portfolio_header mb-6 flex justify-between p-2 px-4">
         <div className="item_title">
-          <div className="portfolio_subtitle text-orange-500 font-bold mb-4">DISCOVER OUR CASES</div>
+          <div className="portfolio_subtitle text-[#ec008c] font-bold mb-4">DISCOVER OUR CASES</div>
           <h3 className="portfolio_title text-4xl font-bold mt-3 mb-3">Latest Projects</h3>
         </div>
         <div className="flex space-x-4">
           {categories.map(category => (
             <button
               key={category.name}
-              className={`px-4 py-2 rounded transition font-bold ${activeCategory === category.name ? 'text-orange-600' : 'text-black'}`}
+              className={`px-4 py-2 rounded transition font-bold ${activeCategory === category.name ? 'text-[#ec008c]' : 'text-black'}`}
               onClick={() => {
                 setActiveCategory(category.name);
                 setVisibleItems(4); // Reset to the initial number when category changes
@@ -85,7 +85,7 @@ const Portfolio = () => {
         <div className="flex justify-center mt-6">
           <button
             onClick={loadMoreItems}
-            className="px-4 py-2 bg-orange-600 text-white rounded hover:bg-orange-700 transition"
+            className="px-4 py-2 bg-[#ec008c] text-white rounded hover:bg-[#ec008c] transition"
           >
             Load More
           </button>

@@ -15,8 +15,8 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="p-4 relative z-10">
-        <div className="container mx-auto flex justify-between items-center source-code-pro">
+      <nav className="py-4 px-5 relative z-10">
+        <div className="mx-auto flex justify-between items-center source-code-pro">
           <div className="font-bold text-xl" data-aos="fade-right">
             <Link to="/">
               <img src="/images/infinity.png" alt="logo" className="logo" />
@@ -24,13 +24,13 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8 uppercase font-bold text-center" data-aos="fade-up">
+          <div className="hidden md:flex space-x-8 gap-4 uppercase font-bold text-center" data-aos="fade-up">
             {['Home', 'About', 'Services', 'Portfolio', 'Blog', 'Contact'].map((item, index) => (
               <div key={index} className={item === 'Services' ? 'dropdown relative' : 'relative arimo-bold text-[14px] tracking-[2px]'}>
                 {item === 'Services' ? (
                   <>
                     <Link
-                      className="nav-link dropdown-toggle no-underline arimo-bold !text-[14px] tracking-[2px]"
+                      className="nav-link relative dropdown-toggle no-underline arimo-bold !text-[14px] tracking-[2px]"
                       to="#!"
                       role="button"
                       data-toggle="dropdown"
@@ -38,18 +38,18 @@ const Navbar = () => {
                     >
                       Services
                       <span className="menu-item_dots"></span>
-                    </Link>
-                    <div className="dropdown-menu">
+                    <div className="dropdown-menu capitalize !p-7 absolute top-10 transition-[0.4s]">
                       {services.map((service, index) => (
                         <Link
                           key={index}
-                          className="dropdown-item text-[#232323] bg-white relative arimo-bold text-[14px] tracking-[2px]"
+                          className="dropdown-item text-[#232323] bg-white my-1 relative text-[16px] font-medium tracking-[1px] hover:!text-[#ec008c]"
                           to={`/${service.link}`}
                         >
                           {service.text}
                         </Link>
                       ))}
                     </div>
+                    </Link>
                   </>
                 ) : (
                   <Link className="nav-link no-underline arimo-bold text-[14px] tracking-[2px]" to={`/${item.toLowerCase()}`}>
@@ -87,7 +87,7 @@ const Navbar = () => {
             {['Home', 'About', 'Portfolio', 'Blog', 'Contact'].map((item) => (
               <div key={item} className="relative">
                 <Link
-                  className="hover:text-orange-400 uppercase pr-7 pl-3"
+                  className="hover:text-[#ec008c] uppercase pr-7 pl-3"
                   to={`/${item.toLowerCase()}`}
                   onClick={() => setIsOpen(false)}
                 >
@@ -105,11 +105,11 @@ const Navbar = () => {
                 <span className="menu-item_dots"></span>
               </button>
               {isOpen && (
-                <div className="dropdown-menu bg-black text-white">
+                <div className="dropdown-menu capitalize bg-black text-white">
                   {services.map((service, index) => (
                     <Link
                       key={index}
-                      className="dropdown-item text-[#232323] bg-white relative arimo-bold text-[14px] tracking-[2px]"
+                      className="dropdown-item text-[#232323] bg-white hover:text-[#ec008c] relative text-[14px] tracking-[2px]"
                       to={`/${service.link}`}
                     >
                       {service.text}

@@ -6,9 +6,9 @@
   --color-background-light: url(https://wgl-dsites.net/bili/light/wp-content/uploads/2023/03/homepage-1_1.jpg);
   --color-background-contact: url(https://wgl-dsites.net/bili/light/wp-content/uploads/2023/03/contacts-bg-l.jpg);
   --color-background-about: url(https://wgl-dsites.net/bili/light/wp-content/uploads/2023/03/about-bg-l3.png);
-  --color-text: #232323;
+  --color-text: #585858;
   --color-text-light: #dfdfdf;
-  --color-accent: #ff7425;
+  --color-accent: #ec008c;
   --color-border: rgba(35, 35, 35, 0.3);
 
   /* Font Families */
@@ -59,9 +59,11 @@ body {
   background-attachment: scroll;
   background-position: top center;
   font-family: var(--font-dm-sans);
-  color: var(--color-text);
+  color: #585858 !important;
 }
-
+p{
+  line-height: 30px;
+}
 /* Links */
 a {
   text-decoration: none !important;
@@ -74,7 +76,7 @@ footer a {
 .logo {
   object-fit: contain;
   height: 50px;
-  width: 200px;
+  width: 150px;
 }
 nav a {
   color: #232323;
@@ -110,6 +112,11 @@ nav a {
 .dropdown-menu {
   opacity: 0;
   transition: opacity 1s ease;
+  border: 0 !important;
+  border-radius: unset !important;
+}
+.nav-link:hover .menu-item_dots{
+  background: currentColor;
 }
 
 /* banner css */
@@ -126,7 +133,7 @@ nav a {
 }
 .heading-title {
   color: #ffffff00;
-  font-size: 130px;
+  font-size: 130px !important;
   line-height: 1em;
   -webkit-text-stroke-width: 1px;
   stroke-width: 1px;
@@ -180,6 +187,9 @@ nav a {
   font-size: 130px;
   line-height: 1em;
 }
+/* .testimonials{
+  background: url(/public/images/homepage-1_2.jpg);
+} */
 .dblh__title-wrapper {
   line-height: 49.4px;
   font-weight: 700;
@@ -245,8 +255,8 @@ nav a {
   justify-content: center;
 }
 .pricing_plan .wgl-button:hover {
-  border-color: #ff7425;
-  background: #ff7425;
+  border-color: #ec008c;
+  background: #ec008c;
 }
 .list-disc li {
   position: relative;
@@ -261,7 +271,7 @@ nav a {
   height: 8px;
   position: absolute;
   border-radius: 50%;
-  background-color: #ff7425;
+  background-color: #ec008c;
 }
 .vc-line {
   border-bottom: 1px solid;
@@ -269,7 +279,7 @@ nav a {
   margin-top: 18px;
 }
 .service-box:hover .hover-line {
-  color: #ff7425;
+  color: #ec008c;
 }
 .text-webkit {
   -webkit-text-stroke: 1px currentColor;
@@ -311,7 +321,7 @@ nav a {
   font-size: 14px;
   font-weight: 600;
   line-height: 1.25;
-  color: #ff7425;
+  color: #ec008c;
   margin-top: 12px;
   letter-spacing: 0.1em;
 }
@@ -347,8 +357,8 @@ nav a {
 
 .sqs-block-button-element--medium {
   color: #fff;
-  background-color: #af4328;
-  border-color: #af4328;
+  background-color: #ec008c;
+  border-color: #ec008c;
   padding: 18px 34px 21px 34px;
   border-radius: 30px;
 }
@@ -374,7 +384,7 @@ nav a {
   visibility: visible;
 }
 .showcase__content:hover .sub {
-  color: orange;
+  color: #ec008c;
 }
 
 .page-header .page-header_content {
@@ -526,7 +536,7 @@ button.elementor-swiper-button.elementor-swiper-button-prev.slick-arrow.slick-pr
   /* border-width: 1px 0px 0px 0px; */
   color: #232323;
   border-color: #000000;
-  background-color: #ff742500;
+  background-color: #ec008c00;
   width: 100%;
   text-align: center;
 }
@@ -534,8 +544,8 @@ button.elementor-swiper-button.elementor-swiper-button-prev.slick-arrow.slick-pr
   content: none;
 }
 .blog .wgl-button:hover {
-  background-color: orange;
-  border-color: orange;
+  background-color: #ec008c;
+  border-color: #ec008c;
 }
 
 .contact input,
@@ -874,7 +884,7 @@ button.elementor-swiper-button.elementor-swiper-button-prev.slick-arrow.slick-pr
   transform: translateY(-3px);
 }
 .dropdown:hover, .nav-link:hover{
-    color: #ff7425 !important;
+    color: #ec008c !important;
 }
 
 
