@@ -48,7 +48,7 @@ const BannerSection = () => {
           </div>
 
           <div
-            className={`d-flex flex-column md:flex-row align-items-start md:align-items-center space-y-4 md:space-x-4 mt-6 md:mt-10 transition-opacity duration-500 ${
+            className={`d-flex  md:flex-row align-items-start md:align-items-center space-y-4 md:space-x-4 mt-6 md:mt-10 transition-opacity duration-500 ${
               transitioning ? "opacity-0" : "opacity-100"
             }`}
           >

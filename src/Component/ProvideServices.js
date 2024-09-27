@@ -73,7 +73,7 @@ const ProvideServices = () => {
                 <div className='row m-auto'>
                     <div className="flex flex-col w-full md:w-1/3 p-4 col-4">
                         <div className="mb-4 mt-10">
-                            <span className="text-orange-600 dblh__subtitle mb-4 block text-lg font-bold mt-10">Our Benefits</span>
+                            <span className="text-[#ec008c] dblh__subtitle mb-4 block text-lg font-bold mt-10">Our Benefits</span>
                             <h2 className="text-white text-5xl font-bold mt-3 mb-3">Learn What Services We Provide</h2>
                         </div>
                         <Link
@@ -94,7 +94,7 @@ const ProvideServices = () => {
                                     <div className="">
                                         <div className="flex gap-2">
                                             <span className="sub block text-xl  text-[#5B5B5B] text-[20px] font-normal">{service.subtitle}</span>
-                                            <span className="block text-[#5B5B5B] hover:text-white relative z-[2] text-[72px] font-bold">{service.title}</span>
+                                            <span className="block text-[#5B5B5B] hover:text-white relative z-[2] text-[52px] font-bold">{service.title}</span>
                                         </div>
                                     </div>
                                     <div className='showcase__image' data-aos="zoom-in">

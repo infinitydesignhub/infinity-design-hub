@@ -29,7 +29,7 @@ const TextPath = () => {
                   return (
                     <span key={index}>
                       <span
-                        className="text text-[130px] font-bold uppercase"
+                        className="text text-[80px] font-bold uppercase"
                         style={{
                           color: textColor,
                           ...(textColor === '#232323'
@@ -38,7 +38,7 @@ const TextPath = () => {
                         }}
                       >
                         {service.title}
-                        <span className="inline-block mx-4 text-orange-600">_</span>
+                        <span className="inline-block mx-4 text-[#ec008c]">_</span>
                       </span>
                       &nbsp;
                     </span>

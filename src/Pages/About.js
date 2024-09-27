@@ -9,6 +9,7 @@ import FeaturesSection from '../Component/FeaturesSection';
 // import data from '../Data/benefits.json';
 import wData from '../Data/WhyUsData.json';
 import featuresData from '../Data/FeaturesData.json';
+import CounterSection from '../Component/CounterSection';
 
 const About = () => {
   return (
@@ -16,8 +17,9 @@ const About = () => {
       <PageHeader />
       <AboutSection />
       {/* <BenefitsSection data={data.about} /> */}
-      <WhyUs wData={wData.about} />
       <TextPath />
+      <WhyUs wData={wData.about} />
+      <CounterSection/>
       <VisionSection />
       <FeaturesSection data={featuresData.about} />
     </>

@@ -12,7 +12,9 @@ const Footer = () => {
               <img src={footerData.logo.src} alt={footerData.logo.alt} className="h-7" />
             </a>
             <p className='py-4'>
-              We build killer Squarespace sites with our quick and pain-free process
+              We build killer Squarespace sites with 
+              <br></br>
+              our quick and pain-free process
             </p>
             <div className="sqs-block button-block sqs-block-button">
               <div className="sqs-block-button-container sqs-block-button-container--left">
@@ -23,7 +25,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className='col-md-4 m-auto'>
+          <div className='col-4 m-auto'>
             <h5 className="text-lg font-semibold mb-4">Navigation</h5>
             <ul className='pl-0'>
               {footerData.services.map((service, index) => (
