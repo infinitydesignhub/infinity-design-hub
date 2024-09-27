@@ -51,9 +51,11 @@
 }
 
 /* Body */
+.default-class{
+  background-image: var(--color-background-light);
+}
 body {
   background-color: var(--color-background);
-  background-image: var(--color-background-light);
   background-size: contain;
   background-repeat: no-repeat;
   background-attachment: scroll;
