@@ -65,11 +65,31 @@ const BannerSection = () => {
         </div>
       </div>
 
-      {/* Social Media (Sidebar-like styling) */}
-      <div className="absolute left-0 top-1/2 transform -translate-y-1/2 space-y-10 text-gray-600 flex justify-center flex-column items-center gap-5 text-xs md:text-sm lg:text-base">
-        <div className="rotate-90 transform-origin-left">FACEBOOK</div>
-        <div className="rotate-90 transform-origin-left">TWITTER</div>
-        <div className="rotate-90 transform-origin-left">INSTAGRAM</div>
+      {/* Social Media Links */}
+      <div className="social side-social absolute left-0 top-1/2 transform -translate-y-1/2 space-y-10 text-gray-600 flex flex-col items-center gap-5 text-xs md:text-sm lg:text-base">
+        <a className="text">Follow Us</a>
+        <div className="line"></div>
+        <a href="https://twitter.com/Infinity_DH" target="_blank" rel="noopener noreferrer">
+          <i className="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.facebook.com/infinitydesignhub" target="_blank" rel="noopener noreferrer">
+          <i className="fab fa-facebook" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.instagram.com/infinitydesignhub" target="_blank" rel="noopener noreferrer">
+          <i className="fab fa-instagram" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.youtube.com/channel/UChLbMTr9BghON2RxeaX3MIA" target="_blank" rel="noopener noreferrer">
+          <i className="fab fa-youtube" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.behance.net/Infinity_Designhub" target="_blank" rel="noopener noreferrer">
+          <i className="fab fa-behance" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.linkedin.com/company/31553220/admin/" target="_blank" rel="noopener noreferrer">
+          <i className="fab fa-linkedin-in" aria-hidden="true"></i>
+        </a>
+        <a href="https://in.pinterest.com/Infinity_DH/" target="_blank" rel="noopener noreferrer">
+          <i className="fab fa-pinterest" aria-hidden="true"></i>
+        </a>
       </div>
     </section>
   );

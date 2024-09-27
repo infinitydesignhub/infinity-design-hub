@@ -60,13 +60,13 @@ const VisionSection = () => {
         </div>
         <div className="col-md-6" data-aos="fade-left">
           <div className="mb-6">
-            <h3 className="text-3xl font-semibold mt-2">{data.vision.title}</h3>
+            <h3 className="text-3xl font-semibold mt-2  text-[#232323]">{data.vision.title}</h3>
           </div>
           <div className="mb-6">
             {data.vision.features.map((feature, index) => (
               <div key={index}>
                 <h4
-                  className={`cursor-pointer text-2xl font-semibold py-2 flex items-center hover:text-[#ec008c] transition duration-300 ease-in-out ${
+                  className={`cursor-pointer text-2xl font-medium py-2 flex items-center hover:text-[#ec008c] transition duration-300 ease-in-out ${
                     openFeatureIndex === index ? "text-[#ec008c]" : "text-gray-800"
                   }`}
                   onClick={() => toggleFeature(index)}

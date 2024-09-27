@@ -33,7 +33,7 @@ const ServicesSection = ({ approach, services }) => {
           {/* Left Content Section */}
           <div className="btn-w col-md-4 d-flex flex-column" data-aos="fade-right" data-aos-duration="1000">
             <h2 className="text-[#ec008c] font-semibold text-lg mb-2">{approach.title}</h2>
-            <h3 className="dblh__title-wrapper text-4xl font-bold mb-7">{approach.subtitle}</h3>
+            <h3 className="dblh__title-wrapper text-4xl text-[#232323] font-bold mb-7">{approach.subtitle}</h3>
             <a
               href="#services"
               className="wgl-button text-gray-600 no-underline relative px-8 py-3 z-1 font-semibold rounded-full transition-all duration-300"
