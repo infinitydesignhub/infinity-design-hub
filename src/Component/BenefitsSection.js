@@ -21,13 +21,13 @@ const BenefitsSection = ({ data }) => {
 
   return (
     <section className="py-16">
-      <div className=" max-w-6xl mx-auto">
+      <div className="container mx-auto">
         <div className="row flex-wrap">
           <div className="col-12 col-md-6" data-aos="fade-right">
             <div className="mb-4">
               {/* Dynamic section title and subtitle */}
               <span className="text-[#ec008c] font-bold mb-4">{data.sectionTitle}</span>
-              <h3 className="text-4xl font-bold mt-3 mb-3">{data.sectionSubtitle}</h3>
+              <h3 className="text-4xl font-bold mt-3 mb-3 text-[#232323]">{data.sectionSubtitle}</h3>
               <p>{data.sectionDescription}</p>
             </div>
 
@@ -35,7 +35,7 @@ const BenefitsSection = ({ data }) => {
               {data.benefits.map((benefit, index) => (
                 <div key={index} data-aos="fade-up">
                   <h4
-                    className={`cursor-pointer text-2xl font-semibold py-2 flex items-center hover:text-[#ec008c] transition duration-300 ease-in-out ${
+                    className={`cursor-pointer text-2xl font-medium py-2 flex items-center hover:text-[#ec008c] transition duration-300 ease-in-out ${
                       activeIndex === index ? "text-[#ec008c]" : "text-gray-800"
                     }`}
                     onClick={() => handleToggle(index)}

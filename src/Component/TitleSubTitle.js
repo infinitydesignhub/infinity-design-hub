@@ -14,7 +14,7 @@ const TitleSubTitle = () => {
             <div className="text-lg text-[#ec008c] mb-2 font-bold">
               <span>{pricingData.subtitle}</span>
             </div>
-            <h3 className="text-[38px] font-bold">
+            <h3 className="text-[38px] text-[#232323] font-bold">
               <span>{pricingData.title}</span>
             </h3>
           </div>

@@ -2,7 +2,7 @@
 import React from 'react';
 
 const WhatsAppIcon = () => {
-    const whatsappUrl = 'https://wa.me/your-number'; // Replace with your WhatsApp number
+    const whatsappUrl = 'https://wa.me/+16594008283'; // Replace with your WhatsApp number
 
     return (
         <a

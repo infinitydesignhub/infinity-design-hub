@@ -112,7 +112,7 @@ nav a {
 }
 
 .dropdown-menu {
-  opacity: 0;
+  display: none;
   transition: opacity 1s ease;
   border: 0 !important;
   border-radius: unset !important;
