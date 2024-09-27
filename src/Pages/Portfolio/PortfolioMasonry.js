@@ -14,14 +14,14 @@ const categories = [
 
 const Portfolio = () => {
   const [activeCategory, setActiveCategory] = useState('All');
-  const [visibleItems, setVisibleItems] = useState(4); // Initial number of items to display
+  const [visibleItems, setVisibleItems] = useState(5); // Initial number of items to display
 
   const filteredProjects = activeCategory === 'All'
     ? data
     : data.filter(project => project.category.includes(activeCategory));
 
   const loadMoreItems = () => {
-    setVisibleItems(prevVisibleItems => prevVisibleItems + 4); // Load 4 more items
+    setVisibleItems(prevVisibleItems => prevVisibleItems + 1); // Load 5 more items
   };
 
   const breakpointColumnsObj = {
@@ -44,7 +44,7 @@ const Portfolio = () => {
               className={`px-4 py-2 rounded transition font-bold ${activeCategory === category.name ? 'text-[#ec008c]' : 'text-black'}`}
               onClick={() => {
                 setActiveCategory(category.name);
-                setVisibleItems(4); // Reset to the initial number when category changes
+                setVisibleItems(5); // Reset to the initial number when category changes
               }}
             >
               {category.name}
@@ -85,7 +85,7 @@ const Portfolio = () => {
         <div className="flex justify-center mt-6">
           <button
             onClick={loadMoreItems}
-            className="px-4 py-2 bg-[#ec008c] text-white rounded hover:bg-[#ec008c] transition"
+            className="inline-block text-black wgl-button relative px-8 py-3 z-1 font-semibold rounded-full transition-all duration-300 my-5"
           >
             Load More
           </button>

@@ -9,6 +9,7 @@ import FeaturesSection from '../Component/FeaturesSection';
 import GetInTouch from '../Component/GetInTouch';
 import featuresData from '../Data/FeaturesData.json';
 import FlipboxGrid from './Services/FlipboxGrid';
+import TextPath from '../Component/TextPath';
 
 const componentMap = {
   layoutComponent: TalkAboutDesignSection,
@@ -62,6 +63,8 @@ const Services = () => {
                 {contentTypeId === 'layoutComponent' && <CounterSection />}
                 {/* Check if the rendered component is BenefitsSection */}
                 {contentTypeId === 'customComponent' && <FlipboxGrid />}
+                {contentTypeId === 'customComponent' &&  <TextPath/>}
+               
               </>
             ) : (
               <div>Unknown section type</div>

@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const pageHeaderData = {
-  title: 'Contacts',
+  title: 'Portfolio',
   breadcrumbs: [
     {
       label: 'Home',
@@ -10,7 +10,7 @@ const pageHeaderData = {
       isCurrent: false,
     },
     {
-      label: 'Portfolio',
+      label: 'portfolio',
       isCurrent: true,
     },
   ],

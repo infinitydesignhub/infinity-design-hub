@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className="bg-[#0E0E0E] text-white">
       <div className="container mx-auto py-8">
         <div className="row"> 
-          <div className='col-md-4'>
+          <div className=' w-auto'>
             <a href={footerData.logo.link}>
               <img src={footerData.logo.src} alt={footerData.logo.alt} className="h-7" />
             </a>
@@ -25,7 +25,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className='col-4 m-auto'>
+          <div className=' w-auto m-auto'>
             <h5 className="text-lg font-semibold mb-4">Navigation</h5>
             <ul className='pl-0'>
               {footerData.services.map((service, index) => (
@@ -36,7 +36,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className='col-md-4'>
+          <div className=' w-auto'>
             <h5 className="text-lg font-semibold mb-4">Contacts</h5>
             <ul className='pl-0'>
               <li className="mb-2">{footerData.contacts.address}</li>
