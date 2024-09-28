@@ -888,7 +888,10 @@ button.elementor-swiper-button.elementor-swiper-button-prev.slick-arrow.slick-pr
 .dropdown:hover, .nav-link:hover{
     color: #ec008c !important;
 }
-
+iframe{
+  height: 580px;
+  filter: brightness(100%) contrast(100%) saturate(0%) blur(0px) hue-rotate(0deg);
+}
 
 @media screen and (max-width: 767px) {
   .banner h1,.heading-title,.text-path span {

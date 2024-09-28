@@ -10,7 +10,7 @@ const contactSectionData = {
     submitButtonText: 'GET IN TOUCH',
   },
   contacts: {
-    header: 'OUR CONTACTS',
+    header: 'OUR CONTACT',
     subHeader: "Let’s Build Something Incredible Together!",
     description: 'Have questions? Want to talk about how we can bring your brand to life? We’d love to hear from you! Whether you need a fresh logo, a complete brand overhaul, or dynamic marketing solutions, our team is ready to make your vision a reality.',
     address: '27 Division St, New York, NY 10002, USA',
@@ -92,20 +92,20 @@ const ContactSection = () => {
         <div className="elementor-column elementor-col-50 col-md-6 contact-details">
           <div className="elementor-widget-wrap pr-0">
             <div className="elementor-widget">
-              <h4 className="font-semibold mb-3"> <span className='text-[#FF7425] text-[14px] font-bold'>{contactSectionData.contacts.header}</span></h4>
-              <h3 className="text-[38px] font-bold mt-4 mb-3">{contactSectionData.contacts.subHeader}</h3>
+              <h4 className="font-semibold mb-3"> <span className='text-[#ec008c] text-[14px] font-bold'>{contactSectionData.contacts.header}</span></h4>
+              <h3 className="text-[38px] font-bold mt-4 mb-3 text-[#232323]">{contactSectionData.contacts.subHeader}</h3>
             </div>
             <div className="elementor-widget">
-              <p className='pt-2 text-[18px]'>{contactSectionData.contacts.description}</p>
+              <p className='pt-2 text-[18px] text-[#585858]'>{contactSectionData.contacts.description}</p>
             </div>
             <div className="elementor-widget">
               <ul className="list-none pl-0">
-                <li className='py-2 text-[18px]'>{contactSectionData.contacts.address}</li>
-                <li className='py-2 text-[18px]'>
-                  <a href={`tel:${contactSectionData.contacts.phone}`}>{contactSectionData.contacts.phone}</a>
+                <li className='py-2 text-[18px] text-[#232323] font-normal'>{contactSectionData.contacts.address}</li>
+                <li className='py-2 text-[18px] text-[#232323] font-normal'>
+                  <a className='hover:!text-[#ec008c]' href={`tel:${contactSectionData.contacts.phone}`}>{contactSectionData.contacts.phone}</a>
                 </li>
-                <li className='py-2 text-[18px]'>
-                  <a href={`mailto:${contactSectionData.contacts.email}`}>{contactSectionData.contacts.email}</a>
+                <li className='py-2 text-[18px] text-[#232323] font-normal'>
+                  <a className='hover:!text-[#ec008c]' href={`mailto:${contactSectionData.contacts.email}`}>{contactSectionData.contacts.email}</a>
                 </li>
               </ul>
             </div>

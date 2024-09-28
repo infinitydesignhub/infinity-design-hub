@@ -6,10 +6,12 @@ import WhyUs from './About/WhyUs';
 import TextPath from '../Component/TextPath';
 import VisionSection from './About/VisionSection';
 import FeaturesSection from '../Component/FeaturesSection';
+import DynamicSection from '../Component/DynamicSection';
 // import data from '../Data/benefits.json';
 import wData from '../Data/WhyUsData.json';
 import featuresData from '../Data/FeaturesData.json';
 import CounterSection from '../Component/CounterSection';
+import contentData from '../Data/contentData.json';
 
 const About = () => {
   return (
@@ -19,9 +21,10 @@ const About = () => {
       {/* <BenefitsSection data={data.about} /> */}
       <TextPath />
       <WhyUs wData={wData.about} />
-      <CounterSection/>
+      <CounterSection />
       <VisionSection />
       <FeaturesSection data={featuresData.about} />
+      <DynamicSection {...contentData.about} />
     </>
   );
 };
