@@ -47,7 +47,7 @@ const VisionSection = () => {
   };
 
   return (
-    <section className="container mx-auto py-12">
+    <section className="container mx-auto py-16">
       <div className="row flex-wrap">
         <div className="col-md-6" data-aos="fade-right">
           <img
