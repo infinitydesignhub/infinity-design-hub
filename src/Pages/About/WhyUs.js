@@ -14,7 +14,7 @@ const WhyUs = ({ wData }) => {
   }
 
   return (
-    <section className="container mx-auto py-16">
+    <section className="max-w-6xl mx-auto py-16">
       <div className="row flex-wrap">
         <div className="col-md-6" data-aos="fade-right">
           <img
@@ -33,7 +33,7 @@ const WhyUs = ({ wData }) => {
           <p className="mb-6 p-3 text-[17px] leading-[29px]">{wData.description}</p>
           <Link
             to={wData.buttonLink}
-                      className="inline-block text-black wgl-button relative px-8 py-3 z-1 font-semibold rounded-full transition-all duration-300 mt-6"
+            className="no-underline text-gray-600 wgl-button relative px-8 py-3 z-1 font-semibold rounded-full transition-all duration-300 mt-10 flex w-[200px]"
           >
             {wData.buttonText}
           </Link>

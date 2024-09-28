@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import footerData from "../Data/footerData.json"; // Adjust the path as necessary
+import footerData from '../Data/footerData.json'; // Adjust the path as necessary
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -24,58 +24,43 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div
-            className="hidden md:flex space-x-8 gap-4 uppercase font-bold text-center"
-            data-aos="fade-up"
-          >
-            {["Home", "About", "Services", "Portfolio", "Blog", "Contact"].map(
-              (item, index) => (
-                <div
-                  key={index}
-                  className={
-                    item === "Services"
-                      ? "dropdown relative"
-                      : "relative arimo-bold text-[14px] tracking-[2px]"
-                  }
-                >
-                  {item === "Services" ? (
-                    <>
-                      <Link
-                        className="nav-link relative dropdown-toggle no-underline arimo-bold !text-[14px] tracking-[2px]"
-                        to="#!"
-                        role="button"
-                        data-toggle="dropdown"
-                        aria-expanded="false"
-                      >
-                        Services
-                        <span className="menu-item_dots"></span>
-                        <div className="dropdown-menu absolute transition-[0.4s] bg-transparent">
-                          <div className="capitalize !p-7 bg-white mt-4">
-                            {services.map((service, index) => (
-                              <Link
-                                key={index}
-                                className="dropdown-item text-[#232323] bg-white my-1 relative text-[16px] font-medium tracking-[1px] hover:!text-[#ec008c]"
-                                to={/${service.link}}
-                              >
-                                {service.text}
-                              </Link>
-                            ))}
-                          </div>
-                        </div>
-                      </Link>
-                    </>
-                  ) : (
+          <div className="hidden md:flex space-x-8 gap-4 uppercase font-bold text-center" data-aos="fade-up">
+            {['Home', 'About', 'Services', 'Portfolio', 'Blog', 'Contact'].map((item, index) => (
+              <div key={index} className={item === 'Services' ? 'dropdown relative' : 'relative arimo-bold text-[14px] tracking-[2px]'}>
+                {item === 'Services' ? (
+                  <>
                     <Link
-                      className="nav-link no-underline arimo-bold text-[14px] tracking-[2px]"
-                      to={/${item.toLowerCase()}}
+                      className="nav-link relative dropdown-toggle no-underline arimo-bold !text-[14px] tracking-[2px]"
+                      to="#!"
+                      role="button"
+                      data-toggle="dropdown"
+                      aria-expanded="false"
                     >
-                      {item}
+                      Services
                       <span className="menu-item_dots"></span>
+                     <div className="dropdown-menu absolute transition-[0.4s] bg-transparent">
+                     <div className="capitalize !p-7 bg-white mt-4">
+                      {services.map((service, index) => (
+                        <Link
+                          key={index}
+                          className="dropdown-item text-[#232323] bg-white my-1 relative text-[16px] font-medium tracking-[1px] hover:!text-[#ec008c]"
+                          to={`/${service.link}`}
+                        >
+                          {service.text}
+                        </Link>
+                      ))}
+                    </div>
+                     </div>
                     </Link>
-                  )}
-                </div>
-              )
-            )}
+                  </>
+                ) : (
+                  <Link className="nav-link no-underline arimo-bold text-[14px] tracking-[2px]" to={`/${item.toLowerCase()}`}>
+                    {item}
+                    <span className="menu-item_dots"></span>
+                  </Link>
+                )}
+              </div>
+            ))}
           </div>
 
           {/* Mobile Menu Toggle */}
@@ -92,10 +77,7 @@ const Navbar = () => {
                 <i className="fa-solid fa-envelope text-xl cursor-pointer"></i>
               </div>
               <div className="relative">
-                <i
-                  className="fa-solid fa-phone text-xl cursor-pointer"
-                  onClick={() => setIsSearchOpen(!isSearchOpen)}
-                ></i>
+                <i className="fa-solid fa-phone text-xl cursor-pointer" onClick={() => setIsSearchOpen(!isSearchOpen)}></i>
               </div>
             </div>
           </div>
@@ -104,11 +86,11 @@ const Navbar = () => {
         {/* Mobile Menu */}
         {isOpen && (
           <div className="md:hidden flex flex-col items-center space-y-4 pt-4 bg-black text-white">
-            {["Home", "About", "Portfolio", "Blog", "Contact"].map((item) => (
+            {['Home', 'About', 'Portfolio', 'Blog', 'Contact'].map((item) => (
               <div key={item} className="relative">
                 <Link
                   className="hover:text-[#ec008c] uppercase pr-7 pl-3"
-                  to={/${item.toLowerCase()}}
+                  to={`/${item.toLowerCase()}`}
                   onClick={() => setIsOpen(false)}
                 >
                   {item}
@@ -130,7 +112,7 @@ const Navbar = () => {
                     <Link
                       key={index}
                       className="dropdown-item text-[#232323] bg-white hover:text-[#ec008c] relative text-[14px] tracking-[2px]"
-                      to={/${service.link}}
+                      to={`/${service.link}`}
                     >
                       {service.text}
                     </Link>

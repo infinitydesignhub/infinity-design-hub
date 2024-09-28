@@ -39,15 +39,17 @@ const ClientSlider = () => {
   return (
     <section className="py-24 my-12">
       <div className="container mx-auto text-center">
-        <h2 className="text-black text-2xl mb-12">OVER 1K+ SOFTWARE BUSINESSES GROWING WITH BILI</h2>
+        <h2 className="text-black text-2xl mb-8">OVER 1K+ SOFTWARE BUSINESSES GROWING WITH BILI</h2>
         <Slider {...settings}>
           {clients.map(client => (
-            <div key={client.id} className="!w-[80px] !h-[80px] overflow-hidden flex gap-4 justify-center items-center">
-              <img
-                src={client.imgSrc}
-                alt={`Partner ${client.id}`}
-                className="w-full h-full object-contain transition-all duration-300 grayscale hover:filter-none"
-              />
+            <div key={client.id} className="!flex justify-center items-center mt-8">
+              <a href={client.link}>
+                <img
+                  src={client.imgSrc}
+                  alt={`Partner ${client.id}`}
+                  className="w-[100px] h-[100px] object-contain grayscale hover:filter-none"
+                />
+              </a>
             </div>
           ))}
         </Slider>
