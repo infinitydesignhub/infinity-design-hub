@@ -31,7 +31,7 @@ const ServicesSection = ({ approach, services }) => {
       <div className="container mx-auto px-4 py-16">
         <div className="row">
           {/* Left Content Section */}
-          <div className="btn-w col-md-4 d-flex flex-column" data-aos="fade-right" data-aos-duration="1000">
+          <div className="btn-w col-md-4 d-flex flex-column mb-5 md:mb-0" data-aos="fade-right" data-aos-duration="1000">
             <h2 className="text-[#ec008c] font-semibold text-lg mb-2">{approach.title}</h2>
             <h3 className="dblh__title-wrapper text-4xl text-[#232323] font-bold mb-7">{approach.subtitle}</h3>
             <a

@@ -38,7 +38,7 @@ const FeaturesSection = () => {
   return (
     <div className="py-16 wgl-double-heading">
       <section className=" max-w-6xl mx-auto text-center mb-3 dblh__title-wrapper">
-        <h2 className="text-3xl font-semibold text-[128px] leading-[36px] dblh__title-2">{data.title}</h2>
+        <h2 className="text-3xl font-semibold text-[50px] md:text-[128px] leading-[50px] md:leading-[36px] dblh__title-2">{data.title}</h2>
       </section>
 
       <section className=" max-w-6xl mx-auto flex flex-wrap justify-center gap-4">

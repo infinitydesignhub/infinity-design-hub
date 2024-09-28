@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const GetInTouch = () => {
   return (
     <section className="container mx-auto py-16">
-      <div className="flex justify-between items-start">
+      <div className="flex flex-col md:flex-row gap-[60px] md:gap-[0px] justify-between items-center md:items-start">
         <div className="text-center">
           <h3 className="font-bold dblh__title">
             <span className="dblh__title-1">We craft branding </span>

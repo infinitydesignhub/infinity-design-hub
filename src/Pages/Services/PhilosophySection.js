@@ -13,7 +13,7 @@ const PhilosophySection = ({ data }) => {
 
   return (
     <section className="container mx-auto py-16">
-      <div className="row">
+      <div className="row flex-wrap">
         <div className="col-md-6 mb-6">
           <div className="mb-6">
             <span className="text-gray-600">{subtitle}</span>
@@ -38,7 +38,7 @@ const PhilosophySection = ({ data }) => {
             {boxs.map((box, index) => {
               const { boxTitle, hoverImage, des } = box.fields; // Access fields within each box
               return (
-                <div key={index} className="col-6 mb-4">
+                <div key={index} className="col-md-6 mb-4">
                   <div className="wgl-flipbox type_flip_right">
                     <div className="wgl-flipbox_wrap">
                       <div className="wgl-flipbox_front p-4 border rounded">
