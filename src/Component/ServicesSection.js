@@ -60,7 +60,7 @@ const ServicesSection = ({ approach, services }) => {
                     <span className="hover-line text-4xl font-bold text-gray-400">{String(index + 1).padStart(2, '0')}</span>
                     <span className="hover-line vc-line"></span>
                   </div>
-                  <h3 className="text-2xl font-semibold mb-2 text-[#232323]">{service.title}</h3>
+                  <h3 className="text-2xl font-semibold mb-2">{service.title}</h3>
                   <h4 className="text-xl font-medium text-gray-500 mb-4">{service.subtitle}</h4>
                   <p className="text-gray-600">{service.description}</p>
                   <img 

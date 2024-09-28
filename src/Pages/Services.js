@@ -6,12 +6,11 @@ import CounterSection from '../Component/CounterSection'; // Your local componen
 import PhilosophySection from './Services/PhilosophySection';
 import BenefitsSection from './Services/BenefitsSection'; // Import the BenefitsSection
 import FeaturesSection from '../Component/FeaturesSection';
-// import GetInTouch from '../Component/GetInTouch';
-import DynamicSection from '../Component/DynamicSection';
+import GetInTouch from '../Component/GetInTouch';
 import featuresData from '../Data/FeaturesData.json';
 import FlipboxGrid from './Services/FlipboxGrid';
 import TextPath from '../Component/TextPath';
-import contentData from '../Data/contentData.json';
+
 const componentMap = {
   layoutComponent: TalkAboutDesignSection,
   customComponent: PhilosophySection,
@@ -74,8 +73,7 @@ const Services = () => {
         );
       })}
       <FeaturesSection data={featuresData.services} />
-      {/* <GetInTouch /> */}
-      <DynamicSection {...contentData.about} />
+      <GetInTouch />
     </div>
   );
 };

@@ -46,7 +46,7 @@ const VisionSection = () => {
   }, [activeTabIndex]);
 
   return (
-    <section className="container mx-auto py-16">
+    <section className="max-w-6xl mx-auto py-16">
       <div className="row flex-wrap flex-row-reverse">
         <div className="col-md-6" data-aos="fade-right">
           <img

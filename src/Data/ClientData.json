@@ -7,137 +7,92 @@
       },
       {
         "id": "partner2",
-        "imgSrc": "/images/Logos/2.png",
+        "imgSrc": "/images/Logos/2 (2).png",
         "link": "/contact"
       },
       {
         "id": "partner3",
-        "imgSrc": "/images/Logos/3.png",
+        "imgSrc": "/images/Logos/2 (3).png",
         "link": "/contact"
       },
       {
         "id": "partner4",
-        "imgSrc": "/images/Logos/4.png",
+        "imgSrc": "/images/Logos/3.png",
         "link": "/contact"
       },
       {
         "id": "partner5",
-        "imgSrc": "/images/Logos/5.png",
+        "imgSrc": "/images/Logos/4.png",
         "link": "/contact"
       },
       {
         "id": "partner6",
-        "imgSrc": "/images/Logos/6.png",
+        "imgSrc": "/images/Logos/5.png",
         "link": "/contact"
       },
       {
         "id": "partner7",
-        "imgSrc": "/images/Logos/7.png",
+        "imgSrc": "/images/Logos/6.png",
         "link": "/contact"
       },
       {
         "id": "partner8",
-        "imgSrc": "/images/Logos/8.png",
+        "imgSrc": "/images/Logos/7.png",
         "link": "/contact"
       },
       {
         "id": "partner9",
-        "imgSrc": "/images/Logos/9.png",
+        "imgSrc": "/images/Logos/8.png",
         "link": "/contact"
       },
       {
-        "id": "partner10",
-        "imgSrc": "/images/Logos/10.png",
+        "id": "partner12",
+        "imgSrc": "/images/Logos/Logo (2).png",
         "link": "/contact"
       },
       {
         "id": "partner13",
-        "imgSrc": "/images/Logos/11.png",
+        "imgSrc": "/images/Logos/Logo (3).png",
         "link": "/contact"
       },
       {
         "id": "partner14",
-        "imgSrc": "/images/Logos/12.png",
+        "imgSrc": "/images/Logos/Logo (4).png",
         "link": "/contact"
       },
       {
         "id": "partner15",
-        "imgSrc": "/images/Logos/13.png",
+        "imgSrc": "/images/Logos/Logo (5).png",
         "link": "/contact"
       },
       {
         "id": "partner16",
-        "imgSrc": "/images/Logos/14.png",
+        "imgSrc": "/images/Logos/logo.png",
         "link": "/contact"
       },
       {
         "id": "partner17",
-        "imgSrc": "/images/Logos/15.png",
+        "imgSrc": "/images/Logos/Nirvanaah Logo.jpg",
         "link": "/contact"
       },
       {
         "id": "partner18",
-        "imgSrc": "/images/Logos/16.png",
+        "imgSrc": "/images/Logos/Orignal Logo Color.png",
         "link": "/contact"
       },
       {
         "id": "partner19",
-        "imgSrc": "/images/Logos/17.png",
+        "imgSrc": "/images/Logos/Portfolio.png",
         "link": "/contact"
       },
       {
         "id": "partner20",
-        "imgSrc": "/images/Logos/18.png",
+        "imgSrc": "/images/Logos/Star_Chaat_Logo.png",
         "link": "/contact"
       },
       {
         "id": "partner21",
-        "imgSrc": "/images/Logos/19.png",
-        "link": "/contact"
-      },
-      {
-        "id": "partner18",
-        "imgSrc": "/images/Logos/20.png",
-        "link": "/contact"
-      },
-      {
-        "id": "partner19",
-        "imgSrc": "/images/Logos/21.png",
-        "link": "/contact"
-      },
-      {
-        "id": "partner20",
-        "imgSrc": "/images/Logos/22.png",
-        "link": "/contact"
-      },
-      {
-        "id": "partner21",
-        "imgSrc": "/images/Logos/23.png",
-        "link": "/contact"
-      },
-      {
-        "id": "partner18",
-        "imgSrc": "/images/Logos/24.png",
-        "link": "/contact"
-      },
-      {
-        "id": "partner19",
-        "imgSrc": "/images/Logos/25.png",
-        "link": "/contact"
-      },
-      {
-        "id": "partner20",
-        "imgSrc": "/images/Logos/26.png",
-        "link": "/contact"
-      },
-      {
-        "id": "partner21",
-        "imgSrc": "/images/Logos/27.png",
-        "link": "/contact"
-      },
-      {
-        "id": "partner21",
-        "imgSrc": "/images/Logos/28.png",
+        "imgSrc": "/images/Logos/Stavik Stationery .png",
         "link": "/contact"
       }
     ]

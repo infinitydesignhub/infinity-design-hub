@@ -17,7 +17,7 @@ const PhilosophySection = ({ data }) => {
         <div className="col-md-6 mb-6">
           <div className="mb-6">
             <span className="text-gray-600">{subtitle}</span>
-            <h3 className="text-3xl font-semibold text-[#232323]">{title}</h3>
+            <h3 className="text-3xl font-semibold">{title}</h3>
           </div>
           <div className="mb-6 text-[18px] leading-[36px]">
             {description && typeof description === 'object'
