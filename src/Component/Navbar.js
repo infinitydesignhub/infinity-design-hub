@@ -55,7 +55,7 @@ const Navbar = () => {
                               <Link
                                 key={index}
                                 className="dropdown-item text-[#232323] bg-white my-1 relative text-[16px] font-medium tracking-[1px] hover:!text-[#ec008c]"
-                                to={/${service.link}}
+                                to={`/${service.link}`}
                               >
                                 {service.text}
                               </Link>
@@ -67,7 +67,7 @@ const Navbar = () => {
                   ) : (
                     <Link
                       className="nav-link no-underline arimo-bold text-[14px] tracking-[2px]"
-                      to={/${item.toLowerCase()}}
+                      to={`/${item.toLowerCase()}`}
                     >
                       {item}
                       <span className="menu-item_dots"></span>
@@ -108,7 +108,7 @@ const Navbar = () => {
               <div key={item} className="relative">
                 <Link
                   className="hover:text-[#ec008c] uppercase pr-7 pl-3"
-                  to={/${item.toLowerCase()}}
+                  to={`/${item.toLowerCase()}`}
                   onClick={() => setIsOpen(false)}
                 >
                   {item}
@@ -130,7 +130,7 @@ const Navbar = () => {
                     <Link
                       key={index}
                       className="dropdown-item text-[#232323] bg-white hover:text-[#ec008c] relative text-[14px] tracking-[2px]"
-                      to={/${service.link}}
+                      to={`/${service.link}`}
                     >
                       {service.text}
                     </Link>
