@@ -1,0 +1,21 @@
+{
+    "home": {
+      "imageSrc": "https://wgl-dsites.net/bili/light/wp-content/uploads/2023/03/homepage-9_9.jpg",
+      "titleParts": ["Let’s", "Start", "Working"],
+      "description": "With every single one of our clients, we bring forth a deep passion for creative problem solving — which is what we deliver.",
+      "button":"SEND US A MESSAGE" 
+    },
+    "about": {
+        "imageSrc": "https://wgl-dsites.net/bili/light/wp-content/uploads/2023/03/homepage-9_9.jpg",
+        "titleParts": ["Let’s", "Start", "Working"],
+        "description": "With every single one of our clients, we bring forth a deep passion for creative problem solving — which is what we deliver.",
+        "button":"SEND US A MESSAGE" 
+    },
+    "services": {
+      "imageSrc": "https://example.com/services-image.jpg",
+      "titleParts": ["Our Services", "What We Offer"],
+      "description": "We offer a range of services to meet your needs.",
+      "button":"SEND US A MESSAGE" 
+    }
+  }
+  

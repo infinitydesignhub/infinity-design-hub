@@ -9,24 +9,14 @@ const mapSectionData = {
 const MapSection = () => {
     return (
         <section className="elementor-section elementor-top-section map">
-            <div className="elementor-column-gap-no">
-                <div className="elementor-column elementor-col-100">
-                    <div className="elementor-widget-wrap">
-                        <div className="elementor-widget">
-                            <div className="elementor-widget-container">
-                                <div className="elementor-custom-embed">
-                                    <iframe
-                                        loading="lazy"
-                                        src={mapSectionData.mapEmbedUrl}
-                                        title={mapSectionData.mapTitle}
-                                        aria-label={mapSectionData.mapTitle}
-                                        className="w-full h-96"
-                                    ></iframe>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div className="elementor-custom-embed">
+                <iframe
+                    loading="lazy"
+                    src={mapSectionData.mapEmbedUrl}
+                    title={mapSectionData.mapTitle}
+                    aria-label={mapSectionData.mapTitle}
+                    className="w-full"
+                ></iframe>
             </div>
         </section>
     );
