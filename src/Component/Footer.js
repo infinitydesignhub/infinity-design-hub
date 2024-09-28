@@ -5,9 +5,9 @@ import { Link } from 'react-router-dom';
 const Footer = () => {
   return (
     <footer className="bg-[#0E0E0E] text-white">
-      <div className="container mx-auto py-8">
+      <div className="container mx-auto pt-14 pb-8">
         <div className="row"> 
-          <div className=' w-auto'>
+          <div className='w-auto mx-auto'>
             <a href={footerData.logo.link}>
               <img src={footerData.logo.src} alt={footerData.logo.alt} className="h-7" />
             </a>
@@ -25,7 +25,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className=' w-auto m-auto'>
+          <div className='w-auto mx-auto'>
             <h5 className="text-lg font-semibold mb-4">Navigation</h5>
             <ul className='pl-0'>
               {footerData.services.map((service, index) => (
@@ -36,7 +36,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className=' w-auto'>
+          <div className=' w-auto mx-auto'>
             <h5 className="text-lg font-semibold mb-4">Contacts</h5>
             <ul className='pl-0'>
               <li className="mb-2">{footerData.contacts.address}</li>
@@ -65,14 +65,9 @@ const Footer = () => {
         </div>
 
         {/* Footer Bottom Links */}
-        <div className="mt-8 grid grid-cols-2 text-sm text-gray-400">
-          <div>Copyright © 2024 All Rights Reserved</div>
-          {/* Uncomment if you want footer links */}
-          {/* <div className="flex justify-end space-x-4">
-            {footerData.footerLinks.map((link, index) => (
-              <a key={index} href={link.link} className="hover:text-white">{link.text}</a>
-            ))}
-          </div> */}
+        <hr></hr>
+        <div className="mt-8 text-sm text-gray-400 text-center">
+          <p>Copyright © 2024 All Rights Reserved</p>
         </div>
       </div>
     </footer>

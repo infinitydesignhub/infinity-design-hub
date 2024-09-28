@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const FeaturesSection = ({ data }) => {
   // Log data to check its structure
@@ -27,20 +28,27 @@ const FeaturesSection = ({ data }) => {
                 height: '200px', // Set fixed height for each box
               }}
             >
-              <div className="wgl-infobox_wrapper bg-gradient-to-r from-blue-500 to-blue-300 p-12 rounded-lg d-flex flex-column align-items-center h-100">
-                <img
-                  loading="lazy"
-                  decoding="async"
-                  src={feature.imgSrc}
-                  alt=""
-                  className="mb-4 object-contain w-[80px] h-[60px]"
-                />
-                <p className="text-center">
-                  {feature.text.split('\n').map((line, i) => (
-                    <span key={i}>{line}<br /></span>
-                  ))}
-                </p>
-              </div>
+              <Link
+                to={feature.link}
+
+              >
+                <div className="wgl-infobox_wrapper bg-gradient-to-r from-blue-500 to-blue-300 p-12 rounded-lg d-flex flex-column align-items-center h-100 transition-transform duration-300 ease-in-out transform hover:bg-[#ec008c] hover:scale-105 hover:!text-white">
+                  <img
+                    loading="lazy"
+                    decoding="async"
+                    src={feature.imgSrc}
+                    alt={feature.imgSrc}
+                    className="mb-4 object-contain w-[100px] h-[100px]"
+                  />
+                  <p className="text-center text-gray-800 font-semibold  transition-colors duration-300">
+                    {feature.text.split('\n').map((line, i) => (
+
+                      <span key={i}>{line}<br /></span>
+
+                    ))}
+                  </p>
+                </div>
+              </Link>
             </div>
           ))}
         </div>
