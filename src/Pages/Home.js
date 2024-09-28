@@ -7,7 +7,8 @@ import ServicesSection from "../Component/ServicesSection";
 import CounterSection from "../Component/CounterSection";
 import TitleSubTitle from "../Component/TitleSubTitle";
 import PricingSection from "../Component/PricingSection";
-import GetInTouch from "../Component/GetInTouch";
+// import GetInTouch from "../Component/GetInTouch";
+import DynamicSection from '../Component/DynamicSection';
 import ClientSlider from "../Component/ClientSlider";
 import Testimonials from "../Component/Testimonials";
 import ProvideServices from '../Component/ProvideServices';
@@ -16,6 +17,7 @@ import VisionSection from '../Component/VisionSection';
 // import Portfolio from './Portfolio';
 import data from '../Data/benefits.json'
 import allData from '../Data/OurApproach.json'; // Adjust the path as necessary
+import contentData from '../Data/contentData.json';
 const Home = () => {
     const { approach, services } = allData.page1; // Get data for Page 1
     return (
@@ -32,7 +34,8 @@ const Home = () => {
             <CounterSection />
             <Testimonials />
             {/* <Blog /> */}
-            <GetInTouch />
+            {/* <GetInTouch /> */}
+            <DynamicSection {...contentData.about} />
             {/* <Portfolio/> */}
         </>
     )

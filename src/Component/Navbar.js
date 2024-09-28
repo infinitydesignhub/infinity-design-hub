@@ -39,6 +39,7 @@ const Navbar = () => {
                       Services
                       <span className="menu-item_dots"></span>
                     <div className="dropdown-menu capitalize !p-7 absolute top-10 transition-[0.4s]">
+                      
                       {services.map((service, index) => (
                         <Link
                           key={index}

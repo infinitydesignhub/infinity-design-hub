@@ -66,7 +66,7 @@ const BannerSection = () => {
       </div>
 
       {/* Social Media Links */}
-      <div className="social side-social absolute left-0 top-1/2 transform -translate-y-1/2 space-y-10 text-gray-600 flex flex-col items-center gap-5 text-xs md:text-sm lg:text-base">
+      {/* <div className="social side-social absolute left-0 top-1/2 transform -translate-y-1/2 space-y-10 text-gray-600 flex flex-col items-center gap-5 text-xs md:text-sm lg:text-base">
         <a className="text">Follow Us</a>
         <div className="line"></div>
         <a href="https://twitter.com/Infinity_DH" target="_blank" rel="noopener noreferrer">
@@ -90,7 +90,7 @@ const BannerSection = () => {
         <a href="https://in.pinterest.com/Infinity_DH/" target="_blank" rel="noopener noreferrer">
           <i className="fab fa-pinterest" aria-hidden="true"></i>
         </a>
-      </div>
+      </div> */}
     </section>
   );
 };
