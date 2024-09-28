@@ -50,7 +50,7 @@ const ContactSection = () => {
         <div className="elementor-widget-wrap bg-[#F5F5F5] col-md-6  p-4 md:p-5  ">
           <div className="">
             <div className="elementor-widget">
-              <h3 className="text-[1.875rem] font-bold mb-2">{contactSectionData.title}</h3>
+              <h3 className="text-[1.875rem] font-bold mb-2 text-[#232323]">{contactSectionData.title}</h3>
             </div>
             <div className="elementor-widget mt-3">
               <p className='text-[14px]'>{contactSectionData.description}</p>
@@ -65,18 +65,18 @@ const ContactSection = () => {
                 name="label-name"
                 placeholder={contactSectionData.form.namePlaceholder}
                 required
-                className="border p-2 mb-4"
+                className="border p-2 mb-4 text-[#232323]"
               />
               <input
                 type="text"
                 name="label-website"
                 placeholder={contactSectionData.form.websitePlaceholder}
-                className="border p-2 mb-4"
+                className="border p-2 mb-4 text-[#232323]"
               />
               <textarea
                 name="label-textarea"
                 placeholder={contactSectionData.form.commentPlaceholder}
-                className="border p-2 mb-4"
+                className="border p-2 mb-4 text-[#232323]"
               />
               <button
                 type="submit"
