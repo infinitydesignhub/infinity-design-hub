@@ -45,9 +45,9 @@ const ContactSection = () => {
   return (
     <section className="wpcf7 elementor-section elementor-top-section">
       <div className="container">
-        <div className='row'>
+        <div className='row flex-wrap'>
         {/* Contact Form Column */}
-        <div className="elementor-widget-wrap bg-[#F5F5F5] col-6 p-5 ">
+        <div className="elementor-widget-wrap bg-[#F5F5F5] col-md-6  p-4 md:p-5  ">
           <div className="">
             <div className="elementor-widget">
               <h3 className="text-[1.875rem] font-bold mb-2">{contactSectionData.title}</h3>
@@ -89,7 +89,7 @@ const ContactSection = () => {
         </div>
 
         {/* Contact Details Column */}
-        <div className="elementor-column elementor-col-50 col-6 contact-details">
+        <div className="elementor-column elementor-col-50 col-md-6 contact-details">
           <div className="elementor-widget-wrap pr-0">
             <div className="elementor-widget">
               <h4 className="font-semibold mb-3"> <span className='text-[#FF7425] text-[14px] font-bold'>{contactSectionData.contacts.header}</span></h4>

@@ -70,15 +70,15 @@ const ProvideServices = () => {
     return (
         <section className="provide_services bg-[#181818] pt-[124px] pb-14 my-10" id='services'>
             <div className='container'>
-                <div className='row m-auto'>
-                    <div className="flex flex-col w-full md:w-1/3 p-4 col-4">
+                <div className='row m-auto flex flex-wrap justify-between'>
+                    <div className="flex flex-col w-full md:w-1/3 p-4 col-md-4 ">
                         <div className="mb-4 mt-10">
                             <span className="text-[#ec008c] dblh__subtitle mb-4 block text-lg font-bold mt-10">Our Benefits</span>
-                            <h2 className="text-white text-5xl font-bold mt-3 mb-3">Learn What Services We Provide</h2>
+                            <h2 className="text-white text-3xl md:text-5xl font-bold mt-3 mb-3">Learn What Services We Provide</h2>
                         </div>
                         <Link
                             to="/contact"
-                            className="flex wgl-button text-white no-underline relative px-8 py-3 z-1 font-semibold rounded-full transition-all duration-300 w-40"
+                            className="flex wgl-button text-white no-underline relative px-8 py-3 z-1 font-semibold rounded-full transition-all duration-300 w-40 mb-5 md:mb-0"
                         >
                             Get inTouch
                         </Link>
