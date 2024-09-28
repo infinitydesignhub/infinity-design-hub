@@ -78,35 +78,43 @@
         "features": [
             {
                 "imgSrc": "/images/web-icon/WebIconsInfinity-1.svg",
-                "text": "Logo Design"
+                "text": "Logo Design",
+                "link":"/services/logo-design"
             },
             {
                 "imgSrc": "/images/web-icon/WebIconsInfinity-2.svg",
-                "text": "Branding Strategies"
+                "text": "Branding Strategies",
+                "link":"/services/branding-strategies"
             },
             {
                 "imgSrc": "/images/web-icon/WebIconsInfinity-3.svg",
-                "text": "Web Development"
+                "text": "Website Development",
+                "link":"/services/web-development"
             },
             {
                 "imgSrc": "/images/web-icon/WebIconsInfinity-4.svg",
-                "text": "Digital Marketing"
+                "text": "Digital Marketing",
+                "link":"/services/digital-marketing"
             },
             {
                 "imgSrc": "/images/web-icon/WebIconsInfinity-5.svg",
-                "text": "Design Solutions"
+                "text": "Design Solutions",
+                "link":"/services/design-solutions"
             },
             {
                 "imgSrc": "/images/web-icon/WebIconsInfinity-6.svg",
-                "text": "Content Writing"
+                "text": "Content Writing",
+                "link":"/services/content-writing"
             },
             {
                 "imgSrc": "/images/web-icon/WebIconsInfinity-7.svg",
-                "text": "Video Creation"
+                "text": "Video Creation",
+                "link":"/services/video-creation"
             },
             {
                 "imgSrc": "/images/web-icon/WebIconsInfinity-8.svg",
-                "text": "Printing Solutions"
+                "text": "Printing Solutions",
+                "link":"/services/printing-solutions"
             }
         ]
     }

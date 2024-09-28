@@ -9,7 +9,7 @@ const WhatsAppIcon = () => {
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="fixed bottom-5 left-5 bg-[#ec008c] py-[5px] px-[10px] rounded-[100%] shadow-lg hover:shadow-xl transition-shadow duration-300"
+            className="fixed bottom-5 left-5 bg-green-500 py-[5px] px-[10px] rounded-[100%] shadow-lg hover:shadow-xl transition-shadow duration-300"
         >
             <i className="fab fa-whatsapp text-white text-3xl animate-pulse"></i>
         </a>

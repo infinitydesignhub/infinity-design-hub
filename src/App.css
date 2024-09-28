@@ -439,6 +439,10 @@ nav a {
   transform: translateY(0) skewY(0) scaleZ(1) rotate(-15deg);
   visibility: visible;
 }
+.showcase__content:hover span,
+.wgl-infobox_wrapper:hover p{
+  color: #fff;
+}
 
 .showcase__content:hover .sub {
   color: #ec008c;

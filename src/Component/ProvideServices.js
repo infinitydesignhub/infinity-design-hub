@@ -68,7 +68,7 @@ const ProvideServices = () => {
     }, []);
 
     return (
-        <section className="provide_services bg-[#181818] pt-[124px] pb-14 my-10" id='services'>
+        <section className="provide_services bg-[#181818] py-[100px] my-10" id='services'>
             <div className='container'>
                 <div className='row m-auto flex flex-wrap justify-between'>
                     <div className="flex flex-col w-full md:w-1/3 p-4 col-md-4 ">
@@ -90,7 +90,7 @@ const ProvideServices = () => {
                                 className="relative group showcase__content"
                                 data-aos="fade-up"
                             >
-                                <Link to={service.link} className="block relative z-10">
+                                <Link to={service.link} className="block relative z-10 hover:text-white">
                                     <div className="">
                                         <div className="flex gap-2">
                                             <span className="sub block text-xl  text-[#5B5B5B] text-[20px] font-normal">{service.subtitle}</span>

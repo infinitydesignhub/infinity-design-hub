@@ -63,9 +63,6 @@ const Services = () => {
                 {/* Render CounterSection after layoutComponent */}
                 {contentTypeId === 'layoutComponent' && <CounterSection />}
                 {/* Check if the rendered component is BenefitsSection */}
-                {contentTypeId === 'customComponent' && <FlipboxGrid />}
-                {contentTypeId === 'customComponent' &&  <TextPath/>}
-               
               </>
             ) : (
               <div>Unknown section type</div>
@@ -73,6 +70,8 @@ const Services = () => {
           </React.Fragment>
         );
       })}
+      <TextPath/>
+      <FlipboxGrid/>
       <FeaturesSection data={featuresData.services} />
       {/* <GetInTouch /> */}
       <DynamicSection {...contentData.about} />
