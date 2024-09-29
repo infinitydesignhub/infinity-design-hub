@@ -27,10 +27,10 @@ const Flipbox = ({ title, imgSrc, alt }) => (
   <div className="w-full sm:w-1/2 md:w-1/4 p-4">
     <div className="wgl-flipbox type_flip_right">
       <div className="wgl-flipbox_wrap">
-        <div className="wgl-flipbox_front p-4 border rounded">
+        <div className="wgl-flipbox_front p-4 border rounded ">
           <h3 className="wgl-flipbox_title"><span>{title}</span></h3>
         </div>
-        <div className="wgl-flipbox_back p-4 border rounded shadow-lg bg-gray-100">
+        <div className="wgl-flipbox_back p-4 border rounded shadow-lg">
           <img src={imgSrc} alt={alt} className="w-full h-auto" />
         </div>
       </div>

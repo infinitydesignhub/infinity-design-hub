@@ -43,7 +43,7 @@ const FeaturesSection = ({ data }) => {
                   <p className="text-center text-gray-800 font-semibold  transition-colors duration-300">
                     {feature.text.split('\n').map((line, i) => (
 
-                      <span key={i}>{line}<br /></span>
+                      <span key={i} className='block'>{line}<br /></span>
 
                     ))}
                   </p>

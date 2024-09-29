@@ -36,28 +36,27 @@ const PhilosophySection = ({ data }) => {
         <div className="col-md-6">
           <div className="row">
             {boxs.map((box, index) => {
-              const { boxTitle, hoverImage, des, number} = box.fields; // Access fields within each box
+              const { boxTitle, hoverImage, des, number } = box.fields; // Access fields within each box
               return (
                 <div key={index} className="col-md-6 mb-4">
                   <div className="wgl-flipbox type_flip_right">
                     <div className="wgl-flipbox_wrap">
                       <div className="wgl-flipbox_front p-4 border rounded">
+                        <div class="wgl-flipbox_media-wrap">
+                          <div class="media-wrapper number-wrapper">
+                            <span className="wgl-number elementor-icon">
+                              <span className="number">0{number}</span>
+                            </span>
+                          </div>
+                        </div>
                         <h3 className="wgl-flipbox_title">
                           <span>{boxTitle}</span>
                         </h3>
                       </div>
-                      <div className="wgl-flipbox_back p-4 border rounded shadow-lg bg-gray-100 hover:bg-[#ec008c]">
-                       <p>
-                        {des}
-                       </p>
-                       {/* <p>{number}</p> */}
-                        {/* {hoverImage && hoverImage.fields && (
-                          <img
-                            src={hoverImage.fields.file.url} // Access the URL from the nested fields
-                            alt={boxTitle} // Use box title for alt text
-                            className="w-full h-auto" // Adjust styles as needed
-                          />
-                        )} */}
+                      <div className="wgl-flipbox_back p-4 border rounded shadow-lg bg-[#ec008c]">
+                        <p className='text-white'>
+                          {des}
+                        </p>
                       </div>
                     </div>
                   </div>
