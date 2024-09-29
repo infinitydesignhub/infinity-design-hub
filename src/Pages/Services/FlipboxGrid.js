@@ -40,7 +40,7 @@ const Flipbox = ({ title, imgSrc, alt }) => (
 
 const FlipboxGrid = () => {
   return (
-    <div className="w-full container py-4">
+    <div className="w-full custom-container mx-auto py-4">
       <div className="flex flex-wrap -mx-4">
         {data.map((item, index) => (
           <Flipbox key={index} title={item.title} imgSrc={item.imgSrc} alt={item.alt} />

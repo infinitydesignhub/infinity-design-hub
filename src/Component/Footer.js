@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const Footer = () => {
   return (
     <footer className="bg-[#0E0E0E] text-white">
-      <div className="container mx-auto pt-14 pb-8">
+      <div className="custom-container mx-auto pt-14 pb-8">
         <div className="row"> 
           <div className='w-auto mx-auto'>
             <a href={footerData.logo.link}>
@@ -17,7 +17,7 @@ const Footer = () => {
               our quick and pain-free process
             </p>
             <div className="sqs-block button-block sqs-block-button">
-              <div className="sqs-block-button-container sqs-block-button-container--left">
+              <div className="sqs-block-button-custom-container sqs-block-button-custom-container--left">
                 <Link to="/contact" className="inline-block text-white wgl-button relative px-8 py-3 z-1 font-semibold rounded-full transition-all duration-300 px-4 py-2 rounded-lg">
                   Get inTouch
                 </Link>

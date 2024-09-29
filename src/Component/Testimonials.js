@@ -75,7 +75,7 @@ const Testimonials = () => {
 
   return (
     <section className="testimonials py-5">
-    <div className='container'>
+    <div className='custom-container mx-auto'>
       <div className="row justify-between align-items-center">
         <div className="col-md-4 d-none d-md-block">
           <img

@@ -1,7 +1,7 @@
 {
     "home": {
       "imageSrc": "https://wgl-dsites.net/bili/light/wp-content/uploads/2023/03/homepage-9_9.jpg",
-      "titleParts": ["Let’s", "Start", "Working"],
+      "titleParts": ["Let’s ", "Start ", "Working"],
       "description": "With every single one of our clients, we bring forth a deep passion for creative problem solving — which is what we deliver.",
       "button":"SEND US A MESSAGE" 
     },

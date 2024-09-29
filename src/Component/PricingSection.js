@@ -49,7 +49,11 @@ const pricingPlans = [
 
 const PricingSection = () => {
   useEffect(() => {
-    AOS.init({ duration: 1000 }); // Initialize AOS
+    AOS.init({
+      duration: 1000,
+      once: true,
+      offset: 200, // Adjust this value as needed
+    });
   }, []);
 
   return (
@@ -60,7 +64,7 @@ const PricingSection = () => {
         <h3 className="text-3xl font-extrabold text-white">Explore Our Digital Pricing Plans</h3>
       </div> */}
 
-      <div className="container">
+      <div className="custom-container mx-auto">
         <div className="row justify-content-center">
           {pricingPlans.map((plan) => (
             <div

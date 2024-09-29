@@ -4,6 +4,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import footerData from "../Data/footerData.json"; // Adjust the path as necessary
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -38,7 +39,15 @@ const Navbar = () => {
                       : "relative arimo-bold text-[14px] tracking-[2px]"
                   }
                 >
-                  {item === "Services" ? (
+                  {item === "Home" ? (
+                    <Link
+                      className="nav-link no-underline arimo-bold text-[14px] tracking-[2px]"
+                      to="/"
+                    >
+                      Home
+                      <span className="menu-item_dots"></span>
+                    </Link>
+                  ) : item === "Services" ? (
                     <>
                       <Link
                         className="nav-link relative dropdown-toggle no-underline arimo-bold !text-[14px] tracking-[2px]"

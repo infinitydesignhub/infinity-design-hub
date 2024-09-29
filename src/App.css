@@ -1,3 +1,4 @@
+
 :root {
   /* Colors */
   --color-primary: #ec008c;
@@ -6,6 +7,7 @@
   --color-background-light: url(https://wgl-dsites.net/bili/light/wp-content/uploads/2023/03/homepage-1_1.jpg);
   --color-background-contact: url(https://wgl-dsites.net/bili/light/wp-content/uploads/2023/03/contacts-bg-l.jpg);
   --color-background-about: url(https://wgl-dsites.net/bili/light/wp-content/uploads/2023/03/about-bg-l3.png);
+ --color-background-potfolio:url(/public/images/portfolio-s-bg-l.jpg);
   --color-text: #585858;
   --color-text-light: #dfdfdf;
   --color-accent: #ec008c;
@@ -52,9 +54,14 @@
 
 /* Body */
 .default-class {
-  background-image: var(--color-background-light);
+  /* background-image: var(--color-background-light); */
+  background:url(https://wgl-dsites.net/bili/light/wp-content/uploads/2023/03/team-bg-l.jpg);
+background-repeat: no-repeat;
 }
 
+.portfolio-class{
+  background-image: var(--color-background-potfolio);
+}
 body {
   background-color: var(--color-background);
   background-size: contain;
@@ -536,16 +543,17 @@ button.elementor-swiper-button.elementor-swiper-button-prev.slick-arrow.slick-pr
 }
 
 .btn-size-lg {
-  padding: 96px 12px 96px 12px;
+  /* padding: 96px 12px 96px 12px; */
   border-radius: 50%;
   color: #ffffff;
   background-color: #323232ed;
   transition: 0.4s;
+  cursor: pointer;
 }
 
-.btn-circle {
+/* .btn-circle {
   margin-top: 4.25rem !important;
-}
+} */
 
 .btn-size-lg:hover {
   background-color: #ec008c;
@@ -1022,6 +1030,48 @@ iframe {
 input::placeholder,
 textarea::placeholder {
   color: #232323;
+}
+.side-social {
+  right: 0;
+  top: 45%;
+  position: absolute;
+  -webkit-transform: translateY(-60%);
+  transform: translateY(-60%);
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  z-index: 6;
+  margin-right: -127px;
+}
+.side-social a {
+  display: block;
+  color: #000;
+  font-size: 13px;
+  margin-top: 10px;
+  float: left;
+  margin-right: 15px;
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+  font-weight: 600;
+}
+.line {
+  float: left;
+  width: 72px;
+  background: #bfbfbf;
+  height: 1px;
+  margin: 20px 17px;
+}
+.side-social a i {
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+.side-social a:hover i {
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+.social a:hover i{
+  color: #ec008c;
 }
 
 @media screen and (max-width: 767px) {

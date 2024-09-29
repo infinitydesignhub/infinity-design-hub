@@ -1,0 +1,26 @@
+/* custom-bootstrap.css */
+@media (min-width: 576px) {
+    .custom-container {
+        width: 100%; /* Small screens */
+    }
+}
+
+@media (min-width: 768px) {
+    .custom-container {
+        width: 100%; /* Medium screens */
+    }
+}
+
+@media (min-width: 992px) {
+    .custom-container {
+        width: 1200px; /* Large screens */
+        max-width: 1200px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .custom-container {
+        width: 1200px; /* Extra large screens */
+        max-width: 1200px;
+    }
+}

@@ -20,7 +20,7 @@ const AboutSection = () => {
   };
 
   return (
-    <section className="container mx-auto py-16">
+    <section className="custom-container mx-auto py-16">
       <div className="row flex-wrap">
         <div className="col-md-6 mb-4" data-aos="fade-right">
           <div className="mb-6 px-4 mt-4">

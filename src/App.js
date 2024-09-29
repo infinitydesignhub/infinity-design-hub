@@ -4,6 +4,8 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./App.css";
+import '../src/dist/aos.css'
+import './custom-bootstrap.css';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import Navbar from "./Component/Navbar";
@@ -28,7 +30,11 @@ function App() {
   const location = useLocation();
 
   useEffect(() => {
-    AOS.init({ duration: 1000 });
+    AOS.init({
+      duration: 1000,
+      once: true,
+      offset: 200, // Adjust this value as needed
+    });
 
     // Generate the body class based on the current path
     const bodyClass = getBodyClass(location.pathname);

@@ -28,7 +28,7 @@ const ServicesSection = ({ approach, services }) => {
 
   return (
     <section className="services py-1">
-      <div className="container mx-auto px-4 py-16">
+      <div className="custom-container mx-auto px-4 py-16">
         <div className="row">
           {/* Left Content Section */}
           <div className="btn-w col-md-4 d-flex flex-column mb-5 md:mb-0" data-aos="fade-right" data-aos-duration="1000">
@@ -36,7 +36,7 @@ const ServicesSection = ({ approach, services }) => {
             <h3 className="dblh__title-wrapper text-4xl text-[#232323] font-bold mb-7">{approach.subtitle}</h3>
             <a
               href="#services"
-              className="wgl-button text-gray-600 no-underline relative px-8 py-3 z-1 font-semibold rounded-full transition-all duration-300"
+              className="wgl-button text-gray-600 no-underline relative px-8 py-3 z-1 font-semibold rounded-full transition-all duration-300 w-[290px]"
             >
               MORE SERVICES
             </a>

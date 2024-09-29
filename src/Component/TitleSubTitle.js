@@ -7,7 +7,7 @@ const pricingData = {
 
 const TitleSubTitle = () => {
   return (
-    <section className="max-w-7xl mx-auto pt-16">
+    <section className="custom-container mx-auto pt-16">
       <div className=" pl-[1rem] md:pl-[4.5rem] py-3">
         <div className="w-full">
           <div className="title-text">

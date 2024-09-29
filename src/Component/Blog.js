@@ -33,7 +33,7 @@ const Blog = () => {
   ];
 
   return (
-    <div className="blog container mx-auto p-4 py-16">
+    <div className="blog custom-container mx-auto p-4 py-16">
       <h1 className="text-3xl font-bold mb-6">Our Steps</h1>
       <section className="flex flex-wrap justify-between">
         {data.map((step, index) => (
