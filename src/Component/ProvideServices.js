@@ -97,7 +97,7 @@ const ProvideServices = () => {
                                             <span className="block text-[#5B5B5B] hover:text-white relative z-[2] text-[52px] font-bold">{service.title}</span>
                                         </div>
                                     </div>
-                                    <div className='showcase__image' data-aos="zoom-in">
+                                    <div className='showcase__image'>
                                         <img
                                             src={service.image}
                                             alt={service.title}

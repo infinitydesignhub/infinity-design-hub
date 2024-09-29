@@ -901,7 +901,8 @@ button.elementor-swiper-button.elementor-swiper-button-prev.slick-arrow.slick-pr
   line-height: 1.5;
   font-weight: 700;
   color: #fff;
-  text-align: center;
+  margin-top: 10px;
+  /* text-align: center; */
 }
 
 .wgl-flipbox_wrap {
@@ -1073,7 +1074,26 @@ textarea::placeholder {
 .social a:hover i{
   color: #ec008c;
 }
+.elementor-icon {
+  padding: 19px 18px 19px 20px;
+}
+.wgl-number {
+  display: flex;                   /* Use flexbox for centering */
+  justify-content: center;         /* Center horizontally */
+  align-items: center;             /* Center vertically */
+  width: 50px;                     /* Set width for the circle */
+  height: 50px;                    /* Set height for the circle */
+  border-radius: 50%;              /* Make it circular */
+  background-color: #ec008c;      /* Background color */
+  font-size: 18px;               /* Adjust font size as needed */
+  text-align: center;              /* Center text */
+  color: white;                    /* Text color */
+}
 
+.wgl-infobox_wrapper  span
+{
+  line-height: 1.4;
+}
 @media screen and (max-width: 767px) {
 
   .banner h1,

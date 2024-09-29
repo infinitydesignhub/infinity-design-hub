@@ -29,7 +29,7 @@ const TalkAboutDesignSection = ({ data }) => {
             className="w-full h-auto round-img"
           />
           </div>
-        <p className="mb-6 text-[18px] leading-[36px] w-[300px]">{data.leftSubTitle}</p>
+        <p className="mb-6 text-[18px] leading-[36px] w-[360px] ml-[3px]">{data.leftSubTitle}</p>
         </div>
         <div className="flex  space-x-4 gap[15px]">
           <Link

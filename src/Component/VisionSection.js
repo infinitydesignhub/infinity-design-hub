@@ -14,7 +14,7 @@ const VisionSection = () => {
       title: "Why Partner with Infinity DesignHub?",
       buttonText: "GET IN TOUCH",
       buttonLink: "/contact",
-      imageSrc: "https://wgl-dsites.net/bili/light/wp-content/uploads/2022/08/home6-1.jpg",
+      imageSrc: "/images/0Homepag2.jpg",
       features: [
         {
           title: "Expert Professional Team",

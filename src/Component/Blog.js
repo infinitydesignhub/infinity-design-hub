@@ -34,12 +34,12 @@ const Blog = () => {
 
   return (
     <div className="blog custom-container mx-auto p-4 py-16">
-      <h1 className="text-3xl font-bold mb-6">Our Steps</h1>
+      <h1 className="text-[18px] font-bold mb-6 text-[#ec008c]">Our Steps</h1>
       <section className="flex flex-wrap justify-between">
         {data.map((step, index) => (
-          <div key={index} className="w-full md:w-1/3 p-4">
+          <div key={index} className="w-full md:w-1/3 py-4">
             <div
-              className="elementor-widget-wrap rounded-lg shadow-md p-6 flex flex-col items-center"
+              className="elementor-widget-wrap rounded-lg shadow-md"
               style={{ backgroundColor: step.bgColor }}
               data-aos="fade-up" // Add animation attribute
             >
