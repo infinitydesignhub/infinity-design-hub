@@ -44,7 +44,7 @@ const contactSectionData = {
 const ContactSection = () => {
   return (
     <section className="wpcf7 elementor-section elementor-top-section">
-      <div className="container">
+      <div className="custom-container mx-auto">
         <div className='row flex-wrap'>
         {/* Contact Form Column */}
         <div className="elementor-widget-wrap bg-[#F5F5F5] col-md-6  p-4 md:p-5  ">

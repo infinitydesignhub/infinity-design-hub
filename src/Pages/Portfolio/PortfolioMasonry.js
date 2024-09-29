@@ -31,7 +31,7 @@ const Portfolio = () => {
   };
 
   return (
-    <div className="wgl-portfolio_wrapper container">
+    <div className="wgl-portfolio_wrapper custom-container mx-auto">
       <div className="wgl-portfolio_header mb-6 flex flex-col md:flex-row justify-between p-2 px-4">
         <div className="item_title">
           <div className="portfolio_subtitle text-[#ec008c] font-bold mb-4">DISCOVER OUR CASES</div>

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const GetInTouch = () => {
   return (
-    <section className="container mx-auto py-16">
+    <section className="custom-container mx-auto py-16">
       <div className="flex flex-col md:flex-row gap-[60px] md:gap-[0px] justify-between items-center md:items-start">
         <div className="text-center">
           <h3 className="font-bold dblh__title">

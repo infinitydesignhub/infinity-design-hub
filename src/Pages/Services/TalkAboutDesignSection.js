@@ -14,12 +14,13 @@ const TalkAboutDesignSection = ({ data }) => {
   }
 
   return (
-    <section className=" container mx-auto py-16 flex flex-wrap talk">
+    <section className="custom-container mx-auto py-16 flex flex-wrap talk">
       <div className="w-full md:w-1/2 py-4">
         <div className="mb-6">
           <h2 className="service-title text-2xl font-semibold">{data.leftTitle}</h2>
         </div>
-        <div className="mb-4">
+        <div className="mb-4 flex">
+          <div>
           <img
             loading="lazy"
             decoding="async"
@@ -27,8 +28,9 @@ const TalkAboutDesignSection = ({ data }) => {
             alt={data.leftTitle}
             className="w-full h-auto round-img"
           />
+          </div>
+        <p className="mb-6 text-[18px] leading-[36px] w-[300px]">{data.leftSubTitle}</p>
         </div>
-        <p className="mb-6 text-[18px] leading-[36px]">{data.leftSubTitle}</p>
         <div className="flex  space-x-4 gap[15px]">
           <Link
             to="/contact"
