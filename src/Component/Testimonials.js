@@ -83,7 +83,7 @@ const Testimonials = () => {
             decoding="async"
             src="/images/Review-Home-page.jpg"
             alt="review"
-            className="img-fluid"
+            className="img-fluid rounded-full"
           />
         </div>
         <div className="col-md-8 col-12">

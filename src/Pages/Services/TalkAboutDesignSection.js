@@ -17,7 +17,7 @@ const TalkAboutDesignSection = ({ data }) => {
     <section className="container-fiuld  mx-auto py-16 px-5 flex flex-wrap talk">
       <div className="w-full md:w-1/2 py-4">
         <div className="mb-6">
-          <h2 className="service-title text-2xl font-semibold">{data.leftTitle}</h2>
+          <h2 className="service-title text-4xl font-bold mt-3 mb-3 text-[#232323]">{data.leftTitle}</h2>
         </div>
         <div className="mb-4 flex">
           <div>
