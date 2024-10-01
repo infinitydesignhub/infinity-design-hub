@@ -14,36 +14,37 @@ const TalkAboutDesignSection = ({ data }) => {
   }
 
   return (
-    <section className="custom-container mx-auto py-16 flex flex-wrap talk">
+    <section className="container-fiuld  mx-auto py-16 px-5 flex flex-wrap talk">
       <div className="w-full md:w-1/2 py-4">
         <div className="mb-6">
           <h2 className="service-title text-2xl font-semibold">{data.leftTitle}</h2>
         </div>
         <div className="mb-4 flex">
           <div>
-          <img
+          {/* <img
             loading="lazy"
             decoding="async"
             src={leftImage}
             alt={data.leftTitle}
             className="w-full h-auto round-img"
-          />
+          /> */}
           </div>
-        <p className="mb-6 text-[18px] leading-[36px] w-[360px] ml-[3px]">{data.leftSubTitle}</p>
+        <p className="mb-6 text-[18px] leading-[36px]   ml-[3px]">{data.leftSubTitle}</p>
         </div>
         <div className="flex  space-x-4 gap[15px]">
           <Link
             to="/contact"
             className="inline-block text-black wgl-button relative px-8 py-3 z-1 font-semibold rounded-full  transition-all duration-300  px-4 py-2 rounded-lg"
           >
-            {data.getInTouchButton}
+              {data.ourAgencyButton}
+          
           </Link>
-          <Link
+          {/* <Link
             to="/about"
             className="inline-block text-black wgl-button relative px-8 py-3 z-1 font-semibold rounded-full  transition-all duration-300  px-4 py-2 rounded-lg"
           >
-            {data.ourAgencyButton}
-          </Link>
+              {data.getInTouchButton}
+          </Link> */}
         </div>
         <p className="mb-6 text-[18px] leading-[36px]">{data.description}</p>
       </div>

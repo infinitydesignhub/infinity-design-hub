@@ -81,8 +81,8 @@ const Testimonials = () => {
           <img
             loading="lazy"
             decoding="async"
-            src="https://wgl-dsites.net/bili/light/wp-content/uploads/2022/11/h8-6.png"
-            alt=""
+            src="/images/Review-Home-page.jpg"
+            alt="review"
             className="img-fluid"
           />
         </div>

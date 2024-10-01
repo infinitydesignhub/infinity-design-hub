@@ -15,20 +15,20 @@ const VisionSection = () => {
         {
           title: "Vision",
           content: [
-            "We envision a world where every brand possesses a distinctive identity that stands out and leaves a lasting impression."
+            "We envision a world where every brand has a unique identity that not only stands out but also resonates deeply with its audience. We believe that a powerful brand can inspire change, evoke emotions, and foster connections, allowing businesses to make their mark in the ever-evolving marketplace."
           ]
         },
         {
           title: "Mission",
           content: [
-            "Our mission is driven by teamwork and expertise. By combining our diverse skills, we create tailored solutions to meet the unique needs of businesses, helping them thrive in a competitive landscape."
+            "Our mission is fueled by our passion for creativity and our commitment to excellence. By harnessing the diverse talents within our team, we craft tailored branding solutions that address the specific challenges faced by businesses today. We prioritize collaboration and open communication, ensuring that each project reflects the true essence of our clients’ visions. We strive to empower brands to thrive in a competitive landscape by transforming their ideas into compelling narratives and stunning visuals that capture attention and drive engagement. Together, we are not just creating brands; we are building legacies that inspire and connect."
           ]
         }
       ],
       buttonText: "GET IN TOUCH",
-      buttonLink: "https://wgl-dsites.net/bili/light/services/",
-      imageSrc: "https://wgl-dsites.net/bili/light/wp-content/uploads/2022/08/home6-1.jpg"
-    }
+      buttonLink: "/contact",
+      imageSrc: "images/newImages/About-Page-2.jpg"
+   }
   };
 
   const [activeTabIndex, setActiveTabIndex] = useState(0);
