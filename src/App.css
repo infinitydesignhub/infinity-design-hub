@@ -759,11 +759,10 @@ button.elementor-swiper-button.elementor-swiper-button-prev.slick-arrow.slick-pr
 }
 
 .service-title {
-  color: #181818;
-  font-size: 75px;
+  color: #232323;
+  font-size: 38px;
   font-weight: 700;
-  line-height: 1em;
-  margin: 0% -45% 3% 0%;
+  line-height: 49.4px;
   padding: 0px 0px 4px 0px;
   z-index: 0;
   position: relative;

@@ -15,7 +15,7 @@ const AboutSection = () => {
       description: "Welcome to Infinity DesignHub! I’m Kavita, and in 2019, I embarked on a journey to create a space where creativity meets strategy. Based in California, my team and I—spread across the USA and India—are passionate about providing 360-degree branding solutions. From designing eye-catching logos and stunning graphics to crafting dynamic websites and high-quality printing, we pour our hearts into elevating brands and transforming visions into reality. Together, we handle global marketing demands, ensuring every brand we touch shines brightly.",
       buttonText: "GET IN TOUCH",
       buttonLink: "/contact",
-      imageSrc: "https://wgl-dsites.net/bili/light/wp-content/uploads/2023/03/about-sl-1.jpg"
+      imageSrc: "/images/newImages/About-Page-1.jpg"
     }
   };
 

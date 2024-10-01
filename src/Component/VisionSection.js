@@ -12,29 +12,30 @@ const VisionSection = () => {
   const data = {
     vision: {
       title: "Why Partner with Infinity DesignHub?",
+      desc:"Partnering with Infinity DesignHub means unlocking the full potential of your brand through expert guidance, innovative strategies, and unwavering support—because your success is our mission.",
       buttonText: "GET IN TOUCH",
       buttonLink: "/contact",
-      imageSrc: "/images/0Homepag2.jpg",
+      imageSrc: "/images/Home-Page-2.jpg",
       features: [
         {
           title: "Expert Professional Team",
-          description: "Access top talent with extensive experience in digital innovation and marketing."
+          description: "Access a team of industry experts specializing in digital innovation and marketing, guaranteeing that your brand leverages cutting-edge strategies and creative solutions through our extensive experience."
         },
         {
           title: "End-to-End Solutions",
-          description: "From strategy to execution, we handle every aspect of your digital and print needs."
+          description: "We provide comprehensive services, covering every stage of your project—from strategic planning to flawless execution in both digital and print."
         },
         {
           title: "Proven Experience",
-          description: "Leveraging years of success globally across various industries."
+          description: "With a track record of delivering successful campaigns across multiple industries, we bring years of global experience to help your brand thrive in competitive markets."
         },
         {
           title: "Economical and Efficient",
-          description: "Quality solutions that fit your budget without compromising on excellence."
+          description: "Our solutions are designed to offer maximum value, combining quality and creativity within your budget, so you achieve the best results without overspending."
         },
         {
           title: "Continuous Support",
-          description: "Timely and responsive service to ensure your success every step of the way."
+          description: "Our team offers ongoing, responsive support to ensure your marketing efforts remain on track, with timely solutions at every phase to drive long-term success."
         }
       ]
     }
@@ -61,6 +62,7 @@ const VisionSection = () => {
         <div className="col-md-6" data-aos="fade-left">
           <div className="mb-6">
             <h3 className="text-3xl font-semibold mt-2  text-[#232323]">{data.vision.title}</h3>
+          <p className='my-3'>{data.vision.desc}</p>
           </div>
           <div className="mb-6">
             {data.vision.features.map((feature, index) => (
