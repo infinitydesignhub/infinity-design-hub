@@ -12,7 +12,7 @@ import DynamicSection from '../Component/DynamicSection';
 import ClientSlider from "../Component/ClientSlider";
 import Testimonials from "../Component/Testimonials";
 import ProvideServices from '../Component/ProvideServices';
-// import Blog from '../Component/Blog';
+import Blog from '../Component/Blog';
 import VisionSection from '../Component/VisionSection';
 // import Portfolio from './Portfolio';
 import data from '../Data/benefits.json'
@@ -33,7 +33,7 @@ const Home = () => {
             <PricingSection />
             <CounterSection />
             <Testimonials />
-            {/* <Blog /> */}
+            <Blog />
             {/* <GetInTouch /> */}
             <DynamicSection {...contentData.about} />
             {/* <Portfolio/> */}

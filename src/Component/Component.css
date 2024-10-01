@@ -12,3 +12,23 @@
   display: inline-block;
   animation: loop 120s linear infinite; /* Change duration to 120 seconds */
 }
+/* Component.css */
+.marquee-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.marquee-start,
+.marquee-end {
+  position: absolute;
+  width: 100px; /* Adjust width as needed */
+  height: 100%; /* Match height of marquee */
+  background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)); /* For start blur */
+  z-index: 1;
+}
+
+.marquee-end {
+  right: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)); /* For end blur */
+}
+
