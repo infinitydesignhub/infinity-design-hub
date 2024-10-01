@@ -19,7 +19,7 @@ const BenefitsSection = ({ data }) => {
 
   return (
     <section className="py-16">
-      <div className="custom-container mx-auto flex flex-wrap justify-between">
+      <div className="custom-container mx-auto flex flex-wrap justify-between items-center">
         {/* Left Column - Image */}
         <div className="w-full md:w-1/2 flex justify-between">
           {image && image.fields && (
