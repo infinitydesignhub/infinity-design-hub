@@ -1,4 +1,3 @@
-
 :root {
   /* Colors */
   --color-primary: #ec008c;
@@ -7,7 +6,7 @@
   --color-background-light: url(https://wgl-dsites.net/bili/light/wp-content/uploads/2023/03/homepage-1_1.jpg);
   --color-background-contact: url(https://wgl-dsites.net/bili/light/wp-content/uploads/2023/03/contacts-bg-l.jpg);
   --color-background-about: url(https://wgl-dsites.net/bili/light/wp-content/uploads/2023/03/about-bg-l3.png);
- --color-background-potfolio:url(/public/images/portfolio-s-bg-l.jpg);
+  --color-background-potfolio: url(/public/images/portfolio-s-bg-l.jpg);
   --color-text: #585858;
   --color-text-light: #dfdfdf;
   --color-accent: #ec008c;
@@ -55,13 +54,14 @@
 /* Body */
 .default-class {
   /* background-image: var(--color-background-light); */
-  background:url(https://wgl-dsites.net/bili/light/wp-content/uploads/2023/03/team-bg-l.jpg);
-background-repeat: no-repeat;
+  background: url(https://wgl-dsites.net/bili/light/wp-content/uploads/2023/03/team-bg-l.jpg);
+  background-repeat: no-repeat;
 }
 
-.portfolio-class{
+.portfolio-class {
   background-image: var(--color-background-potfolio);
 }
+
 body {
   background-color: var(--color-background);
   background-size: contain;
@@ -446,8 +446,9 @@ nav a {
   transform: translateY(0) skewY(0) scaleZ(1) rotate(-15deg);
   visibility: visible;
 }
+
 .showcase__content:hover span,
-.wgl-infobox_wrapper:hover p{
+.wgl-infobox_wrapper:hover p {
   color: #fff;
 }
 
@@ -1032,6 +1033,7 @@ input::placeholder,
 textarea::placeholder {
   color: #232323;
 }
+
 .side-social {
   right: 0;
   top: 45%;
@@ -1043,6 +1045,7 @@ textarea::placeholder {
   z-index: 6;
   margin-right: -127px;
 }
+
 .side-social a {
   display: block;
   color: #000;
@@ -1054,6 +1057,7 @@ textarea::placeholder {
   transition: all ease 0.3s;
   font-weight: 600;
 }
+
 .line {
   float: left;
   width: 72px;
@@ -1061,38 +1065,84 @@ textarea::placeholder {
   height: 1px;
   margin: 20px 17px;
 }
+
 .side-social a i {
   -webkit-transition: all ease 0.3s;
   transition: all ease 0.3s;
 }
+
 .side-social a:hover i {
   -webkit-transform: rotate(-90deg);
   transform: rotate(-90deg);
   -webkit-transition: all ease 0.3s;
   transition: all ease 0.3s;
 }
-.social a:hover i{
+
+.social a:hover i {
   color: #ec008c;
 }
+
 .elementor-icon {
   padding: 19px 18px 19px 20px;
 }
+
 .wgl-number {
-  display: flex;                   /* Use flexbox for centering */
-  justify-content: center;         /* Center horizontally */
-  align-items: center;             /* Center vertically */
-  width: 50px;                     /* Set width for the circle */
-  height: 50px;                    /* Set height for the circle */
-  border-radius: 50%;              /* Make it circular */
-  background-color: #ec008c;      /* Background color */
-  font-size: 18px;               /* Adjust font size as needed */
-  text-align: center;              /* Center text */
-  color: white;                    /* Text color */
+  display: flex;
+  /* Use flexbox for centering */
+  justify-content: center;
+  /* Center horizontally */
+  align-items: center;
+  /* Center vertically */
+  width: 50px;
+  /* Set width for the circle */
+  height: 50px;
+  /* Set height for the circle */
+  border-radius: 50%;
+  /* Make it circular */
+  background-color: #ec008c;
+  /* Background color */
+  font-size: 18px;
+  /* Adjust font size as needed */
+  text-align: center;
+  /* Center text */
+  color: white;
+  /* Text color */
 }
 
-.wgl-infobox_wrapper  span
-{
+.wgl-infobox_wrapper span {
   line-height: 1.4;
+}
+.blog .wgl-button {
+  padding: 25px 20px 25px 20px !important;
+  border-style: solid;
+  border-width: 1px 0px 0px 0px;
+  color: #232323 !important;
+  border-color: #000000;
+  background-color: #FF742500;
+  display: block;
+  border-radius: 0;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Add transition */
+}
+
+.blog .wgl-button:focus,
+.blog .wgl-button:hover {
+  color: #FFFFFF !important;
+  background-color: #ec008c;
+  border-color: #ec008c;
+}
+.blog .flex.row.flex-wrap.justify-between .col-4:last-child .dblh__subtitle {
+  color:#fff !important; 
+}
+.blog .flex.row.flex-wrap.justify-between .col-4:last-child .dblh__title-wrapper {
+color: #888888 !important;
+}
+.blog .flex.row.flex-wrap.justify-between .col-4:last-child .wgl-button{
+  color:#fff !important; 
+  border-color: #fff !important;
+}
+.blog .flex.row.flex-wrap.justify-between .col-4:last-child .wgl-button:focus,
+.blog .flex.row.flex-wrap.justify-between .col-4:last-child .wgl-button:hover{
+  border-color: #ec008c !important;
 }
 @media screen and (max-width: 767px) {
 

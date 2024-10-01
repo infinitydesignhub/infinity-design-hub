@@ -14,55 +14,55 @@ const Blog = () => {
       title: "first step",
       image: "/images/homepage-9_6.jpg",
       link: "/blog/",
-      bgColor: "#EAEAEA", // Light blue background
+      bgColor: "#EAEAEA",
     },
     {
       subtitle: "Design & Development",
       title: "second step",
       image: "/images/homepage-9_7.jpg",
       link: "/blog/",
-      bgColor: "#ff7425", // Light green background
+      bgColor: "#ff7425",
     },
     {
       subtitle: "Customize & Testing",
       title: "third step",
       image: "/images/homepage-9_8.jpg",
       link: "/blog/",
-      bgColor: "black", // Light yellow background
+      bgColor: "black",
     },
   ];
 
   return (
-    <div className="blog custom-container mx-auto p-4 py-16">
-      <h1 className="text-[18px] font-bold mb-6 text-[#ec008c]">Our Steps</h1>
-      <section className="flex flex-wrap justify-between">
+    <div className="blog custom-container mx-auto py-20">
+      <h1 className="text-[18px] font-bold mb-4 text-[#ec008c]">Our Steps</h1>
+      <div className="row">
         {data.map((step, index) => (
-          <div key={index} className="w-full md:w-1/3 py-4">
+          <div className="col-12 col-md-4 mb-4" key={index}>
             <div
-              className="elementor-widget-wrap rounded-lg shadow-md"
+              className="rounded-lg shadow-md w-100 pt-4"
               style={{ backgroundColor: step.bgColor }}
-              data-aos="fade-up" // Add animation attribute
+              data-aos="fade-up"
             >
-              <div className="mb-4">
-                <span className="text-sm text-gray-600 dblh__subtitle">{step.subtitle}</span>
-                <h2 className="text-lg font-semibold dblh__title-wrapper">{step.title}</h2>
+              <div className="mb-4 text-center">
+                <span className="text-sm text-[#232323] dblh__subtitle">{step.subtitle}</span>
+                <h2 className="text-lg font-semibold text-[#585858] dblh__title-wrapper">{step.title}</h2>
               </div>
               <img
-                className="w-full h-auto rounded-md mb-4"
+                className="img-fluid rounded-md mb-8"
                 src={step.image}
                 alt={step.title}
               />
               <Link
                 to={step.link}
-                className="wgl-button bg-blue-500 text-black py-2 px-4 rounded-lg transition duration-300"
-                data-aos="zoom-in" // Add animation attribute for the button
+                className="wgl-button py-2 px-4 rounded-lg transition duration-300 text-[14px] font-bold"
+                data-aos="zoom-in"
               >
                 READ MORE
               </Link>
             </div>
           </div>
         ))}
-      </section>
+      </div>
     </div>
   );
 };
