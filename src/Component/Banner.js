@@ -53,7 +53,7 @@ const BannerSection = () => {
             className={`space-y-6 transition-opacity duration-500 ${transitioning ? "opacity-0" : "opacity-100"
               }`}
           >
-            <h1 className="text-3xl md:text-5xl lg:text-7xl font-bold">
+            <h1 className="text-3xl md:text-5xl lg:text-7xl font-bold uppercase">
               {currentData.mainText[0]}
             </h1>
             <div className="d-flex align-items-center">
@@ -62,11 +62,11 @@ const BannerSection = () => {
                 alt="arrow"
                 className="w-8 h-12 md:w-10 md:h-16 lg:w-15 lg:h-20 mr-3"
               />
-              <h2 className="heading-title text-3xl md:text-5xl lg:text-7xl font-bold text-gray-600">
+              <h2 className="heading-title text-3xl md:text-5xl lg:text-7xl font-bold text-gray-600 uppercase">
                 {currentData.mainText[1]}
               </h2>
             </div>
-            <h1 className="text-3xl md:text-5xl lg:text-7xl font-bold">
+            <h1 className="text-3xl md:text-5xl lg:text-7xl font-bold uppercase">
               {currentData.mainText[2]}
             </h1>
           </div>

@@ -10,10 +10,10 @@ const AnimatedSection = () => {
             <div className="simple_line">
               <div className="simple_line--wrapper" style={{ width: '8780px' }}>
                 <span className="text--word">
-                  Web Development _ UI/UX _ Branding Strategy _ Photography&nbsp;
+                  Website Development _ UI/UX _ Branding Strategy _ Photography&nbsp;
                 </span>
                 <span className="text--word">
-                  Web Development _ UI/UX _ Branding Strategy _ Photography
+                  Website Development _ UI/UX _ Branding Strategy _ Photography
                 </span>
               </div>
             </div>

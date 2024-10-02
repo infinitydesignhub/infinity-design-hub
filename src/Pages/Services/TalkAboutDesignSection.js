@@ -1,5 +1,5 @@
-import React from 'react'; 
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
 const TalkAboutDesignSection = ({ data }) => {
   console.log("TalkAboutDesignSection data:", data);
@@ -16,12 +16,48 @@ const TalkAboutDesignSection = ({ data }) => {
   return (
     <section className="container-fiuld  mx-auto py-16 px-5 flex flex-wrap talk">
       <div className="w-full md:w-1/2 py-4">
+        <div className="my-16">
+          <div className="flex flex-col">
+            <div className="mb-6 flex flex-wrap">
+              <img
+                loading="lazy"
+                decoding="async"
+                src="https://wgl-dsites.net/bili/light/wp-content/uploads/2023/03/homepage-9_9.jpg"
+                alt=""
+                style={{
+                  width: "265px",
+                  height: "86px",
+                  margin: "auto 10px  auto 0",
+                  borderRadius: "0px 100px 100px 0px",
+                }}
+                className="" // Ensure the image covers its px-5
+              />
+              <h2 className="text-[#232323] text-[100px] font-semibold mb-2 text-center uppercase">
+          
+              Digital 
+              </h2>
+              <span
+                className="text-[100px] font-bold uppercase"
+                style={{
+                  color: "transparent",
+                  WebkitTextStroke: "1px rgb(35, 35, 35)",
+                  WebkitTextFillColor: "transparent",
+                }}
+              >
+                Marketing
+              </span>
+            </div>
+          </div>
+        </div>
+        <div>
         <div className="mb-6">
-          <h2 className="service-title text-4xl font-bold mt-3 mb-3 text-[#232323]">{data.leftTitle}</h2>
+          <h2 className="service-title text-4xl font-bold mt-3 mb-3 text-[#232323]">
+            {data.leftTitle}
+          </h2>
         </div>
         <div className="mb-4 flex">
           <div>
-          {/* <img
+            {/* <img
             loading="lazy"
             decoding="async"
             src={leftImage}
@@ -29,15 +65,16 @@ const TalkAboutDesignSection = ({ data }) => {
             className="w-full h-auto round-img"
           /> */}
           </div>
-        <p className="mb-6 text-[18px] leading-[36px]   ml-[3px]">{data.leftSubTitle}</p>
+          <p className="mb-6 text-[18px] leading-[36px]   ml-[3px]">
+            {data.leftSubTitle}
+          </p>
         </div>
         <div className="flex  space-x-4 gap[15px]">
           <Link
             to="/contact"
             className="inline-block text-black wgl-button relative px-8 py-3 z-1 font-semibold rounded-full  transition-all duration-300  px-4 py-2 rounded-lg"
           >
-              {data.ourAgencyButton}
-          
+            {data.ourAgencyButton}
           </Link>
           {/* <Link
             to="/about"
@@ -48,6 +85,7 @@ const TalkAboutDesignSection = ({ data }) => {
         </div>
         <p className="mb-6 text-[18px] leading-[36px]">{data.description}</p>
       </div>
+        </div>
       <div className="w-full md:w-1/2 py-4">
         <div className="mb-6">
           <img

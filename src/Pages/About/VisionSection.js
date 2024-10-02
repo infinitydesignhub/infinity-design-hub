@@ -15,7 +15,7 @@ const VisionSection = () => {
         {
           title: "Vision",
           content: [
-            "We envision a world where every brand has a unique identity that not only stands out but also resonates deeply with its audience. We believe that a powerful brand can inspire change, evoke emotions, and foster connections, allowing businesses to make their mark in the ever-evolving marketplace."
+            " We envision a world where every brand has a unique identity that not only stands out but also resonates deeply with its audience. We believe that a powerful brand can inspire change, evoke emotions, and foster connections, allowing businesses to make their mark in the ever-evolving marketplace."
           ]
         },
         {
@@ -46,7 +46,7 @@ const VisionSection = () => {
   }, [activeTabIndex]);
 
   return (
-    <section className="container mx-auto py-16">
+    <section className="custom-container mx-auto py-16">
       <div className="row flex-wrap flex-row-reverse">
         <div className="col-md-6" data-aos="fade-right">
           <img
@@ -59,7 +59,7 @@ const VisionSection = () => {
         </div>
         <div className="col-md-6" data-aos="fade-left">
           <div className="mb-6">
-            <h3 className="text-[38px] font-semibold mt-2 text-[#232323]">{data.vision.title}</h3>
+            <h3 className="text-4xl font-bold mt-3 mb-3 text-[#232323]">{data.vision.title}</h3>
           </div>
 
           <div className="wgl-tabs">
