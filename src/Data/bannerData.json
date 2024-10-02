@@ -1,27 +1,21 @@
 [
     {
       "backgroundImage": "https://wgl-dsites.net/bili/light/wp-content/uploads/2023/03/homepage-1_1.jpg",
-      "mainText": ["HIGH END", "CREATIVE", "AGENCY"],
-      "subheading": "Over 15 years in the game & build successful, profitable products.",
+      "mainText": ["360-Degree", "Marketing", "Solutions"],
+      "subheading": "Comprehensive branding, design, and digital strategies tailored to elevate your brand across all platforms.",
       "buttonText": "GET IN TOUCH"
     },
     {
       "backgroundImage": "https://example.com/image2.jpg",
-      "mainText": ["NEXT LEVEL", "INNOVATIVE", "DESIGN"],
-      "subheading": "Pioneering new trends in the industry.",
+      "mainText": ["One-Stop", "Solution", "for Success"],
+      "subheading": "From concept to execution, we bring together creative expertise and strategic insight to drive your brand’s growth.",
       "buttonText": "CONTACT US"
     },
     {
       "backgroundImage": "https://example.com/image3.jpg",
-      "mainText": ["MODERN", "ELEGANT", "SOLUTIONS"],
-      "subheading": "Crafting the future with style and sophistication.",
+      "mainText": ["Infinite", "Brand", "Growth"],
+      "subheading": "With 10 years of experience, we drive your brand's growth through creative solutions and endless possibilities.",
       "buttonText": "LEARN MORE"
-    },
-    {
-      "backgroundImage": "https://example.com/image4.jpg",
-      "mainText": ["UNIQUE", "VISIONARY", "CREATIVITY"],
-      "subheading": "Innovative solutions that stand out.",
-      "buttonText": "GET IN TOUCH"
     }
   ]
   

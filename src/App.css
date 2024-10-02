@@ -733,7 +733,7 @@ button.elementor-swiper-button.elementor-swiper-button-prev.slick-arrow.slick-pr
 
 .wgl-tabs_content-wrap {
   position: relative;
-  max-height: 200px;
+  max-height: 500px;
   overflow-y: auto;
   transition: max-height 1s ease, opacity 1s ease;
 }
@@ -747,14 +747,14 @@ button.elementor-swiper-button.elementor-swiper-button-prev.slick-arrow.slick-pr
 
 .wgl-tabs_content.active {
   opacity: 1;
-  max-height: 200px;
+  max-height: 500px;
 }
 
 .wgl-infobox_wrapper {
   background-color: #1717171a;
   background-image: linear-gradient(210deg, #1717171a 10%, #1717171a 90%);
   /* justify-content: center; */
-  height: 200px;
+  height: 500px;
   width: 140px;
 }
 

@@ -28,7 +28,7 @@ const WhyUs = ({ wData }) => {
         <div className="col-md-6" data-aos="fade-left">
           <div className="mb-6 px-2 mt-4">
             <span className="text-[#ec008c] text-[14px] uppercase font-bold">{wData.subtitle}</span>
-            {/* <h3 className="text-3xl font-semibold mt-2">{wData.title}</h3> */}
+            <h3 className="text-4xl font-bold mt-3 mb-3 text-[#232323]">{wData.title}</h3>
           </div>
           <p className="mb-6 p-3 text-[17px] leading-[29px]">{wData.description}</p>
           <Link

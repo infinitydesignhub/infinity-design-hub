@@ -20,7 +20,7 @@ const servicesData = [
     },
     {
         id: 3,
-        title: 'Web Development',
+        title: 'Website Development',
         subtitle: '03',
         link: '/services/web-development',
         image: '/images/newImages/Web-Homer-Service.jpg',
