@@ -1,48 +1,62 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
 const InstagramFeed = () => {
-  const [posts, setPosts] = useState([]);
-  const accessToken = process.env.REACT_APP_INSTAGRAM_ACCESS_TOKEN; // Use environment variable for access token
-
-  useEffect(() => {
-    const fetchPosts = async () => {
-      try {
-        const response = await fetch(`https://graph.instagram.com/me/media?fields=id,caption,media_type,media_url,permalink&access_token=${accessToken}&limit=3`);
-        const data = await response.json();
-        setPosts(data.data);
-      } catch (error) {
-        console.error('Error fetching Instagram posts:', error);
-      }
-    };
-
-    fetchPosts();
-  }, [accessToken]);
+  const posts = [
+    {
+      id: 'sbi_17975935597966382',
+      date: '1674714143',
+      link: 'https://www.instagram.com/reel/Cn3jjoLD09G/',
+      imgSrc: 'https://www.infinitydesignhub.com/wp-content/uploads/sb-instagram-feed-images/327135969_469359185228761_6990906629015827096_nfull.jpg',
+      alt: 'Instagram post 17975935597966382',
+    },
+    {
+      id: 'sbi_17941141814529201',
+      date: '1672581140',
+      link: 'https://www.instagram.com/reel/Cm3_agVIz4n/',
+      imgSrc: 'https://www.infinitydesignhub.com/wp-content/uploads/sb-instagram-feed-images/323155776_545684907470214_1391843489717670428_nfull.jpg',
+      alt: 'Instagram post 17941141814529201',
+    },
+    {
+      id: 'sbi_17849207201885064',
+      date: '1669937327',
+      link: 'https://www.instagram.com/reel/ClpMES4rWab/',
+      imgSrc: 'https://www.infinitydesignhub.com/wp-content/uploads/sb-instagram-feed-images/317957164_158193760249002_1034538080151971911_nfull.jpg',
+      alt: 'Instagram post 17849207201885064',
+    },
+  ];
 
   return (
-    <div className="w-full p-4">
-      <div className="flex flex-col items-center mb-4">
-        <h3 className="text-lg font-semibold">Latest Instagram Posts</h3>
-      </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    <div className="container container-lg mx-auto py-16">
+      <h3 className='dblh__title-wrapper text-4xl text-[#232323] font-bold text-center mb-10'>Our infinite creative approaches will ensure a unique brand image with infinite growth.</h3>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {posts.map(post => (
-          <div key={post.id} className="relative">
-            <a href={post.permalink} target="_blank" rel="noopener noreferrer">
-              <img 
-                src={post.media_url} 
-                alt={post.caption} 
-                className="w-full h-auto rounded-lg shadow-lg transition-transform transform hover:scale-105" 
+          <div key={post.id} className="relative mt-10">
+            <a href={post.link} target="_blank" rel="noopener noreferrer">
+              <img
+                src={post.imgSrc}
+                alt={post.alt}
+                className="w-full h-[450px] object-contain rounded-lg"
               />
+              <div className="absolute inset-0 flex items-center justify-center">
+                <svg className="text-white w-12 h-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                  <path fill="currentColor" d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"></path>
+                </svg>
+              </div>
             </a>
           </div>
         ))}
       </div>
-      <div className="flex justify-center mt-6">
-        <a 
-          href="https://www.instagram.com/infinitydesignhub/" 
-          target="_blank" 
-          rel="noopener noreferrer" 
-          className="bg-pink-600 text-white font-semibold py-2 px-4 rounded hover:bg-pink-700 transition duration-200"
+
+      <div className="mt-5">
+        <a
+          href="https://www.instagram.com/infinitydesignhub/"
+          className="w-52 m-auto flex items-center justify-center bg-pink-600 text-white p-2 rounded"
+          target="_blank"
+          rel="noopener noreferrer"
         >
+          <svg className="w-6 h-6 mr-2" aria-hidden="true" viewBox="0 0 448 512">
+            <path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path>
+          </svg>
           Follow on Instagram
         </a>
       </div>

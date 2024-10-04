@@ -69,7 +69,7 @@ const ProvideServices = () => {
 
     return (
         <section className="provide_services bg-[#181818] py-[100px] my-10" id='services'>
-            <div className='custom-container mx-auto'>
+            <div className='container container-lg mx-auto'>
                 <div className='row m-auto flex flex-wrap justify-between'>
                     <div className="flex flex-col w-full md:w-1/3 p-4 col-md-4 ">
                         <div className="mb-4 mt-10">

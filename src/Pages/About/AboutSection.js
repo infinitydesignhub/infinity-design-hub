@@ -21,10 +21,10 @@ const AboutSection = () => {
   };
 
   return (
-    <section className="custom-container  mx-auto py-16">
+    <section className="container container-lg  mx-auto py-16">
       <div className="row flex-wrap">
         <div className="col-md-6 mb-4" data-aos="fade-right">
-          <div className="mb-6 pr-4 mt-4">
+          <div className="mb-6 pr-4">
             <span className="text-[#ec008c] text-[14px] uppercase font-bold">
               {data.about.subtitle}
             </span>
@@ -32,7 +32,7 @@ const AboutSection = () => {
               {data.about.title}
             </h3>
           </div>
-          <p className="mb-6  text-[17px] leading-[29px]">
+          <p className="mb-6  text-[16px] leading-[29px]">
             {data.about.description}
           </p>
           <Link

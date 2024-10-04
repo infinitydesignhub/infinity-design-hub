@@ -33,7 +33,7 @@ const Blog = () => {
   ];
 
   return (
-    <div className="blog custom-container mx-auto py-20">
+    <div className="blog container container-lg mx-auto py-20">
       <h1 className="text-[18px] font-bold mb-4 text-[#ec008c]">Our Steps</h1>
       <div className="row">
         {data.map((step, index) => (

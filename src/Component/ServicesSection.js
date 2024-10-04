@@ -28,7 +28,7 @@ const ServicesSection = ({ approach, services }) => {
 
   return (
     <section className="services py-1">
-      <div className="custom-container mx-auto px-4 py-16">
+      <div className="container container-lg mx-auto px-4 py-16">
         <div className="row">
           {/* Left Content Section */}
           <div className="btn-w col-md-4 d-flex flex-column mb-5 md:mb-0" data-aos="fade-right" data-aos-duration="1000">

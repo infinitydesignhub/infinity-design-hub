@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useRef } from "react";
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import client from '../../client'; // Adjust the path to your Contentful client
 
 const BenefitsSection = ({ data }) => {
-  const [activeIndex, setActiveIndex] = React.useState(0);
+  const [activeIndex, setActiveIndex] = React.useState(null);
+  const contentRefs = useRef([]);
 
-  // Handle accordion toggle
   const handleToggle = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
@@ -14,19 +14,19 @@ const BenefitsSection = ({ data }) => {
     title,
     image,
     subTitle,
-    collapsibleSection= [],
+    collapsibleSection = [],
   } = data;
 
   return (
     <section className="py-16">
-      <div className="custom-container mx-auto flex flex-wrap justify-between items-center">
+      <div className="container container-lg mx-auto flex flex-wrap justify-between items-center">
         {/* Left Column - Image */}
         <div className="w-full md:w-1/2 flex justify-between">
           {image && image.fields && (
             <img
               src={image.fields.file.url}
               alt={title}
-              className="max-w-full h-auto"
+              className="max-w-full w-full h-auto"
             />
           )}
         </div>
@@ -53,10 +53,20 @@ const BenefitsSection = ({ data }) => {
                   </span>
                   {item.fields.Collapsibletitle}
                 </h4>
-                <div className={`overflow-hidden transition-max-height duration-300 ${activeIndex === index ? "max-h-screen" : "max-h-0"}`}>
+                <div
+                  ref={el => contentRefs.current[index] = el}
+                  className={`collapsible-content ${
+                    activeIndex === index ? "open" : ""
+                  }`}
+                  style={{
+                    maxHeight: activeIndex === index ? `${contentRefs.current[index]?.scrollHeight}px` : '0',
+                    transition: 'max-height 0.3s ease, opacity 0.3s ease',
+                    overflow: 'hidden',
+                  }}
+                >
                   <div className="text-gray-600 mt-2">
-                    {activeIndex === index && item.fields.collapsibleDescription && (
-                      <div className="text-[16px] font-normal leading-7 pt-[3px] px-[35px] py-[15px}">
+                    {item.fields.collapsibleDescription && (
+                      <div className="text-[16px] font-normal leading-7 pt-[3px] px-[35px] py-[15px]">
                         {documentToReactComponents(item.fields.collapsibleDescription)}
                       </div>
                     )}

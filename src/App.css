@@ -1111,6 +1111,7 @@ textarea::placeholder {
 .wgl-infobox_wrapper span {
   line-height: 1.4;
 }
+
 .blog .wgl-button {
   padding: 25px 20px 25px 20px !important;
   border-style: solid;
@@ -1120,7 +1121,8 @@ textarea::placeholder {
   background-color: #FF742500;
   display: block;
   border-radius: 0;
-  transition: background-color 0.3s ease, color 0.3s ease; /* Add transition */
+  transition: background-color 0.3s ease, color 0.3s ease;
+  /* Add transition */
 }
 
 .blog .wgl-button:focus,
@@ -1129,20 +1131,25 @@ textarea::placeholder {
   background-color: #ec008c;
   border-color: #ec008c;
 }
+
 .blog .flex.row.flex-wrap.justify-between .col-4:last-child .dblh__subtitle {
-  color:#fff !important; 
+  color: #fff !important;
 }
+
 .blog .flex.row.flex-wrap.justify-between .col-4:last-child .dblh__title-wrapper {
-color: #888888 !important;
+  color: #888888 !important;
 }
-.blog .flex.row.flex-wrap.justify-between .col-4:last-child .wgl-button{
-  color:#fff !important; 
+
+.blog .flex.row.flex-wrap.justify-between .col-4:last-child .wgl-button {
+  color: #fff !important;
   border-color: #fff !important;
 }
+
 .blog .flex.row.flex-wrap.justify-between .col-4:last-child .wgl-button:focus,
-.blog .flex.row.flex-wrap.justify-between .col-4:last-child .wgl-button:hover{
+.blog .flex.row.flex-wrap.justify-between .col-4:last-child .wgl-button:hover {
   border-color: #ec008c !important;
 }
+
 @media screen and (max-width: 767px) {
 
   .banner h1,
@@ -1192,4 +1199,59 @@ color: #888888 !important;
     left: 14.5rem;
     top: 390px;
   }
+}
+
+.item__description {
+  top: initial;
+  left: 0;
+  bottom: 40px;
+  height: auto;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 300px;
+  word-break: break-word;
+  background: #fff;
+  transform: rotateY(20deg);
+  border-bottom-left-radius: inherit;
+  border-bottom-right-radius: inherit;
+  transition: opacity 0.5s, transform 0.5s;
+  transform-origin: left center;
+}
+
+.item__description {
+  display: flex;
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  height: 100%;
+  padding: 27px 30px 31px;
+  opacity: 0;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.item__description {
+  top: initial;
+  left: 0;
+  bottom: 40px;
+  height: auto;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 300px;
+  word-break: break-word;
+  background: #fff;
+  transform: rotateY(20deg);
+  border-bottom-left-radius: inherit;
+  border-bottom-right-radius: inherit;
+  transition: opacity 0.5s, transform 0.5s;
+  transform-origin: left center;
+}
+
+.group:hover .item__description {
+  opacity: 1;
+  transform: rotateY(0);
 }

@@ -3,35 +3,35 @@
     "id": 1,
     "title": "Printing and Packaging Solutions",
     "category": ["Printing-solutions"],
-    "image": "/images/portfolio/P1.jpg",
+    "image": "/images/PortfolioImages/1.jpg",
     "link": "/portfolio/printing-and-packaging-solutions"
   },
   {
     "id": 2,
     "title": "Logo Design",
     "category": ["Logo Design"],
-    "image": "/images/portfolio/P2.jpg",
+    "image": "/images/PortfolioImages/2.jpg",
     "link": "/portfolio/development-software"
   },
   {
     "id": 3,
     "title": "Satvik Eggless Bakery",
     "category": ["Development"],
-    "image": "/images/portfolio/Satvik-Web-Port-1.jpg",
+    "image": "/images/PortfolioImages/3.jpg",
     "link": "/portfolio/development-software"
   },
   {
     "id": 4,
     "title": "Balista Cafe",
     "category": ["Development"],
-    "image": "/images/portfolio/Balista-1-scaled.jpg",
+    "image": "/images/PortfolioImages/4.jpg",
     "link": "/portfolio/development-software-2"
   },
   {
     "id": 5,
     "title": "Premier Lab Dental",
     "category": ["Development"],
-    "image": "/images/portfolio/Lab-1.jpg",
+    "image": "/images/PortfolioImages/5.jpg",
     "link": "/portfolio/development-software-2"
   },
   {

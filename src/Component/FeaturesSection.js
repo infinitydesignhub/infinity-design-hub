@@ -11,12 +11,12 @@ const FeaturesSection = ({ data }) => {
   }
 
   return (
-    <div className="py-16 wgl-double-heading">
-      <section className="custom-container mx-auto text-center mb-3 dblh__title-wrapper">
-        <h2 className="text-3xl font-semibold text-[50px] md:text-[128px] leading-[50px] md:leading-[36px] dblh__title-2">{data.title}</h2>
+    <div className="wgl-double-heading bg-[#F5F5F5] pt-16">
+      <section className="container container-lg mx-auto text-center mb-3 dblh__title-wrapper">
+        <h2 className="text-3xl font-semibold text-[50px] md:text-[100px] leading-[50px] md:leading-[36px] dblh__title-2">{data.title}</h2>
       </section>
-      <section className="custom-container mx-auto">
-        <div className="d-flex justify-content-between flex-wrap"> {/* Flex custom-container to hold items */}
+      <section className="container container-lg mx-auto pb-16">
+        <div className="d-flex justify-content-between flex-wrap"> {/* Flex container container-lg to hold items */}
           {data.features.map((feature, index) => (
             <div
               key={index}

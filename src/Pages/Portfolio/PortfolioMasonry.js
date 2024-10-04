@@ -31,11 +31,11 @@ const Portfolio = () => {
   };
 
   return (
-    <div className="wgl-portfolio_wrapper custom-container mx-auto">
+    <div className="wgl-portfolio_wrapper container container-lg mx-auto">
       <div className="wgl-portfolio_header mb-6 flex flex-col md:flex-row justify-between p-2 px-4">
         <div className="item_title">
           <div className="portfolio_subtitle text-[#ec008c] font-bold mb-4">DISCOVER OUR CASES</div>
-          <h3 className="portfolio_title text-4xl font-bold mt-3 mb-3">Latest Projects</h3>
+          <h3 className="portfolio_title text-4xl font-bold mt-3 mb-3 text-[#232323]">Latest Projects</h3>
         </div>
         <div className="flex flex-col md:flex-row space-x-4">
           {categories.map(category => (
@@ -66,7 +66,7 @@ const Portfolio = () => {
                 alt={project.title}
                 className="w-full h-auto object-cover transition-transform duration-300 transform group-hover:scale-105"
               />
-              <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="item__description">
                 <div className="text-white text-center">
                   <div className="post_cats">
                     {project.category.map(cat => (

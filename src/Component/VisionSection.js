@@ -48,9 +48,8 @@ const VisionSection = () => {
   };
 
   return (
-    <section className="custom-container mx-auto pb-16 pt-20">
-      <div className="row flex-wrap">
-        <div className="col-md-6" data-aos="fade-right">
+    <section className="container container-lg mx-auto flex flex-wrap justify-between items-center pt-24 pb-16">
+        <div className="w-full md:w-1/2 flex justify-between" data-aos="fade-right">
           <img
             loading="lazy"
             decoding="async"
@@ -59,7 +58,7 @@ const VisionSection = () => {
             className="w-full h-auto"
           />
         </div>
-        <div className="col-md-6" data-aos="fade-left">
+        <div className="w-full md:w-1/2 pl-10" data-aos="fade-left">
           <div className="mb-6">
             <h3 className="text-3xl font-semibold mt-2  text-[#232323]">{data.vision.title}</h3>
           <p className='my-3'>{data.vision.desc}</p>
@@ -91,7 +90,6 @@ const VisionSection = () => {
             {data.vision.buttonText}
           </Link>
         </div>
-      </div>
     </section>
   );
 };
