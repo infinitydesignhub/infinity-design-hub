@@ -12,7 +12,7 @@ const PhilosophySection = ({ data }) => {
   } = data;
 
   return (
-    <section className="custom-container mx-auto py-16">
+    <section className="container container-lg mx-auto py-16">
       <div className="row flex-wrap items-center">
         <div className="col-md-6 mb-6">
           <div className="mb-6">

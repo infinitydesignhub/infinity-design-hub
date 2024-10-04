@@ -40,7 +40,7 @@ const CounterSection = () => {
 
   return (
     <section ref={sectionRef} className="bg-white py-16">
-      <div className="custom-container mx-auto ">
+      <div className="container container-lg mx-auto ">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 justify-items-center items-center">
           {counters.map((counter, index) => (
             <div

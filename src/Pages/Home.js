@@ -18,6 +18,7 @@ import VisionSection from '../Component/VisionSection';
 import data from '../Data/benefits.json'
 import allData from '../Data/OurApproach.json'; // Adjust the path as necessary
 import contentData from '../Data/contentData.json';
+import InstagramFeed from '../Component/InstagramFeed';
 const Home = () => {
     const { approach, services } = allData.page1; // Get data for Page 1
     return (
@@ -35,6 +36,7 @@ const Home = () => {
             <Testimonials />
             <Blog />
             {/* <GetInTouch /> */}
+            <InstagramFeed/>
             <DynamicSection {...contentData.about} />
             {/* <Portfolio/> */}
         </>

@@ -14,9 +14,9 @@ const TalkAboutDesignSection = ({ data }) => {
   }
 
   return (
-    <section className="container-fiuld  mx-auto py-16 px-5 flex flex-wrap talk">
+    <section className="container container-lg mx-auto py-16  flex flex-wrap talk">
       <div className="w-full md:w-1/2 py-4">
-        <div className="my-16">
+        <div className="">
           <div className="flex flex-col">
             <div className="mb-6 flex flex-wrap">
               <img

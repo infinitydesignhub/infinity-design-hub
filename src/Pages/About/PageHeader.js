@@ -40,7 +40,7 @@ const PageHeader = () => {
       }}
     >
       <div className="page-header_wrapper">
-        <div className="wgl-custom-container">
+        <div className="wgl-container container-lg">
           <div className="page-header_content">
             <div
               className="page-header_title"

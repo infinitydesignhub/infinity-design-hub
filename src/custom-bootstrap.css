@@ -13,14 +13,21 @@
 
 @media (min-width: 992px) {
     .custom-container {
-        width: 1200px; /* Large screens */
-        max-width: 1200px;
+        width: 100%; /* Large screens */
+        max-width: 1200px; /* Set max width for large screens */
     }
 }
 
 @media (min-width: 1200px) {
     .custom-container {
-        width: 1200px; /* Extra large screens */
-        max-width: 1200px;
+        width: 100%; /* Extra large screens */
+        max-width: 1150px; /* Adjust max width for extra large screens */
+    }
+}
+
+@media (min-width: 1400px) {
+    .custom-container {
+        width: 100%; /* Extra large screens */
+        max-width: 1200px; /* Set max width for larger than extra large */
     }
 }

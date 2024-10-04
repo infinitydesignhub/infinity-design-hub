@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const DynamicSection = ({ imageSrc, titleParts, description, button }) => {
     return (
         <section className="py-16">
-            <div className="custom-container mx-auto px-4">
+            <div className="container container-lg mx-auto">
                 <hr></hr>
                 <div className='my-16'>
                     <div className="flex flex-col">
@@ -20,7 +20,7 @@ const DynamicSection = ({ imageSrc, titleParts, description, button }) => {
                                     margin: 'auto 10px  auto 0',
                                     borderRadius: '0px 100px 100px 0px'
                                 }}
-                                className="" // Ensure the image covers its custom-container
+                                className="" // Ensure the image covers its container container-lg
                             />
                             <h2 className="text-[#232323] text-[100px] font-semibold mb-2 text-center">{titleParts}</h2>
                             {/* {titleParts.map((part, index) => (

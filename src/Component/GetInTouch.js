@@ -9,7 +9,7 @@ const GetInTouch = () => {
   }, []);
 
   return (
-    <section className="custom-container mx-auto py-16">
+    <section className="container container-lg mx-auto py-16">
       <div className="flex flex-col md:flex-row gap-[60px] md:gap-[0px] justify-between items-center md:items-start" data-aos="fade-up"> {/* Add animation attribute */}
         <div className="text-center">
           <h3 className="font-bold dblh__title">

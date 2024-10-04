@@ -21,7 +21,7 @@ const BenefitsSection = ({ data }) => {
 
   return (
     <section className="py-16">
-      <div className="custom-container mx-auto">
+      <div className="container container-lg mx-auto">
         <div className="row flex-wrap">
           <div className="col-12 col-md-6" data-aos="fade-right" data-aos-offset="100">
             <div className="mb-4">

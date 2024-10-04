@@ -47,7 +47,7 @@ const BannerSection = () => {
           <i className="fab fa-pinterest" aria-hidden="true"></i>
         </a>
       </div>
-      <div className="custom-container mx-auto d-flex flex-md-row align-items-start text-start py-10 md:py-28">
+      <div className="container container-lg mx-auto d-flex flex-md-row align-items-start text-start py-10 md:py-28">
         <div className="flex-1">
           <div
             className={`space-y-6 transition-opacity duration-500 ${transitioning ? "opacity-0" : "opacity-100"

@@ -64,7 +64,7 @@ const PricingSection = () => {
         <h3 className="text-3xl font-extrabold text-white">Explore Our Digital Pricing Plans</h3>
       </div> */}
 
-      <div className="custom-container mx-auto">
+      <div className="container container-lg mx-auto">
         <div className="row justify-content-center">
           {pricingPlans.map((plan) => (
             <div
