@@ -83,9 +83,10 @@ const Navbar = () => {
               </div>
             ))}
             {/* Contact Us Button */}
+          
             <Link
               to="/contact"
-              className="bg-[#ec008c] text-white py-2 px-4 rounded uppercase"
+              className="inline-block px-8 sm:px-10 lg:px-[20px] hover:bg-custom-btn text-[16px]  text-center font-[400] bg-[#393939] text-white py-1 rounded-full tracking-wide transition duration-200"
             >
               Contact Us
             </Link>
@@ -139,7 +140,7 @@ const Navbar = () => {
             {/* Mobile Contact Us Button */}
             <Link
               to="/contact"
-              className="bg-[#ec008c] text-white py-2 px-4 rounded uppercase"
+              className="inline-block px-8 sm:px-10 lg:px-[20px] hover:bg-custom-btn text-[16px]  text-center font-[400] bg-[#393939] text-white py-1 rounded-full tracking-wide transition duration-200"
               onClick={() => setIsOpen(false)}
             >
               Contact Us

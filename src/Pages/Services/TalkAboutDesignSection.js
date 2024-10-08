@@ -32,9 +32,9 @@ const TalkAboutDesignSection = ({ data }) => {
                 }}
                 className="" // Ensure the image covers its px-5
               />
+
               <h2 className="text-[#232323] text-[60px] md:text-[100px] font-semibold mb-2 text-center uppercase">
-          
-              Digital 
+          {data.pageTitle}
               </h2>
               <span
                 className="text-[60px] md:text-[100px] font-bold uppercase"
@@ -44,7 +44,7 @@ const TalkAboutDesignSection = ({ data }) => {
                   WebkitTextFillColor: "transparent",
                 }}
               >
-                Marketing
+                {data.pageSubTitle}
               </span>
             </div>
           </div>
