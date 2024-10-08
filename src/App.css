@@ -1199,6 +1199,14 @@ textarea::placeholder {
     left: 14.5rem;
     top: 390px;
   }
+  .img-box{
+    align-items: center;
+    gap: 20px;
+  }
+  .img-box .box{
+   height:250px !important;
+   width: 50% !important;
+  }
 }
 
 .item__description {
