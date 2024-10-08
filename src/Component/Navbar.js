@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import footerData from "../Data/footerData.json"; // Adjust the path as necessary
+import footerData from "../Data/footerData.json";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const services = footerData.services; // Get services from JSON data
+  const services = footerData.services;
 
   useEffect(() => {
     AOS.init({ duration: 1000 });
@@ -82,11 +82,9 @@ const Navbar = () => {
                 )}
               </div>
             ))}
-            {/* Contact Us Button */}
-          
             <Link
               to="/contact"
-              className="inline-block px-8 sm:px-10 lg:px-[20px] hover:bg-custom-btn text-[16px]  text-center font-[400] bg-[#393939] text-white py-1 rounded-full tracking-wide transition duration-200"
+              className="inline-block px-8 sm:px-10 lg:px-[20px] hover:bg-custom-btn text-[16px] text-center font-[400] bg-[#393939] text-white py-1 rounded-full tracking-wide transition duration-200"
             >
               Contact Us
             </Link>
@@ -100,9 +98,27 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Mobile Menu */}
+        {/* Mobile Menu Backdrop */}
         {isOpen && (
-          <div className="md:hidden flex flex-col items-center space-y-4 pt-4 bg-black text-white">
+          <div
+            className="fixed inset-0 bg-black bg-opacity-70 transition-opacity duration-300"
+            onClick={() => setIsOpen(false)}
+          ></div>
+        )}
+
+        {/* Mobile Menu */}
+        <div
+          className={`fixed right-0 top-0 w-64 bg-white h-full shadow-lg transition-transform duration-300 ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}
+        >
+          <div className="flex flex-col p-4">
+            {/* Close Button */}
+            <button 
+              onClick={() => setIsOpen(false)} 
+              className="self-end text-xl mb-4"
+            >
+              <i className="fa-solid fa-times"></i>
+            </button>
+
             {["Home", "About", "Portfolio", "Blog"].map((item) => (
               <div key={item} className="relative">
                 <Link
@@ -137,16 +153,15 @@ const Navbar = () => {
                 </div>
               )}
             </div>
-            {/* Mobile Contact Us Button */}
             <Link
               to="/contact"
-              className="inline-block px-8 sm:px-10 lg:px-[20px] hover:bg-custom-btn text-[16px]  text-center font-[400] bg-[#393939] text-white py-1 rounded-full tracking-wide transition duration-200"
+              className="inline-block px-8 sm:px-10 lg:px-[20px] hover:bg-custom-btn text-[16px] text-center font-[400] bg-[#393939] text-white py-1 rounded-full tracking-wide transition duration-200"
               onClick={() => setIsOpen(false)}
             >
               Contact Us
             </Link>
           </div>
-        )}
+        </div>
       </nav>
     </>
   );
