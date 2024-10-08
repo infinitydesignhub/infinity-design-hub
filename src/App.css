@@ -1145,6 +1145,65 @@ textarea::placeholder {
   border-color: #ec008c !important;
 }
 
+@media screen and (max-width: 767px) {
+
+  .banner h1,
+  .heading-title,
+  .text-path span {
+    font-size: 40px !important;
+  }
+
+  .banner img {
+    width: 50px;
+  }
+
+  .contact-details .elementor-widget-wrap {
+    padding: 65px 0px 60px 10px;
+  }
+
+  .elementor-widget-wrap {
+    padding: 42px 20px 64px 20px;
+  }
+
+  .wgl-infobox_wrapper {
+    width: 100%;
+    margin-bottom: 20px !important;
+  }
+
+  .dblh__title {
+    font-size: 60px;
+
+  }
+
+  .btn-circle {
+    margin-top: 5rem !important;
+    margin-bottom: 8rem;
+  }
+
+  .service-title {
+    font-size: 40px;
+    margin: 0% 0% 3% 0%;
+  }
+
+  button.elementor-swiper-button.elementor-swiper-button-next.slick-arrow.slick-next {
+    left: 6rem;
+    top: 389px;
+  }
+
+  button.elementor-swiper-button.elementor-swiper-button-prev.slick-arrow.slick-prev {
+    left: 14.5rem;
+    top: 390px;
+  }
+  .img-box{
+    align-items: center;
+    gap: 20px;
+  }
+  .img-box .box{
+   height:250px !important;
+   width: 50% !important;
+  }
+}
+
 .item__description {
   top: initial;
   left: 0;

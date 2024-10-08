@@ -71,10 +71,10 @@ const BannerSection = () => {
             </h1>
           </div>
           <div
-            className={`d-flex  md:flex-row align-items-start md:align-items-center space-y-4 md:space-x-4 mt-6 md:mt-10 transition-opacity duration-500 ${transitioning ? "opacity-0" : "opacity-100"
+            className={`d-flex flex-col md:flex-row align-items-start md:align-items-center space-y-4 md:space-x-4 mt-6 md:mt-10 transition-opacity duration-500 ${transitioning ? "opacity-0" : "opacity-100"
               }`}
           >
-            <p className="w-full md:w-[400px] text-base md:text-lg lg:text-[20px] leading-[28px] md:leading-[36px] text-gray-600 dm-sans">
+            <p className="w-[300px] md:w-[400px] text-base md:text-lg lg:text-[20px] leading-[28px] md:leading-[36px] text-gray-600 dm-sans">
               {currentData.subheading}
             </p>
             <Link
