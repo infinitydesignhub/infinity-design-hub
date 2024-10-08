@@ -6,16 +6,16 @@ import CounterSection from '../Component/CounterSection'; // Your local componen
 import PhilosophySection from './Services/PhilosophySection';
 import BenefitsSection from './Services/BenefitsSection'; // Import the BenefitsSection
 import FeaturesSection from '../Component/FeaturesSection';
-// import GetInTouch from '../Component/GetInTouch';
-import DynamicSection from '../Component/DynamicSection';
 import featuresData from '../Data/FeaturesData.json';
 import FlipboxGrid from './Services/FlipboxGrid';
 import TextPath from '../Component/TextPath';
-import contentData from '../Data/contentData.json';
+import DynamicSection from './Services/DynamicSection';
+
 const componentMap = {
   layoutComponent: TalkAboutDesignSection,
   customComponent: PhilosophySection,
   'customComponent-2': BenefitsSection, // Use the exact content type ID
+  contactUs: DynamicSection, // Ensure this is last in rendering logic
 };
 
 const Services = () => {
@@ -31,7 +31,7 @@ const Services = () => {
           include: 2, // Ensure linked entries are included
         });
 
-        console.log("Service Data:", response);
+        console.log("Service Data:", response); // Log the response
 
         if (response.items.length > 0) {
           setData(response.items[0].fields);
@@ -48,21 +48,23 @@ const Services = () => {
 
   return (
     <div>
-      {/* <h1 className="text-3xl font-bold">{data.title}</h1> */}
+      {/* Render all sections first */}
       {data.sections.map((section, index) => {
         const contentTypeId = section.sys.contentType.sys.id;
-        const ComponentToRender = componentMap[contentTypeId];
+        
+        // Check if the section is contactUs
+        if (contentTypeId === 'contactUs') {
+          return null; // Skip rendering here
+        }
 
-        console.log("Rendering section:", section);
+        const ComponentToRender = componentMap[contentTypeId];
 
         return (
           <React.Fragment key={index}>
             {ComponentToRender ? (
               <>
                 <ComponentToRender data={section.fields} />
-                {/* Render CounterSection after layoutComponent */}
                 {contentTypeId === 'layoutComponent' && <CounterSection />}
-                {/* Check if the rendered component is BenefitsSection */}
               </>
             ) : (
               <div>Unknown section type</div>
@@ -70,11 +72,22 @@ const Services = () => {
           </React.Fragment>
         );
       })}
-      <TextPath/>
-      <FlipboxGrid/>
+
+      {/* Render the DynamicSection last */}
+      {data.sections.map((section, index) => {
+        const contentTypeId = section.sys.contentType.sys.id;
+
+        if (contentTypeId === 'contactUs') {
+          return <DynamicSection key={index} data={section.fields} />;
+        }
+
+        return null; // Skip rendering if not contactUs
+      })}
+
+      {/* Other components that should appear before DynamicSection */}
+      <TextPath />
+      <FlipboxGrid />
       <FeaturesSection data={featuresData.services} />
-      {/* <GetInTouch /> */}
-      <DynamicSection {...contentData.about} />
     </div>
   );
 };

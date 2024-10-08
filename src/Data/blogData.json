@@ -1,0 +1,30 @@
+[
+    {
+      "id": 1,
+      "subtitle": "Research & Planning",
+      "title": "First Step",
+      "image": "/images/homepage-9_6.jpg",
+      "link": "/blog/1",
+      "bgColor": "#EAEAEA",
+      "content": "This is the detailed content for the first step in our process."
+    },
+    {
+      "id": 2,
+      "subtitle": "Design & Development",
+      "title": "Second Step",
+      "image": "/images/homepage-9_7.jpg",
+      "link": "/blog/2",
+      "bgColor": "#ff7425",
+      "content": "This is the detailed content for the second step in our process."
+    },
+    {
+      "id": 3,
+      "subtitle": "Customize & Testing",
+      "title": "Third Step",
+      "image": "/images/homepage-9_8.jpg",
+      "link": "/blog/3",
+      "bgColor": "black",
+      "content": "This is the detailed content for the third step in our process."
+    }
+  ]
+  
