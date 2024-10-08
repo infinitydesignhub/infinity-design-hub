@@ -21,10 +21,10 @@ const AboutSection = () => {
   };
 
   return (
-    <section className="container container-lg  mx-auto py-16">
-      <div className="row flex-wrap">
-        <div className="col-md-6 mb-4" data-aos="fade-right">
-          <div className="mb-6 pr-4">
+    <section className="container mx-auto py-16">
+      <div className="flex flex-wrap">
+        <div className="w-full md:w-1/2 mb-4  pr-10" data-aos="fade-right">
+          <div className="mb-6">
             <span className="text-[#ec008c] text-[14px] uppercase font-bold">
               {data.about.subtitle}
             </span>
@@ -32,17 +32,17 @@ const AboutSection = () => {
               {data.about.title}
             </h3>
           </div>
-          <p className="mb-6  text-[16px] leading-[29px]">
+          <p className="mb-6 text-[16px] leading-[29px]">
             {data.about.description}
           </p>
           <Link
-            href={data.about.buttonLink}
+            to={data.about.buttonLink}
             className="inline-block text-black wgl-button relative px-8 py-3 z-1 font-semibold rounded-full transition-all duration-300 mt-6"
           >
             {data.about.buttonText}
           </Link>
         </div>
-        <div className="col-md-6 mb-4" data-aos="fade-left">
+        <div className="w-full md:w-1/2 mb-4" data-aos="fade-left">
           <img
             loading="lazy"
             decoding="async"

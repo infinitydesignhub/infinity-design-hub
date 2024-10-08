@@ -73,8 +73,14 @@ const Services = () => {
         );
       })}
 
-      {/* Render the DynamicSection last */}
-      {data.sections.map((section, index) => {
+     
+
+      {/* Other components that should appear before DynamicSection */}
+      <TextPath />
+      <FlipboxGrid />
+      <FeaturesSection data={featuresData.services} />
+       {/* Render the DynamicSection last */}
+       {data.sections.map((section, index) => {
         const contentTypeId = section.sys.contentType.sys.id;
 
         if (contentTypeId === 'contactUs') {
@@ -83,11 +89,6 @@ const Services = () => {
 
         return null; // Skip rendering if not contactUs
       })}
-
-      {/* Other components that should appear before DynamicSection */}
-      <TextPath />
-      <FlipboxGrid />
-      <FeaturesSection data={featuresData.services} />
     </div>
   );
 };

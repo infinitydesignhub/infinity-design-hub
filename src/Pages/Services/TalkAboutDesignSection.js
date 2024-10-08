@@ -34,7 +34,7 @@ const TalkAboutDesignSection = ({ data }) => {
               />
 
               <h2 className="text-[#232323] text-[60px] md:text-[100px] font-semibold mb-2 text-center uppercase">
-          {data.pageTitle}
+                {data.pageTitle}
               </h2>
               <span
                 className="text-[60px] md:text-[100px] font-bold uppercase"
@@ -50,42 +50,42 @@ const TalkAboutDesignSection = ({ data }) => {
           </div>
         </div>
         <div>
-        <div className="mb-6">
-          <h2 className="service-title text-4xl font-bold mt-3 mb-3 text-[#232323]">
-            {data.leftTitle}
-          </h2>
-        </div>
-        <div className="mb-4 flex">
-          <div>
-            {/* <img
+          <div className="mb-6">
+            <h2 className="service-title text-4xl font-bold mt-3 mb-3 text-[#232323]">
+              {data.leftTitle}
+            </h2>
+          </div>
+          <div className="mb-4 flex">
+            <div>
+              {/* <img
             loading="lazy"
             decoding="async"
             src={leftImage}
             alt={data.leftTitle}
             className="w-full h-auto round-img"
           /> */}
+            </div>
+            <p className="mb-6 text-[18px] leading-[36px] pr-10">
+              {data.leftSubTitle}
+            </p>
           </div>
-          <p className="mb-6 text-[18px] leading-[36px]   ml-[3px]">
-            {data.leftSubTitle}
-          </p>
-        </div>
-        <div className="flex  space-x-4 gap[15px]">
-          <Link
-            to="/contact"
-            className="inline-block text-black wgl-button relative px-8 py-3 z-1 font-semibold rounded-full  transition-all duration-300  px-4 py-2 rounded-lg"
-          >
-            {data.ourAgencyButton}
-          </Link>
-          {/* <Link
+          <div className="flex  space-x-4 gap[15px]">
+            <Link
+              to="/contact"
+              className="inline-block text-black wgl-button relative px-8 py-3 z-1 font-semibold rounded-full  transition-all duration-300  px-4 py-2 rounded-lg"
+            >
+              {data.getInTouchButton}
+            </Link>
+            {/* <Link
             to="/about"
             className="inline-block text-black wgl-button relative px-8 py-3 z-1 font-semibold rounded-full  transition-all duration-300  px-4 py-2 rounded-lg"
           >
               {data.getInTouchButton}
           </Link> */}
+          </div>
+          <p className="mb-6 text-[18px] leading-[36px]">{data.description}</p>
         </div>
-        <p className="mb-6 text-[18px] leading-[36px]">{data.description}</p>
       </div>
-        </div>
       <div className="w-full md:w-1/2 py-4">
         <div className="mb-6">
           <img

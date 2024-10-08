@@ -22,13 +22,20 @@ const BenefitsSection = ({ data }) => {
   return (
     <section className="py-16">
       <div className="container container-lg mx-auto">
-        <div className="row flex-wrap">
-          <div className="col-12 col-md-6" data-aos="fade-right" data-aos-offset="100">
+        <div className="flex flex-wrap">
+          <div
+            className="w-full md:w-1/2"
+            data-aos="fade-right"
+            data-aos-offset="100"
+          >
             <div className="mb-4">
-              {/* Dynamic section title and subtitle */}
-              <span className="text-[#ec008c] font-bold mb-4">{data.sectionTitle}</span>
-              <h3 className="text-4xl font-bold mt-3 mb-3 text-[#232323]">{data.sectionSubtitle}</h3>
-              <p>{data.sectionDescription}</p>
+              <span className="text-[#ec008c] font-bold mb-4">
+                {data.sectionTitle}
+              </span>
+              <h3 className="text-4xl font-bold mt-3 mb-3 text-[#232323]">
+                {data.sectionSubtitle}
+              </h3>
+              <p className="pr-10">{data.sectionDescription}</p>
             </div>
 
             <div className="space-y-2">
@@ -51,26 +58,24 @@ const BenefitsSection = ({ data }) => {
                       activeIndex === index ? "max-h-screen" : "max-h-0"
                     }`}
                   >
-                    <div className="text-gray-600 mt-2">
-                      {activeIndex === index && (
+                    {activeIndex === index && (
+                      <div className="text-gray-600 mt-2">
                         <p className="text-[16px] font-normal leading-7 pt-[3px] px-[35px] py-[15px] text-[#585858]">
                           {benefit.content}
                         </p>
-                      )}
-                    </div>
+                      </div>
+                    )}
                   </div>
                 </div>
               ))}
             </div>
           </div>
 
-          <div className="col-12 col-md-6 d-flex justify-content-center" data-aos="fade-left" data-aos-offset="100">
-            <img
-              src={data.image}
-              alt="Business Growth"
-              className="img-fluid object-cover" // Use Bootstrap class for responsive images
-            />
-          </div>
+          <img
+            src={data.image}
+            alt="Business Growth"
+            className="w-full md:w-1/2  object-cover h-[670px]" // Make the image cover the container
+          />
         </div>
       </div>
     </section>
