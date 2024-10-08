@@ -22,14 +22,14 @@ const DynamicSection = ({ imageSrc, titleParts, description, button }) => {
                                 }}
                                 className="" // Ensure the image covers its container container-lg
                             />
-                            <h2 className="text-[#232323] text-[100px] font-semibold mb-2 text-center">{titleParts}</h2>
+                            <h2 className="text-[#232323] text-[60px] md:text-[100px] font-semibold mb-2 text-center">{titleParts}</h2>
                             {/* {titleParts.map((part, index) => (
                             <h2 key={index} className="text-[#232323] text-[120px] font-semibold mb-2 text-center">
                                 {part}
                             </h2>
                         ))} */}
                         </div>
-                        <div className='flex justify-between'>
+                        <div className='flex flex-col md:flex-row justify-between'>
                             <p className="text-[20px] text-[#5B5B5B] md:text-xl max-w-2xl mb-6">
                                 {description}
                             </p>
