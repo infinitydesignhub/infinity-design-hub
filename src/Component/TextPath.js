@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/no-distracting-elements */
 import React from 'react';
 import './Component.css'; // Optional: for custom styles
 import data from '../Data/TextPathData.json'; // Import the JSON data
@@ -32,7 +33,10 @@ const TextPath = () => {
                   }}
                 >
                   {service.title}
-                  <span className="inline-block mx-4 text-[#232323]">_</span>
+                  <span className='inline-block'>
+                  <img src='../images/connection.gif' alt='fast-forward' className='w-20 flex items-center'/>
+                  </span>
+                  {/* <span className="inline-block mx-4 text-[#232323]">_</span> */}
                 </span>
               );
             })}

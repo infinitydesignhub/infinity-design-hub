@@ -58,7 +58,7 @@ const BannerSection = () => {
             </h1>
             <div className="d-flex align-items-center">
               <img
-                src="https://wgl-dsites.net/bili/light/wp-content/uploads/2022/03/arrow_orange.png"
+                src="../images/fast-forward.gif"
                 alt="arrow"
                 className="w-8 h-12 md:w-10 md:h-16 lg:w-15 lg:h-20 mr-3"
               />

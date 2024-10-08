@@ -32,7 +32,7 @@ const TalkAboutDesignSection = ({ data }) => {
                 }}
                 className="" // Ensure the image covers its px-5
               />
-              <h2 className="text-[#232323] text-[100px] font-semibold mb-2 text-center uppercase">
+              <h2 className="text-[#232323] text-[60px] font-semibold mb-2 text-center uppercase">
           {data.pageTitle}
               </h2>
               <span
@@ -73,7 +73,7 @@ const TalkAboutDesignSection = ({ data }) => {
             to="/contact"
             className="inline-block text-black wgl-button relative px-8 py-3 z-1 font-semibold rounded-full  transition-all duration-300  px-4 py-2 rounded-lg"
           >
-            {data.ourAgencyButton}
+            {data.getInTouchButton}
           </Link>
           {/* <Link
             to="/about"

@@ -15,7 +15,7 @@ const VisionSection = () => {
         {
           title: "Vision",
           content: [
-            " We envision a world where every brand has a unique identity that not only stands out but also resonates deeply with its audience. We believe that a powerful brand can inspire change, evoke emotions, and foster connections, allowing businesses to make their mark in the ever-evolving marketplace."
+            "We envision a world where every brand has a unique identity that not only stands out but also resonates deeply with its audience. We believe that a powerful brand can inspire change, evoke emotions, and foster connections, allowing businesses to make their mark in the ever-evolving marketplace."
           ]
         },
         {
@@ -28,7 +28,7 @@ const VisionSection = () => {
       buttonText: "GET IN TOUCH",
       buttonLink: "/contact",
       imageSrc: "images/newImages/About-Page-2.jpg"
-   }
+    }
   };
 
   const [activeTabIndex, setActiveTabIndex] = useState(0);
@@ -46,9 +46,9 @@ const VisionSection = () => {
   }, [activeTabIndex]);
 
   return (
-    <section className="container container-lg mx-auto py-16">
-      <div className="row flex-wrap flex-row-reverse">
-        <div className="col-md-6" data-aos="fade-right">
+    <section className="container mx-auto py-16">
+      <div className="flex flex-col md:flex-row-reverse">
+        <div className="w-full md:w-1/2 mb-4" data-aos="fade-right">
           <img
             loading="lazy"
             decoding="async"
@@ -57,7 +57,7 @@ const VisionSection = () => {
             className="w-full h-auto"
           />
         </div>
-        <div className="col-md-6" data-aos="fade-left">
+        <div className="w-full md:w-1/2 mb-4  pr-10" data-aos="fade-left">
           <div className="mb-6">
             <h3 className="text-4xl font-bold mt-3 mb-3 text-[#232323]">{data.vision.title}</h3>
           </div>
@@ -92,7 +92,7 @@ const VisionSection = () => {
           </div>
 
           <Link
-            href={data.vision.buttonLink}
+            to={data.vision.buttonLink}
             className="inline-block text-black wgl-button relative px-8 py-3 z-1 font-semibold rounded-full transition-all duration-300 mt-6"
           >
             {data.vision.buttonText}
