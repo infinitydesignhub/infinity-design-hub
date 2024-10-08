@@ -16,11 +16,11 @@ const FeaturesSection = ({ data }) => {
         <h2 className="text-3xl font-semibold text-[50px] md:text-[100px] leading-[50px] md:leading-[36px] dblh__title-2">{data.title}</h2>
       </section>
       <section className="container container-lg mx-auto pb-16">
-        <div className="d-flex justify-content-between flex-wrap"> {/* Flex container container-lg to hold items */}
+        <div className="d-flex flex-col md:flex-row justify-content-between flex-wrap img-box"> {/* Flex container container-lg to hold items */}
           {data.features.map((feature, index) => (
             <div
               key={index}
-              className="flex-grow-0 flex-shrink-0 d-flex justify-content-center"
+              className="flex-grow-0 flex-shrink-0 d-flex justify-content-center box"
               style={{
                 marginTop: index % 2 === 1 ? '40px' : '0px', // 40px for odd indices
                 marginBottom: index % 2 === 0 ? '-40px' : '0px', // -40px for even indices

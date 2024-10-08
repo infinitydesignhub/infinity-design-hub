@@ -25,7 +25,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className='w-auto mx-auto'>
+          <div className='!w-[68%] md:!w-auto mx-auto mt-[10px] md:!mt-0'>
             <h5 className="text-lg font-semibold mb-4">Navigation</h5>
             <ul className='pl-0'>
               {footerData.services.map((service, index) => (
@@ -36,7 +36,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className=' w-auto mx-auto'>
+          <div className='w-auto mx-auto'>
             <h5 className="text-lg font-semibold mb-4">Contacts</h5>
             <ul className='pl-0'>
               <li className="mb-2">{footerData.contacts.address}</li>
