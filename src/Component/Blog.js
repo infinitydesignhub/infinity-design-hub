@@ -60,7 +60,7 @@ const Blog = () => {
                 alt={step.title}
               />
               <Link
-                to={`/blog/${step.link}`}  // Adjust link to include blog id
+                to={`/blogs/${step.link}`}  // Adjust link to include blog id
                 className="wgl-button py-2 px-4 rounded-lg transition duration-300 text-[14px] font-bold"
                 data-aos="zoom-in"
               >

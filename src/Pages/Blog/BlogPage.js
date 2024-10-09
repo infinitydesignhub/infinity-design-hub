@@ -1,12 +1,12 @@
 import React from 'react'
-import Blog from '../../Component/Blog'
 import DynamicSection from '../../Component/DynamicSection'
 import contentData from "../../Data/contentData.json";
+import BlogSection from './BlogSection';
 
 const BlogPage = () => {
   return (
     <>
-      <Blog/>
+      <BlogSection/>
       <DynamicSection {...contentData.blog} />
     </>
   )

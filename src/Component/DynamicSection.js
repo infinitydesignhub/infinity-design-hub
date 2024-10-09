@@ -22,7 +22,7 @@ const DynamicSection = ({ imageSrc, titleParts, description, button }) => {
                                 }}
                                 className="" // Ensure the image covers its container container-lg
                             />
-                            <h2 className="text-[#232323] text-[60px] md:text-[100px] font-semibold mb-2 text-center">{titleParts}</h2>
+                            <h2 className="text-[#232323] text-[60px] md:text-[60px] font-semibold mb-2 text-center">{titleParts}</h2>
                             {/* {titleParts.map((part, index) => (
                             <h2 key={index} className="text-[#232323] text-[120px] font-semibold mb-2 text-center">
                                 {part}

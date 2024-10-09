@@ -19,7 +19,7 @@ import About from "./Pages/About";
 import Services from "./Pages/Services";
 import PortfolioDetails from "./Pages/PortfolioDeatils/PortfolioDetails";
 // import BasicPage from "./Pages/BasicPage";
-import Blog from "./Pages/Blog/BlogPage";
+import BlogSection from "./Pages/Blog/BlogSection";
 import BlogDetails from "./Pages/Blog/BlogDetails";
 function getBodyClass(pathname) {
   // Remove leading/trailing slashes and convert to kebab-case
@@ -61,8 +61,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/blog/:id" element={<BlogDetails />} />  {/* Use :id */}
+        <Route path="/blog" element={<BlogSection />} />
+        <Route path="/blogs/:id" element={<BlogDetails />} />
         <Route path="/services/:slug" element={<Services />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/portfolio/:title" element={<PortfolioDetails />} />

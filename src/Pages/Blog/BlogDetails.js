@@ -1,69 +1,63 @@
-import React from 'react';
-import { Link, useParams } from 'react-router-dom';
+import React from "react";
+import { useParams } from "react-router-dom";
+import DynamicSection from '../../Component/DynamicSection'
+import contentData from "../../Data/contentData.json";
 
 const BlogDetails = () => {
-  const { id } = useParams();
+  const { id } = useParams(); // Get the blog ID from the URL
 
-  const blogData = [
+  const blogs = [
     {
       id: "1",
-      subtitle: "Research & Planning",
-      title: "First Step",
-      content: "Details about the first step...",
-      image: "/images/homepage-9_6.jpg",
+      title: "What is Lorem Ipsum?",
+      date: "9th Oct, 2024",
+      content:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry...",
+      image: "../images/teamwork-making-online-blog.jpg",
     },
     {
       id: "2",
-      subtitle: "Design & Development",
-      title: "Second Step",
-      content: "Details about the second step...",
-      image: "/images/homepage-9_7.jpg",
+      title: "What is Lorem Ipsum?",
+      date: "9th Oct, 2024",
+      content:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry...",
+      image: "../images/teamwork-making-online-blog.jpg",
     },
     {
       id: "3",
-      subtitle: "Customize & Testing",
-      title: "Third Step",
-      content: "Details about the third step...",
-      image: "/images/homepage-9_8.jpg",
+      title: "What is Lorem Ipsum?",
+      date: "19th Oct, 2024",
+      content:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry...",
+      image: "../images/teamwork-making-online-blog.jpg",
     },
+    // ... other blogs
   ];
 
-  const blogPost = blogData.find(post => post.id === id);
+  // Find the blog post based on the ID
+  const blog = blogs.find((b) => b.id === id);
 
-  if (!blogPost) return <div>Post not found</div>;
+  if (!blog) {
+    return <p>Blog not found!</p>;
+  }
 
   return (
-    <div className="container mx-auto py-20">
-      {/* Banner */}
-      <div className="bg-blue-500 text-white text-center p-4 mb-8">
-        <h1 className="text-3xl font-bold">Welcome to Our Blog!</h1>
-      </div>
-
-      <div className="flex">
-        {/* Left Side - Current Post */}
-        <div className="flex-1 pr-4">
-          <h2 className="text-2xl font-bold">{blogPost.title}</h2>
-          <h3 className="text-xl text-gray-600">{blogPost.subtitle}</h3>
-          <img src={blogPost.image} alt={blogPost.title} className="mb-4 w-full" />
-          <p>{blogPost.content}</p>
-        </div>
-
-        {/* Right Side - Related Posts */}
-        <div className="w-1/3">
-          <h3 className="text-xl font-bold mb-4">Related Posts</h3>
-          <ul>
-            {blogData.map(post => (
-              <li key={post.id} className="border-b py-2">
-                <Link to={`/blog/${post.id}`} className="text-blue-600 hover:underline">
-                  {post.title}
-                  <img src={post.image} alt='' className='w-14'/>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
+    <>
+    <div className="container mx-auto py-8">
+      <h3 className="text-4xl font-bold mt-3 mb-3 text-[#232323]">
+        {blog.title}
+      </h3>
+      <p className="text-[#ec008c] font-bold mb-4 text-sm">{blog.date}</p>
+      <img
+        src={blog.image}
+        alt={blog.title}
+        loading="lazy"
+        className="w-full h-auto mb-4 rounded-lg"
+      />
+      <p className="text-lg">{blog.content}</p>
     </div>
+      <DynamicSection {...contentData.blog} />
+    </>
   );
 };
 
