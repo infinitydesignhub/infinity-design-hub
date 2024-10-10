@@ -1308,5 +1308,14 @@ textarea::placeholder {
     left: 14.5rem;
     top: 390px;
   }
+  .container {
+    padding-right: 1rem !important;
+    padding-left: 1rem !important;
+   }
+   footer .button-block .sqs-block-button-container{
+    display: flex;
+    justify-content: flex-end;
+   }
+   
 }
 
