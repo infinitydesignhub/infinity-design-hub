@@ -35,9 +35,9 @@ const DynamicSection = ({ data }) => {
                   }}
                 />
               )}
-              <h2 className="text-[#232323] text-[80px] font-semibold mb-2 text-center">{title}</h2>
+              <h2 className="text-[#232323] text-[50px] md:text-[80px] font-semibold mb-2 text-center">{title}</h2>
             </div>
-            <div className='flex justify-between'>
+            <div className='flex flex-col md:flex-row justify-between'>
               <p className="text-[20px] text-[#5B5B5B] md:text-xl max-w-2xl mb-6">
                 {subTitle}
               </p>
