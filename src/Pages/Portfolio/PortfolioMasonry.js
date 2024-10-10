@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import Masonry from "react-responsive-masonry"; // Import the Masonry component
+import Box from "@mui/material/Box";
+// import Paper from '@mui/material/Paper';
+import Masonry from "@mui/lab/Masonry";
+// import { styled } from '@mui/material/styles';
 import data from "./portfolio.json"; // Update with your JSON data path
 
 const categories = [
@@ -20,8 +23,6 @@ const Portfolio = () => {
     activeCategory === "All"
       ? data
       : data.filter((project) => project.category.includes(activeCategory));
-
-  const heights = [450, 250, 480, 520, 500, 280, 340, 560, 490, 230]; // Unique heights for desktop
 
   return (
     <div className="wgl-portfolio_wrapper container mx-auto px-4 sm:px-6 lg:px-8">
@@ -45,7 +46,7 @@ const Portfolio = () => {
               }`}
               onClick={() => {
                 setActiveCategory(category.name);
-                setVisibleItems(5); // Reset to the initial number when category changes
+                setVisibleItems(2); // Reset to the initial number when category changes
               }}
             >
               {category.name}
@@ -53,43 +54,56 @@ const Portfolio = () => {
           ))}
         </div>
       </div>
-      <Masonry columnsCountBreakPoints={{ 350: 1, 600: 2, 900: 3, 1200: 4 }}>
-        {filteredProjects.slice(0, visibleItems).map((project, index) => (
-          <div key={project.id} className="relative p-4 group">
-            <Link
-              to={`/portfolio/${project.title ? project.title.replace(/\s+/g, "-").toLowerCase() : ""}`}
-              className="block"
-            >
-              <img
-                src={project.image}
-                alt={project.title}
-                className="w-full object-cover transition-transform duration-300 transform group-hover:scale-105"
-                style={{
-                  height: window.innerWidth < 768 ? 'auto' : `${heights[index]}px`, // Auto height on mobile, fixed on desktop
-                }}
-              />
-              <div className="item__description">
-                <div className="text-white text-center">
-                  <div className="post_cats">
-                    {project.category.map((cat) => (
-                      <span key={cat} className="portfolio-category">
-                        {cat}
-                      </span>
-                    ))}
-                  </div>
-                  <h5 className="title">{project.title}</h5>
-                </div>
+
+      <div className="container">
+        <Box>
+          <Masonry columns={2} spacing={5}>
+            {filteredProjects.slice(0, visibleItems).map((project, index) => (
+              <div key={project.id} className="hover relative">
+                <Link
+                  to={`/portfolio/${
+                    project.title
+                      ? project.title.replace(/\s+/g, "-").toLowerCase()
+                      : ""
+                  }`}
+                  className="block"
+                >
+                  <img
+                    srcSet={`${project.image}?w=162&auto=format&dpr=2 2x`}
+                    src={`${project.image}?w=162&auto=format`}
+                    alt={project.title}
+                    loading="lazy"
+                    style={{
+                      display: "block",
+                      width: "100%",
+                    }}
+                  />
+                  <div className="item__description">
+                    <div className="text-white text-center">
+                      <div className="post_cats">
+                        {project.category.map((cat) => (
+                          <span key={cat} className="portfolio-category">
+                            {cat}
+                          </span>
+                        ))}
+                      </div>
+                      <h5 className="title">{project.title}</h5>
+                    </div>
+                  </div>{" "}
+                </Link>
               </div>
-            </Link>
-          </div>
-        ))}
-      </Masonry>
+            ))}
+          </Masonry>
+        </Box>
+      </div>
 
       {/* Load more button */}
       {visibleItems < filteredProjects.length && (
         <div className="flex justify-center mt-6">
           <button
-            onClick={() => setVisibleItems((prevVisibleItems) => prevVisibleItems + 5)}
+            onClick={() =>
+              setVisibleItems((prevVisibleItems) => prevVisibleItems + 5)
+            }
             className="inline-block text-black wgl-button relative px-8 py-3 z-1 font-semibold rounded-full transition-all duration-300 my-5"
           >
             Load More

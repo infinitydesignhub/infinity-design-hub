@@ -841,7 +841,7 @@ button.elementor-swiper-button.elementor-swiper-button-prev.slick-arrow.slick-pr
   transform-origin: left center;
 }
 
-.animation_sub_layer:hover .item__description {
+.hover:hover .item__description {
   transition: opacity 0.2s, transform 0.5s;
   transform: rotateY(0);
   opacity: 1;

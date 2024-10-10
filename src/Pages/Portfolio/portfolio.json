@@ -8,18 +8,19 @@
   },
   {
     "id": 2,
-    "title": "Logo Design",
-    "category": ["Logo Design"],
-    "image": "/images/PortfolioImages/2.jpg",
-    "link": "/portfolio/development-software"
+    "title": "Forest Nectar",
+    "category": ["Development"],
+    "image": "/images/portfolio/Cosmetic-Port_page-0001.jpg",
+    "link": "/portfolio/development-software-2"
   },
   {
     "id": 3,
-    "title": "Satvik Eggless Bakery",
+    "title": "RUTUL NARANIA",
     "category": ["Development"],
-    "image": "/images/PortfolioImages/3.jpg",
-    "link": "/portfolio/development-software"
+    "image": "/images/portfolio/web-home-03.jpg",
+    "link": "/portfolio/development-software-2"
   },
+
   {
     "id": 4,
     "title": "Balista Cafe",
@@ -34,12 +35,13 @@
     "image": "/images/PortfolioImages/5.jpg",
     "link": "/portfolio/development-software-2"
   },
+
   {
     "id": 6,
-    "title": "Forest Nectar",
-    "category": ["Development"],
-    "image": "/images/portfolio/Cosmetic-Port_page-0001.jpg",
-    "link": "/portfolio/development-software-2"
+    "title": "Logo Design",
+    "category": ["Logo Design"],
+    "image": "/images/PortfolioImages/2.jpg",
+    "link": "/portfolio/development-software"
   },
   {
     "id": 7,
@@ -57,10 +59,10 @@
   },
   {
     "id": 9,
-    "title": "RUTUL NARANIA",
+    "title": "Satvik Eggless Bakery",
     "category": ["Development"],
-    "image": "/images/portfolio/web-home-03.jpg",
-    "link": "/portfolio/development-software-2"
+    "image": "/images/PortfolioImages/3.jpg",
+    "link": "/portfolio/development-software"
   },
   {
     "id": 10,
