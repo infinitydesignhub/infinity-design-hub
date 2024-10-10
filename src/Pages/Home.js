@@ -19,7 +19,7 @@ import data from "../Data/benefits.json";
 import allData from "../Data/OurApproach.json"; // Adjust the path as necessary
 import contentData from "../Data/contentData.json";
 import InstagramFeed from "../Component/InstagramFeed";
-import ImageMasonry from "../Component/Portfolio";
+// import ImageMasonry from "../Component/Portfolio";
 // import MasonryGallery from "../Component/MasonryG";
 const Home = () => {
   const { approach, services } = allData.page1; // Get data for Page 1
@@ -37,7 +37,7 @@ const Home = () => {
       <CounterSection />
       <Testimonials />
       <Blog />
-      <ImageMasonry/>
+      {/* <ImageMasonry/> */}
       {/* <GetInTouch /> */}
       <InstagramFeed />
       <DynamicSection {...contentData.about} />
