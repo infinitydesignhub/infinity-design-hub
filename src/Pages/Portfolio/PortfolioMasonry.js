@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Box from "@mui/material/Box";
-// import Paper from '@mui/material/Paper';
 import Masonry from "@mui/lab/Masonry";
-// import { styled } from '@mui/material/styles';
 import data from "./portfolio.json"; // Update with your JSON data path
 
 const categories = [
@@ -57,8 +55,12 @@ const Portfolio = () => {
 
       <div className="container">
         <Box>
-          <Masonry columns={2} spacing={5}>
-            {filteredProjects.slice(0, visibleItems).map((project, index) => (
+          {/* Masonry with responsive columns */}
+          <Masonry
+            columns={{ xs: 1, sm: 2 }} // Set 1 column on small screens, 2 on larger
+            spacing={5}
+          >
+            {filteredProjects.slice(0, visibleItems).map((project) => (
               <div key={project.id} className="hover relative">
                 <Link
                   to={`/portfolio/${
@@ -89,7 +91,7 @@ const Portfolio = () => {
                       </div>
                       <h5 className="title">{project.title}</h5>
                     </div>
-                  </div>{" "}
+                  </div>
                 </Link>
               </div>
             ))}
