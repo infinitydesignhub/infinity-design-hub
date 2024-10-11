@@ -1316,6 +1316,15 @@ textarea::placeholder {
     display: flex;
     justify-content: flex-end;
    }
+   .item__description {
+    display: flex;
+    position: unset !important;
+    opacity: 1 !important;
+    padding: 0px;
+}
+.hover{
+  width: 100% !important;
+}
    
 }
 
