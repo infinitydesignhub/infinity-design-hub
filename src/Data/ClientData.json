@@ -139,7 +139,38 @@
         "id": "partner21",
         "imgSrc": "/images/Logos/28.png",
         "link": "/contact"
+      },
+      {
+        "id": "partner18",
+        "imgSrc": "/images/Logos/29.png",
+        "link": "/contact"
+      },
+      {
+        "id": "partner19",
+        "imgSrc": "/images/Logos/30.png",
+        "link": "/contact"
+      },
+      {
+        "id": "partner20",
+        "imgSrc": "/images/Logos/31.png",
+        "link": "/contact"
+      },
+      {
+        "id": "partner21",
+        "imgSrc": "/images/Logos/32.png",
+        "link": "/contact"
+      },
+      {
+        "id": "partner21",
+        "imgSrc": "/images/Logos/33.png",
+        "link": "/contact"
+      },
+      {
+        "id": "partner21",
+        "imgSrc": "/images/Logos/34.png",
+        "link": "/contact"
       }
+
     ]
   }
   
