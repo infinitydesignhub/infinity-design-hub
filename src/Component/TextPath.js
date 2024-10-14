@@ -33,10 +33,10 @@ const TextPath = () => {
                   }}
                 >
                   {service.title}
-                  <span className='inline-block'>
+                  {/* <span className='inline-block'>
                   <img src='../images/connection.gif' alt='fast-forward' className='w-20 flex items-center'/>
-                  </span>
-                  {/* <span className="inline-block mx-4 text-[#232323]">_</span> */}
+                  </span> */}
+                  <span className="inline-block mx-4 text-[#232323]">_</span>
                 </span>
               );
             })}

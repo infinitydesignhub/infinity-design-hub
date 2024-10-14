@@ -36,7 +36,7 @@ const Home = () => {
       <PricingSection />
       <CounterSection />
       <Testimonials />
-      <Blog />
+      {/* <Blog /> */}
       {/* <ImageMasonry/> */}
       {/* <GetInTouch /> */}
       <InstagramFeed />

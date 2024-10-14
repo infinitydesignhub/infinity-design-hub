@@ -37,7 +37,7 @@
         ]
     },
     "about": {
-        "title": "About Us Features",
+        "title": "Our Services",
         "features": [
             {
                 "imgSrc": "/images/web-icon/WebIconsInfinity-1.svg",
@@ -82,7 +82,7 @@
         ]
     },
     "services": {
-        "title": "Services We Offer",
+        "title": "Our Services",
         "features": [
             {
                 "imgSrc": "/images/web-icon/WebIconsInfinity-1.svg",

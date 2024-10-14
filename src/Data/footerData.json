@@ -47,7 +47,7 @@
     {
       "platform": "Twitter",
       "link": "https://twitter.com/Infinity_DH",
-      "iconClass": "fab fa-twitter"
+      "iconClass": "fab fa-x-twitter"  
     },
     {
       "platform": "Facebook",
@@ -63,6 +63,16 @@
       "platform": "Instagram",
       "link": "https://www.instagram.com/infinitydesignhub/?hl=en",
       "iconClass": "fab fa-instagram"
+    },
+    {
+      "platform": "Google",
+      "link": "https://www.google.com",
+      "iconClass": "fab fa-google"
+    },
+    {
+      "platform": "Yelp",
+      "link": "https://www.yelp.com",
+      "iconClass": "fab fa-yelp"
     }
   ]
 }
