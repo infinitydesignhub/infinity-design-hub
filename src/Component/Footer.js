@@ -47,12 +47,12 @@ const Footer = () => {
                 <a href={`mailto:${footerData.contacts.email}`} className="hover:text-gray-400">{footerData.contacts.email}</a>
               </li>
             </ul>
-            <div className="mt-8 flex space-x-4">
+            <div className="mt-8 flex space-x-4 social">
               {footerData.socials.map((social, index) => (
                 <a
                   key={index}
                   href={social.link}
-                  className="text-white hover:text-gray-400"
+                  className="!text-[#191919] text-[16px] py-[2px] px-[7px] inline-block mr-[8px] cursor-pointer bg-white hover:text-gray-400"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={social.platform}

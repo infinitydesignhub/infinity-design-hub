@@ -46,6 +46,12 @@ const BannerSection = () => {
         <a href="https://in.pinterest.com/Infinity_DH/" target="_blank" rel="noopener noreferrer">
           <i className="fab fa-pinterest" aria-hidden="true"></i>
         </a>
+        <a href="https://www.linkedin.com/company/31553220/admin/" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-google"></i>
+        </a>
+        <a href="https://in.pinterest.com/Infinity_DH/" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-yelp"></i>
+        </a>
       </div>
       <div className="container container-lg mx-auto d-flex flex-md-row align-items-start text-start py-10 md:py-28">
         <div className="flex-1">
@@ -58,7 +64,7 @@ const BannerSection = () => {
             </h1>
             <div className="d-flex align-items-center">
               <img
-                src="../images/fast-forward.gif"
+                src="../images/output.gif"
                 alt="arrow"
                 className="w-8 h-12 md:w-10 md:h-16 lg:w-15 lg:h-20 mr-3"
               />

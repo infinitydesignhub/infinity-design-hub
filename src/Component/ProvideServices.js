@@ -74,7 +74,7 @@ const ProvideServices = () => {
                     <div className="flex flex-col w-full md:w-1/3 p-4 col-md-4 ">
                         <div className="mb-4 mt-10">
                             <span className="text-[#ec008c] dblh__subtitle mb-4 block text-lg font-bold mt-10">Our Benefits</span>
-                            <h2 className="text-white text-3xl md:text-5xl font-bold mt-3 mb-3">Learn What Services We Provide</h2>
+                            <h2 className="text-white text-3xl md:text-5xl font-bold mt-3 mb-3">What Services We Provide</h2>
                         </div>
                         <Link
                             to="/contact"
