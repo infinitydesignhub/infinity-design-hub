@@ -33,7 +33,7 @@ const TalkAboutDesignSection = ({ data }) => {
                 className="" // Ensure the image covers its px-5
               />
 
-              <h2 className="text-[#232323] text-[50px] md:text-[60px] font-semibold mb-2 text-center uppercase">
+              <h2 className="text-[#232323] text-[50px] md:text-[60px] font-semibold mb-2 text-center uppercase mr-5">
                 {data.pageTitle}
               </h2>
               <span
