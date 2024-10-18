@@ -1,33 +1,46 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 const InstagramFeed = () => {
-  const posts = [
-    {
-      id: 'sbi_17975935597966382',
-      date: '1674714143',
-      link: 'https://www.instagram.com/reel/Cn3jjoLD09G/',
-      imgSrc: 'https://www.infinitydesignhub.com/wp-content/uploads/sb-instagram-feed-images/327135969_469359185228761_6990906629015827096_nfull.jpg',
-      alt: 'Instagram post 17975935597966382',
-    },
-    {
-      id: 'sbi_17941141814529201',
-      date: '1672581140',
-      link: 'https://www.instagram.com/reel/Cm3_agVIz4n/',
-      imgSrc: 'https://www.infinitydesignhub.com/wp-content/uploads/sb-instagram-feed-images/323155776_545684907470214_1391843489717670428_nfull.jpg',
-      alt: 'Instagram post 17941141814529201',
-    },
-    {
-      id: 'sbi_17849207201885064',
-      date: '1669937327',
-      link: 'https://www.instagram.com/reel/ClpMES4rWab/',
-      imgSrc: 'https://www.infinitydesignhub.com/wp-content/uploads/sb-instagram-feed-images/317957164_158193760249002_1034538080151971911_nfull.jpg',
-      alt: 'Instagram post 17849207201885064',
-    },
-  ];
+  const [posts, setPosts] = useState([]);
+
+  // Placeholder function to mimic fetching data from Instagram API
+  const fetchInstagramPosts = async () => {
+    // Replace with your actual fetch call
+    const fetchedPosts = [
+      {
+        id: 'sbi_1',
+        link: 'https://www.instagram.com/p/C5rURK5SmSV/',
+        imgSrc: './images/insta1.jpg', // Replace with actual image URLs
+        alt: 'Instagram post C5rURK5SmSV',
+        caption: 'A glimpse into our creative process!',
+      },
+      {
+        id: 'sbi_2',
+        link: 'https://www.instagram.com/p/C5jwnYUvFcv/',
+        imgSrc: './images/insta2.jpg',
+        alt: 'Instagram post C5jwnYUvFcv',
+        caption: 'Exploring new design horizons.',
+      },
+      {
+        id: 'sbi_3',
+        link: 'https://www.instagram.com/p/C5RxfNvP9hz/',
+        imgSrc: './images/insta3.jpg',
+        alt: 'Instagram post C5RxfNvP9hz',
+        caption: 'Collaboration leads to great ideas!',
+      },
+    ];
+    setPosts(fetchedPosts);
+  };
+
+  useEffect(() => {
+    fetchInstagramPosts();
+  }, []);
 
   return (
     <div className="container container-lg mx-auto py-16">
-      <h3 className='dblh__title-wrapper text-4xl text-[#232323] font-bold text-center mb-10'>Our infinite creative approaches will ensure a unique brand image with infinite growth.</h3>
+      <h3 className='dblh__title-wrapper text-4xl text-[#232323] font-bold text-center mb-10'>
+        Our infinite creative approaches will ensure a unique brand image with infinite growth.
+      </h3>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {posts.map(post => (
           <div key={post.id} className="relative mt-10">
@@ -35,7 +48,7 @@ const InstagramFeed = () => {
               <img
                 src={post.imgSrc}
                 alt={post.alt}
-                className="w-full h-[450px] object-contain rounded-lg"
+                className="w-full h-[450px] object-cover rounded-lg"
               />
               <div className="absolute inset-0 flex items-center justify-center">
                 <svg className="text-white w-12 h-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -43,6 +56,7 @@ const InstagramFeed = () => {
                 </svg>
               </div>
             </a>
+            <p className="mt-2 text-center text-sm text-[#232323]">{post.caption}</p>
           </div>
         ))}
       </div>

@@ -124,28 +124,35 @@ const Navbar = () => {
                 <Link
                   className="hover:text-[#ec008c] uppercase pr-7 pl-3"
                   to={`/${item.toLowerCase()}`}
-                  onClick={() => setIsOpen(false)}
+                  onClick={() => setIsOpen(false)} // Close menu on link click
                 >
                   {item}
                   <span className="menu-item_dots"></span>
                 </Link>
               </div>
             ))}
-            <div className="dropdown relative">
-              <button
-                className="nav-link dropdown-toggle no-underline"
-                onClick={() => setIsOpen(!isOpen)}
+
+            {/* Services Dropdown in Mobile View */}
+            <div className="relative">
+              <Link
+                className="nav-link relative dropdown-toggle no-underline hover:text-[#ec008c] uppercase pr-7 pl-3"
+                to="#!"
+                onClick={(e) => {
+                  e.preventDefault(); // Prevent default behavior
+                  setIsOpen(!isOpen); // Toggle dropdown
+                }}
               >
                 Services
                 <span className="menu-item_dots"></span>
-              </button>
+              </Link>
               {isOpen && (
-                <div className="dropdown-menu capitalize bg-black text-white">
+                <div className="dropdown-menu capitalize bg-white text-[#232323]">
                   {services.map((service, index) => (
                     <Link
                       key={index}
-                      className="dropdown-item text-[#232323] bg-white hover:text-[#ec008c] relative text-[14px] tracking-[2px]"
+                      className="dropdown-item text-[#232323] bg-white hover:text-[#ec008c] relative text-[14px] tracking-[2px] p-2"
                       to={`/${service.link}`}
+                      onClick={() => setIsOpen(false)} // Close menu on service link click
                     >
                       {service.text}
                     </Link>
@@ -153,10 +160,11 @@ const Navbar = () => {
                 </div>
               )}
             </div>
+
             <Link
               to="/contact"
               className="inline-block px-8 sm:px-10 lg:px-[20px] hover:bg-custom-btn text-[16px] text-center font-[400] bg-[#393939] text-white py-1 rounded-full tracking-wide transition duration-200"
-              onClick={() => setIsOpen(false)}
+              onClick={() => setIsOpen(false)} // Close menu on link click
             >
               Contact Us
             </Link>
