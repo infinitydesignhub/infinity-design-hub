@@ -23,47 +23,24 @@ const Navbar = () => {
             </Link>
           </div>
 
-          {/* Desktop Navigation */}
-          <div
-            className="hidden md:flex space-x-8 gap-4 uppercase items-center font-bold text-center"
-            data-aos="fade-up"
-          >
+          {/* Desktop Navigation (unchanged) */}
+          <div className="hidden md:flex space-x-8 gap-4 uppercase items-center font-bold text-center" data-aos="fade-up">
             {["Home", "About", "Services", "Portfolio", "Blog"].map((item, index) => (
-              <div
-                key={index}
-                className={
-                  item === "Services"
-                    ? "dropdown relative"
-                    : "relative arimo-bold text-[14px] tracking-[2px]"
-                }
-              >
+              <div key={index} className={item === "Services" ? "dropdown relative" : "relative arimo-bold text-[14px] tracking-[2px]"}>
                 {item === "Home" ? (
-                  <Link
-                    className="nav-link no-underline arimo-bold text-[14px] tracking-[2px]"
-                    to="/"
-                  >
+                  <Link className="nav-link no-underline arimo-bold text-[14px] tracking-[2px]" to="/">
                     Home
                     <span className="menu-item_dots"></span>
                   </Link>
                 ) : item === "Services" ? (
                   <>
-                    <Link
-                      className="nav-link relative dropdown-toggle no-underline arimo-bold !text-[14px] tracking-[2px]"
-                      to="#!"
-                      role="button"
-                      data-toggle="dropdown"
-                      aria-expanded="false"
-                    >
+                    <Link className="nav-link relative dropdown-toggle no-underline arimo-bold !text-[14px] tracking-[2px]" to="#!" role="button" data-toggle="dropdown" aria-expanded="false">
                       Services
                       <span className="menu-item_dots"></span>
                       <div className="dropdown-menu absolute transition-[0.4s] bg-transparent">
                         <div className="capitalize !p-7 bg-white mt-4">
                           {services.map((service, index) => (
-                            <Link
-                              key={index}
-                              className="dropdown-item text-[#232323] bg-white my-1 relative text-[16px] font-medium tracking-[1px] hover:!text-[#ec008c]"
-                              to={`/${service.link}`}
-                            >
+                            <Link key={index} className="dropdown-item text-[#232323] bg-white my-1 relative text-[16px] font-medium tracking-[1px] hover:!text-[#ec008c]" to={`/${service.link}`}>
                               {service.text}
                             </Link>
                           ))}
@@ -72,20 +49,14 @@ const Navbar = () => {
                     </Link>
                   </>
                 ) : (
-                  <Link
-                    className="nav-link no-underline arimo-bold text-[14px] tracking-[2px]"
-                    to={`/${item.toLowerCase()}`}
-                  >
+                  <Link className="nav-link no-underline arimo-bold text-[14px] tracking-[2px]" to={`/${item.toLowerCase()}`}>
                     {item}
                     <span className="menu-item_dots"></span>
                   </Link>
                 )}
               </div>
             ))}
-            <Link
-              to="/contact"
-              className="inline-block px-8 sm:px-10 lg:px-[20px] hover:bg-custom-btn text-[16px] text-center font-[400] bg-[#393939] text-white py-1 rounded-full tracking-wide transition duration-200"
-            >
+            <Link to="/contact" className="inline-block px-8 sm:px-10 lg:px-[20px] hover:bg-custom-btn text-[16px] text-center font-[400] bg-[#393939] text-white py-1 rounded-full tracking-wide transition duration-200">
               Contact Us
             </Link>
           </div>
@@ -98,78 +69,60 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Mobile Menu Backdrop */}
-        {isOpen && (
-          <div
-            className="fixed inset-0 bg-black bg-opacity-70 transition-opacity duration-300"
-            onClick={() => setIsOpen(false)}
-          ></div>
-        )}
-
         {/* Mobile Menu */}
-        <div
-          className={`fixed right-0 top-0 w-64 bg-white h-full shadow-lg transition-transform duration-300 ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}
-        >
-          <div className="flex flex-col p-4">
-            {/* Close Button */}
-            <button 
-              onClick={() => setIsOpen(false)} 
-              className="self-end text-xl mb-4"
-            >
-              <i className="fa-solid fa-times"></i>
-            </button>
-
-            {["Home", "About", "Portfolio", "Blog"].map((item) => (
-              <div key={item} className="relative">
-                <Link
-                  className="hover:text-[#ec008c] uppercase pr-7 pl-3"
-                  to={`/${item.toLowerCase()}`}
-                  onClick={() => setIsOpen(false)} // Close menu on link click
-                >
-                  {item}
-                  <span className="menu-item_dots"></span>
+        {isOpen && (
+          <div className="md:hidden">
+            <div className="fixed inset-0 bg-black bg-opacity-70 transition-opacity duration-300" onClick={() => setIsOpen(false)}></div>
+            <div className="absolute top-0 left-0 w-full bg-white p-5">
+              <div className="flex justify-between items-center mb-4">
+                {/* <h2 className="text-xl font-bold">Menu</h2> */}
+                <button onClick={() => setIsOpen(false)} className="text-xl">
+                  <i className="fa-solid fa-times"></i> {/* Close button */}
+                </button>
+              </div>
+              <div className="flex flex-col space-y-4">
+                {["Home", "About", "Services", "Portfolio", "Blog"].map((item, index) => (
+                  <div key={index}>
+                    {item === "Services" ? (
+                      <>
+                        <Link className="nav-link relative dropdown-toggle no-underline arimo-bold text-[16px]" to="#!" onClick={(e) => {
+                          e.preventDefault();
+                          setIsOpen((prev) => !prev); // Toggle services menu
+                        }}>
+                          Services
+                          <span className="menu-item_dots"></span>
+                        </Link>
+                        <div className="dropdown-menu absolute bg-white mt-2">
+                          {services.map((service, index) => (
+                            <Link
+                              key={index}
+                              className="dropdown-item text-[#232323] my-1 block text-[16px] font-medium tracking-[1px] hover:!text-[#ec008c] px-4 py-2"
+                              to={`/${service.link}`}
+                              onClick={() => setIsOpen(false)} // Close menu on click
+                            >
+                              {service.text}
+                            </Link>
+                          ))}
+                        </div>
+                      </>
+                    ) : (
+                      <Link
+                        className="nav-link no-underline arimo-bold text-[16px]"
+                        to={`/${item.toLowerCase()}`}
+                        onClick={() => setIsOpen(false)} // Close the menu on link click
+                      >
+                        {item}
+                      </Link>
+                    )}
+                  </div>
+                ))}
+                <Link to="/contact" className="inline-block bg-[#393939] text-white py-2 px-4 rounded text-center font-bold">
+                  Contact Us
                 </Link>
               </div>
-            ))}
-
-            {/* Services Dropdown in Mobile View */}
-            <div className="relative">
-              <Link
-                className="nav-link relative dropdown-toggle no-underline hover:text-[#ec008c] uppercase pr-7 pl-3"
-                to="#!"
-                onClick={(e) => {
-                  e.preventDefault(); // Prevent default behavior
-                  setIsOpen(!isOpen); // Toggle dropdown
-                }}
-              >
-                Services
-                <span className="menu-item_dots"></span>
-              </Link>
-              {isOpen && (
-                <div className="dropdown-menu capitalize bg-white text-[#232323]">
-                  {services.map((service, index) => (
-                    <Link
-                      key={index}
-                      className="dropdown-item text-[#232323] bg-white hover:text-[#ec008c] relative text-[14px] tracking-[2px] p-2"
-                      to={`/${service.link}`}
-                      onClick={() => setIsOpen(false)} // Close menu on service link click
-                    >
-                      {service.text}
-                    </Link>
-                  ))}
-                </div>
-              )}
             </div>
-
-            <Link
-              to="/contact"
-              className="inline-block px-8 sm:px-10 lg:px-[20px] hover:bg-custom-btn text-[16px] text-center font-[400] bg-[#393939] text-white py-1 rounded-full tracking-wide transition duration-200"
-              onClick={() => setIsOpen(false)} // Close menu on link click
-            >
-              Contact Us
-            </Link>
           </div>
-        </div>
+        )}
       </nav>
     </>
   );
