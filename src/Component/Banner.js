@@ -47,10 +47,10 @@ const BannerSection = () => {
           <i className="fab fa-pinterest" aria-hidden="true"></i>
         </a>
         <a href="https://www.linkedin.com/company/31553220/admin/" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-google"></i>
+        <i className="fab fa-google"></i>
         </a>
         <a href="https://in.pinterest.com/Infinity_DH/" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-yelp"></i>
+        <i className="fab fa-yelp"></i>
         </a>
       </div>
       <div className="container container-lg mx-auto d-flex flex-md-row align-items-start text-start py-10 md:py-28">
