@@ -5,26 +5,26 @@ import contentData from "../../Data/contentData.json";
 const BlogSection = () => {
   const blogs = [
     {
-      title: "What is Lorem Ipsum?",
+      title: "Top 10 Reasons to Post on Social Media Regularly",
       date: "9th oct, 2024",
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer.",
+        "In today's digitally driven world, social media reigns supreme. It's a vibrant landscape where brands connect with audiences, build communities, and cultivate brand loyalty. But more than simply having a social media presence is required. To truly thrive, consistent posting is key.",
       image: "./images/teamwork-making-online-blog.jpg",
       link: "/blogs/1",
     },
     {
-      title: "What is Lorem Ipsum?",
+      title: "Lost in the Digital Jungle? Choose Infinity DesignHub as Your Digital Marketing Partner.",
       date: "9th oct, 2024",
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer.",
+        "Imagine your business as a majestic lion with a product or service that is so impressive that it deserves a worldwide audience. But the online world feels like a tangled jungle, filled with confusing algorithms and elusive customers. Fear not, brave entrepreneur! Infinity DesignHub is here to be your digital Tarzan, swinging you to the top of the online food chain.",
       image: "./images/teamwork-making-online-blog.jpg",
       link: "/blogs/2",
     },
     {
-      title: "What is Lorem Ipsum?",
+      title: "The Importance of Google Business Profile in 2024 and Beyond",
       date: "9th oct, 2024",
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer.",
+        "Let’s take a journey back to when Google Business Profile first emerged. It was designed to help businesses connect with customers in their local area by appearing prominently in Google Search and Maps. Fast forward to 2024, and its importance has only skyrocketed. With more people relying on online searches to make decisions, having a well-optimized Google Business Profile is crucial for attracting new customers.",
       image: "./images/teamwork-making-online-blog.jpg",
       link: "/blogs/3",
     },

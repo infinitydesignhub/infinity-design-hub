@@ -25,19 +25,19 @@ const TalkAboutDesignSection = ({ data }) => {
                 src="https://wgl-dsites.net/bili/light/wp-content/uploads/2023/03/homepage-9_9.jpg"
                 alt=""
                 style={{
-                  width: "265px",
-                  height: "86px",
+                  width: "160px",
+                  height: "80px",
                   margin: "auto 10px  auto 0",
                   borderRadius: "0px 100px 100px 0px",
                 }}
                 className="" // Ensure the image covers its px-5
               />
 
-              <h2 className="text-[#232323] text-[50px] md:text-[60px] font-semibold mb-2 text-center uppercase mr-5">
+              <h2 className="text-[#232323] text-[90px] md:text-[90px] font-semibold mb-2 text-center uppercase mr-5">
                 {data.pageTitle}
               </h2>
               <span
-                className="text-[50px] md:text-[60px] font-bold uppercase"
+                className="text-[90px] md:text-[90px] font-bold uppercase"
                 style={{
                   color: "transparent",
                   WebkitTextStroke: "1px rgb(35, 35, 35)",

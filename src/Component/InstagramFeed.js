@@ -38,7 +38,7 @@ const InstagramFeed = () => {
 
   return (
     <div className="container container-lg mx-auto py-16">
-      <h3 className='dblh__title-wrapper text-4xl text-[#232323] font-bold text-center mb-10'>
+      <h3 className='dblh__title-wrapper text-black text-2xl mb-12 font-medium text-center mt-12'>
         Our infinite creative approaches will ensure a unique brand image with infinite growth.
       </h3>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -56,7 +56,7 @@ const InstagramFeed = () => {
                 </svg>
               </div>
             </a>
-            <p className="mt-2 text-center text-sm text-[#232323]">{post.caption}</p>
+            {/* <p className="mt-2 text-center text-sm text-[#232323]">{post.caption}</p> */}
           </div>
         ))}
       </div>

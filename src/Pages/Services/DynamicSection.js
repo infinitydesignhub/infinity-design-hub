@@ -20,7 +20,7 @@ const DynamicSection = ({ data }) => {
         <hr />
         <div className='my-16'>
           <div className="flex flex-col">
-            <div className="mb-6 flex flex-wrap justify-between">
+            <div className="mb-6 flex  justify-between">
               {imageSrc && (
                 <img
                   loading="lazy"
@@ -38,9 +38,9 @@ const DynamicSection = ({ data }) => {
               <h2 className="text-[#232323] text-[50px] md:text-[80px] font-semibold mb-2 text-center">{title}</h2>
             </div>
             <div className='flex flex-col md:flex-row justify-between'>
-              <p className="text-[20px] text-[#5B5B5B] md:text-xl max-w-2xl mb-6">
+              {/* <p className="text-[20px] text-[#5B5B5B] md:text-xl max-w-2xl mb-6">
                 {subTitle}
-              </p>
+              </p> */}
               <div>
                 <Link
                   className="inline-block text-[#5B5B5B] wgl-button relative px-8 py-3 z-1 font-semibold rounded-full !transition-all !duration-300 px-4 py-2 rounded-lg"

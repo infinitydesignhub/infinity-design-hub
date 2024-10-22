@@ -54,8 +54,9 @@
 /* Body */
 .default-class {
   /* background-image: var(--color-background-light); */
-  background: url(https://wgl-dsites.net/bili/light/wp-content/uploads/2023/03/team-bg-l.jpg);
+  background: url('../public/images/home-b.jpg');
   background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .portfolio-class {
@@ -150,7 +151,9 @@ nav a {
 }
 
 .banner img {
-  width: 91px;
+  inline-size: 91px;
+  filter: grayscale(1);
+  -webkit-filter: grayscale(1);
 }
 
 .heading-title {

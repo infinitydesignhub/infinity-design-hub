@@ -41,25 +41,26 @@ const servicesData = [
     },
     {
         id: 6,
+        title: 'Packaging & Printing',
+        subtitle: '08',
+        link: '/services/printing-solutions',
+        image: '/images/newImages/Printing-Solution-Service.jpg',
+    },
+    {
+        id: 7,
         title: 'Content Writing',
         subtitle: '06',
         link: '/services/content-writing',
         image: '/images/newImages/Content-Service.jpg',
     },
     {
-        id: 7,
+        id: 8,
         title: 'Video Creation',
         subtitle: '07',
         link: '/services/video-creation',
         image: '/images/newImages/Video-Creation-Service.jpg',
     },
-    {
-        id: 8,
-        title: 'Printing Solutions',
-        subtitle: '08',
-        link: '/services/printing-solutions',
-        image: '/images/newImages/Printing-Solution-Service.jpg',
-    },
+    
 ];
 
 const ProvideServices = () => {

@@ -8,7 +8,7 @@ const DynamicSection = ({ imageSrc, titleParts, description, button }) => {
                 <hr></hr>
                 <div className='my-16'>
                     <div className="flex flex-col">
-                        <div className="mb-6 flex flex-wrap justify-between">
+                        <div className="mb-6 flex  gap-[50px]">
                             <img
                                 loading="lazy"
                                 decoding="async"
@@ -29,7 +29,7 @@ const DynamicSection = ({ imageSrc, titleParts, description, button }) => {
                             </h2>
                         ))} */}
                         </div>
-                        <div className='flex flex-col md:flex-row justify-between'>
+                        <div className='flex flex-col md:flex-row gap-[50px]'>
                             <p className="text-[20px] text-[#5B5B5B] md:text-xl max-w-2xl mb-6">
                                 {description}
                             </p>

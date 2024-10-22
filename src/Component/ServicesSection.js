@@ -58,7 +58,8 @@ const ServicesSection = ({ approach, services }) => {
                   // onMouseLeave={handleMouseLeave}
                 >
                   <div className="mb-4 position-relative">
-                    <span className="hover-line text-4xl font-bold text-gray-400">{String(index + 1).padStart(2, '0')}</span>
+                    <img   src={service.image}  alt="CreativeExecution" width={50} className=" object-contain h-10"/>
+                    {/* <span className="hover-line text-4xl font-bold text-gray-400">{String(index + 1).padStart(2, '0')}</span> */}
                     <span className="hover-line vc-line"></span>
                   </div>
                   <h3 className="text-2xl font-semibold mb-2 text-[#232323]">{service.title}</h3>

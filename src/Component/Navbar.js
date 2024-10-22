@@ -15,7 +15,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="py-4 pl-[1rem] md:pl-[2.5rem] px-10 relative z-10">
+      <nav className="py-4 pl-[1rem] md:pl-[2.5rem] relative z-10 container">
         <div className="mx-auto flex justify-between items-center source-code-pro">
           <div className="font-bold text-xl" data-aos="fade-right">
             <Link to="/">

@@ -9,22 +9,22 @@
         {
           "title": "In-Depth Discovery",
           "description": "We dive deep into understanding your brand’s unique needs and target audience.",
-          "image": "../image/infobox_cursor.png"
+          "image": "./images/In-Depth Discovery.svg"
         },
         {
           "title": "Strategic Planning",
           "description": "Infinity DesignHub crafts a tailored digital marketing strategy that blends creativity with data-driven insights.",
-          "image": "../image/infobox_cursor_3.png"
+          "image": "./images/StrategicPlanning.svg"
         },
         {
             "title": "Creative Execution",
             "description": "We launch innovative campaigns and engaging content that connects with your audience.",
-            "image": "../image/infobox_cursor_3.png"
+            "image": "./images/CreativeExecution.svg"
           },
           {
             "title": "Impactful Results",
             "description": "We drive measurable growth and enhance your brand’s digital presence through strategic, impactful solutions.",
-            "image": "../image/infobox_cursor_3.png"
+            "image": "./images/ImpactfulResults.svg"
           }
       ]
     }

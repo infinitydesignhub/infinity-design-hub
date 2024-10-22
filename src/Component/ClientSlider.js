@@ -39,7 +39,7 @@ const ClientSlider = () => {
   return (
     <section className="py-24 my-12">
       <div className="container container-lg mx-auto text-center">
-        <h2 className="text-black text-2xl mb-12">OVER 1K+ SOFTWARE BUSINESSES GROWING WITH BILI</h2>
+        <h2 className="text-black text-2xl mb-12">Businesses We've Empowered and Continue..</h2>
         <Slider {...settings}>
           {clients.map(client => (
             <div key={client.id} className="!w-[80px] !h-[80px] overflow-hidden flex gap-4 justify-center items-center">

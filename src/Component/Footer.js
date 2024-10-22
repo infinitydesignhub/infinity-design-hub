@@ -12,9 +12,9 @@ const Footer = () => {
               <img src={footerData.logo.src} alt={footerData.logo.alt} className="h-7" />
             </a>
             <p className='py-4'>
-              We build killer Squarespace sites with 
+            Your vision is our mission,  
               <br></br>
-              our quick and pain-free process
+              and your success is our legacy. 
             </p>
             <div className="sqs-block button-block sqs-block-button">
               <div className="!pl-0 sqs-block-button-container container-lg sqs-block-button-container container-lg--left">
@@ -48,7 +48,34 @@ const Footer = () => {
               </li>
             </ul>
             <div className="mt-8 flex space-x-4 social">
-              {footerData.socials.map((social, index) => (
+            <a href="https://twitter.com/Infinity_DH" target="_blank" rel="noopener noreferrer">
+          <i className="fab fa-x-twitter" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.facebook.com/infinitydesignhub" target="_blank" rel="noopener noreferrer">
+          <i className="fab fa-facebook" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.instagram.com/infinitydesignhub" target="_blank" rel="noopener noreferrer">
+          <i className="fab fa-instagram" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.youtube.com/channel/UChLbMTr9BghON2RxeaX3MIA" target="_blank" rel="noopener noreferrer">
+          <i className="fab fa-youtube" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.behance.net/Infinity_Designhub" target="_blank" rel="noopener noreferrer">
+          <i className="fab fa-behance" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.linkedin.com/company/31553220/admin/" target="_blank" rel="noopener noreferrer">
+          <i className="fab fa-linkedin-in" aria-hidden="true"></i>
+        </a>
+        <a href="https://in.pinterest.com/Infinity_DH/" target="_blank" rel="noopener noreferrer">
+          <i className="fab fa-pinterest" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.linkedin.com/company/31553220/admin/" target="_blank" rel="noopener noreferrer">
+        <i className="fab fa-google"></i>
+        </a>
+        <a href="https://in.pinterest.com/Infinity_DH/" target="_blank" rel="noopener noreferrer">
+        <i className="fab fa-yelp"></i>
+        </a>
+              {/* {footerData.socials.map((social, index) => (
                 <a
                   key={index}
                   href={social.link}
@@ -59,7 +86,7 @@ const Footer = () => {
                 >
                   <i className={social.iconClass}></i>
                 </a>
-              ))}
+              ))} */}
             </div>
           </div>
         </div>
