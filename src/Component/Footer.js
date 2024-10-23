@@ -12,9 +12,10 @@ const Footer = () => {
               <img src={footerData.logo.src} alt={footerData.logo.alt} className="h-7" />
             </a>
             <p className='py-4'>
-            Your vision is our mission,  
+            Your vision is our mission 
+ 
               <br></br>
-              and your success is our legacy. 
+              and your growth is our success.
             </p>
             <div className="sqs-block button-block sqs-block-button">
               <div className="!pl-0 sqs-block-button-container container-lg sqs-block-button-container container-lg--left">

@@ -8,7 +8,7 @@ const contactSectionData = {
   form: {
     namePlaceholder: "Your Name",
     websitePlaceholder: "Your Email",
-    commentPlaceholder: "Your Massage",
+    commentPlaceholder: "Your Message",
     submitButtonText: "GET IN TOUCH",
   },
   contacts: {
