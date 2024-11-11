@@ -95,7 +95,7 @@ const ProvideServices = () => {
                                     <div className="">
                                         <div className="flex gap-2">
                                             <span className="sub block text-xl  text-[#5B5B5B] text-[20px] font-normal">{service.subtitle}</span>
-                                            <span className="block text-[#5B5B5B] hover:text-white relative z-[2] text-[52px] font-bold">{service.title}</span>
+                                            <span className="block text-[#5B5B5B] hover:text-white relative z-[2] md:text-[52px] text-[50px] font-bold">{service.title}</span>
                                         </div>
                                     </div>
                                     <div className='showcase__image'>

@@ -33,11 +33,11 @@ const TalkAboutDesignSection = ({ data }) => {
                 className="" // Ensure the image covers its px-5
               />
 
-              <h2 className="text-[#232323] text-[90px] md:text-[90px] font-semibold mb-2 text-center uppercase mr-5">
+              <h2 className="text-[#232323] md:text-[90px] text-[50px] font-semibold mb-2 text-center uppercase mr-5">
                 {data.pageTitle}
               </h2>
               <span
-                className="text-[90px] md:text-[90px] font-bold uppercase"
+                className="md:text-[90px] text-[50px] font-bold uppercase"
                 style={{
                   color: "transparent",
                   WebkitTextStroke: "1px rgb(35, 35, 35)",
