@@ -8,7 +8,7 @@ const DynamicSection = ({ imageSrc, titleParts, description, button }) => {
                 <hr></hr>
                 <div className='my-16'>
                     <div className="flex flex-col">
-                        <div className="mb-6 flex  gap-[50px]">
+                        <div className="mb-6 flex md:flex-row flex-col gap-[50px]">
                             <img
                                 loading="lazy"
                                 decoding="async"

@@ -7,6 +7,7 @@ import footerData from "../Data/footerData.json";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);  // State to toggle services submenu in mobile view
   const services = footerData.services;
 
   useEffect(() => {
@@ -75,7 +76,6 @@ const Navbar = () => {
             <div className="fixed inset-0 bg-black bg-opacity-70 transition-opacity duration-300" onClick={() => setIsOpen(false)}></div>
             <div className="absolute top-0 left-0 w-full bg-white p-5">
               <div className="flex justify-between items-center mb-4">
-                {/* <h2 className="text-xl font-bold">Menu</h2> */}
                 <button onClick={() => setIsOpen(false)} className="text-xl">
                   <i className="fa-solid fa-times"></i> {/* Close button */}
                 </button>
@@ -85,25 +85,28 @@ const Navbar = () => {
                   <div key={index}>
                     {item === "Services" ? (
                       <>
-                        <Link className="nav-link relative dropdown-toggle no-underline arimo-bold text-[16px]" to="#!" onClick={(e) => {
-                          e.preventDefault();
-                          setIsOpen((prev) => !prev); // Toggle services menu
-                        }}>
+                        <button
+                          className="dropdown-toggle nav-link relative no-underline arimo-bold text-[16px] !text-[#232323]"
+                          onClick={() => setIsServicesOpen((prev) => !prev)} // Toggle services submenu
+                        >
                           Services
                           <span className="menu-item_dots"></span>
-                        </Link>
-                        <div className="dropdown-menu absolute bg-white mt-2">
-                          {services.map((service, index) => (
-                            <Link
-                              key={index}
-                              className="dropdown-item text-[#232323] my-1 block text-[16px] font-medium tracking-[1px] hover:!text-[#ec008c] px-4 py-2"
-                              to={`/${service.link}`}
-                              onClick={() => setIsOpen(false)} // Close menu on click
-                            >
-                              {service.text}
-                            </Link>
-                          ))}
-                        </div>
+                        </button>
+                        {/* Toggle Services submenu */}
+                        {isServicesOpen && (
+                          <div className="bg-white mt-2">
+                            {services.map((service, index) => (
+                              <Link
+                                key={index}
+                                className="text-[#232323] my-1 block text-[16px] font-medium tracking-[1px] hover:!text-[#ec008c] px-4 py-2"
+                                to={`/${service.link}`}
+                                onClick={() => setIsOpen(false)} // Close menu on click
+                              >
+                                {service.text}
+                              </Link>
+                            ))}
+                          </div>
+                        )}
                       </>
                     ) : (
                       <Link
@@ -116,7 +119,11 @@ const Navbar = () => {
                     )}
                   </div>
                 ))}
-                <Link to="/contact" className="inline-block bg-[#393939] text-white py-2 px-4 rounded text-center font-bold">
+                <Link
+                  to="/contact"
+                  className="inline-block bg-[#393939] text-white py-2 px-4 rounded text-center font-bold"
+                  onClick={() => setIsOpen(false)} // Close the menu on link click
+                >
                   Contact Us
                 </Link>
               </div>
