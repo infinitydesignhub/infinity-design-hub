@@ -94,7 +94,7 @@ footer a {
 }
 
 nav a {
-  color: #232323;
+  color: #232323 !important;
 }
 
 .inconsolata {
@@ -1337,6 +1337,9 @@ footer .social a:hover {
 .hover{
   width: 100% !important;
 }
+.side-social {
+  right: -50%;
+  margin-right: auto;
    
 }
-
+}

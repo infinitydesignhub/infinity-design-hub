@@ -20,7 +20,7 @@ const DynamicSection = ({ data }) => {
         <hr />
         <div className='my-16'>
           <div className="flex flex-col">
-            <div className="mb-6 flex  justify-between">
+            <div className="mb-6 flex justify-between md:flex-row flex-col">
               {imageSrc && (
                 <img
                   loading="lazy"
