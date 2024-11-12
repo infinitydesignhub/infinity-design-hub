@@ -42,8 +42,8 @@ const PhilosophySection = ({ data }) => {
                   <div className="wgl-flipbox type_flip_right">
                     <div className="wgl-flipbox_wrap">
                       <div className="wgl-flipbox_front p-4 border rounded">
-                        <div className="wgl-flipbox_media-wrap">
-                          <div className="media-wrapper number-wrapper">
+                        <div class="wgl-flipbox_media-wrap">
+                          <div class="media-wrapper number-wrapper">
                             <span className="wgl-number elementor-icon">
                               <span className="number">0{number}</span>
                             </span>

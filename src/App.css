@@ -1343,14 +1343,3 @@ footer .social a:hover {
    
 }
 }
-
-/* For Masonry grid */
-.wgl-portfolio_wrapper {
-  position: relative;
-  overflow: hidden; /* Ensure no overflow */
-}
-
-/* Smooth transition on the masonry grid */
-.masonry-item {
-  transition: all 0.3s ease; /* Smooth transition for each item */
-}
