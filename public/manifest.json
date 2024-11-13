@@ -1,6 +1,6 @@
 {
-  "short_name": "Infinity DesignHub",
-  "name": "Infinity DesignHub was founded in 2019 with a vision to create a space where creativity meets strategy. Our California-based agency is dedicated to providing 360-degree branding solutions across the globe",
+  "short_name": "React App",
+  "name": "Create React App Sample",
   "icons": [
     {
       "src": "favicon.ico",
@@ -8,7 +8,7 @@
       "type": "image/x-icon"
     },
     {
-      "src": "/images/infinity.png",
+      "src": "logo192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
