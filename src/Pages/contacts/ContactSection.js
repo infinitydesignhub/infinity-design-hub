@@ -250,14 +250,14 @@ const ContactSection = () => {
                     <i className="fab fa-pinterest" aria-hidden="true"></i>
                   </a>
                   <a
-                    href="https://www.linkedin.com/company/31553220/admin/"
+                    href="https://www.google.com/search?hl=en-IN&gl=in&q=Infinity+Design+Hub&ludocid=4054609671248797353&lsig=AB86z5WLDoIJ8MvpIasm2-6njHds&hl=en&gl=IN#lrd=0x395e83bec735c467:0x3844de0385a5dea9,1"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <i className="fab fa-google"></i>
                   </a>
                   <a
-                    href="https://in.pinterest.com/Infinity_DH/"
+                    href="https://www.yelp.com/biz/infinity-designhub-dublin"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
