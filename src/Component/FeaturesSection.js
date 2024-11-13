@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const FeaturesSection = ({ data }) => {
   // Log data to check its structure
-  // console.log(data);
+  console.log(data);
 
   // Check if data is defined and has features
   if (!data || !data.features) {
