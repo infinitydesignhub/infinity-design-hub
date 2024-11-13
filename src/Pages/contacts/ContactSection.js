@@ -44,12 +44,12 @@ const contactSectionData = {
     },
     {
       platform: "Google",
-      link: "https://www.google.com",
+      link: "https://www.google.com/search?hl=en-IN&gl=in&q=Infinity+Design+Hub&ludocid=4054609671248797353&lsig=AB86z5WLDoIJ8MvpIasm2-6njHds&hl=en&gl=IN#lrd=0x395e83bec735c467:0x3844de0385a5dea9,1",
       iconClass: "fab fa-google",
     },
     {
       platform: "Yelp",
-      link: "https://www.yelp.com",
+      link: "https://www.yelp.com/biz/infinity-designhub-dublin",
       iconClass: "fab fa-yelp",
     },
   ],
@@ -74,16 +74,8 @@ const ContactSection = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const { name, website, comment } = formData;
-    const emailBody = `Name: ${name}\nWebsite: ${website}\nComment: ${comment}`;
-    const mailtoLink = `mailto:info@sagarbharvadiya.com?subject=Contact Form Submission&body=${encodeURIComponent(
-      emailBody
-    )}`;
-
-    // Redirect to mailto link
-    window.location.href = mailtoLink;
-
-    // Reset form and show thank you message
+    // Since Netlify handles the form submission, we don't need to redirect to mailto or send emails manually.
+    // If you want to show the thank you message after submission, this will be handled in the `submitted` state.
     setFormData({ name: "", website: "", comment: "" });
     setSubmitted(true);
   };
@@ -94,7 +86,6 @@ const ContactSection = () => {
         <div className="row flex-wrap">
           <div className="elementor-widget-wrap bg-[#F5F5F5] col-md-6 p-4 md:p-5">
             <div className="">
-              {/* Conditionally render title and description */}
               {!submitted && (
                 <>
                   <div className="elementor-widget">
@@ -121,7 +112,15 @@ const ContactSection = () => {
                   </p>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="flex flex-col contact">
+                <form
+                  onSubmit={handleSubmit}
+                  name="contact" // Form name required by Netlify
+                  method="POST"
+                  data-netlify="true" // This attribute is required to make it a Netlify form
+                  className="flex flex-col contact"
+                >
+                  <input type="hidden" name="form-name" value="contact" /> {/* Hidden field to prevent submission issues */}
+                  
                   <input
                     type="text"
                     name="name"
@@ -157,7 +156,6 @@ const ContactSection = () => {
             </div>
           </div>
 
-          {/* Contact Details Column */}
           <div className="elementor-column elementor-col-50 col-md-6 contact-details">
             <div className="elementor-widget-wrap pr-0">
               <div className="elementor-widget">
@@ -200,7 +198,7 @@ const ContactSection = () => {
               </div>
               <div className="elementor-widget">
                 <div className="flex space-x-4 pt-3 social">
-                  <a
+                <a
                     href="https://twitter.com/Infinity_DH"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -250,14 +248,14 @@ const ContactSection = () => {
                     <i className="fab fa-pinterest" aria-hidden="true"></i>
                   </a>
                   <a
-                    href="https://www.linkedin.com/company/31553220/admin/"
+                    href="https://www.google.com/search?hl=en-IN&gl=in&q=Infinity+Design+Hub&ludocid=4054609671248797353&lsig=AB86z5WLDoIJ8MvpIasm2-6njHds&hl=en&gl=IN#lrd=0x395e83bec735c467:0x3844de0385a5dea9,1"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <i className="fab fa-google"></i>
                   </a>
                   <a
-                    href="https://in.pinterest.com/Infinity_DH/"
+                    href="https://www.yelp.com/biz/infinity-designhub-dublin"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
