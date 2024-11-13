@@ -1,26 +1,82 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import Box from "@mui/material/Box";
-import Masonry from "@mui/lab/Masonry";
-import data from "./portfolio.json"; // Update with your JSON data path
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import Box from '@mui/material/Box';
+import Masonry from '@mui/lab/Masonry';
+import client from '../../client'; // Import the Contentful client
 
-const categories = [
-  { name: "All", filter: "All" },
-  { name: "Branding", filter: "Branding" },
-  { name: "Logo Design", filter: "Logo Design" },
-  { name: "Printing-solutions", filter: "Printing-solutions" },
-  { name: "Social Media", filter: "Social Media" },
-  { name: "Website design", filter: "Website design" },
-];
+const PortfolioMasonry = () => {
+  const [activeCategory, setActiveCategory] = useState('All');
+  const [visibleItems, setVisibleItems] = useState(3);
+  const [projects, setProjects] = useState([]);
+  const [categories, setCategories] = useState(['All']); // Default 'All' category
+  const [loading, setLoading] = useState(true);
 
-const Portfolio = () => {
-  const [activeCategory, setActiveCategory] = useState("All");
-  const [visibleItems, setVisibleItems] = useState(5);
+  // Fetch the slug from the URL
+  const { slug } = useParams();
 
+  // Fetch the portfolio data from Contentful
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        // Fetch portfolio items
+        const portfolioResponse = await client.getEntries({
+          content_type: 'portfolio', // Content type ID for portfolio
+          'fields.slug': slug, // Use the slug to filter if necessary
+        });
+  
+        console.log('Portfolio Data:', portfolioResponse); // Log the response to check its structure
+  
+        if (portfolioResponse.items.length > 0) {
+          // Format the projects and extract categories dynamically
+          const formattedProjects = portfolioResponse.items.map((item) => {
+            if (item && item.fields) {
+              return {
+                id: item.sys.id,
+                title: item.fields.title,
+                image: item.fields.images?.[0]?.fields?.file?.url
+                  ? `https:${item.fields.images[0].fields.file.url}`
+                  : '',
+                category: item.fields.categories || [], // Categories field from portfolio entry
+                link: item.fields.link || '',
+              };
+            }
+            return null;
+          }).filter((project) => project !== null);
+  
+          setProjects(formattedProjects); // Set the projects
+  
+          // Dynamically extract unique categories
+          const allCategories = new Set(['All']); // Initialize with 'All' category
+          portfolioResponse.items.forEach((item) => {
+            if (item.fields.categories) {
+              item.fields.categories.forEach((cat) => {
+                allCategories.add(cat); // Add each category to the set
+              });
+            }
+          });
+  
+          // Log the categories to verify
+          console.log('All Categories:', [...allCategories]);
+  
+          setCategories([...allCategories]); // Set the categories (convert Set to Array)
+        }
+  
+        setLoading(false); // Set loading to false once data is fetched
+      } catch (error) {
+        console.error('Error fetching data from Contentful:', error);
+        setLoading(false); // Handle errors and set loading to false
+      }
+    };
+  
+    fetchData();
+  }, [slug]);
+  
+  // Filtered projects based on selected category
   const filteredProjects =
-    activeCategory === "All"
-      ? data
-      : data.filter((project) => project.category.includes(activeCategory));
+    activeCategory === 'All'
+      ? projects
+      : projects.filter((project) => project.category.includes(activeCategory));
 
   return (
     <div className="wgl-portfolio_wrapper container mx-auto px-4 sm:px-6 lg:px-8">
@@ -36,18 +92,14 @@ const Portfolio = () => {
         <div className="flex flex-wrap md:flex-nowrap space-x-2">
           {categories.map((category) => (
             <button
-              key={category.name}
-              className={`px-3 py-2 rounded transition font-bold ${
-                activeCategory === category.name
-                  ? "text-[#ec008c]"
-                  : "text-black"
-              }`}
+              key={category}
+              className={`px-3 py-2 rounded transition font-bold ${activeCategory === category ? 'text-[#ec008c]' : 'text-black'}`}
               onClick={() => {
-                setActiveCategory(category.name);
-                setVisibleItems(2); // Reset to the initial number when category changes
+                setActiveCategory(category);
+                setVisibleItems(5); // Reset visible items to initial state when category changes
               }}
             >
-              {category.name}
+              {category}
             </button>
           ))}
         </div>
@@ -56,45 +108,44 @@ const Portfolio = () => {
       <div className="container">
         <Box>
           {/* Masonry with responsive columns */}
-          <Masonry
-            columns={{ xs: 1, sm: 2 }} // Set 1 column on small screens, 2 on larger
-            spacing={5}
-          >
-            {filteredProjects.slice(0, visibleItems).map((project) => (
-              <div key={project.id} className="hover relative">
-                <Link
-                  to={`/portfolio/${
-                    project.title
-                      ? project.title.replace(/\s+/g, "-").toLowerCase()
-                      : ""
-                  }`}
-                  className="block"
-                >
-                  <img
-                    srcSet={`${project.image}?w=162&auto=format&dpr=2 2x`}
-                    src={`${project.image}?w=162&auto=format`}
-                    alt={project.title}
-                    loading="lazy"
-                    style={{
-                      display: "block",
-                      width: "100%",
-                    }}
-                  />
-                  <div className="item__description">
-                    <div className="text-white text-center">
-                      <div className="post_cats">
-                        {project.category.map((cat) => (
-                          <span key={cat} className="portfolio-category">
-                            {cat}
-                          </span>
-                        ))}
+          <Masonry columns={{ xs: 1, sm: 2 }} spacing={3}>
+            {loading ? (
+              <div>Loading...</div> // Show loading message if data is still loading
+            ) : (
+              filteredProjects.slice(0, visibleItems).reverse().map((project) => (
+                <div key={project.id} className="hover relative">
+                  <Link
+                    to={`/portfolio/${project.title
+                      .replace(/\s+/g, '-')
+                      .toLowerCase()}`}
+                    className="block"
+                  >
+                    <img
+                      srcSet={`${project.image}`}
+                      src={`${project.image}`}
+                      alt={project.title}
+                      loading="lazy"
+                      style={{
+                        display: 'block',
+                        width: '100%',
+                      }}
+                    />
+                    <div className="item__description">
+                      <div className="text-white text-center">
+                        <div className="post_cats">
+                          {project.category.map((cat) => (
+                            <span key={cat} className="portfolio-category">
+                              {cat}
+                            </span>
+                          ))}
+                        </div>
+                        <h5 className="title">{project.title}</h5>
                       </div>
-                      <h5 className="title">{project.title}</h5>
                     </div>
-                  </div>
-                </Link>
-              </div>
-            ))}
+                  </Link>
+                </div>
+              ))
+            )}
           </Masonry>
         </Box>
       </div>
@@ -104,7 +155,7 @@ const Portfolio = () => {
         <div className="flex justify-center mt-6">
           <button
             onClick={() =>
-              setVisibleItems((prevVisibleItems) => prevVisibleItems + 5)
+              setVisibleItems((prevVisibleItems) => prevVisibleItems + 3)
             }
             className="inline-block text-black wgl-button relative px-8 py-3 z-1 font-semibold rounded-full transition-all duration-300 my-5"
           >
@@ -116,4 +167,4 @@ const Portfolio = () => {
   );
 };
 
-export default Portfolio;
+export default PortfolioMasonry;
