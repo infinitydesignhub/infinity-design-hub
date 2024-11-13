@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const TalkAboutDesignSection = ({ data }) => {
-  console.log("TalkAboutDesignSection data:", data);
+  // console.log("TalkAboutDesignSection data:", data);
 
   if (!data) return null; // Early return if no data
 

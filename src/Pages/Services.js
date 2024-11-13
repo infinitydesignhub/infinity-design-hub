@@ -31,7 +31,7 @@ const Services = () => {
           include: 2, // Ensure linked entries are included
         });
 
-        console.log("Service Data:", response); // Log the response
+        // console.log("Service Data:", response); // Log the response
 
         if (response.items.length > 0) {
           setData(response.items[0].fields);
