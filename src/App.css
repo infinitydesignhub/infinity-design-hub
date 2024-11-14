@@ -54,7 +54,7 @@
 /* Body */
 .default-class {
   /* background-image: var(--color-background-light); */
-  background: url('../public/images/home-b.jpg');
+  background: url('../public/images/new-banner.jpg');
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -1338,7 +1338,7 @@ footer .social a:hover {
   width: 100% !important;
 }
 .side-social {
-  right: -50%;
+  right: -45%;
   margin-right: auto;
    
 }

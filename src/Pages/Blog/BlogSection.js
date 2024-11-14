@@ -101,7 +101,7 @@ const BlogSection = () => {
                       className="text-black font-semibold text-sm bg-[#e9e9e9] py-1 px-4 rounded-2xl"
                       to="/blogs/1"
                     >
-                      Lorem
+                      JavaScript
                     </Link>
                   </li>
                   <li>

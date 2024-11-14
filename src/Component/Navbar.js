@@ -75,7 +75,7 @@ const Navbar = () => {
           <div className="md:hidden">
             <div className="fixed inset-0 bg-black bg-opacity-70 transition-opacity duration-300" onClick={() => setIsOpen(false)}></div>
             <div className="absolute top-0 left-0 w-full bg-white p-5">
-              <div className="flex justify-between items-center mb-4">
+              <div className="float-right mb-4">
                 <button onClick={() => setIsOpen(false)} className="text-xl">
                   <i className="fa-solid fa-times"></i> {/* Close button */}
                 </button>
