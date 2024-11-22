@@ -2,12 +2,12 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import Box from '@mui/material/Box';
-import Masonry from '@mui/lab/Masonry';
+import Masonry from 'react-masonry-css'; // Importing from react-masonry-css
 import client from '../../client'; // Import the Contentful client
 
 const PortfolioMasonry = () => {
   const [activeCategory, setActiveCategory] = useState('All');
-  const [visibleItems, setVisibleItems] = useState(3);
+  const [visibleItems, setVisibleItems] = useState(5); // Initially showing 5 items
   const [projects, setProjects] = useState([]);
   const [categories, setCategories] = useState(['All']); // Default 'All' category
   const [loading, setLoading] = useState(true);
@@ -25,8 +25,7 @@ const PortfolioMasonry = () => {
           'fields.slug': slug, // Use the slug to filter if necessary
         });
   
-        console.log('Portfolio Data:', portfolioResponse); // Log the response to check its structure
-  
+      
         if (portfolioResponse.items.length > 0) {
           // Format the projects and extract categories dynamically
           const formattedProjects = portfolioResponse.items.map((item) => {
@@ -56,9 +55,6 @@ const PortfolioMasonry = () => {
             }
           });
   
-          // Log the categories to verify
-          console.log('All Categories:', [...allCategories]);
-  
           setCategories([...allCategories]); // Set the categories (convert Set to Array)
         }
   
@@ -78,6 +74,13 @@ const PortfolioMasonry = () => {
       ? projects
       : projects.filter((project) => project.category.includes(activeCategory));
 
+  // Breakpoints for responsive masonry grid
+  const breakpoints = {
+    default: 2, // 2 items per row (default)
+    1100: 2,    // 2 items per row when the screen width is 1100px or smaller
+    700: 1,     // 1 item per row for screens smaller than 700px
+  };
+
   return (
     <div className="wgl-portfolio_wrapper container mx-auto px-4 sm:px-6 lg:px-8">
       <div className="wgl-portfolio_header mb-6 flex flex-col md:flex-row justify-between p-2">
@@ -96,7 +99,7 @@ const PortfolioMasonry = () => {
               className={`px-3 py-2 rounded transition font-bold ${activeCategory === category ? 'text-[#ec008c]' : 'text-black'}`}
               onClick={() => {
                 setActiveCategory(category);
-                setVisibleItems(5); // Reset visible items to initial state when category changes
+                setVisibleItems(5); // Reset visible items to 5 when category changes
               }}
             >
               {category}
@@ -108,11 +111,15 @@ const PortfolioMasonry = () => {
       <div className="container">
         <Box>
           {/* Masonry with responsive columns */}
-          <Masonry columns={{ xs: 1, sm: 2 }} spacing={3}>
+          <Masonry
+            // breakpointCols={breakpoints} // Apply responsive breakpoints
+            className="my-masonry-grid"  // Optional class for custom styling
+            columnClassName="my-masonry-grid_column" // Optional custom column class
+          >
             {loading ? (
               <div>Loading...</div> // Show loading message if data is still loading
             ) : (
-              filteredProjects.slice(0, visibleItems).reverse().map((project) => (
+              filteredProjects.reverse().map((project) => (
                 <div key={project.id} className="hover relative">
                   <Link
                     to={`/portfolio/${project.title
@@ -155,7 +162,7 @@ const PortfolioMasonry = () => {
         <div className="flex justify-center mt-6">
           <button
             onClick={() =>
-              setVisibleItems((prevVisibleItems) => prevVisibleItems + 3)
+              setVisibleItems((prevVisibleItems) => prevVisibleItems + 5) // Increase by 5 items
             }
             className="inline-block text-black wgl-button relative px-8 py-3 z-1 font-semibold rounded-full transition-all duration-300 my-5"
           >

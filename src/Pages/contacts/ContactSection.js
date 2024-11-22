@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import footerData from "../../Data/footerData.json";
+import emailjs from "@emailjs/browser";
 
 const contactSectionData = {
   title: "Drop Us a Line",
@@ -19,40 +19,7 @@ const contactSectionData = {
     address: "27 Division St, New York, NY 10002, USA",
     phone: "+1 (659) 400-8283",
     email: "info@infinitydesignhub.com",
-  },
-
-  socialLinks: [
-    {
-      platform: "Twitter",
-      link: "https://twitter.com/Infinity_DH",
-      iconClass: "fab fa-x-twitter",
-    },
-    {
-      platform: "Facebook",
-      link: "https://www.facebook.com/infinitydesignhub/?eid=ARCLTZCdUHvhxs9ypf5WNhDY5f8ZTHcm7DHkQCKRrvrknw3BTLvNiVTMRMrMDb1muGMpXRRh0NmN92OJ",
-      iconClass: "fab fa-facebook-f",
-    },
-    {
-      platform: "LinkedIn",
-      link: "https://www.linkedin.com/company/31553220/admin/",
-      iconClass: "fab fa-linkedin-in",
-    },
-    {
-      platform: "Instagram",
-      link: "https://www.instagram.com/infinitydesignhub/?hl=en",
-      iconClass: "fab fa-instagram",
-    },
-    {
-      platform: "Google",
-      link: "https://www.google.com",
-      iconClass: "fab fa-google",
-    },
-    {
-      platform: "Yelp",
-      link: "https://www.yelp.com",
-      iconClass: "fab fa-yelp",
-    },
-  ],
+  }
 };
 
 const ContactSection = () => {
@@ -62,6 +29,7 @@ const ContactSection = () => {
     comment: "",
   });
   const [submitted, setSubmitted] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -75,17 +43,33 @@ const ContactSection = () => {
     e.preventDefault();
 
     const { name, website, comment } = formData;
-    const emailBody = `Name: ${name}\nWebsite: ${website}\nComment: ${comment}`;
-    const mailtoLink = `mailto:info@sagarbharvadiya.com?subject=Contact Form Submission&body=${encodeURIComponent(
-      emailBody
-    )}`;
+    
+    // Prepare the email data
+    const emailData = {
+      name,
+      website,
+      comment,
+    };
 
-    // Redirect to mailto link
-    window.location.href = mailtoLink;
-
-    // Reset form and show thank you message
-    setFormData({ name: "", website: "", comment: "" });
-    setSubmitted(true);
+    // Call EmailJS to send the email
+    emailjs
+      .send(
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,  // Your service ID
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID, // Your template ID
+        emailData,
+        process.env.REACT_APP_EMAILJS_USER_ID  // Your user ID
+      )
+      .then(
+        (response) => {
+          console.log("Email sent successfully", response);
+          setSubmitted(true);
+          setFormData({ name: "", website: "", comment: "" });
+        },
+        (error) => {
+          console.error("Email sending error", error);
+          setErrorMessage("Something went wrong. Please try again.");
+        }
+      );
   };
 
   return (
@@ -146,6 +130,9 @@ const ContactSection = () => {
                     onChange={handleChange}
                     className="border p-2 mb-4 !text-[#232323]"
                   />
+                  {errorMessage && (
+                    <div className="text-red-500">{errorMessage}</div>
+                  )}
                   <button
                     type="submit"
                     className="no-underline text-black wgl-button relative px-8 py-3 z-1 font-semibold rounded-full transition-all duration-300"
@@ -263,18 +250,6 @@ const ContactSection = () => {
                   >
                     <i className="fab fa-yelp"></i>
                   </a>
-                  {/* {footerData.socials.map((social, index) => (
-                    <a
-                      key={index}
-                      href={social.link}
-                      className="!text-[#191919] text-[16px] py-[2px] px-[7px] inline-block mr-[8px] cursor-pointer bg-white hover:text-gray-400"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label={social.platform}
-                    >
-                      <i className={social.iconClass}></i>
-                    </a>
-                  ))} */}
                 </div>
               </div>
             </div>
