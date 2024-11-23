@@ -1,27 +1,75 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import portfolioData from './portfolioData.json'; // Path to your JSON file
+import client from '../../client';
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 
 const PortfolioDetail = () => {
   const { title } = useParams(); // Get title from URL
+  const [portfolio, setPortfolio] = useState(null);
+  const [previousPortfolio, setPreviousPortfolio] = useState(null);
+  const [nextPortfolio, setNextPortfolio] = useState(null);
+  const [loading, setLoading] = useState(true);
 
-  // Find the portfolio item that matches the title
-  const portfolio = portfolioData.portfolios.find(
-    item => item.title.toLowerCase().replace(/ /g, '-') === title
-  );
+  // Format the title in the URL for matching
+  const formattedTitle = title.replace(/-/g, ' ').toLowerCase();
+  console.log('Formatted title from URL:', formattedTitle); // Debugging
+
+  // Fetch portfolio data from Contentful
+  useEffect(() => {
+    const fetchPortfolioData = async () => {
+      try {
+        // Fetch all portfolio entries (temporary, without filtering by title)
+        const response = await client.getEntries({
+          content_type: 'portfolioDetails', // Your Contentful content type ID
+        });
+
+        console.log('All portfolios from Contentful:', response); // Debugging
+
+        // Check if the response has any items
+        if (response.items.length > 0) {
+          const matchingPortfolio = response.items.find(
+            (item) => item.fields.title.toLowerCase().replace(/ /g, '-') === title
+          );
+
+          if (matchingPortfolio) {
+            setPortfolio(matchingPortfolio.fields);
+            const allPortfolios = response.items;
+
+            const currentIndex = allPortfolios.findIndex(
+              (item) => item.fields.title.toLowerCase().replace(/ /g, '-') === title
+            );
+
+            const nextPortfolio = allPortfolios[currentIndex + 1] || null;
+            const previousPortfolio = allPortfolios[currentIndex - 1] || null;
+
+            setNextPortfolio(nextPortfolio ? nextPortfolio.fields : null);
+            setPreviousPortfolio(previousPortfolio ? previousPortfolio.fields : null);
+          } else {
+            console.log(`No portfolio found for title: ${formattedTitle}`);
+          }
+        } else {
+          console.log('No portfolios found in Contentful.');
+        }
+      } catch (error) {
+        console.error('Error fetching portfolio data', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchPortfolioData();
+  }, [title, formattedTitle]); // Add formattedTitle as dependency
+
+  if (loading) {
+    return <h2 className="text-center">Loading...</h2>;
+  }
 
   if (!portfolio) {
     return <h2 className="text-center">Portfolio item not found</h2>;
   }
 
-  // Find the index of the current portfolio item
-  const currentIndex = portfolioData.portfolios.findIndex(
-    item => item.title.toLowerCase().replace(/ /g, '-') === title
-  );
-
-  // Get the next and previous portfolio items
-  const nextPortfolio = portfolioData.portfolios[currentIndex + 1] || null;
-  const previousPortfolio = portfolioData.portfolios[currentIndex - 1] || null;
+  // Render the Rich Text field
+  const richTextDescription = documentToReactComponents(portfolio.description);
 
   // Construct links for next and previous portfolio items
   const nextPortfolioLink = nextPortfolio
@@ -36,23 +84,23 @@ const PortfolioDetail = () => {
     <div className="cont w-[70%] m-auto">
       <section className="portfolio-single portfolio-images pp-img type-3 top_90 row">
         <figure className="hero-image">
-          <img src={portfolio.images[0]} alt={portfolio.title} />
+          <img src={portfolio.featuredImage.fields.file.url} alt={portfolio.title} />
         </figure>
         <div className="col-md-8 offset-md-2 text-center">
           <h1 className="text-black bottom_45 top_60 text-4xl font-bold">{portfolio.title}</h1>
           <h4 className="text-lx font-bold mb-4">{portfolio.subtitle}</h4>
-          {portfolio.description.map((desc, index) => (
-            <p key={index} className="text-center leading-[30px] mb-4">{desc}</p>
-          ))}
+          <div className="text-center leading-[30px] mb-4">
+            {richTextDescription}  {/* Rendered Rich Text */}
+          </div>
           <ul className="information text-center">
             <li><span>Client:</span> {portfolio.client}</li>
             <li><span>Category:</span> {portfolio.category}</li>
           </ul>
         </div>
         <div className="col-md-12 portfolio-images top_90">
-          {portfolio.images.map((img, index) => (
+          {portfolio.gallery.map((img, index) => (
             <figure className="bottom_30" key={index}>
-              <img src={img} alt={`Portfolio image ${index + 1}`} />
+              <img src={img.fields.file.url} alt={`Portfolio image ${index + 1}`} />
             </figure>
           ))}
         </div>
