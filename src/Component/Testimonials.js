@@ -6,17 +6,31 @@ import 'aos/dist/aos.css';
 const testimonialsData = [
   {
     id: 1,
-    quote: "“Our office is something we are pleased with. We consider it the little magnet; it is wanting to come here and afterward difficult to leave it. Our office is additionally a big name.”",
-    author: "Monica Regan",
-    position: "CLIENT OF AGENCY",
-    image: "https://wgl-dsites.net/bili/light/wp-content/uploads/2022/03/testimonials_1-340x340.jpg",
+    quote: "“Infinity Design hub and its team is an exceptional team who have helped raamah group in changing its face from designing the new logo, website and social media designing.”",
+    author: "Raama Group",
+    position: "Construction company",
+    image: "./rama.png",
   },
   {
     id: 2,
-    quote: "“Our office is something we are pleased with. We consider it the little magnet; it is wanting to come here and afterward difficult to leave it. Our office is additionally a big name.”",
-    author: "Megan Olson",
+    quote: "“Outstanding work from owner..I was searching for logo for my brand..I tried many designer but didn't work..my friend gave me reference of infinity design. They have me wide options for logo.. finally they Did it..we got our most creative logo. Thanks.”",
+    author: "Hardik",
     position: "CLIENT OF AGENCY",
-    image: "https://wgl-dsites.net/bili/light/wp-content/uploads/2022/03/testimonials_2-340x340.jpg",
+    image: "./Hardik.png",
+  },
+  {
+    id: 3,
+    quote: "“Infinity designhub is the one platform where i get the solution of all my branding things. They have designed my logo, brochure, stationery and social media as i needed. I am surely gonna contact again for my future worries like website design and many more. I highly recommend to everyone. Best branding agency!”",
+    author: "patel vatsal",
+    position: "CLIENT OF AGENCY",
+    image: "./vatsal.png",
+  },
+  {
+    id: 4,
+    quote: "“Infinity designhub is the one platform where i get the solution of all my branding things. They have designed my logo, brochure, stationery and social media as i needed. I am surely gonna contact again for my future worries like website design and many more. I highly recommend to everyone. Best branding agency!”",
+    author: "patel vatsal",
+    position: "CLIENT OF AGENCY",
+    image: "./vatsal.png",
   },
   // Add more testimonials as needed
 ];

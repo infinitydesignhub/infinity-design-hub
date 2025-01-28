@@ -1367,3 +1367,22 @@ footer .social a:hover {
 .masonry-item {
   transition: all 0.3s ease; /* Smooth transition for each item */
 }
+
+/* Add this to your CSS file */
+.wgl-portfolio_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); /* Creates responsive columns */
+  gap: 20px; /* Adjust the gap between items */
+  margin: 0 auto;
+  max-width: 1200px; /* Optional: set max-width for better responsiveness */
+}
+
+.portfolio__item {
+  /* Optionally, set item styles */
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.portfolio__item:hover {
+  transform: scale(1.05); /* Optional: add a hover effect */
+}
