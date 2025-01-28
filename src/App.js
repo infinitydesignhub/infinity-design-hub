@@ -1,3 +1,4 @@
+// src/App.js
 import React, { useEffect } from "react";
 import { Route, Routes, useLocation } from 'react-router-dom';
 import '@fortawesome/fontawesome-free/css/all.min.css';
@@ -18,9 +19,10 @@ import Contact from "./Pages/Contact";
 import About from "./Pages/About";
 import Services from "./Pages/Services";
 import PortfolioDetails from "./Pages/PortfolioDeatils/PortfolioDetails";
-// import BasicPage from "./Pages/BasicPage";
 import BlogSection from "./Pages/Blog/BlogSection";
 import BlogDetails from "./Pages/Blog/BlogDetails";
+import NotFound from './Pages/NotFound'; // Import your NotFound component
+
 function getBodyClass(pathname) {
   // Remove leading/trailing slashes and convert to kebab-case
   const formattedPath = pathname.replace(/^\//, '').replace(/\/$/, '').replace(/\//g, '-');
@@ -48,12 +50,13 @@ function App() {
       document.body.classList.remove(bodyClass);
     };
   }, [location.pathname]);
+
   useEffect(() => {
     const images = document.querySelectorAll('img');
     images.forEach((img) => {
         img.setAttribute('loading', 'lazy');
     });
-}, []);
+  }, []);
 
   return (
     <div className="">
@@ -67,6 +70,7 @@ function App() {
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/portfolio/:title" element={<PortfolioDetails />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="*" element={<NotFound />} /> {/* Catch-all route for 404 page */}
       </Routes>
       <Footer />
       <ScrollToTop />
