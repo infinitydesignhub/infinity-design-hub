@@ -42,7 +42,7 @@ const ClientSlider = () => {
         <h2 className="text-black text-2xl mb-12">Businesses We've Empowered and Continue..</h2>
         <Slider {...settings}>
           {clients.map(client => (
-            <div key={client.id} className="!w-[80px] !h-[80px] overflow-hidden flex gap-4 justify-center items-center">
+            <div key={client.id} className="!w-[60px] !h-[60px] overflow-hidden flex gap-4 justify-center items-center">
               <img
                 src={client.imgSrc}
                 alt={`Partner ${client.id}`}

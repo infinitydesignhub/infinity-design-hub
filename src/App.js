@@ -15,6 +15,7 @@ import ScrollToTop from "./Component/ScrollToTop";
 import Home from "./Pages/Home";
 import Portfolio from "./Pages/Portfolio";
 import WhatsAppIcon from "./Component/WhatsAppIcon";
+import PhoneIcon from "./Component/PhoneIcon";
 import Contact from "./Pages/Contact";
 import About from "./Pages/About";
 import Services from "./Pages/Services";
@@ -74,6 +75,7 @@ function App() {
       </Routes>
       <Footer />
       <ScrollToTop />
+      <PhoneIcon/>
       <WhatsAppIcon />
     </div>
   );
