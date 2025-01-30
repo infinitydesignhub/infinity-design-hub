@@ -1325,13 +1325,13 @@ footer .social a:hover {
   }
 
   button.elementor-swiper-button.elementor-swiper-button-next.slick-arrow.slick-next {
-    left: 6rem;
-    top: 389px;
+    left: 5rem;
+    top: 95%;
   }
 
   button.elementor-swiper-button.elementor-swiper-button-prev.slick-arrow.slick-prev {
-    left: 14.5rem;
-    top: 390px;
+    left: 10rem;
+    top: 95%;
   }
   .container {
     padding-right: 1rem !important;
@@ -1354,6 +1354,11 @@ footer .social a:hover {
   right: -45%;
   margin-right: auto;
    
+}
+.item__quote,
+.item__quote:after,
+.item__quote:before{
+  border: none;
 }
 }
 
