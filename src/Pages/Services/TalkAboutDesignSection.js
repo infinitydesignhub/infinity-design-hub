@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import leftImages from '../../images/pink.jpg'
 const TalkAboutDesignSection = ({ data }) => {
   // console.log("TalkAboutDesignSection data:", data);
 
@@ -22,13 +22,15 @@ const TalkAboutDesignSection = ({ data }) => {
               <img
                 loading="lazy"
                 decoding="async"
-                src="https://wgl-dsites.net/bili/light/wp-content/uploads/2023/03/homepage-9_9.jpg"
+                // src={leftImage}
+                src={leftImages}
                 alt=""
                 style={{
                   width: "160px",
                   height: "80px",
                   margin: "auto 10px  auto 0",
                   borderRadius: "0px 100px 100px 0px",
+                  objectFit:'cover'
                 }}
                 className="" // Ensure the image covers its px-5
               />

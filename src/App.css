@@ -1386,3 +1386,7 @@ footer .social a:hover {
 .portfolio__item:hover {
   transform: scale(1.05); /* Optional: add a hover effect */
 }
+
+.testimonials .slick-prev:before, .testimonials .slick-next:before{
+  display: none;
+}

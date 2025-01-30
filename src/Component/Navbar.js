@@ -57,7 +57,7 @@ const Navbar = () => {
                 )}
               </div>
             ))}
-            <Link to="/contact" className="inline-block px-8 sm:px-10 lg:px-[20px] hover:bg-custom-btn text-[16px] text-center font-[400] bg-[#393939] text-white py-1 rounded-full tracking-wide transition duration-200">
+            <Link to="/contact" className="inline-block px-8 sm:px-10 lg:px-[20px] bg-custom-btn text-[16px] text-center font-[400] hover:bg-[#393939] text-white py-1 rounded-full tracking-wide transition duration-200">
               Contact Us
             </Link>
           </div>
