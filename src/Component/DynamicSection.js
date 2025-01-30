@@ -18,7 +18,8 @@ const DynamicSection = ({ imageSrc, titleParts, description, button }) => {
                                     width: '265px',
                                     height: '86px',
                                     margin: 'auto 10px  auto 0',
-                                    borderRadius: '0px 100px 100px 0px'
+                                    borderRadius: '0px 100px 100px 0px',
+                                    objectFit:'cover'
                                 }}
                                 className="" // Ensure the image covers its container container-lg
                             />

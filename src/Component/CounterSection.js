@@ -6,9 +6,9 @@ import 'aos/dist/aos.css';
 const CounterSection = () => {
   const counters = [
     { value: 10, title: 'Years of Experience' },
-    { value: 18, title: 'Skilled Professionals' },
-    { value: 32, title: 'Visited Conferences' },
-    { value: 10, title: 'Projects Worldwide', isK: true },
+    { value: 5, title: 'Counrty We Work' },
+    { value: 20, title: 'Industry' },
+    { value: 15, title: 'Projects Worldwide', isK: false },
   ];
 
   const [hasAnimated, setHasAnimated] = useState(false);
