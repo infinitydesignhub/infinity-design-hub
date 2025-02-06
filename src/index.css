@@ -23,6 +23,13 @@ a {
 }
 
 
+/* Make sure the masonry grid is properly laid out */
+.my-masonry-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;  /* Adjust space between items */
+}
 
-
-
+.my-masonry-grid_column{
+  width: 32% !important;
+}
